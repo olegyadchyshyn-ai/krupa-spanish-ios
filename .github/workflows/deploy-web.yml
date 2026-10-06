@@ -1,0 +1,68 @@
+name: Deploy web version (PWA)
+
+# Публікує веб-версію застосунку на GitHub Pages — дитина відкриває посилання
+# в Safari і додає застосунок на екран «Домівки». Працює офлайн, без підпису
+# й без термінів дії.
+#
+# Після першого запуску: Settings → Pages → Source = GitHub Actions.
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'web/**'
+      - '.github/workflows/deploy-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Перевірка логіки та модулів
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Синтаксис усіх модулів
+        run: |
+          set -euo pipefail
+          for file in $(find web/js -name '*.js'); do
+            node --check "$file"
+          done
+          node --check web/sw.js
+
+      - name: Тести логіки на реальному контенті
+        run: node web/test/logic.test.mjs
+
+      - name: Перевірка імпорту екранів
+        run: node web/test/views.test.mjs
+
+  deploy:
+    name: Публікація на GitHub Pages
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

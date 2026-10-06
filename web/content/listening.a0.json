@@ -1,0 +1,281 @@
+{
+  "contentVersion": 1,
+  "listening": [
+    {
+      "id": "l_a0_001",
+      "level": "A0",
+      "topicId": "t_a0_greetings",
+      "titleEs": "En la calle",
+      "titleUk": "На вулиці",
+      "kind": "dialogue",
+      "orderIndex": 1,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Hola! ¿Qué tal?", "translationUk": "Привіт! Як справи?" },
+        { "speaker": "B", "spanish": "Muy bien, gracias.", "translationUk": "Дуже добре, дякую." },
+        { "speaker": "A", "spanish": "¿Y tú? ¿Todo bien?", "translationUk": "А ти? Усе гаразд?" },
+        { "speaker": "B", "spanish": "Sí, todo muy bien.", "translationUk": "Так, усе дуже добре." },
+        { "speaker": "A", "spanish": "¡Qué alegría verte!", "translationUk": "Як я рада тебе бачити!" },
+        { "speaker": "B", "spanish": "¡Hasta luego, Ana!", "translationUk": "Бувай, Ано!" }
+      ],
+      "keyWords": [
+        { "spanish": "hola", "translationUk": "привіт" },
+        { "spanish": "¿Qué tal?", "translationUk": "Як справи?" },
+        { "spanish": "muy bien", "translationUk": "дуже добре" },
+        { "spanish": "gracias", "translationUk": "дякую" },
+        { "spanish": "todo bien", "translationUk": "усе гаразд" },
+        { "spanish": "hasta luego", "translationUk": "до побачення" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Як відповідає B на вітання?",
+          "options": ["Muy bien, gracias", "Muy mal, gracias", "No lo sé"],
+          "correctIndex": 0,
+          "explanationUk": "B каже «Muy bien, gracias», тобто «Дуже добре, дякую»."
+        },
+        {
+          "questionUk": "Як B прощається?",
+          "options": ["Buenos días", "Hasta luego", "Buenas noches"],
+          "correctIndex": 1,
+          "explanationUk": "B каже «¡Hasta luego, Ana!» — це прощання, а не вітання."
+        },
+        {
+          "questionUk": "Як звати дівчину, до якої звертається B?",
+          "options": ["Marta", "Lucía", "Ana"],
+          "correctIndex": 2,
+          "explanationUk": "B називає її на ім’я: «¡Hasta luego, Ana!»"
+        }
+      ]
+    },
+    {
+      "id": "l_a0_002",
+      "level": "A0",
+      "topicId": "t_a0_introductions",
+      "titleEs": "Mucho gusto",
+      "titleUk": "Приємно познайомитися",
+      "kind": "dialogue",
+      "orderIndex": 2,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Hola! Me llamo Ana.", "translationUk": "Привіт! Мене звати Ана." },
+        { "speaker": "B", "spanish": "Hola, Ana. Yo soy Pablo.", "translationUk": "Привіт, Ано. Я Пабло." },
+        { "speaker": "A", "spanish": "Mucho gusto, Pablo.", "translationUk": "Приємно познайомитися, Пабло." },
+        { "speaker": "B", "spanish": "Igualmente. ¿De dónde eres?", "translationUk": "Взаємно. Звідки ти?" },
+        { "speaker": "A", "spanish": "Soy de Ucrania. ¿Y tú?", "translationUk": "Я з України. А ти?" },
+        { "speaker": "B", "spanish": "Yo soy de Madrid.", "translationUk": "Я з Мадрида." },
+        { "speaker": "A", "spanish": "¡Qué bien! Hablamos luego.", "translationUk": "Як чудово! Поговоримо пізніше." }
+      ],
+      "keyWords": [
+        { "spanish": "me llamo", "translationUk": "мене звати" },
+        { "spanish": "mucho gusto", "translationUk": "приємно познайомитися" },
+        { "spanish": "¿de dónde eres?", "translationUk": "звідки ти?" },
+        { "spanish": "soy de", "translationUk": "я з (якогось місця)" },
+        { "spanish": "igualmente", "translationUk": "взаємно" },
+        { "spanish": "hablamos luego", "translationUk": "поговоримо пізніше" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Як звати чоловіка?",
+          "options": ["Pablo", "Ana", "Madrid"],
+          "correctIndex": 0,
+          "explanationUk": "Він представляється: «Yo soy Pablo»."
+        },
+        {
+          "questionUk": "Звідки Пабло?",
+          "options": ["De Ucrania", "De Madrid", "De Barcelona"],
+          "correctIndex": 1,
+          "explanationUk": "Пабло каже «Yo soy de Madrid», а Ана — «Soy de Ucrania»."
+        },
+        {
+          "questionUk": "Що відповідає Пабло на «Mucho gusto»?",
+          "options": ["Hasta luego", "No, gracias", "Igualmente"],
+          "correctIndex": 2,
+          "explanationUk": "У відповідь на «Mucho gusto» кажуть «Igualmente» — «Взаємно»."
+        }
+      ]
+    },
+    {
+      "id": "l_a0_003",
+      "level": "A0",
+      "topicId": "t_a0_courtesy",
+      "titleEs": "Un móvil en el suelo",
+      "titleUk": "Мобільний телефон на землі",
+      "kind": "dialogue",
+      "orderIndex": 3,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Perdón! ¿Es tu móvil?", "translationUk": "Перепрошую! Це твій телефон?" },
+        { "speaker": "B", "spanish": "¡Sí! Muchas gracias.", "translationUk": "Так! Щиро дякую." },
+        { "speaker": "A", "spanish": "De nada. No pasa nada.", "translationUk": "Нема за що. Нічого страшного." },
+        { "speaker": "B", "spanish": "Qué amable. Gracias.", "translationUk": "Як люб’язно. Дякую." },
+        { "speaker": "A", "spanish": "¿Necesitas más ayuda?", "translationUk": "Тобі потрібна ще допомога?" },
+        { "speaker": "B", "spanish": "No, gracias. ¡Adiós!", "translationUk": "Ні, дякую. Бувай!" },
+        { "speaker": "A", "spanish": "¡Adiós! ¡Hasta pronto!", "translationUk": "Бувай! До скорої зустрічі!" }
+      ],
+      "keyWords": [
+        { "spanish": "perdón", "translationUk": "перепрошую" },
+        { "spanish": "el móvil", "translationUk": "мобільний телефон" },
+        { "spanish": "muchas gracias", "translationUk": "щиро дякую" },
+        { "spanish": "de nada", "translationUk": "нема за що" },
+        { "spanish": "no pasa nada", "translationUk": "нічого страшного" },
+        { "spanish": "amable", "translationUk": "люб’язний" },
+        { "spanish": "la ayuda", "translationUk": "допомога" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що знайшов A?",
+          "options": ["Un móvil", "Un libro", "Una llave"],
+          "correctIndex": 0,
+          "explanationUk": "A питає «¿Es tu móvil?» — отже, він знайшов телефон."
+        },
+        {
+          "questionUk": "Як B дякує?",
+          "options": ["Dice «De nada»", "Dice «Muchas gracias»", "Dice «Lo siento»"],
+          "correctIndex": 1,
+          "explanationUk": "B каже «¡Sí! Muchas gracias», а «De nada» відповідає вже A."
+        },
+        {
+          "questionUk": "Чи потрібна B ще якась допомога?",
+          "options": ["Sí, necesita mucha ayuda", "No lo sabe", "No, no necesita ayuda"],
+          "correctIndex": 2,
+          "explanationUk": "B відповідає «No, gracias» — допомога більше не потрібна."
+        }
+      ]
+    },
+    {
+      "id": "l_a0_004",
+      "level": "A0",
+      "topicId": "t_a0_numbers_0_20",
+      "titleEs": "En la frutería",
+      "titleUk": "У крамниці овочів і фруктів",
+      "kind": "dialogue",
+      "orderIndex": 4,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenos días. ¿Qué desea?", "translationUk": "Доброго ранку. Що бажаєте?" },
+        { "speaker": "B", "spanish": "Dos kilos de patatas.", "translationUk": "Два кілограми картоплі." },
+        { "speaker": "A", "spanish": "Son tres euros.", "translationUk": "З вас три євро." },
+        { "speaker": "B", "spanish": "Aquí tiene, gracias.", "translationUk": "Ось, візьміть, дякую." },
+        { "speaker": "A", "spanish": "¿Desea algo más?", "translationUk": "Бажаєте щось іще?" },
+        { "speaker": "B", "spanish": "No, eso es todo.", "translationUk": "Ні, це все." },
+        { "speaker": "A", "spanish": "¡Adiós! Hasta luego.", "translationUk": "До побачення! Бувайте." }
+      ],
+      "keyWords": [
+        { "spanish": "¿Qué desea?", "translationUk": "Що бажаєте?" },
+        { "spanish": "dos kilos", "translationUk": "два кілограми" },
+        { "spanish": "las patatas", "translationUk": "картопля" },
+        { "spanish": "tres euros", "translationUk": "три євро" },
+        { "spanish": "algo más", "translationUk": "щось іще" },
+        { "spanish": "eso es todo", "translationUk": "це все" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Скільки кілограмів картоплі просить B?",
+          "options": ["Dos kilos", "Tres kilos", "Un kilo"],
+          "correctIndex": 0,
+          "explanationUk": "B каже «Dos kilos de patatas» — два кілограми."
+        },
+        {
+          "questionUk": "Скільки коштує покупка?",
+          "options": ["Dos euros", "Tres euros", "Cuatro euros"],
+          "correctIndex": 1,
+          "explanationUk": "Продавець каже «Son tres euros»."
+        },
+        {
+          "questionUk": "Чи купує B щось іще?",
+          "options": ["Sí, un poco más", "Solo pan", "No, eso es todo"],
+          "correctIndex": 2,
+          "explanationUk": "B відповідає «No, eso es todo» — більше нічого не бере."
+        }
+      ]
+    },
+    {
+      "id": "l_a0_005",
+      "level": "A0",
+      "topicId": "t_a0_basic_verbs",
+      "titleEs": "Mi rutina",
+      "titleUk": "Мій день",
+      "kind": "monologue",
+      "orderIndex": 5,
+      "lines": [
+        { "speaker": "A", "spanish": "Hola. Soy Marta.", "translationUk": "Привіт. Я Марта." },
+        { "speaker": "A", "spanish": "Vivo en Sevilla.", "translationUk": "Я живу в Севільї." },
+        { "speaker": "A", "spanish": "Trabajo en un café.", "translationUk": "Я працюю в кав’ярні." },
+        { "speaker": "A", "spanish": "Hablo español y ucraniano.", "translationUk": "Я говорю іспанською та українською." },
+        { "speaker": "A", "spanish": "Como a las dos.", "translationUk": "Я обідаю о другій годині." },
+        { "speaker": "A", "spanish": "Por la noche leo.", "translationUk": "Увечері я читаю." },
+        { "speaker": "A", "spanish": "Duermo ocho horas.", "translationUk": "Я сплю вісім годин." }
+      ],
+      "keyWords": [
+        { "spanish": "vivo", "translationUk": "я живу" },
+        { "spanish": "trabajo", "translationUk": "я працюю" },
+        { "spanish": "hablo", "translationUk": "я говорю" },
+        { "spanish": "como", "translationUk": "я їм" },
+        { "spanish": "leo", "translationUk": "я читаю" },
+        { "spanish": "duermo", "translationUk": "я сплю" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Де живе Марта?",
+          "options": ["En Sevilla", "En Madrid", "En Valencia"],
+          "correctIndex": 0,
+          "explanationUk": "Вона каже «Vivo en Sevilla»."
+        },
+        {
+          "questionUk": "Де вона працює?",
+          "options": ["En un banco", "En un café", "En un hotel"],
+          "correctIndex": 1,
+          "explanationUk": "У розповіді звучить «Trabajo en un café»."
+        },
+        {
+          "questionUk": "Скільки годин вона спить?",
+          "options": ["Seis horas", "Siete horas", "Ocho horas"],
+          "correctIndex": 2,
+          "explanationUk": "Остання репліка: «Duermo ocho horas»."
+        }
+      ]
+    },
+    {
+      "id": "l_a0_006",
+      "level": "A0",
+      "topicId": "t_a0_survival",
+      "titleEs": "No entiendo",
+      "titleUk": "Я не розумію",
+      "kind": "dialogue",
+      "orderIndex": 6,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Perdón! No entiendo.", "translationUk": "Перепрошую! Я не розумію." },
+        { "speaker": "B", "spanish": "Dime, ¿qué necesitas?", "translationUk": "Скажи, що тобі потрібно?" },
+        { "speaker": "A", "spanish": "¿Puedes hablar despacio?", "translationUk": "Можеш говорити повільніше?" },
+        { "speaker": "B", "spanish": "Sí, claro. Sin problema.", "translationUk": "Так, звичайно. Без проблем." },
+        { "speaker": "A", "spanish": "¿Dónde está el baño?", "translationUk": "Де туалет?" },
+        { "speaker": "B", "spanish": "Allí, a la derecha.", "translationUk": "Он там, праворуч." },
+        { "speaker": "A", "spanish": "Muchas gracias. ¡Adiós!", "translationUk": "Щиро дякую. Бувай!" }
+      ],
+      "keyWords": [
+        { "spanish": "no entiendo", "translationUk": "я не розумію" },
+        { "spanish": "¿puedes hablar despacio?", "translationUk": "можеш говорити повільніше?" },
+        { "spanish": "sin problema", "translationUk": "без проблем" },
+        { "spanish": "¿dónde está el baño?", "translationUk": "де туалет?" },
+        { "spanish": "a la derecha", "translationUk": "праворуч" },
+        { "spanish": "claro", "translationUk": "звичайно" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що просить A?",
+          "options": ["Un café", "Hablar despacio", "Un mapa"],
+          "correctIndex": 1,
+          "explanationUk": "A каже «¿Puedes hablar despacio?» — просить говорити повільніше."
+        },
+        {
+          "questionUk": "Що шукає A?",
+          "options": ["La estación", "El hotel", "El baño"],
+          "correctIndex": 2,
+          "explanationUk": "A питає «¿Dónde está el baño?» — шукає туалет."
+        },
+        {
+          "questionUk": "Де туалет?",
+          "options": ["A la derecha", "A la izquierda", "Muy lejos"],
+          "correctIndex": 0,
+          "explanationUk": "B відповідає «Allí, a la derecha» — праворуч."
+        }
+      ]
+    }
+  ]
+}

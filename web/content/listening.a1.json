@@ -1,0 +1,404 @@
+{
+  "contentVersion": 1,
+  "listening": [
+    {
+      "id": "l_a1_001",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "titleEs": "El piso de Laura",
+      "titleUk": "Квартира Лаури",
+      "kind": "dialogue",
+      "orderIndex": 1,
+      "lines": [
+        { "speaker": "A", "spanish": "Hola, Laura. ¿Buscas un piso nuevo?", "translationUk": "Привіт, Лауро. Шукаєш нову квартиру?" },
+        { "speaker": "B", "spanish": "Sí, quiero un piso en el centro.", "translationUk": "Так, я хочу квартиру в центрі." },
+        { "speaker": "A", "spanish": "¿Cuánto cuesta un piso allí?", "translationUk": "Скільки коштує квартира там?" },
+        { "speaker": "B", "spanish": "El alquiler cuesta mil doscientos euros al mes.", "translationUk": "Оренда коштує тисячу двісті євро на місяць." },
+        { "speaker": "A", "spanish": "¡Es muy caro! ¿Y fuera del centro?", "translationUk": "Це дуже дорого! А за межами центру?" },
+        { "speaker": "B", "spanish": "Fuera del centro son ochocientos euros.", "translationUk": "За межами центру — вісімсот євро." },
+        { "speaker": "A", "spanish": "Mi primo paga seiscientos euros.", "translationUk": "Мій двоюрідний брат платить шістсот євро." },
+        { "speaker": "B", "spanish": "Vale. Voy a buscar más pisos.", "translationUk": "Гаразд. Я пошукаю ще квартири." },
+        { "speaker": "A", "spanish": "Hay un piso cerca de mi casa.", "translationUk": "Є одна квартира біля мого дому." },
+        { "speaker": "B", "spanish": "¡Perfecto! Voy a llamar mañana.", "translationUk": "Чудово! Я зателефоную завтра." }
+      ],
+      "keyWords": [
+        { "spanish": "el piso", "translationUk": "квартира" },
+        { "spanish": "el alquiler", "translationUk": "орендна плата" },
+        { "spanish": "mil doscientos euros", "translationUk": "тисяча двісті євро" },
+        { "spanish": "caro", "translationUk": "дорогий" },
+        { "spanish": "fuera del centro", "translationUk": "за межами центру" },
+        { "spanish": "cerca de", "translationUk": "біля, поруч із" },
+        { "spanish": "voy a buscar", "translationUk": "я пошукаю" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Скільки коштує оренда квартири в центрі?",
+          "options": ["Ochocientos euros", "Mil doscientos euros", "Seiscientos euros"],
+          "correctIndex": 1,
+          "explanationUk": "Лаура каже «El alquiler cuesta mil doscientos euros al mes»."
+        },
+        {
+          "questionUk": "Скільки коштує квартира за межами центру?",
+          "options": ["Ochocientos euros", "Mil euros", "Quinientos euros"],
+          "correctIndex": 0,
+          "explanationUk": "У діалозі звучить «Fuera del centro son ochocientos euros»."
+        },
+        {
+          "questionUk": "Що пропонує A?",
+          "options": ["Un piso en el centro", "Un trabajo", "Un piso cerca de su casa"],
+          "correctIndex": 2,
+          "explanationUk": "A каже «Hay un piso cerca de mi casa» — квартира біля його дому."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_002",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "titleEs": "El cumpleaños de Marta",
+      "titleUk": "День народження Марти",
+      "kind": "dialogue",
+      "orderIndex": 2,
+      "lines": [
+        { "speaker": "A", "spanish": "El sábado es el cumpleaños de Marta.", "translationUk": "У суботу день народження Марти." },
+        { "speaker": "B", "spanish": "¿A qué hora es la fiesta?", "translationUk": "О котрій годині вечірка?" },
+        { "speaker": "A", "spanish": "A las siete de la tarde, en su piso.", "translationUk": "О сьомій вечора, у її квартирі." },
+        { "speaker": "B", "spanish": "¿Siete? Es un poco tarde para mí.", "translationUk": "О сьомій? Для мене це трохи пізно." },
+        { "speaker": "A", "spanish": "Podemos ir a las seis y media.", "translationUk": "Можемо піти о пів на сьому." },
+        { "speaker": "B", "spanish": "Vale. ¿Qué le vamos a regalar?", "translationUk": "Гаразд. Що ми їй подаруємо?" },
+        { "speaker": "A", "spanish": "Un libro de cocina. Le gusta mucho cocinar.", "translationUk": "Кулінарну книгу. Вона дуже любить готувати." },
+        { "speaker": "B", "spanish": "Buena idea. Yo llevo el pastel.", "translationUk": "Гарна ідея. Я принесу торт." },
+        { "speaker": "A", "spanish": "¡Perfecto! ¿Y el domingo descansas?", "translationUk": "Чудово! А в неділю ти відпочиваєш?" },
+        { "speaker": "B", "spanish": "Sí, el domingo no trabajo. ¡Hasta el sábado!", "translationUk": "Так, у неділю я не працюю. До суботи!" }
+      ],
+      "keyWords": [
+        { "spanish": "el cumpleaños", "translationUk": "день народження" },
+        { "spanish": "la fiesta", "translationUk": "вечірка" },
+        { "spanish": "¿a qué hora?", "translationUk": "о котрій годині?" },
+        { "spanish": "vamos a regalar", "translationUk": "ми подаруємо" },
+        { "spanish": "el libro de cocina", "translationUk": "кулінарна книга" },
+        { "spanish": "el pastel", "translationUk": "торт" },
+        { "spanish": "descansar", "translationUk": "відпочивати" },
+        { "spanish": "el domingo", "translationUk": "у неділю" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Коли відзначають день народження?",
+          "options": ["El sábado", "El domingo", "El viernes"],
+          "correctIndex": 0,
+          "explanationUk": "A каже «El sábado es el cumpleaños de Marta»."
+        },
+        {
+          "questionUk": "Що вони збираються подарувати?",
+          "options": ["Un pastel", "Un libro de cocina", "Un disco"],
+          "correctIndex": 1,
+          "explanationUk": "A пропонує «Un libro de cocina», бо Марта любить готувати."
+        },
+        {
+          "questionUk": "Що бере на себе B?",
+          "options": ["Comprar el regalo", "Llamar a Marta", "Llevar el pastel"],
+          "correctIndex": 2,
+          "explanationUk": "B каже «Yo llevo el pastel» — він принесе торт."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_003",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "titleEs": "La familia de Sofía",
+      "titleUk": "Родина Софії",
+      "kind": "story",
+      "orderIndex": 3,
+      "lines": [
+        { "speaker": "A", "spanish": "Me llamo Sofía y tengo una familia grande.", "translationUk": "Мене звати Софія, і в мене велика родина." },
+        { "speaker": "A", "spanish": "Mi padre se llama Andrés y tiene cincuenta años.", "translationUk": "Мого батька звати Андрес, йому п’ятдесят років." },
+        { "speaker": "A", "spanish": "Mi madre trabaja en un hospital.", "translationUk": "Моя мама працює в лікарні." },
+        { "speaker": "A", "spanish": "Tengo dos hermanos y una hermana pequeña.", "translationUk": "У мене два брати й маленька сестра." },
+        { "speaker": "A", "spanish": "Mi hermano mayor vive en Valencia con su mujer.", "translationUk": "Мій старший брат живе у Валенсії зі своєю дружиною." },
+        { "speaker": "A", "spanish": "Mi abuela tiene ochenta años y vive con nosotros.", "translationUk": "Моїй бабусі вісімдесят років, і вона живе з нами." },
+        { "speaker": "A", "spanish": "Los domingos comemos todos juntos en casa.", "translationUk": "Щонеділі ми всі обідаємо разом удома." },
+        { "speaker": "A", "spanish": "A mi abuela le gusta cocinar paella.", "translationUk": "Моя бабуся любить готувати паелью." },
+        { "speaker": "A", "spanish": "Yo quiero mucho a mi familia.", "translationUk": "Я дуже люблю свою родину." }
+      ],
+      "keyWords": [
+        { "spanish": "la familia", "translationUk": "родина" },
+        { "spanish": "el padre", "translationUk": "батько" },
+        { "spanish": "la madre", "translationUk": "мати" },
+        { "spanish": "los hermanos", "translationUk": "брати й сестри" },
+        { "spanish": "la abuela", "translationUk": "бабуся" },
+        { "spanish": "mayor", "translationUk": "старший" },
+        { "spanish": "juntos", "translationUk": "разом" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Де працює мама Софії?",
+          "options": ["En un hospital", "En un colegio", "En una tienda"],
+          "correctIndex": 0,
+          "explanationUk": "У розповіді сказано «Mi madre trabaja en un hospital»."
+        },
+        {
+          "questionUk": "Скільки років бабусі?",
+          "options": ["Sesenta", "Setenta", "Ochenta"],
+          "correctIndex": 2,
+          "explanationUk": "Софія каже «Mi abuela tiene ochenta años»."
+        },
+        {
+          "questionUk": "Що любить робити бабуся?",
+          "options": ["Leer libros", "Cocinar paella", "Ver la tele"],
+          "correctIndex": 1,
+          "explanationUk": "Звучить речення «A mi abuela le gusta cocinar paella»."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_004",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "titleEs": "En la cafetería",
+      "titleUk": "У кав’ярні",
+      "kind": "dialogue",
+      "orderIndex": 4,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenos días. ¿Qué va a tomar?", "translationUk": "Доброго ранку. Що будете замовляти?" },
+        { "speaker": "B", "spanish": "Un café con leche, por favor.", "translationUk": "Каву з молоком, будь ласка." },
+        { "speaker": "A", "spanish": "¿Quiere también algo de comer?", "translationUk": "Бажаєте чогось поїсти?" },
+        { "speaker": "B", "spanish": "Sí, una tostada con tomate.", "translationUk": "Так, тост із томатом." },
+        { "speaker": "A", "spanish": "¿Desea beber algo más, por favor?", "translationUk": "А щось іще випити, будь ласка?" },
+        { "speaker": "B", "spanish": "Un zumo de naranja, gracias.", "translationUk": "Апельсиновий сік, дякую." },
+        { "speaker": "A", "spanish": "Muy bien. Son cuatro euros.", "translationUk": "Дуже добре. З вас чотири євро." },
+        { "speaker": "B", "spanish": "Aquí tiene. ¿Tienen wifi aquí?", "translationUk": "Ось, візьміть. У вас тут є вайфай?" },
+        { "speaker": "A", "spanish": "Sí, la clave está en la mesa.", "translationUk": "Так, пароль на столику." },
+        { "speaker": "B", "spanish": "Gracias. ¡Qué sitio tan agradable!", "translationUk": "Дякую. Яке приємне місце!" }
+      ],
+      "keyWords": [
+        { "spanish": "el café con leche", "translationUk": "кава з молоком" },
+        { "spanish": "la tostada", "translationUk": "тост" },
+        { "spanish": "el zumo de naranja", "translationUk": "апельсиновий сік" },
+        { "spanish": "¿qué va a tomar?", "translationUk": "що будете замовляти?" },
+        { "spanish": "la clave", "translationUk": "пароль" },
+        { "spanish": "la mesa", "translationUk": "столик" },
+        { "spanish": "agradable", "translationUk": "приємний" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що замовляє B випити?",
+          "options": ["Un café con leche y un zumo", "Solo un café solo", "Un té y un zumo"],
+          "correctIndex": 0,
+          "explanationUk": "B просить «Un café con leche» і додає «Un zumo de naranja»."
+        },
+        {
+          "questionUk": "Скільки коштує замовлення?",
+          "options": ["Tres euros", "Cuatro euros", "Cinco euros"],
+          "correctIndex": 1,
+          "explanationUk": "Офіціант каже «Son cuatro euros»."
+        },
+        {
+          "questionUk": "Де можна знайти пароль від вайфаю?",
+          "options": ["En la puerta", "En el menú", "En la mesa"],
+          "correctIndex": 2,
+          "explanationUk": "Відповідь така: «la clave está en la mesa» — пароль на столику."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_005",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "titleEs": "La vecina nueva",
+      "titleUk": "Нова сусідка",
+      "kind": "dialogue",
+      "orderIndex": 5,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Hola! ¿Eres la vecina nueva?", "translationUk": "Привіт! Ти нова сусідка?" },
+        { "speaker": "B", "spanish": "Sí, me llamo Iryna. Vivo en el tercero.", "translationUk": "Так, мене звати Ірина. Я живу на третьому поверсі." },
+        { "speaker": "A", "spanish": "Yo soy Carlos. Vivo aquí desde hace años.", "translationUk": "Я Карлос. Живу тут уже багато років." },
+        { "speaker": "B", "spanish": "Mi piso es pequeño, pero muy luminoso.", "translationUk": "Моя квартира маленька, але дуже світла." },
+        { "speaker": "A", "spanish": "¿Cuántas habitaciones tiene tu piso?", "translationUk": "Скільки кімнат у твоїй квартирі?" },
+        { "speaker": "B", "spanish": "Tiene dos habitaciones y una cocina grande.", "translationUk": "Дві кімнати й велика кухня." },
+        { "speaker": "A", "spanish": "¿Y tienes balcón o terraza?", "translationUk": "А балкон чи тераса є?" },
+        { "speaker": "B", "spanish": "Sí, hay un balcón pequeño.", "translationUk": "Так, є маленький балкон." },
+        { "speaker": "A", "spanish": "Mi piso es igual, pero sin ascensor.", "translationUk": "Моя квартира така сама, але без ліфта." },
+        { "speaker": "B", "spanish": "¡Qué bien! El nuestro tiene ascensor.", "translationUk": "Як добре! У нашому будинку ліфт є." },
+        { "speaker": "A", "spanish": "Vale, nos vemos pronto en el portal.", "translationUk": "Гаразд, скоро побачимося в під’їзді." }
+      ],
+      "keyWords": [
+        { "spanish": "la vecina", "translationUk": "сусідка" },
+        { "spanish": "el tercero", "translationUk": "третій поверх" },
+        { "spanish": "luminoso", "translationUk": "світлий" },
+        { "spanish": "las habitaciones", "translationUk": "кімнати" },
+        { "spanish": "el balcón", "translationUk": "балкон" },
+        { "spanish": "el ascensor", "translationUk": "ліфт" },
+        { "spanish": "nos vemos", "translationUk": "побачимося" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "На якому поверсі живе Ірина?",
+          "options": ["En el primero", "En el segundo", "En el tercero"],
+          "correctIndex": 2,
+          "explanationUk": "Ірина каже «Vivo en el tercero» — на третьому поверсі."
+        },
+        {
+          "questionUk": "Скільки кімнат у квартирі Ірини?",
+          "options": ["Dos", "Tres", "Una"],
+          "correctIndex": 0,
+          "explanationUk": "Вона відповідає «Tiene dos habitaciones»."
+        },
+        {
+          "questionUk": "Чого немає в будинку Карлоса?",
+          "options": ["Balcón", "Ascensor", "Cocina"],
+          "correctIndex": 1,
+          "explanationUk": "Карлос каже «Mi piso es igual, pero sin ascensor» — без ліфта."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_006",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "titleEs": "Comprando ropa",
+      "titleUk": "Купуємо одяг",
+      "kind": "dialogue",
+      "orderIndex": 6,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenas tardes. ¿Puedo ayudarte en algo?", "translationUk": "Доброго дня. Можу вам чимось допомогти?" },
+        { "speaker": "B", "spanish": "Sí, busco una camisa azul.", "translationUk": "Так, я шукаю синю сорочку." },
+        { "speaker": "A", "spanish": "Muy bien. ¿Qué talla necesitas?", "translationUk": "Дуже добре. Який розмір тобі потрібен?" },
+        { "speaker": "B", "spanish": "Creo que uso la talla mediana.", "translationUk": "Здається, я ношу середній розмір." },
+        { "speaker": "A", "spanish": "Aquí tienes. El probador está allí.", "translationUk": "Ось, будь ласка. Примірочна он там." },
+        { "speaker": "B", "spanish": "Gracias. ¿Cuánto cuesta la camisa?", "translationUk": "Дякую. Скільки коштує сорочка?" },
+        { "speaker": "A", "spanish": "Veinticinco euros, pero hoy hay descuento.", "translationUk": "Двадцять п’ять євро, але сьогодні є знижка." },
+        { "speaker": "B", "spanish": "¡Perfecto! Entonces me la llevo.", "translationUk": "Чудово! Тоді я її беру." },
+        { "speaker": "A", "spanish": "¿Quieres pagar con tarjeta o en efectivo?", "translationUk": "Хочеш заплатити карткою чи готівкою?" },
+        { "speaker": "B", "spanish": "Sí, con tarjeta, muchas gracias.", "translationUk": "Так, карткою, дуже дякую." }
+      ],
+      "keyWords": [
+        { "spanish": "la camisa", "translationUk": "сорочка" },
+        { "spanish": "la talla", "translationUk": "розмір" },
+        { "spanish": "el probador", "translationUk": "примірочна" },
+        { "spanish": "el descuento", "translationUk": "знижка" },
+        { "spanish": "me la llevo", "translationUk": "я її беру" },
+        { "spanish": "pagar con tarjeta", "translationUk": "платити карткою" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що шукає B?",
+          "options": ["Una camisa azul", "Un pantalón negro", "Una camiseta blanca"],
+          "correctIndex": 0,
+          "explanationUk": "B каже «busco una camisa azul»."
+        },
+        {
+          "questionUk": "Який розмір потрібен B?",
+          "options": ["La talla pequeña", "La talla mediana", "La talla grande"],
+          "correctIndex": 1,
+          "explanationUk": "B відповідає «Creo que uso la talla mediana»."
+        },
+        {
+          "questionUk": "Як B хоче платити?",
+          "options": ["En efectivo", "Con el móvil", "Con tarjeta"],
+          "correctIndex": 2,
+          "explanationUk": "На пропозицію продавця B відповідає «Sí, con tarjeta»."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_007",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "titleEs": "¿Qué tiempo hace?",
+      "titleUk": "Яка сьогодні погода?",
+      "kind": "dialogue",
+      "orderIndex": 7,
+      "lines": [
+        { "speaker": "A", "spanish": "¿Qué tiempo hace hoy en Madrid?", "translationUk": "Яка сьогодні погода в Мадриді?" },
+        { "speaker": "B", "spanish": "Hace frío y llueve un poco.", "translationUk": "Холодно, і трохи дощить." },
+        { "speaker": "A", "spanish": "¡Qué pena! Quiero ir al parque.", "translationUk": "Як шкода! Я хочу піти в парк." },
+        { "speaker": "B", "spanish": "En primavera llueve mucho aquí.", "translationUk": "Навесні тут часто дощить." },
+        { "speaker": "A", "spanish": "¿Y qué tiempo hace en verano?", "translationUk": "А яка погода влітку?" },
+        { "speaker": "B", "spanish": "En verano hace mucho calor.", "translationUk": "Улітку дуже спекотно." },
+        { "speaker": "A", "spanish": "Prefiero el otoño, hace menos calor.", "translationUk": "Я більше люблю осінь, тоді не так спекотно." },
+        { "speaker": "B", "spanish": "Sí, pero los días son más cortos.", "translationUk": "Так, але дні коротші." },
+        { "speaker": "A", "spanish": "Voy a llevar un paraguas, porque llueve un poco.", "translationUk": "Я візьму парасольку, бо трохи дощить." },
+        { "speaker": "B", "spanish": "Buena idea. ¡Nos vemos luego!", "translationUk": "Гарна ідея. Побачимося пізніше!" }
+      ],
+      "keyWords": [
+        { "spanish": "¿qué tiempo hace?", "translationUk": "яка погода?" },
+        { "spanish": "hace frío", "translationUk": "холодно" },
+        { "spanish": "llueve", "translationUk": "дощить" },
+        { "spanish": "la primavera", "translationUk": "весна" },
+        { "spanish": "el verano", "translationUk": "літо" },
+        { "spanish": "el calor", "translationUk": "спека" },
+        { "spanish": "el paraguas", "translationUk": "парасолька" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Яка погода сьогодні в Мадриді?",
+          "options": ["Hace frío y llueve", "Hace sol y calor", "Nieva"],
+          "correctIndex": 0,
+          "explanationUk": "B каже «Hace frío y llueve un poco»."
+        },
+        {
+          "questionUk": "Яка погода в Мадриді влітку?",
+          "options": ["Hace mucho frío", "Hace mucho calor", "Llueve mucho"],
+          "correctIndex": 1,
+          "explanationUk": "У діалозі звучить «En verano hace mucho calor»."
+        },
+        {
+          "questionUk": "Що збирається взяти A?",
+          "options": ["Una chaqueta", "Un libro", "Un paraguas"],
+          "correctIndex": 2,
+          "explanationUk": "A каже «Voy a llevar un paraguas, porque llueve un poco» — бо на вулиці дощить."
+        }
+      ]
+    },
+    {
+      "id": "l_a1_008",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "titleEs": "Mis aficiones",
+      "titleUk": "Мої захоплення",
+      "kind": "story",
+      "orderIndex": 8,
+      "lines": [
+        { "speaker": "A", "spanish": "En mi tiempo libre hago muchas cosas.", "translationUk": "У вільний час я роблю багато чого." },
+        { "speaker": "A", "spanish": "Me gusta mucho leer novelas de misterio.", "translationUk": "Мені дуже подобається читати детективи." },
+        { "speaker": "A", "spanish": "Los martes voy a clases de guitarra.", "translationUk": "Щовівторка я ходжу на уроки гітари." },
+        { "speaker": "A", "spanish": "También me gusta cocinar con mi hermana.", "translationUk": "Мені також подобається готувати разом із сестрою." },
+        { "speaker": "A", "spanish": "Los sábados juego al fútbol con mis amigos.", "translationUk": "Щосуботи я граю у футбол із друзями." },
+        { "speaker": "A", "spanish": "No me gusta nada ver la televisión.", "translationUk": "Я зовсім не люблю дивитися телевізор." },
+        { "speaker": "A", "spanish": "Prefiero escuchar música o dar un paseo.", "translationUk": "Я волію слухати музику або прогулятися." },
+        { "speaker": "A", "spanish": "En verano voy a nadar a la piscina.", "translationUk": "Улітку я ходжу плавати в басейн." },
+        { "speaker": "A", "spanish": "¿Y a ti qué te gusta hacer?", "translationUk": "А що любиш робити ти?" }
+      ],
+      "keyWords": [
+        { "spanish": "el tiempo libre", "translationUk": "вільний час" },
+        { "spanish": "me gusta", "translationUk": "мені подобається" },
+        { "spanish": "las clases de guitarra", "translationUk": "уроки гітари" },
+        { "spanish": "jugar al fútbol", "translationUk": "грати у футбол" },
+        { "spanish": "dar un paseo", "translationUk": "прогулятися" },
+        { "spanish": "la piscina", "translationUk": "басейн" },
+        { "spanish": "escuchar música", "translationUk": "слухати музику" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що розповідач робить у вівторок?",
+          "options": ["Va a clases de guitarra", "Juega al fútbol", "Va a la piscina"],
+          "correctIndex": 0,
+          "explanationUk": "Звучить речення «Los martes voy a clases de guitarra»."
+        },
+        {
+          "questionUk": "Що розповідач зовсім не любить?",
+          "options": ["Leer novelas", "Ver la televisión", "Cocinar"],
+          "correctIndex": 1,
+          "explanationUk": "Він каже «No me gusta nada ver la televisión»."
+        },
+        {
+          "questionUk": "Де він плаває влітку?",
+          "options": ["En el mar", "En el río", "En la piscina"],
+          "correctIndex": 2,
+          "explanationUk": "Останні репліки: «En verano voy a nadar a la piscina»."
+        }
+      ]
+    }
+  ]
+}

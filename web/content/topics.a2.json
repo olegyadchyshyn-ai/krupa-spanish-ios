@@ -1,0 +1,105 @@
+{
+  "contentVersion": 1,
+  "topics": [
+    {
+      "id": "t_a2_restaurant",
+      "level": "A2",
+      "titleEs": "En el restaurante",
+      "titleUk": "У ресторані",
+      "descriptionUk": "Замовляємо столик, читаємо меню, просимо рахунок і ввічливо скаржимося, якщо щось не так.",
+      "iconKey": "restaurant",
+      "orderIndex": 1,
+      "grammarTags": ["polite", "pronouns_object", "por_para", "numbers"]
+    },
+    {
+      "id": "t_a2_transport",
+      "level": "A2",
+      "titleEs": "Transporte y billetes",
+      "titleUk": "Транспорт і квитки",
+      "descriptionUk": "Купуємо квитки на метро й потяг, питаємо про платформу, пересадки та запізнення.",
+      "iconKey": "transport",
+      "orderIndex": 2,
+      "grammarTags": ["ir_a", "time_expressions", "prepositions", "question_words"]
+    },
+    {
+      "id": "t_a2_travel",
+      "level": "A2",
+      "titleEs": "Viajes y vacaciones",
+      "titleUk": "Подорожі та відпустка",
+      "descriptionUk": "Бронюємо готель, проходимо аеропорт, здаємо багаж і розповідаємо, як минула подорож.",
+      "iconKey": "travel",
+      "orderIndex": 3,
+      "grammarTags": ["preterite", "future", "comparatives", "prepositions"]
+    },
+    {
+      "id": "t_a2_health",
+      "level": "A2",
+      "titleEs": "La salud y el cuerpo",
+      "titleUk": "Здоров'я і тіло",
+      "descriptionUk": "Описуємо симптоми лікарю, купуємо ліки в аптеці й даємо поради, як почуватися краще.",
+      "iconKey": "health",
+      "orderIndex": 4,
+      "grammarTags": ["gustar", "imperative", "reflexive", "ser_estar"]
+    },
+    {
+      "id": "t_a2_work",
+      "level": "A2",
+      "titleEs": "El trabajo y los estudios",
+      "titleUk": "Робота й навчання",
+      "descriptionUk": "Розповідаємо про професію й досвід, проходимо співбесіду, говоримо про курси та іспити.",
+      "iconKey": "work",
+      "orderIndex": 5,
+      "grammarTags": ["perfect", "preterite", "por_para", "comparatives"]
+    },
+    {
+      "id": "t_a2_daily_errands",
+      "level": "A2",
+      "titleEs": "Gestiones del día a día",
+      "titleUk": "Побутові справи",
+      "descriptionUk": "Пошта, банк, документи, черги й домовленості — усе, що треба зробити в місті.",
+      "iconKey": "errands",
+      "orderIndex": 6,
+      "grammarTags": ["polite", "time_expressions", "pronouns_object", "preterite"]
+    },
+    {
+      "id": "t_a2_past_experiences",
+      "level": "A2",
+      "titleEs": "Experiencias pasadas",
+      "titleUk": "Минулий досвід",
+      "descriptionUk": "Розповідаємо, що сталося минулого разу: pretérito indefinido та imperfecto для опису фону.",
+      "iconKey": "past",
+      "orderIndex": 7,
+      "grammarTags": ["preterite", "imperfect", "time_expressions", "perfect"]
+    },
+    {
+      "id": "t_a2_city_directions",
+      "level": "A2",
+      "titleEs": "La ciudad y las direcciones",
+      "titleUk": "Місто й напрямки",
+      "descriptionUk": "Питаємо дорогу, пояснюємо, як дійти, називаємо вулиці, площі та орієнтири.",
+      "iconKey": "city",
+      "orderIndex": 8,
+      "grammarTags": ["imperative", "prepositions", "hay", "question_words"]
+    },
+    {
+      "id": "t_a2_opinions",
+      "level": "A2",
+      "titleEs": "Opiniones y planes",
+      "titleUk": "Думки й плани",
+      "descriptionUk": "Висловлюємо думку, погоджуємося й не погоджуємося, пропонуємо плани та домовляємося.",
+      "iconKey": "opinion",
+      "orderIndex": 9,
+      "grammarTags": ["gustar", "conditional", "ir_a", "comparatives"]
+    },
+    {
+      "id": "t_a2_technology",
+      "level": "A2",
+      "titleEs": "Tecnología y comunicación",
+      "titleUk": "Технології та спілкування",
+      "descriptionUk": "Мобільний, інтернет, повідомлення, соцмережі та дрібні технічні проблеми.",
+      "iconKey": "tech",
+      "orderIndex": 10,
+      "grammarTags": ["present_irregular", "pronouns_object", "perfect", "reflexive"]
+    }
+  ]
+}

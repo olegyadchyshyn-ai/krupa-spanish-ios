@@ -152,7 +152,14 @@ enum ContentValidator {
             issues.append("Слів без перекладу: \(emptyTranslations.count).")
         }
 
-        let emptyAnswers = content.exercises.filter { $0.answerEs.trimmingCharacters(in: .whitespaces).isEmpty }
+        // У вправах «ES → UK» відповідь лежить в `answerUk`, а `answerEs` порожнє —
+        // це особливість контенту, а не дефект.
+        let emptyAnswers = content.exercises.filter { exercise in
+            if exercise.kind == .translationEsUk {
+                return exercise.answerUk.trimmingCharacters(in: .whitespaces).isEmpty
+            }
+            return exercise.answerEs.trimmingCharacters(in: .whitespaces).isEmpty
+        }
         if !emptyAnswers.isEmpty {
             issues.append("Вправ без правильної відповіді: \(emptyAnswers.count).")
         }

@@ -1,0 +1,233 @@
+{
+  "contentVersion": 1,
+  "grammar": [
+    {
+      "id": "g_a2_preterite",
+      "tag": "preterite",
+      "level": "A2",
+      "titleEs": "El pretérito indefinido",
+      "titleUk": "Pretérito indefinido: минуле завершене",
+      "explanationUk": "Українська мова розрізняє минулі дії не часом, а видом: «читав» і «прочитав». Іспанська має для цього окремі часові форми, і найголовніша з них — pretérito indefinido. Ним кажуть про те, що сталося й завершилося: «Ayer trabajé mucho». Логіка проста: мовець дивиться на подію як на закриту сторінку, тому часто поруч стоять слова-маркери: ayer, la semana pasada, en 2019, el año pasado. Для українця головна пастка — звичка обирати форму за видом дієслова. В іспанській вибір залежить від того, як мовець подає подію: як завершений факт чи як процес. І ще: наголоси у формах «я» і «він» розрізняють особу без займенника — hablé і habló звучать по-різному лише завдяки рисці.",
+      "patternUk": "-ar: -é, -aste, -ó, -amos, -asteis, -aron. -er / -ir: -í, -iste, -ió, -imos, -isteis, -ieron. Маркери: ayer, anoche, la semana pasada, en 2019.",
+      "examples": [
+        { "spanish": "Ayer trabajé hasta las ocho.", "translationUk": "Учора я працював до восьмої.", "noteUk": "Учора — закритий проміжок, тому indefinido." },
+        { "spanish": "El año pasado viajamos a Granada.", "translationUk": "Минулого року ми їздили до Гранади.", "noteUk": "Форма «ми» в -ar і -ir дієсловах збігається з теперішнім часом — контекст підказує час." },
+        { "spanish": "¿Comiste paella en Valencia?", "translationUk": "Ти їв паелью у Валенсії?", "noteUk": "Питання про конкретний випадок у минулому." },
+        { "spanish": "Escribió una carta muy larga.", "translationUk": "Він написав дуже довгого листа.", "noteUk": "Рисочка в escribió показує третю особу однини." },
+        { "spanish": "Nací en Kyiv y viví allí diez años.", "translationUk": "Я народився в Києві й прожив там десять років.", "noteUk": "nacer у минулому майже завжди стоїть у цій формі." }
+      ],
+      "commonMistakeUk": "Україномовні або ставлять наголос не на той склад («trabaje» замість «trabajé»), або плутають першу й третю особу. Ще одна помилка — уживати indefinido для опису звичок у минулому: «Todos los días fui al gimnasio» замість форми, яка описує регулярність.",
+      "tipForUkSpeakersUk": "Уявіть фотографію: indefinido — це знімок завершеної миті. Якщо перед очима ціла стрічка подій, а не один кадр, імовірно, потрібен інший минулий час.",
+      "orderIndex": 10
+    },
+    {
+      "id": "g_a2_imperfect",
+      "tag": "imperfect",
+      "level": "A2",
+      "titleEs": "El pretérito imperfecto",
+      "titleUk": "Imperfecto: опис і звичка в минулому",
+      "explanationUk": "Якщо indefinido — це фотографія, то imperfecto — це відеозапис. Ним не повідомляють про подію, а малюють тло: якою була погода, скільки людині було років, що вона робила щодня. «Cuando era niño, jugaba en la calle» — опис дитинства, а не перелік окремих випадків. Порівняйте: «Ayer jugué al fútbol» — конкретний матч, і «Cuando era niño, jugaba al fútbol» — звична справа того часу. Українська мова передає цю різницю видом дієслова, іспанська — вибором часу. Marker-слова теж допомагають: siempre, normalmente, todos los días, mientras, antes тягнуть за собою imperfecto. А ще лише цей час описує одночасні дії: «Mientras leía, sonó el teléfono» — тло плюс подія.",
+      "patternUk": "-ar: -aba, -abas, -aba, -ábamos, -abais, -aban. -er / -ir: -ía, -ías, -ía, -íamos, -íais, -ían. Маркери: siempre, antes, todos los días, mientras, cuando era niño.",
+      "examples": [
+        { "spanish": "Cuando era pequeño, vivíamos en el campo.", "translationUk": "Коли я був малий, ми жили в селі.", "noteUk": "Опис тривалого стану в минулому — типовий imperfecto." },
+        { "spanish": "Todos los veranos íbamos a la playa.", "translationUk": "Щоліта ми їздили на море.", "noteUk": "Регулярна дія в минулому, а не одна поїздка." },
+        { "spanish": "Mientras cenábamos, empezó a llover.", "translationUk": "Поки ми вечеряли, почався дощ.", "noteUk": "Тло — imperfecto, раптова подія — indefinido." },
+        { "spanish": "La casa era grande y tenía un jardín enorme.", "translationUk": "Дім був великий, і при ньому був величезний сад.", "noteUk": "Опис предметів у минулому завжди в imperfecto." },
+        { "spanish": "Eran las tres de la mañana.", "translationUk": "Була третя година ночі.", "noteUk": "Час у минулому описують саме так." }
+      ],
+      "commonMistakeUk": "Україномовні уникають imperfecto, бо він не має прямого відповідника в рідній мові, і розповідають усе через indefinido: «Cuando era niño, jugué...». Через це зникає тло, і розповідь звучить як список фактів без атмосфери.",
+      "tipForUkSpeakersUk": "Запитайте: це подія, яка сталася один раз, чи те, як було завжди? Один раз — indefinido, «так було постійно» — imperfecto. Опис погоди, віку, зовнішності й настрою майже завжди йде в imperfecto.",
+      "orderIndex": 20
+    },
+    {
+      "id": "g_a2_perfect",
+      "tag": "perfect",
+      "level": "A2",
+      "titleEs": "El pretérito perfecto",
+      "titleUk": "He hecho: минуле, пов'язане з теперішнім",
+      "explanationUk": "Іспанська має ще один минулий час, який для українця виглядає зайвим, але насправді дуже зручний. Він будується з дієслова haber і дієприкметника: he hecho, has comido, hemos visto. Сенс такий: дія вже відбулася, але її наслідок відчутний зараз, у межах періоду, який триває. «Hoy he trabajado mucho» — день ще не закінчився, тому результат стосується теперішнього. «Esta semana he visto tres películas» — тиждень триває. А якщо період закритий, потрібен уже indefinido: «Ayer trabajé mucho». Саме тому в Іспанії кажуть «¿Has comido?» — питання про теперішній стан «ти ситий?», а не про подію в минулому. Ця конструкція завжди пов'язана з теперішнім моментом.",
+      "patternUk": "he / has / ha / hemos / habéis / han + дієприкметник (-ado, -ido). Працює з hoy, esta semana, ya, todavía no, alguna vez, este año.",
+      "examples": [
+        { "spanish": "Hoy he desayunado muy tarde.", "translationUk": "Сьогодні я поснідав дуже пізно.", "noteUk": "День ще триває, тому perfecto, а не indefinido." },
+        { "spanish": "¿Has estado alguna vez en Toledo?", "translationUk": "Ти коли-небудь був у Толедо?", "noteUk": "«Колись у житті» — типовий випадок для цього часу." },
+        { "spanish": "Todavía no hemos terminado el trabajo.", "translationUk": "Ми ще не закінчили роботу.", "noteUk": "Todavía no майже завжди тягне за собою perfecto." },
+        { "spanish": "Esta semana he leído dos libros.", "translationUk": "Цього тижня я прочитав дві книжки.", "noteUk": "Тиждень не закінчився — період відкритий." },
+        { "spanish": "Ya hemos comido, gracias.", "translationUk": "Ми вже поїли, дякую.", "noteUk": "ya підкреслює, що результат важливий зараз." }
+      ],
+      "commonMistakeUk": "Україномовні кажуть «Hoy trabajé mucho» замість «he trabajado», бо переносять звичку вживати минулий час для всього, що вже сталося. Також плутають дієприкметники: «he escribido» замість «he escrito», «he rompido» замість «he roto».",
+      "tipForUkSpeakersUk": "Запитайте себе: чи цей період уже закрився? Якщо день, тиждень або рік іще триває — беріть he + дієприкметник. Якщо період минув — indefinido.",
+      "orderIndex": 30
+    },
+    {
+      "id": "g_a2_pronouns_object",
+      "tag": "pronouns_object",
+      "level": "A2",
+      "titleEs": "Los pronombres de objeto",
+      "titleUk": "Займенники-додатки lo / la / los / las / le / les",
+      "explanationUk": "В українській мові ми кажемо «Я бачу його», «Я даю йому книжку» — займенник змінює форму за відмінком. В іспанській система інша: є прямий додаток (кого? що? — lo, la, los, las) і непрямий (кому? — le, les). Найважливіше для українця: ці займенники стоять перед дієсловом, а не після нього. «Lo veo» — «Я його бачу». Коли в реченні є обидва додатки, першим іде той, кому (непрямий), а потім той, кого (прямий): «Me lo das». І цікава деталь: якщо обидва займенники починаються на l, другий змінюється на se: «Se lo doy» замість «Le lo doy». Ще одна особливість — непрямий додаток часто дублюють: «Le doy el libro a María».",
+      "patternUk": "Прямий: lo, la, los, las. Непрямий: me, te, le, nos, os, les. Порядок: спочатку непрямий, потім прямий. le + lo → se lo.",
+      "examples": [
+        { "spanish": "¿El libro? Lo tengo en casa.", "translationUk": "Книжка? Вона в мене вдома.", "noteUk": "lo заміняє el libro і стоїть перед дієсловом." },
+        { "spanish": "La película la vi ayer.", "translationUk": "Фільм я бачив учора.", "noteUk": "Додаток можна назвати словом і одночасно повторити займенником." },
+        { "spanish": "Le doy las llaves a mi vecino.", "translationUk": "Я даю ключі своєму сусідові.", "noteUk": "le вказує на того, кому дають; a mi vecino уточнює." },
+        { "spanish": "¿Me lo puedes explicar otra vez?", "translationUk": "Можеш пояснити мені це ще раз?", "noteUk": "Спочатку me (кому), потім lo (що)." },
+        { "spanish": "Se lo dije ayer.", "translationUk": "Я сказав йому це вчора.", "noteUk": "le + lo дає se lo — так звучить плавніше." }
+      ],
+      "commonMistakeUk": "Україномовні ставлять займенник після дієслова («Veo lo») і плутають рід: кажуть «lo casa» замість «la casa», бо в українській «дім» — чоловічого роду, а річ може бути жіночого роду в іспанській. Також забувають про заміну le + lo на se lo.",
+      "tipForUkSpeakersUk": "Запам'ятайте порядок «кому — що»: спершу людина, потім річ. І уникайте двох l поряд — іспанська їх не любить, тому le lo стає se lo.",
+      "orderIndex": 40
+    },
+    {
+      "id": "g_a2_por_para",
+      "tag": "por_para",
+      "level": "A2",
+      "titleEs": "Por y para",
+      "titleUk": "Por і para",
+      "explanationUk": "Обидва прийменники перекладаються українською однаково — «для», «за», «через», і саме тому вони так мучять. Насправді між ними чітке смислове розмежування. Para дивиться вперед: мета, призначення, отримувач, кінцевий термін. Por дивиться назад або крізь: причина, засіб, обмін, тривалість, рух приблизно. Порівняйте: «Este regalo es para ti» — подарунок призначений тобі; «Lo hice por ti» — я зробив це заради тебе. Українське «для» майже завжди відповідає para, а «через» — por. Але є й сталі звороти, які треба просто вивчити: por la mañana, por favor, por supuesto, para siempre. Найкорисніше питання для самоперевірки: куди я прямую — до мети чи від причини?",
+      "patternUk": "para + мета, отримувач, термін (para estudiar, para mí, para el lunes). por + причина, засіб, обмін, тривалість (por eso, por teléfono, por diez euros).",
+      "examples": [
+        { "spanish": "Estudio español para trabajar en España.", "translationUk": "Я вивчаю іспанську, щоб працювати в Іспанії.", "noteUk": "Мета — це завжди para." },
+        { "spanish": "Gracias por tu ayuda.", "translationUk": "Дякую за твою допомогу.", "noteUk": "Причина подяки — por; це сталий зворот." },
+        { "spanish": "Este libro es para mi hermana.", "translationUk": "Ця книжка для моєї сестри.", "noteUk": "Отримувач — para." },
+        { "spanish": "Viajamos por Andalucía dos semanas.", "translationUk": "Ми подорожували Андалусією два тижні.", "noteUk": "Рух без точної мети й тривалість — por." },
+        { "spanish": "Lo pagué por veinte euros.", "translationUk": "Я заплатив за це двадцять євро.", "noteUk": "Обмін, ціна — por." }
+      ],
+      "commonMistakeUk": "Україномовні вживають para там, де потрібен por, бо в українській обидва випадки передають словом «для»: кажуть «Gracias para tu ayuda» або «para eso no vino». Помилка виникає з прямого перекладу українських прийменників.",
+      "tipForUkSpeakersUk": "Питайте себе: це мета чи причина? Мета — para, причина — por. Ще мнемоніка: por сховався в слові «porqué» (причина), а para — у «para qué» (навіщо, з якою метою).",
+      "orderIndex": 50
+    },
+    {
+      "id": "g_a2_prepositions",
+      "tag": "prepositions",
+      "level": "A2",
+      "titleEs": "Preposiciones de lugar y dirección",
+      "titleUk": "Прийменники місця й напрямку",
+      "explanationUk": "Українська мова позначає простір відмінками: «у Києві», «до Києва», «з Києва». Іспанська не має відмінків, тому всю роботу виконують прийменники, і їх треба розрізняти за напрямком руху. En — «де»: «Estoy en casa». A — «куди»: «Voy a casa». De — «звідки» або «чий»: «Vengo de casa», «el coche de mi padre». Desde — «від, починаючи з» якоїсь точки, Hasta — «до»: «desde Madrid hasta Toledo». Далі йдуть прийменники положення: sobre (на), bajo (під), entre (між), detrás de (за), delante de (перед), cerca de (біля), lejos de (далеко від). Українцеві найважче запам'ятати, що місце й напрямок — це різні слова, а не одна форма з різними відмінками.",
+      "patternUk": "en — де; a — куди; de — звідки / чий; desde... hasta — від... до. Положення: sobre, bajo, entre, detrás de, delante de, cerca de, lejos de, al lado de.",
+      "examples": [
+        { "spanish": "Estoy en el trabajo.", "translationUk": "Я на роботі.", "noteUk": "Стале місце — en, навіть якщо це «на» роботі." },
+        { "spanish": "Voy a la playa mañana.", "translationUk": "Завтра я їду на пляж.", "noteUk": "Напрямок руху — a, а не en." },
+        { "spanish": "El tren va desde Madrid hasta Barcelona.", "translationUk": "Потяг іде з Мадрида до Барселони.", "noteUk": "desde і hasta позначають початок і кінець маршруту." },
+        { "spanish": "El gato está debajo de la mesa.", "translationUk": "Кіт під столом.", "noteUk": "Складений прийменник зберігає de перед іменником." },
+        { "spanish": "La farmacia está al lado del banco.", "translationUk": "Аптека поруч із банком.", "noteUk": "a + el = al, de + el = del — злиття обов'язкове." }
+      ],
+      "commonMistakeUk": "Україномовні плутають en і a: «Voy en casa» замість «Voy a casa». Ще одна часта помилка — забути de у складених прийменниках: «detrás la casa» замість «detrás de la casa», бо в українській ми кажемо просто «за домом».",
+      "tipForUkSpeakersUk": "Малюйте стрілку: якщо в реченні є рух до точки — a; якщо ви вже стоїте в точці — en; якщо вийшли з точки — de. А всі прийменники положення тримаються за de, як за гачок.",
+      "orderIndex": 60
+    },
+    {
+      "id": "g_a2_future",
+      "tag": "future",
+      "level": "A2",
+      "titleEs": "El futuro simple",
+      "titleUk": "Майбутній час",
+      "explanationUk": "Іспанський майбутній час на диво простий: закінчення приєднують не до кореня, а до повного інфінітива. «Hablar» плюс -é дає hablaré. Ніяких змін кореня, ніяких винятків у правильних дієсловах — усе однаково для -ar, -er та -ir. Проблема лише в наголосах: усі форми, крім «ми», мають риску, і без неї форма читається як інший час. Порівняйте: hablo («я говорю») і hablaré («я говоритиму»). У розмові іспанці частіше беруть простішу конструкцію ir a + інфінітив, а майбутній час лишають для письма, прогнозів і обіцянок. Але є випадки, де він незамінний: передбачення («Lloverá mañana») і припущення про теперішнє («Serán las cinco»).",
+      "patternUk": "інфінітив + -é, -ás, -á, -emos, -éis, -án. Особливі основи: tendr-, podr-, har-, dir-, querr-, vendr-, saldr-, pondr-.",
+      "examples": [
+        { "spanish": "Mañana hablaré con el médico.", "translationUk": "Завтра я поговорю з лікарем.", "noteUk": "Рисочка на -é обов'язкова, інакше це теперішній час." },
+        { "spanish": "Tendré tiempo la semana que viene.", "translationUk": "Наступного тижня в мене буде час.", "noteUk": "tener має основу tendr-, а не tener-." },
+        { "spanish": "¿Vendrás a la cena?", "translationUk": "Ти прийдеш на вечерю?", "noteUk": "venir дає основу vendr-." },
+        { "spanish": "Lloverá por la tarde.", "translationUk": "Після обіду буде дощ.", "noteUk": "Прогноз погоди — класичне поле для майбутнього часу." },
+        { "spanish": "Serán las ocho, más o menos.", "translationUk": "Зараз, мабуть, близько восьмої.", "noteUk": "Майбутній час передає не час, а припущення." }
+      ],
+      "commonMistakeUk": "Україномовні забувають рисочки й кажуть «hablare», «tendra», або будують майбутнє з правильним коренем: «teneré» замість «tendré», «haceré» замість «haré». Причина — звичка до регулярних форм і неуважність до наголосу.",
+      "tipForUkSpeakersUk": "Запам'ятайте: майбутній час приклеює закінчення до всього інфінітива, тому в слові чути повне «-ar», «-er», «-ir». Риска стоїть лише у формі «ми» — de hecho, це єдина форма без неї.",
+      "orderIndex": 70
+    },
+    {
+      "id": "g_a2_conditional",
+      "tag": "conditional",
+      "level": "A2",
+      "titleEs": "El condicional",
+      "titleUk": "Умовний спосіб для ввічливості",
+      "explanationUk": "Українська мова для ввічливості додає частку «б»: «Чи не могли б ви...», «Хотілося б...». Іспанська має для цього окрему дієслівну форму — condicional. Вона утворюється так само, як майбутній час, але з іншими закінченнями: hablaría, comería, viviría. І основи зберігають ті самі зміни: tendría, podría, haría, querría. Уживають цю форму у двох ситуаціях. Перша — пом'якшення прохання або бажання: «¿Podrías ayudarme?» звучить значно делікатніше, ніж «¿Puedes ayudarme?», і зовсім не грубо, як наказ. Друга — гіпотетичні ситуації: «Me gustaría vivir en España» — «Мені хотілося б жити в Іспанії». Разом із цією формою часто працює конструкція з si, яка описує нереальні умови.",
+      "patternUk": "інфінітив + -ía, -ías, -ía, -íamos, -íais, -ían. Ті самі особливі основи, що й у майбутньому: tendr-, podr-, har-, dir-, querr-.",
+      "examples": [
+        { "spanish": "¿Podrías repetirlo, por favor?", "translationUk": "Чи не міг би ти повторити, будь ласка?", "noteUk": "Condicional перетворює прохання на ввічливе питання." },
+        { "spanish": "Me gustaría un café solo.", "translationUk": "Я хотів би каву без молока.", "noteUk": "Формула ввічливого замовлення в барі." },
+        { "spanish": "Deberías descansar más.", "translationUk": "Тобі варто більше відпочивати.", "noteUk": "deberías — м'яка порада, а не вимога." },
+        { "spanish": "Yo, en tu lugar, hablaría con ella.", "translationUk": "Я на твоєму місці поговорив би з нею.", "noteUk": "Гіпотетична ситуація без реальної умови." },
+        { "spanish": "¿Le importaría cerrar la ventana?", "translationUk": "Ви не могли б зачинити вікно?", "noteUk": "Найввічливіша формула прохання до незнайомця." }
+      ],
+      "commonMistakeUk": "Україномовні вживають майбутній час замість умовного, коли хочуть бути ввічливими: «¿Podrás ayudarme?» звучить як питання про плани, а не як прохання. Ще одна помилка — додавати si до самої умовної форми замість правильного узгодження часів.",
+      "tipForUkSpeakersUk": "Проведіть паралель з українським «б»: де в українській реченні є «б», там в іспанській майже завжди condicional. Запам'ятайте три форми ввічливості: podría, me gustaría, deberías.",
+      "orderIndex": 80
+    },
+    {
+      "id": "g_a2_imperative",
+      "tag": "imperative",
+      "level": "A2",
+      "titleEs": "El imperativo",
+      "titleUk": "Наказовий спосіб (tú, vosotros)",
+      "explanationUk": "Наказовий спосіб в іспанській несподівано має різні форми для ствердження й заперечення. Стверджувальний наказ до «ти» збігається з третьою особою теперішнього часу: «¡Habla!», «¡Come!», «¡Escribe!». А заперечний наказ бере іншу форму, яка виглядає як -es, -as: «¡No hables!», «¡No comas!». Для «ви» (vosotros) усе простіше: замініть -r інфінітива на -d — hablad, comed, vivid; заперечення додає -is: no habléis. Ще одна важлива річ — займенники. У стверджувальному наказі вони приєднуються до дієслова ззаду й часто вимагають рисочки: «Dime», «Levántate». У заперечному — стоять попереду, як завжди: «No me lo digas».",
+      "patternUk": "tú: ¡habla! / ¡no hables! vosotros: ¡hablad! / ¡no habléis! Займенник у стверджувальній формі — ззаду (dime, siéntate), у заперечній — спереду (no me digas).",
+      "examples": [
+        { "spanish": "¡Habla más despacio, por favor!", "translationUk": "Говори повільніше, будь ласка.", "noteUk": "Стверджувальний наказ до «ти» має форму habla; знаки ¡...! підкреслюють наказ." },
+        { "spanish": "No hables tan rápido.", "translationUk": "Не говори так швидко.", "noteUk": "Заперечний наказ змінює закінчення на -es." },
+        { "spanish": "Venid a las ocho.", "translationUk": "Приходьте о восьмій.", "noteUk": "Форма для vosotros, типово іспанська." },
+        { "spanish": "Dime la verdad.", "translationUk": "Скажи мені правду.", "noteUk": "Займенник me приєднали до дієслова в кінці." },
+        { "spanish": "No te preocupes.", "translationUk": "Не хвилюйся.", "noteUk": "У заперечній формі займенник стоїть перед дієсловом." }
+      ],
+      "commonMistakeUk": "Україномовні плутають наказ із теперішнім часом: кажуть «Tú hablas más despacio» замість «Habla». Також приєднують займенник у заперечному реченні («No dímelo») або забувають рисочки у формах на кшталт levántate й siéntate.",
+      "tipForUkSpeakersUk": "Просте правило: у наказі займенник біжить за дієсловом, лише коли наказ стверджувальний. Щойно з'являється no — займенник повертається на своє звичне місце перед дієсловом.",
+      "orderIndex": 90
+    },
+    {
+      "id": "g_a2_time_expressions",
+      "tag": "time_expressions",
+      "level": "A2",
+      "titleEs": "Hace, desde, dentro de",
+      "titleUk": "Час і дати: складніші випадки (hace, desde, dentro de)",
+      "explanationUk": "Коли йдеться не про годину, а про проміжки часу, іспанська стає дуже точною. Українське «два роки тому» передають через hace: «Hace dos años viví en Valencia» — дія в минулому. Але якщо дія почалася в минулому й триває досі, конструкція змінюється: «Vivo aquí desde hace dos años» — живе з того часу й досі, тому дієслово в теперішньому часі. Це найбільша пастка для українця: ми скажемо «я живу тут два роки» і не помітимо, що іспанська вимагає теперішнього часу там, де логіка підказує минулий. Desde вказує на точку початку, hasta — на кінець, dentro de — на майбутній момент: «dentro de una hora» — «за годину».",
+      "patternUk": "hace + проміжок — дія в минулому (hace dos años). desde hace + проміжок — почалося в минулому й триває (теперішній час). desde... hasta — від... до. dentro de + проміжок — за (у майбутньому).",
+      "examples": [
+        { "spanish": "Hace tres años viví en Sevilla.", "translationUk": "Три роки тому я жив у Севільї.", "noteUk": "Дія завершилася, тому минулий час." },
+        { "spanish": "Estudio español desde hace dos años.", "translationUk": "Я вивчаю іспанську вже два роки.", "noteUk": "Почав два роки тому й продовжую — дієслово в теперішньому часі." },
+        { "spanish": "Trabajo aquí desde 2020.", "translationUk": "Я працюю тут із 2020 року.", "noteUk": "Desde з конкретним роком, без hace." },
+        { "spanish": "La tienda está abierta desde las nueve hasta las ocho.", "translationUk": "Крамниця відчинена з дев'ятої до восьмої.", "noteUk": "Пара desde... hasta описує межі проміжку." },
+        { "spanish": "Llamo dentro de media hora.", "translationUk": "Я зателефоную за пів години.", "noteUk": "dentro de дивиться в майбутнє." }
+      ],
+      "commonMistakeUk": "Найчастіше україномовні кажуть «Vivo aquí hace dos años», змішуючи дві конструкції. Також уживають por замість desde («Trabajo aquí por dos años») або переводять «за годину» як «en una hora» — хоча правильна форма для майбутнього проміжку — dentro de.",
+      "tipForUkSpeakersUk": "Тримайте три стрілки: desde — «з якого моменту», hace — «скільки тому», dentro de — «через скільки». Якщо дія ще триває, іспанське дієслово стоїть у теперішньому часі — це найголовніше правило теми.",
+      "orderIndex": 100
+    },
+    {
+      "id": "g_a2_word_order",
+      "tag": "word_order",
+      "level": "A2",
+      "titleEs": "El orden en preguntas y negaciones",
+      "titleUk": "Порядок слів у питальних і заперечних реченнях",
+      "explanationUk": "В англійській питання вимагає перестановки слів, і багато українців переносять цю звичку на іспанську. Насправді іспанське питання майже не змінює порядок слів — воно лише ставить питальне слово спереду й додає знаки ¿...?. «¿Tu hermano vive aquí?» звучить абсолютно нормально, як і «¿Vive aquí tu hermano?». Різниця лише в наголосі: у першому випадку ми питаємо про факт, у другому — уточнюємо, хто саме. У запереченнях свобода ще більша: no стоїть перед дієсловом, а підмет може бути до або після нього. Єдине, що залишається незмінним, — займенники-додатки й заперечні слова: вони тримаються своїх місць, як приклеєні.",
+      "patternUk": "Питання: ¿ + питальне слово + дієслово + ...? Підмет можна перенести в кінець для уточнення. Заперечення: no + дієслово, підмет у будь-якому боці, додатки — завжди перед дієсловом.",
+      "examples": [
+        { "spanish": "¿Vive aquí tu hermano?", "translationUk": "Твій брат тут живе?", "noteUk": "Підмет у кінці — іспанська не вважає це порушенням." },
+        { "spanish": "¿Por qué no me lo dijiste antes?", "translationUk": "Чому ти не сказав мені цього раніше?", "noteUk": "Уся службова зв'язка йде суцільно: no, потім me, потім lo, і аж тоді дієслово." },
+        { "spanish": "No lo sé, lo siento.", "translationUk": "Я цього не знаю, вибач.", "noteUk": "Займенник lo незмінно стоїть між no і дієсловом." },
+        { "spanish": "A mí no me gusta el pescado.", "translationUk": "Мені не подобається риба.", "noteUk": "Дублювання a mí підсилює заперечення." },
+        { "spanish": "Nunca he visto nada igual.", "translationUk": "Я ніколи не бачив нічого подібного.", "noteUk": "Nunca на першому місці дозволяє обійтися без no." }
+      ],
+      "commonMistakeUk": "Україномовні за звичкою переставляють підмет і дієслово, наче в англійській, і будують питальні конструкції зі штучним помічником. Друга часта помилка — поставити no після дієслова: «Veo no» замість «No veo», бо в українській «не» справді стоїть перед дієсловом, але порядок слів у нас вільніший і рука сама тягне слово в кінець.",
+      "tipForUkSpeakersUk": "Запам'ятайте непорушний блок: no + займенник + дієслово. Він працює як одне слово, і жодне інше слово не має права вклинитися всередину.",
+      "orderIndex": 110
+    },
+    {
+      "id": "g_a2_polite",
+      "tag": "polite",
+      "level": "A2",
+      "titleEs": "La cortesía avanzada",
+      "titleUk": "Ввічливі прохання й пом'якшення",
+      "explanationUk": "Іспанська ввічливість тримається не на словах, а на граматиці. Пряме «Quiero un café» звучить для носія майже як вимога. Щоб пом'якшити прохання, іспанці роблять три речі. Перше — беруть умовний спосіб: «Me gustaría», «Querría», «Podrías». Друге — оформлюють усе як питання, навіть якщо це наказ: «¿Me pones un café?» Третє — додають слова-пом'якшувачі на кшталт quizá, un poco, si no te importa. І четверте — замінюють наказовий спосіб на запитання про можливість: «¿Se puede?» замість «Déjeme pasar». Українська пом'якшує частками «будь ласка», «чи не міг би», іспанська — вибором дієслівної форми. А ще в Іспанії ввічливість часто переплітається з теплотою: звертання cariño, hombre, mujer звучать не фамільярно, а приязно.",
+      "patternUk": "Хочете ввічливо — питайте, а не наказуйте. Me gustaría / querría / podría + інфінітив. ¿Te importa si...? ¿Sería posible...? un poco, quizá — для пом'якшення.",
+      "examples": [
+        { "spanish": "Me gustaría reservar una mesa para dos.", "translationUk": "Я хотів би забронювати столик на двох.", "noteUk": "Стандартна ввічлива формула в ресторані." },
+        { "spanish": "¿Te importa si abro la ventana?", "translationUk": "Ти не проти, якщо я відчиню вікно?", "noteUk": "Питання про згоду замість прямого дозволу." },
+        { "spanish": "¿Sería posible cambiar la reserva?", "translationUk": "Чи можна було б змінити бронювання?", "noteUk": "Condicional плюс безособова форма — максимум делікатності." },
+        { "spanish": "Perdone, ¿me pone un café con leche?", "translationUk": "Вибачте, можна мені каву з молоком?", "noteUk": "Дієслово у формі третьої особи — звертання до офіціанта на usted." },
+        { "spanish": "Muchísimas gracias, ha sido muy amable.", "translationUk": "Дуже дякую, ви були дуже люб'язні.", "noteUk": "Підсилена подяка після послуги — звична норма." }
+      ],
+      "commonMistakeUk": "Україномовні переносять звичку вживати наказовий спосіб із «будь ласка» й кажуть «Dame un café, por favor» або «Quiero agua». Граматично це правильно, але звучить різко. Ще одна помилка — уживати tú з незнайомою людиною похилого віку.",
+      "tipForUkSpeakersUk": "Запам'ятайте одну рятівну фразу для будь-якої ситуації: «Perdone, ¿podría...?» Вона ввічлива завжди й до всіх. А слово por favor додавайте навіть тоді, коли вам здається, що воно зайве.",
+      "orderIndex": 120
+    }
+  ]
+}
