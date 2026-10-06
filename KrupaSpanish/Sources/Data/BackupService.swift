@@ -151,7 +151,8 @@ final class BackupService: ObservableObject {
 
         switch mode {
         case .replace:
-            progress.importData(try Self.makeEncoder().encode(envelope.data))
+            // importData кидає виняток — позначаємо `try`.
+            try progress.importData(Self.makeEncoder().encode(envelope.data))
         case .merge:
             progress.merge(document: envelope.data)
         }
