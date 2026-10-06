@@ -28,21 +28,31 @@ jobs:
       - name: Install XcodeGen
         run: |
           set -euo pipefail
+
           if command -v xcodegen >/dev/null 2>&1; then
-            echo "XcodeGen вже встановлено"; xcodegen --version; exit 0
+            echo "XcodeGen вже встановлено"
+            xcodegen --version
+            exit 0
           fi
-          mkdir -p "$RUNNER_TEMP/xcodegen"
+
+          # Спершу пробуємо готовий бінарник (швидко, без Homebrew),
+          # інакше — встановлення через Homebrew.
           if curl -fsSL -o "$RUNNER_TEMP/xcodegen.zip" \
-              https://github.com/yonaskolb/XcodeGen/releases/latest/download/xcodegen.zip; then
-            unzip -q "$RUNNER_TEMP/xcodegen.zip" -d "$RUNNER_TEMP/xcodegen"
-            BIN_DIR="$(find "$RUNNER_TEMP/xcodegen" -type d -name bin | head -n 1)"
+               https://github.com/yonaskolb/XcodeGen/releases/latest/download/xcodegen.zip \
+             && unzip -q "$RUNNER_TEMP/xcodegen.zip" -d "$RUNNER_TEMP/xcodegen-tool"; then
+            # У архіві: xcodegen/bin/xcodegen і xcodegen/share/xcodegen —
+            # тека share мусить лежати поруч із bin, тому не робимо симлінк,
+            # а додаємо bin у PATH для наступних кроків.
+            BIN_DIR="$(find "$RUNNER_TEMP/xcodegen-tool" -type d -name bin | head -n 1)"
             chmod +x "$BIN_DIR/xcodegen"
             echo "$BIN_DIR" >> "$GITHUB_PATH"
+            # У поточному кроці PATH ще не оновлено — викликаємо за повним шляхом.
+            "$BIN_DIR/xcodegen" --version
           else
-            echo "Завантаження не вдалося — ставимо через Homebrew"
+            echo "Завантаження не вдалося — встановлюю через Homebrew"
             brew install xcodegen
+            xcodegen --version
           fi
-          xcodegen --version
 
       - name: Generate Xcode project
         working-directory: KrupaSpanish

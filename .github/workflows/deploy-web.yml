@@ -57,6 +57,10 @@ jobs:
   deploy:
     name: Публікація на GitHub Pages
     needs: verify
+    # GitHub Pages на безкоштовному плані працює лише для публічних
+    # репозиторіїв, тому для приватного репозиторію крок пропускається —
+    # workflow завершується успішно, а веб-версію можна розмістити в іншому місці.
+    if: ${{ github.event.repository.private == false }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

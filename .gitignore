@@ -21,3 +21,4 @@ _recon/
 xcuserdata/
 *.xcuserstate
 smoke-*.tmp.mjs
+.gh-setup.json
