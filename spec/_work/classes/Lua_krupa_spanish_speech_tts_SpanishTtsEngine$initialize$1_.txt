@@ -1,0 +1,81 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Lkotlin/coroutines/jvm/internal/ContinuationImpl;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;)
+      name          : 'label'
+      type          : 'I'
+      access        : 0x0000 ()
+    #1              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;)
+      name          : 'result'
+      type          : 'Ljava/lang/Object;'
+      access        : 0x1000 (SYNTHETIC)
+    #2              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;)
+      name          : 'this$0'
+      type          : 'Lua/krupa/spanish/speech/tts/SpanishTtsEngine;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/speech/tts/SpanishTtsEngine;Lkotlin/coroutines/Continuation;)V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 3
+      outs          : 2
+      insns size    : 6 16-bit code units
+009640:                                        |[009640] ua.krupa.spanish.speech.tts.SpanishTtsEngine$initialize$1.<init>:(Lua/krupa/spanish/speech/tts/SpanishTtsEngine;Lkotlin/coroutines/Continuation;)V
+009650: 5b01 4000                              |0000: iput-object v1, v0, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;.this$0:Lua/krupa/spanish/speech/tts/SpanishTtsEngine; // field@0040
+009654: 7020 e600 2000                         |0002: invoke-direct {v0, v2}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;.<init>:(Lkotlin/coroutines/Continuation;)V // method@00e6
+00965a: 0e00                                   |0005: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;)
+      name          : 'invokeSuspend'
+      type          : '(Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 2
+      insns size    : 19 16-bit code units
+009608:                                        |[009608] ua.krupa.spanish.speech.tts.SpanishTtsEngine$initialize$1.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object;
+009618: 5b23 3f00                              |0000: iput-object v3, v2, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;.result:Ljava/lang/Object; // field@003f
+00961c: 5220 3e00                              |0002: iget v0, v2, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;.label:I // field@003e
+009620: 1501 0080                              |0004: const/high16 v1, #int -2147483648 // #8000
+009624: b610                                   |0006: or-int/2addr v0, v1
+009626: 5920 3e00                              |0007: iput v0, v2, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;.label:I // field@003e
+00962a: 5420 4000                              |0009: iget-object v0, v2, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$1;.this$0:Lua/krupa/spanish/speech/tts/SpanishTtsEngine; // field@0040
+00962e: 0721                                   |000b: move-object v1, v2
+009630: 1f01 b900                              |000c: check-cast v1, Lkotlin/coroutines/Continuation; // type@00b9
+009634: 6e20 e601 1000                         |000e: invoke-virtual {v0, v1}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine;.initialize:(Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@01e6
+00963a: 0c00                                   |0011: move-result-object v0
+00963c: 1100                                   |0012: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 1213 (SpanishTtsEngine.kt)
+
+Class #14 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingMethod; value=initialize
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/coroutines/jvm/internal/SuspendLambda;" "Lkotlin/jvm/functions/Function2<" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Ljava/lang/Boolean;" ">;" "Ljava/lang/Object;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\n\n��\n\484850\485048\484951\n\484850\485148\484850\485048��\485150\4848500\484849*\4848500\484850H@" } d2={ "<anonymous>" "" "Lkotlinx/coroutines/CoroutineScope;" } k=3 mv={ 1 9 0 } xi=48
+  VISIBILITY_RUNTIME Lkotlin/coroutines/jvm/internal/DebugMetadata; c="ua.krupa.spanish.speech.tts.SpanishTtsEngine$initialize$4" f="SpanishTtsEngine.kt" i={ } l={ 52 } m="invokeSuspend" n={ } s={ }
+Annotations on field #65 '$deferred'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlinx/coroutines/CompletableDeferred<" "Ljava/lang/Boolean;" ">;" }
+Annotations on method #465 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlinx/coroutines/CompletableDeferred<" "Ljava/lang/Boolean;" ">;" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/speech/tts/SpanishTtsEngine$initialize$4;" ">;)V" }
+Annotations on method #466 'create'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/Object;" "Lkotlin/coroutines/Continuation<" "*>;)" "Lkotlin/coroutines/Continuation<" "Lkotlin/Unit;" ">;" }
+Annotations on method #468 'invoke'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Ljava/lang/Boolean;" ">;)" "Ljava/lang/Object;" }
+
+Class #14            -

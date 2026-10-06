@@ -1,0 +1,450 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ui/screens/ai/ChatMessage;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'fromUser'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'hintUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'spanish'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'timestamp'
+      type          : 'J'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+0102b8:                                        |[0102b8] ua.krupa.spanish.ui.screens.ai.ChatMessage.<clinit>:()V
+0102c8: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : '<init>'
+      type          : '(ZLjava/lang/String;Ljava/lang/String;J)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 7
+      ins           : 6
+      outs          : 2
+      insns size    : 22 16-bit code units
+0102cc:                                        |[0102cc] ua.krupa.spanish.ui.screens.ai.ChatMessage.<init>:(ZLjava/lang/String;Ljava/lang/String;J)V
+0102dc: 1a00 4f06                              |0000: const-string v0, "spanish" // string@064f
+0102e0: 7120 e000 0300                         |0002: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+0102e6: 1a00 9805                              |0005: const-string v0, "hintUk" // string@0598
+0102ea: 7120 e000 0400                         |0007: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+0102f0: 7010 9d00 0100                         |000a: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@009d
+0102f6: 5c12 c100                              |000d: iput-boolean v2, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+0102fa: 5b13 c300                              |000f: iput-object v3, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+0102fe: 5b14 c200                              |0011: iput-object v4, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+010302: 5a15 c400                              |0013: iput-wide v5, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010306: 0e00                                   |0015: return-void
+      catches       : (none)
+      positions     :
+        0x000a line=38
+        0x000d line=39
+        0x000f line=40
+        0x0011 line=41
+        0x0013 line=42
+        0x0015 line=38
+      locals        :
+        0x0000 - 0x0016 reg=1 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+        0x0000 - 0x0016 reg=2 fromUser Z
+        0x0000 - 0x0016 reg=3 spanish Ljava/lang/String;
+        0x0000 - 0x0016 reg=4 hintUk Ljava/lang/String;
+        0x0000 - 0x0016 reg=5 timestamp J
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : '<init>'
+      type          : '(ZLjava/lang/String;Ljava/lang/String;JILkotlin/jvm/internal/DefaultConstructorMarker;)V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 14
+      ins           : 8
+      outs          : 6
+      insns size    : 19 16-bit code units
+010308:                                        |[010308] ua.krupa.spanish.ui.screens.ai.ChatMessage.<init>:(ZLjava/lang/String;Ljava/lang/String;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+010318: dd0c 0c08                              |0000: and-int/lit8 v12, v12, #int 8 // #08
+01031c: 380c 0800                              |0002: if-eqz v12, 000a // +0008
+010320: 7100 ab00 0000                         |0004: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@00ab
+010326: 0b0a                                   |0007: move-result-wide v10
+010328: 04a4                                   |0008: move-wide v4, v10
+01032a: 2802                                   |0009: goto 000b // +0002
+01032c: 04a4                                   |000a: move-wide v4, v10
+01032e: 0760                                   |000b: move-object v0, v6
+010330: 0171                                   |000c: move v1, v7
+010332: 0782                                   |000d: move-object v2, v8
+010334: 0793                                   |000e: move-object v3, v9
+010336: 7606 4202 0000                         |000f: invoke-direct/range {v0, v1, v2, v3, v4, v5}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.<init>:(ZLjava/lang/String;Ljava/lang/String;J)V // method@0242
+01033c: 0e00                                   |0012: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=38
+        0x0004 line=42
+        0x000a line=38
+        0x0012 line=43
+      locals        :
+        0x0000 - 0x0013 reg=6 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+        0x0000 - 0x0013 reg=7 (null) Z
+        0x0000 - 0x0013 reg=8 (null) Ljava/lang/String;
+        0x0000 - 0x0013 reg=9 (null) Ljava/lang/String;
+        0x0000 - 0x0013 reg=10 (null) J
+        0x0000 - 0x0013 reg=12 (null) I
+        0x0000 - 0x0013 reg=13 (null) Lkotlin/jvm/internal/DefaultConstructorMarker;
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'copy$default'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/ChatMessage;ZLjava/lang/String;Ljava/lang/String;JILjava/lang/Object;)Lua/krupa/spanish/ui/screens/ai/ChatMessage;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 11
+      ins           : 8
+      outs          : 6
+      insns size    : 37 16-bit code units
+010220:                                        |[010220] ua.krupa.spanish.ui.screens.ai.ChatMessage.copy$default:(Lua/krupa/spanish/ui/screens/ai/ChatMessage;ZLjava/lang/String;Ljava/lang/String;JILjava/lang/Object;)Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+010230: dd0a 0901                              |0000: and-int/lit8 v10, v9, #int 1 // #01
+010234: 380a 0400                              |0002: if-eqz v10, 0006 // +0004
+010238: 5534 c100                              |0004: iget-boolean v4, v3, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+01023c: dd0a 0902                              |0006: and-int/lit8 v10, v9, #int 2 // #02
+010240: 380a 0400                              |0008: if-eqz v10, 000c // +0004
+010244: 5435 c300                              |000a: iget-object v5, v3, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+010248: 075a                                   |000c: move-object v10, v5
+01024a: dd05 0904                              |000d: and-int/lit8 v5, v9, #int 4 // #04
+01024e: 3805 0400                              |000f: if-eqz v5, 0013 // +0004
+010252: 5436 c200                              |0011: iget-object v6, v3, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+010256: 0760                                   |0013: move-object v0, v6
+010258: dd05 0908                              |0014: and-int/lit8 v5, v9, #int 8 // #08
+01025c: 3805 0400                              |0016: if-eqz v5, 001a // +0004
+010260: 5337 c400                              |0018: iget-wide v7, v3, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010264: 0471                                   |001a: move-wide v1, v7
+010266: 0735                                   |001b: move-object v5, v3
+010268: 0146                                   |001c: move v6, v4
+01026a: 07a7                                   |001d: move-object v7, v10
+01026c: 0708                                   |001e: move-object v8, v0
+01026e: 0419                                   |001f: move-wide v9, v1
+010270: 7406 4802 0500                         |0020: invoke-virtual/range {v5, v6, v7, v8, v9, v10}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.copy:(ZLjava/lang/String;Ljava/lang/String;J)Lua/krupa/spanish/ui/screens/ai/ChatMessage; // method@0248
+010276: 0c03                                   |0023: move-result-object v3
+010278: 1103                                   |0024: return-object v3
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'component1'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010004:                                        |[010004] ua.krupa.spanish.ui.screens.ai.ChatMessage.component1:()Z
+010014: 5510 c100                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+010018: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'component2'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010100:                                        |[010100] ua.krupa.spanish.ui.screens.ai.ChatMessage.component2:()Ljava/lang/String;
+010110: 5410 c300                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+010114: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'component3'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010118:                                        |[010118] ua.krupa.spanish.ui.screens.ai.ChatMessage.component3:()Ljava/lang/String;
+010128: 5410 c200                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+01012c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'component4'
+      type          : '()J'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0101f0:                                        |[0101f0] ua.krupa.spanish.ui.screens.ai.ChatMessage.component4:()J
+010200: 5320 c400                              |0000: iget-wide v0, v2, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010204: 1000                                   |0002: return-wide v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'copy'
+      type          : '(ZLjava/lang/String;Ljava/lang/String;J)Lua/krupa/spanish/ui/screens/ai/ChatMessage;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 13
+      ins           : 6
+      outs          : 6
+      insns size    : 21 16-bit code units
+01027c:                                        |[01027c] ua.krupa.spanish.ui.screens.ai.ChatMessage.copy:(ZLjava/lang/String;Ljava/lang/String;J)Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+01028c: 1a00 4f06                              |0000: const-string v0, "spanish" // string@064f
+010290: 7120 e000 0900                         |0002: invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+010296: 1a00 9805                              |0005: const-string v0, "hintUk" // string@0598
+01029a: 7120 e000 0a00                         |0007: invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+0102a0: 2200 1e01                              |000a: new-instance v0, Lua/krupa/spanish/ui/screens/ai/ChatMessage; // type@011e
+0102a4: 0701                                   |000c: move-object v1, v0
+0102a6: 0182                                   |000d: move v2, v8
+0102a8: 0793                                   |000e: move-object v3, v9
+0102aa: 07a4                                   |000f: move-object v4, v10
+0102ac: 04b5                                   |0010: move-wide v5, v11
+0102ae: 7606 4202 0100                         |0011: invoke-direct/range {v1, v2, v3, v4, v5, v6}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.<init>:(ZLjava/lang/String;Ljava/lang/String;J)V // method@0242
+0102b4: 1100                                   |0014: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'equals'
+      type          : '(Ljava/lang/Object;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 2
+      insns size    : 52 16-bit code units
+01001c:                                        |[01001c] ua.krupa.spanish.ui.screens.ai.ChatMessage.equals:(Ljava/lang/Object;)Z
+01002c: 1210                                   |0000: const/4 v0, #int 1 // #1
+01002e: 3387 0300                              |0001: if-ne v7, v8, 0004 // +0003
+010032: 0f00                                   |0003: return v0
+010034: 2081 1e01                              |0004: instance-of v1, v8, Lua/krupa/spanish/ui/screens/ai/ChatMessage; // type@011e
+010038: 1202                                   |0006: const/4 v2, #int 0 // #0
+01003a: 3901 0300                              |0007: if-nez v1, 000a // +0003
+01003e: 0f02                                   |0009: return v2
+010040: 0781                                   |000a: move-object v1, v8
+010042: 1f01 1e01                              |000b: check-cast v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage; // type@011e
+010046: 5573 c100                              |000d: iget-boolean v3, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+01004a: 5514 c100                              |000f: iget-boolean v4, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+01004e: 3243 0300                              |0011: if-eq v3, v4, 0014 // +0003
+010052: 0f02                                   |0013: return v2
+010054: 5473 c300                              |0014: iget-object v3, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+010058: 5414 c300                              |0016: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+01005c: 7120 de00 4300                         |0018: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+010062: 0a03                                   |001b: move-result v3
+010064: 3903 0300                              |001c: if-nez v3, 001f // +0003
+010068: 0f02                                   |001e: return v2
+01006a: 5473 c200                              |001f: iget-object v3, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+01006e: 5414 c200                              |0021: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+010072: 7120 de00 4300                         |0023: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+010078: 0a03                                   |0026: move-result v3
+01007a: 3903 0300                              |0027: if-nez v3, 002a // +0003
+01007e: 0f02                                   |0029: return v2
+010080: 5373 c400                              |002a: iget-wide v3, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010084: 5315 c400                              |002c: iget-wide v5, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010088: 3101 0305                              |002e: cmp-long v1, v3, v5
+01008c: 3801 0300                              |0030: if-eqz v1, 0033 // +0003
+010090: 0f02                                   |0032: return v2
+010092: 0f00                                   |0033: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'getFromUser'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010094:                                        |[010094] ua.krupa.spanish.ui.screens.ai.ChatMessage.getFromUser:()Z
+0100a4: 5510 c100                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+0100a8: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=39
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+
+    #7              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'getHintUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010130:                                        |[010130] ua.krupa.spanish.ui.screens.ai.ChatMessage.getHintUk:()Ljava/lang/String;
+010140: 5410 c200                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+010144: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=41
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+
+    #8              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'getSpanish'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010148:                                        |[010148] ua.krupa.spanish.ui.screens.ai.ChatMessage.getSpanish:()Ljava/lang/String;
+010158: 5410 c300                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+01015c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=40
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+
+    #9              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'getTimestamp'
+      type          : '()J'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+010208:                                        |[010208] ua.krupa.spanish.ui.screens.ai.ChatMessage.getTimestamp:()J
+010218: 5320 c400                              |0000: iget-wide v0, v2, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+01021c: 1000                                   |0002: return-wide v0
+      catches       : (none)
+      positions     :
+        0x0000 line=42
+      locals        :
+        0x0000 - 0x0003 reg=2 this Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+
+    #10              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'hashCode'
+      type          : '()I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 5
+      ins           : 1
+      outs          : 2
+      insns size    : 34 16-bit code units
+0100ac:                                        |[0100ac] ua.krupa.spanish.ui.screens.ai.ChatMessage.hashCode:()I
+0100bc: 5540 c100                              |0000: iget-boolean v0, v4, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+0100c0: 7110 9100 0000                         |0002: invoke-static {v0}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+0100c6: 0a00                                   |0005: move-result v0
+0100c8: da01 001f                              |0006: mul-int/lit8 v1, v0, #int 31 // #1f
+0100cc: 5442 c300                              |0008: iget-object v2, v4, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+0100d0: 6e10 a000 0200                         |000a: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@00a0
+0100d6: 0a02                                   |000d: move-result v2
+0100d8: b021                                   |000e: add-int/2addr v1, v2
+0100da: da00 011f                              |000f: mul-int/lit8 v0, v1, #int 31 // #1f
+0100de: 5442 c200                              |0011: iget-object v2, v4, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+0100e2: 6e10 a000 0200                         |0013: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@00a0
+0100e8: 0a02                                   |0016: move-result v2
+0100ea: b020                                   |0017: add-int/2addr v0, v2
+0100ec: da01 001f                              |0018: mul-int/lit8 v1, v0, #int 31 // #1f
+0100f0: 5342 c400                              |001a: iget-wide v2, v4, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+0100f4: 7120 9b00 3200                         |001c: invoke-static {v2, v3}, Ljava/lang/Long;.hashCode:(J)I // method@009b
+0100fa: 0a02                                   |001f: move-result v2
+0100fc: b021                                   |0020: add-int/2addr v1, v2
+0100fe: 0f01                                   |0021: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #11              : (in Lua/krupa/spanish/ui/screens/ai/ChatMessage;)
+      name          : 'toString'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 8
+      ins           : 1
+      outs          : 3
+      insns size    : 64 16-bit code units
+010160:                                        |[010160] ua.krupa.spanish.ui.screens.ai.ChatMessage.toString:()Ljava/lang/String;
+010170: 5570 c100                              |0000: iget-boolean v0, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.fromUser:Z // field@00c1
+010174: 5471 c300                              |0002: iget-object v1, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.spanish:Ljava/lang/String; // field@00c3
+010178: 5472 c200                              |0004: iget-object v2, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.hintUk:Ljava/lang/String; // field@00c2
+01017c: 5373 c400                              |0006: iget-wide v3, v7, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.timestamp:J // field@00c4
+010180: 2205 8f00                              |0008: new-instance v5, Ljava/lang/StringBuilder; // type@008f
+010184: 7010 a300 0500                         |000a: invoke-direct {v5}, Ljava/lang/StringBuilder;.<init>:()V // method@00a3
+01018a: 1a06 f301                              |000d: const-string v6, "ChatMessage(fromUser=" // string@01f3
+01018e: 6e20 a800 6500                         |000f: invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+010194: 0c05                                   |0012: move-result-object v5
+010196: 6e20 a900 0500                         |0013: invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+01019c: 0c00                                   |0016: move-result-object v0
+01019e: 1a05 4d01                              |0017: const-string v5, ", spanish=" // string@014d
+0101a2: 6e20 a800 5000                         |0019: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101a8: 0c00                                   |001c: move-result-object v0
+0101aa: 6e20 a800 1000                         |001d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101b0: 0c00                                   |0020: move-result-object v0
+0101b2: 1a01 4201                              |0021: const-string v1, ", hintUk=" // string@0142
+0101b6: 6e20 a800 1000                         |0023: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101bc: 0c00                                   |0026: move-result-object v0
+0101be: 6e20 a800 2000                         |0027: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101c4: 0c00                                   |002a: move-result-object v0
+0101c6: 1a01 5001                              |002b: const-string v1, ", timestamp=" // string@0150
+0101ca: 6e20 a800 1000                         |002d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101d0: 0c00                                   |0030: move-result-object v0
+0101d2: 6e30 a600 3004                         |0031: invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;.append:(J)Ljava/lang/StringBuilder; // method@00a6
+0101d8: 0c00                                   |0034: move-result-object v0
+0101da: 1a01 3601                              |0035: const-string v1, ")" // string@0136
+0101de: 6e20 a800 1000                         |0037: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+0101e4: 0c00                                   |003a: move-result-object v0
+0101e6: 6e10 aa00 0000                         |003b: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@00aa
+0101ec: 0c00                                   |003e: move-result-object v0
+0101ee: 1100                                   |003f: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 405 (AiDialogViewModel.kt)
+
+Class #51 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingClass; value=Lua/krupa/spanish/ui/screens/ai/ComposableSingletons$AiDialogScreenKt;
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/jvm/internal/Lambda;" "Lkotlin/jvm/functions/Function3<" "Landroidx/compose/foundation/layout/RowScope;" "Landroidx/compose/runtime/Composer;" "Ljava/lang/Integer;" "Lkotlin/Unit;" ">;" }
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nAiDialogScreen.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AiDialogScreen.kt\nua/krupa/spanish/ui/screens/ai/ComposableSingletons$AiDialogScreenKt$lambda-1$1\n+ 2 Dp.kt\nandroidx/compose/ui/unit/DpKt\n*L\n1#1,433:1\n154#2:434\n154#2:435\n*S KotlinDebug\n*F\n+ 1 AiDialogScreen.kt\nua/krupa/spanish/ui/screens/ai/ComposableSingletons$AiDialogScreenKt$lambda-1$1\n*L\n133#1:434\n134#1:435\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\484954\n��\n\484850\485048\484850\n\484850\485148\484850\n\484850\b\484850\485048��\485150\4848500\484849*\4848500\484850H\484951¢\484854\484852\b\484851\485048\484852" } d2={ "<anonymous>" "" "Landroidx/compose/foundation/layout/RowScope;" "invoke" "(Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)V" } k=3 mv={ 1 9 0 } xi=48
+
+Class #51            -

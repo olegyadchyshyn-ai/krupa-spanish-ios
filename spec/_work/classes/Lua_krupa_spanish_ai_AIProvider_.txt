@@ -1,0 +1,50 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AIProvider;'
+  Access flags      : 0x0601 (PUBLIC INTERFACE ABSTRACT)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AIProvider;)
+      name          : 'getId'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+    #1              : (in Lua/krupa/spanish/ai/AIProvider;)
+      name          : 'getRequiresNetwork'
+      type          : '()Z'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+    #2              : (in Lua/krupa/spanish/ai/AIProvider;)
+      name          : 'getTitleUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+    #3              : (in Lua/krupa/spanish/ai/AIProvider;)
+      name          : 'isAvailable'
+      type          : '(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+    #4              : (in Lua/krupa/spanish/ai/AIProvider;)
+      name          : 'reply'
+      type          : '(Lua/krupa/spanish/ai/AIRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #5 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingMethod; value=resolve
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_RUNTIME Lkotlin/Metadata; k=3 mv={ 1 9 0 } xi=48
+  VISIBILITY_RUNTIME Lkotlin/coroutines/jvm/internal/DebugMetadata; c="ua.krupa.spanish.ai.AIProviderRegistry" f="AIProvider.kt" i={ 0 0 0 1 1 } l={ 168 169 } m="resolve" n={ "this" "preferredId" "element$iv" "this" "element$iv" } s={ "L$0" "L$1" "L$3" "L$0" "L$2" }
+Annotations on method #167 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ai/AIProviderRegistry;" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;" ">;)V" }
+
+Class #5            -

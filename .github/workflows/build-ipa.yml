@@ -1,0 +1,95 @@
+name: Build iOS IPA
+
+# Збирає .ipa (без підпису) на хмарному macOS-раннері GitHub Actions.
+# Готовий файл забирається зі сторінки запуску: Actions → build → Artifacts.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-ipa:
+    name: Build unsigned IPA
+    runs-on: macos-15
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          swift --version
+
+      - name: Install XcodeGen
+        run: |
+          set -euo pipefail
+          if command -v xcodegen >/dev/null 2>&1; then
+            echo "XcodeGen вже встановлено"; xcodegen --version; exit 0
+          fi
+          mkdir -p "$RUNNER_TEMP/xcodegen"
+          if curl -fsSL -o "$RUNNER_TEMP/xcodegen.zip" \
+              https://github.com/yonaskolb/XcodeGen/releases/latest/download/xcodegen.zip; then
+            unzip -q "$RUNNER_TEMP/xcodegen.zip" -d "$RUNNER_TEMP/xcodegen"
+            BIN_DIR="$(find "$RUNNER_TEMP/xcodegen" -type d -name bin | head -n 1)"
+            chmod +x "$BIN_DIR/xcodegen"
+            echo "$BIN_DIR" >> "$GITHUB_PATH"
+          else
+            echo "Завантаження не вдалося — ставимо через Homebrew"
+            brew install xcodegen
+          fi
+          xcodegen --version
+
+      - name: Generate Xcode project
+        working-directory: KrupaSpanish
+        run: xcodegen generate
+
+      - name: Build app (unsigned)
+        working-directory: KrupaSpanish
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project KrupaSpanish.xcodeproj \
+            -scheme KrupaSpanish \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/build" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_ENTITLEMENTS="" \
+            build | tee "$RUNNER_TEMP/xcodebuild.log" | tail -n 40
+
+      - name: Package IPA
+        run: |
+          set -euo pipefail
+          APP="$RUNNER_TEMP/build/Build/Products/Release-iphoneos/KrupaSpanish.app"
+          test -d "$APP" || { echo "Не знайдено .app: $APP"; exit 1; }
+          rm -rf "$RUNNER_TEMP/Payload"
+          mkdir -p "$RUNNER_TEMP/Payload"
+          cp -R "$APP" "$RUNNER_TEMP/Payload/"
+          cd "$RUNNER_TEMP"
+          zip -qry KrupaSpanish-unsigned.ipa Payload
+          ls -lh KrupaSpanish-unsigned.ipa
+          echo "IPA_PATH=$RUNNER_TEMP/KrupaSpanish-unsigned.ipa" >> "$GITHUB_ENV"
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: KrupaSpanish-unsigned-ipa
+          path: ${{ env.IPA_PATH }}
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: ${{ runner.temp }}/xcodebuild.log
+          if-no-files-found: ignore

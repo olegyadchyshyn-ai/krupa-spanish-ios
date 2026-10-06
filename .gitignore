@@ -1,0 +1,22 @@
+# Згенерований Xcode-проєкт (його створює XcodeGen із project.yml)
+KrupaSpanish/KrupaSpanish.xcodeproj/
+
+# Артефакти збірки
+build/
+DerivedData/
+*.ipa
+*.xcarchive
+Payload/
+
+# Сміття
+.DS_Store
+Thumbs.db
+*.log
+
+# Службові теки аналізу APK (не потрібні в репозиторії)
+_apk_extract/
+_recon/
+
+# Локальні налаштування Xcode
+xcuserdata/
+*.xcuserstate

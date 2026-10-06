@@ -1,0 +1,420 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'expectedWord'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'explanationUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'heardWord'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #3              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'type'
+      type          : 'Lua/krupa/spanish/speech/pronunciation/IssueType;'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+0157cc:                                        |[0157cc] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.<clinit>:()V
+0157dc: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 6
+      ins           : 5
+      outs          : 2
+      insns size    : 32 16-bit code units
+0157e0:                                        |[0157e0] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.<init>:(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+0157f0: 1a00 fd09                              |0000: const-string v0, "type" // string@09fd
+0157f4: 7120 ea00 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0157fa: 1a00 4607                              |0005: const-string v0, "expectedWord" // string@0746
+0157fe: 7120 ea00 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+015804: 1a00 6b08                              |000a: const-string v0, "heardWord" // string@086b
+015808: 7120 ea00 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+01580e: 1a00 4907                              |000f: const-string v0, "explanationUk" // string@0749
+015812: 7120 ea00 0500                         |0011: invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+015818: 7010 9400 0100                         |0014: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@0094
+01581e: 5b12 9a01                              |0017: iput-object v2, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+015822: 5b13 9701                              |0019: iput-object v3, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015826: 5b14 9901                              |001b: iput-object v4, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+01582a: 5b15 9801                              |001d: iput-object v5, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+01582e: 0e00                                   |001f: return-void
+      catches       : (none)
+      positions     :
+        0x0014 line=427
+        0x0017 line=428
+        0x0019 line=429
+        0x001b line=430
+        0x001d line=431
+        0x001f line=427
+      locals        :
+        0x0000 - 0x0020 reg=1 this Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+        0x0000 - 0x0020 reg=2 type Lua/krupa/spanish/speech/pronunciation/IssueType;
+        0x0000 - 0x0020 reg=3 expectedWord Ljava/lang/String;
+        0x0000 - 0x0020 reg=4 heardWord Ljava/lang/String;
+        0x0000 - 0x0020 reg=5 explanationUk Ljava/lang/String;
+
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'copy$default'
+      type          : '(Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 7
+      ins           : 7
+      outs          : 5
+      insns size    : 29 16-bit code units
+01573c:                                        |[01573c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.copy$default:(Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+01574c: dd06 0501                              |0000: and-int/lit8 v6, v5, #int 1 // #01
+015750: 3806 0400                              |0002: if-eqz v6, 0006 // +0004
+015754: 5401 9a01                              |0004: iget-object v1, v0, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+015758: dd06 0502                              |0006: and-int/lit8 v6, v5, #int 2 // #02
+01575c: 3806 0400                              |0008: if-eqz v6, 000c // +0004
+015760: 5402 9701                              |000a: iget-object v2, v0, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015764: dd06 0504                              |000c: and-int/lit8 v6, v5, #int 4 // #04
+015768: 3806 0400                              |000e: if-eqz v6, 0012 // +0004
+01576c: 5403 9901                              |0010: iget-object v3, v0, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+015770: dd05 0508                              |0012: and-int/lit8 v5, v5, #int 8 // #08
+015774: 3805 0400                              |0014: if-eqz v5, 0018 // +0004
+015778: 5404 9801                              |0016: iget-object v4, v0, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+01577c: 6e54 c903 1032                         |0018: invoke-virtual {v0, v1, v2, v3, v4}, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.copy:(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/speech/pronunciation/PronunciationIssue; // method@03c9
+015782: 0c00                                   |001b: move-result-object v0
+015784: 1100                                   |001c: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'component1'
+      type          : '()Lua/krupa/spanish/speech/pronunciation/IssueType;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+01570c:                                        |[01570c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.component1:()Lua/krupa/spanish/speech/pronunciation/IssueType;
+01571c: 5410 9a01                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+015720: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'component2'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0155ec:                                        |[0155ec] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.component2:()Ljava/lang/String;
+0155fc: 5410 9701                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015600: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'component3'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+015604:                                        |[015604] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.component3:()Ljava/lang/String;
+015614: 5410 9901                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+015618: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'component4'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+01561c:                                        |[01561c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.component4:()Ljava/lang/String;
+01562c: 5410 9801                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+015630: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'copy'
+      type          : '(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 6
+      ins           : 5
+      outs          : 5
+      insns size    : 26 16-bit code units
+015788:                                        |[015788] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.copy:(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+015798: 1a00 fd09                              |0000: const-string v0, "type" // string@09fd
+01579c: 7120 ea00 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0157a2: 1a00 4607                              |0005: const-string v0, "expectedWord" // string@0746
+0157a6: 7120 ea00 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0157ac: 1a00 6b08                              |000a: const-string v0, "heardWord" // string@086b
+0157b0: 7120 ea00 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0157b6: 1a00 4907                              |000f: const-string v0, "explanationUk" // string@0749
+0157ba: 7120 ea00 0500                         |0011: invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0157c0: 2200 0a01                              |0014: new-instance v0, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue; // type@010a
+0157c4: 7055 c403 2043                         |0016: invoke-direct {v0, v2, v3, v4, v5}, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.<init>:(Lua/krupa/spanish/speech/pronunciation/IssueType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@03c4
+0157ca: 1100                                   |0019: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'equals'
+      type          : '(Ljava/lang/Object;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 54 16-bit code units
+01551c:                                        |[01551c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.equals:(Ljava/lang/Object;)Z
+01552c: 1210                                   |0000: const/4 v0, #int 1 // #1
+01552e: 3365 0300                              |0001: if-ne v5, v6, 0004 // +0003
+015532: 0f00                                   |0003: return v0
+015534: 2061 0a01                              |0004: instance-of v1, v6, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue; // type@010a
+015538: 1202                                   |0006: const/4 v2, #int 0 // #0
+01553a: 3901 0300                              |0007: if-nez v1, 000a // +0003
+01553e: 0f02                                   |0009: return v2
+015540: 0761                                   |000a: move-object v1, v6
+015542: 1f01 0a01                              |000b: check-cast v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue; // type@010a
+015546: 5453 9a01                              |000d: iget-object v3, v5, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+01554a: 5414 9a01                              |000f: iget-object v4, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+01554e: 3243 0300                              |0011: if-eq v3, v4, 0014 // +0003
+015552: 0f02                                   |0013: return v2
+015554: 5453 9701                              |0014: iget-object v3, v5, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015558: 5414 9701                              |0016: iget-object v4, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+01555c: 7120 e700 4300                         |0018: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00e7
+015562: 0a03                                   |001b: move-result v3
+015564: 3903 0300                              |001c: if-nez v3, 001f // +0003
+015568: 0f02                                   |001e: return v2
+01556a: 5453 9901                              |001f: iget-object v3, v5, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+01556e: 5414 9901                              |0021: iget-object v4, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+015572: 7120 e700 4300                         |0023: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00e7
+015578: 0a03                                   |0026: move-result v3
+01557a: 3903 0300                              |0027: if-nez v3, 002a // +0003
+01557e: 0f02                                   |0029: return v2
+015580: 5453 9801                              |002a: iget-object v3, v5, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+015584: 5411 9801                              |002c: iget-object v1, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+015588: 7120 e700 1300                         |002e: invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00e7
+01558e: 0a01                                   |0031: move-result v1
+015590: 3901 0300                              |0032: if-nez v1, 0035 // +0003
+015594: 0f02                                   |0034: return v2
+015596: 0f00                                   |0035: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'getExpectedWord'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+015634:                                        |[015634] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.getExpectedWord:()Ljava/lang/String;
+015644: 5410 9701                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015648: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=429
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+
+    #7              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'getExplanationUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+01564c:                                        |[01564c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.getExplanationUk:()Ljava/lang/String;
+01565c: 5410 9801                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+015660: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=431
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+
+    #8              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'getHeardWord'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+015664:                                        |[015664] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.getHeardWord:()Ljava/lang/String;
+015674: 5410 9901                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+015678: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=430
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+
+    #9              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'getType'
+      type          : '()Lua/krupa/spanish/speech/pronunciation/IssueType;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+015724:                                        |[015724] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.getType:()Lua/krupa/spanish/speech/pronunciation/IssueType;
+015734: 5410 9a01                              |0000: iget-object v0, v1, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+015738: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=428
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;
+
+    #10              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'hashCode'
+      type          : '()I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 1
+      insns size    : 34 16-bit code units
+015598:                                        |[015598] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.hashCode:()I
+0155a8: 5430 9a01                              |0000: iget-object v0, v3, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+0155ac: 6e10 c003 0000                         |0002: invoke-virtual {v0}, Lua/krupa/spanish/speech/pronunciation/IssueType;.hashCode:()I // method@03c0
+0155b2: 0a00                                   |0005: move-result v0
+0155b4: da01 001f                              |0006: mul-int/lit8 v1, v0, #int 31 // #1f
+0155b8: 5432 9701                              |0008: iget-object v2, v3, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+0155bc: 6e10 9800 0200                         |000a: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@0098
+0155c2: 0a02                                   |000d: move-result v2
+0155c4: b021                                   |000e: add-int/2addr v1, v2
+0155c6: da00 011f                              |000f: mul-int/lit8 v0, v1, #int 31 // #1f
+0155ca: 5432 9901                              |0011: iget-object v2, v3, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+0155ce: 6e10 9800 0200                         |0013: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@0098
+0155d4: 0a02                                   |0016: move-result v2
+0155d6: b020                                   |0017: add-int/2addr v0, v2
+0155d8: da01 001f                              |0018: mul-int/lit8 v1, v0, #int 31 // #1f
+0155dc: 5432 9801                              |001a: iget-object v2, v3, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+0155e0: 6e10 9800 0200                         |001c: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@0098
+0155e6: 0a02                                   |001f: move-result v2
+0155e8: b021                                   |0020: add-int/2addr v1, v2
+0155ea: 0f01                                   |0021: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #11              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;)
+      name          : 'toString'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 1
+      outs          : 2
+      insns size    : 64 16-bit code units
+01567c:                                        |[01567c] ua.krupa.spanish.speech.pronunciation.PronunciationIssue.toString:()Ljava/lang/String;
+01568c: 5460 9a01                              |0000: iget-object v0, v6, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.type:Lua/krupa/spanish/speech/pronunciation/IssueType; // field@019a
+015690: 5461 9701                              |0002: iget-object v1, v6, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.expectedWord:Ljava/lang/String; // field@0197
+015694: 5462 9901                              |0004: iget-object v2, v6, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.heardWord:Ljava/lang/String; // field@0199
+015698: 5463 9801                              |0006: iget-object v3, v6, Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;.explanationUk:Ljava/lang/String; // field@0198
+01569c: 2204 7e00                              |0008: new-instance v4, Ljava/lang/StringBuilder; // type@007e
+0156a0: 7010 9b00 0400                         |000a: invoke-direct {v4}, Ljava/lang/StringBuilder;.<init>:()V // method@009b
+0156a6: 1a05 6d05                              |000d: const-string v5, "PronunciationIssue(type=" // string@056d
+0156aa: 6e20 a300 5400                         |000f: invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156b0: 0c04                                   |0012: move-result-object v4
+0156b2: 6e20 a200 0400                         |0013: invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a2
+0156b8: 0c00                                   |0016: move-result-object v0
+0156ba: 1a04 eb01                              |0017: const-string v4, ", expectedWord=" // string@01eb
+0156be: 6e20 a300 4000                         |0019: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156c4: 0c00                                   |001c: move-result-object v0
+0156c6: 6e20 a300 1000                         |001d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156cc: 0c00                                   |0020: move-result-object v0
+0156ce: 1a01 fa01                              |0021: const-string v1, ", heardWord=" // string@01fa
+0156d2: 6e20 a300 1000                         |0023: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156d8: 0c00                                   |0026: move-result-object v0
+0156da: 6e20 a300 2000                         |0027: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156e0: 0c00                                   |002a: move-result-object v0
+0156e2: 1a01 ec01                              |002b: const-string v1, ", explanationUk=" // string@01ec
+0156e6: 6e20 a300 1000                         |002d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156ec: 0c00                                   |0030: move-result-object v0
+0156ee: 6e20 a300 3000                         |0031: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+0156f4: 0c00                                   |0034: move-result-object v0
+0156f6: 1a01 c001                              |0035: const-string v1, ")" // string@01c0
+0156fa: 6e20 a300 1000                         |0037: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a3
+015700: 0c00                                   |003a: move-result-object v0
+015702: 6e10 a500 0000                         |003b: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@00a5
+015708: 0c00                                   |003e: move-result-object v0
+01570a: 1100                                   |003f: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 1391 (PronunciationScorer.kt)
+
+Class #53 annotations:
+Annotations on class
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��,\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485048\b\n\484850\b\484852\n\484850\485048 \n\484850\485148\484850\n��\n\484850\485048\484954\n\484850\b\t\n\484850\485048\484951\n\484850\b\485149\b\b\485148��2\4848500\484849BQ\485050\484854\485048\484850\485150\4848500\484851\485050\484854\485048\484852\485150\4848500\484851\485050\484854\485048\484853\485150\4848500\484851\485050\484854\485048\484854\485150\4848500\484851\485050\f\485048\484855\485150\b\485050\484852\485050\4848500\t0\b\485050\f\485048\n\485150\b\485050\484852\485050\4848500\4849510\b\485050\484854\485048\f\485150\4848500\484951\485050\484854\485048\r\485150\4848500\484951¢\484854\484850\485048\484954J\t\485048!\485150\4848500\484851HÆ\484851J\t\485048\"\485150\4848500\484851HÆ\484851J\t\485048#\485150\4848500\484851HÆ\484851J\t\485048$\485150\4848500\484851HÆ\484851J\484955\485048%\485150\b\485050\484852\485050\4848500\t0\bHÆ\484851J\484955\485048&\485150\b\485050\484852\485050\4848500\4849510\bHÆ\484851J\t\485048'\485150\4848500\484951HÆ\484851J\t\485048(\485150\4848500\484951HÆ\484851Je\485048)\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\b\b\484850\485048\484852\485150\4848500\4848512\b\b\484850\485048\484853\485150\4848500\4848512\b\b\484850\485048\484854\485150\4848500\4848512\484954\b\484850\485048\484855\485150\b\485050\484852\485050\4848500\t0\b2\484954\b\484850\485048\n\485150\b\485050\484852\485050\4848500\4849510\b2\b\b\484850\485048\f\485150\4848500\4849512\b\b\484850\485048\r\485150\4848500\484951HÆ\484849J\485051\485048*\485150\4848500\4850532\b\485048+\485150\484852\485148\4848490\484849HÖ\484851J\t\485048,\485150\4848500\484851HÖ\484849J\t\485048-\485150\4848500\484951HÖ\484849R\485049\485048\r\485150\4848500\484951¢\484854\b\n��\485150\484852\b\484955\485048\485048R\485049\485048\484854\485150\4848500\484851¢\484854\b\n��\485150\484852\b\485049\485048\485050R\485049\485048\f\485150\4848500\484951¢\484854\b\n��\485150\484852\b\485051\485048\485048R\485049\485048\485052\485150\4848500\4850538F¢\484854\484854\485150\484852\b\485052\485048\485054R\485055\485048\484855\485150\b\485050\484852\485050\4848500\t0\b¢\484854\b\n��\485150\484852\b\485055\485048\485148R\485049\485048\485149\485150\4848500\4850538F¢\484854\484854\485150\484852\b\485150\485048\485054R\485049\485048\484853\485150\4848500\484851¢\484854\b\n��\485150\484852\b\485151\485048\485050R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\485152\485048\485050R\485055\485048\n\485150\b\485050\484852\485050\4848500\4849510\b¢\484854\b\n��\485150\484852\b\485153\485048\485148R\485049\485048\485154\485150\4848500\4849518F¢\484854\484854\485150\484852\b\485155\485048\485048R\485049\485048\484852\485150\4848500\484851¢\484854\b\n��\485150\484852\b \485048\485050¨\484854." } d2={ "Lua/krupa/spanish/speech/pronunciation/PronunciationResult;" "" "score" "" "wordAccuracy" "phoneticScore" "fluencyScore" "issues" "" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" "suggestions" "" "heardText" "expectedText" "(IIIILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V" "getExpectedText" "()Ljava/lang/String;" "getFluencyScore" "()I" "getHeardText" "isGood" "" "()Z" "getIssues" "()Ljava/util/List;" "needsWork" "getNeedsWork" "getPhoneticScore" "getScore" "getSuggestions" "summaryUk" "getSummaryUk" "getWordAccuracy" "component1" "component2" "component3" "component4" "component5" "component6" "component7" "component8" "copy" "equals" "other" "hashCode" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #415 'issues'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" }
+Annotations on field #418 'suggestions'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #979 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(IIII" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" "Ljava/util/List<" "Ljava/lang/String;" ">;" "Ljava/lang/String;" "Ljava/lang/String;" ")V" }
+Annotations on method #984 'component5'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" }
+Annotations on method #985 'component6'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #988 'copy'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(IIII" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" "Ljava/util/List<" "Ljava/lang/String;" ">;" "Ljava/lang/String;" "Ljava/lang/String;" ")" "Lua/krupa/spanish/speech/pronunciation/PronunciationResult;" }
+Annotations on method #994 'getIssues'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" }
+Annotations on method #998 'getSuggestions'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+
+Class #53            -

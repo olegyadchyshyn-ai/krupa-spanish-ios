@@ -1,0 +1,109 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AIScenario$Companion;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario$Companion;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10002 (PRIVATE CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0037b4:                                        |[0037b4] ua.krupa.spanish.ai.AIScenario$Companion.<init>:()V
+0037c4: 7010 5d00 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@005d
+0037ca: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=152
+      locals        :
+        0x0000 - 0x0004 reg=0 this Lua/krupa/spanish/ai/AIScenario$Companion;
+
+    #1              : (in Lua/krupa/spanish/ai/AIScenario$Companion;)
+      name          : '<init>'
+      type          : '(Lkotlin/jvm/internal/DefaultConstructorMarker;)V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 1
+      insns size    : 4 16-bit code units
+0037cc:                                        |[0037cc] ua.krupa.spanish.ai.AIScenario$Companion.<init>:(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+0037dc: 7010 d600 0000                         |0000: invoke-direct {v0}, Lua/krupa/spanish/ai/AIScenario$Companion;.<init>:()V // method@00d6
+0037e2: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario$Companion;)
+      name          : 'fromCode'
+      type          : '(Ljava/lang/String;)Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 2
+      insns size    : 49 16-bit code units
+003740:                                        |[003740] ua.krupa.spanish.ai.AIScenario$Companion.fromCode:(Ljava/lang/String;)Lua/krupa/spanish/ai/AIScenario;
+003750: 1a00 d001                              |0000: const-string v0, "code" // string@01d0
+003754: 7120 7700 0800                         |0002: invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00375a: 7100 dd00 0000                         |0005: invoke-static {}, Lua/krupa/spanish/ai/AIScenario;.getEntries:()Lkotlin/enums/EnumEntries; // method@00dd
+003760: 0c00                                   |0008: move-result-object v0
+003762: 1f00 5500                              |0009: check-cast v0, Ljava/lang/Iterable; // type@0055
+003766: 1201                                   |000b: const/4 v1, #int 0 // #0
+003768: 7210 5b00 0000                         |000c: invoke-interface {v0}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@005b
+00376e: 0c02                                   |000f: move-result-object v2
+003770: 7210 6800 0200                         |0010: invoke-interface {v2}, Ljava/util/Iterator;.hasNext:()Z // method@0068
+003776: 0a03                                   |0013: move-result v3
+003778: 3803 1500                              |0014: if-eqz v3, 0029 // +0015
+00377c: 7210 6900 0200                         |0016: invoke-interface {v2}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@0069
+003782: 0c03                                   |0019: move-result-object v3
+003784: 0734                                   |001a: move-object v4, v3
+003786: 1f04 7b00                              |001b: check-cast v4, Lua/krupa/spanish/ai/AIScenario; // type@007b
+00378a: 1205                                   |001d: const/4 v5, #int 0 // #0
+00378c: 6e10 dc00 0400                         |001e: invoke-virtual {v4}, Lua/krupa/spanish/ai/AIScenario;.getCode:()Ljava/lang/String; // method@00dc
+003792: 0c06                                   |0021: move-result-object v6
+003794: 7120 7600 8600                         |0022: invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+00379a: 0a04                                   |0025: move-result v4
+00379c: 3804 eaff                              |0026: if-eqz v4, 0010 // -0016
+0037a0: 2802                                   |0028: goto 002a // +0002
+0037a2: 1203                                   |0029: const/4 v3, #int 0 // #0
+0037a4: 1f03 7b00                              |002a: check-cast v3, Lua/krupa/spanish/ai/AIScenario; // type@007b
+0037a8: 3903 0400                              |002c: if-nez v3, 0030 // +0004
+0037ac: 6203 3a00                              |002e: sget-object v3, Lua/krupa/spanish/ai/AIScenario;.FREE_TALK:Lua/krupa/spanish/ai/AIScenario; // field@003a
+0037b0: 1103                                   |0030: return-object v3
+      catches       : (none)
+      positions     :
+        0x0005 line=154
+        0x000c line=173
+        0x001e line=154
+        0x0026 line=173
+        0x0029 line=174
+        0x002a line=154
+      locals        :
+        0x001d - 0x0026 reg=4 it Lua/krupa/spanish/ai/AIScenario;
+        0x001e - 0x0026 reg=5 $i$a$-firstOrNull-AIScenario$Companion$fromCode$1 I
+        0x001a - 0x0029 reg=3 element$iv Ljava/lang/Object;
+        0x000b - 0x002a reg=0 $this$firstOrNull$iv Ljava/lang/Iterable;
+        0x000c - 0x002a reg=1 $i$f$firstOrNull I
+        0x0000 - 0x0031 reg=7 this Lua/krupa/spanish/ai/AIScenario$Companion;
+        0x0000 - 0x0031 reg=8 code Ljava/lang/String;
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #10 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/MemberClasses; value={ Lua/krupa/spanish/ai/AIScenario$Companion; }
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/lang/Enum<" "Lua/krupa/spanish/ai/AIScenario;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\485050\n\484850\485148\484850\n\484850\485048\485048\n��\n\484850\485048\484954\n\484850\b\485052\b\484850\485148�� \4850542\b\485050\484852\485050\4848500��0\484849:\484849\485054B'\b\484850\485050\484854\485048\484850\485150\4848500\484851\485050\484854\485048\484852\485150\4848500\484851\485050\484854\485048\484853\485150\4848500\484851\485050\484854\485048\484854\485150\4848500\484851¢\484854\484850\485048\484855R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\b\485048\tR\485049\485048\484854\485150\4848500\484851¢\484854\b\n��\485150\484852\b\n\485048\tR\485049\485048\484853\485150\4848500\484851¢\484854\b\n��\485150\484852\b\484951\485048\tR\485049\485048\484852\485150\4848500\484851¢\484854\b\n��\485150\484852\b\f\485048\tj\484850\b\rj\484850\b\484954j\484850\b\484955j\484850\b\485048j\484850\b\485049j\484850\b\485050j\484850\b\485051j\484850\b\485052j\484850\b\485053¨\484854\485055" } d2={ "Lua/krupa/spanish/ai/AIScenario;" "" "code" "" "titleUk" "openingSpanish" "openingHintUk" "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" "getCode" "()Ljava/lang/String;" "getOpeningHintUk" "getOpeningSpanish" "getTitleUk" "INTRODUCTIONS" "RESTAURANT" "SHOP" "HOTEL" "AIRPORT" "DOCTOR" "WORK" "RENTING" "FREE_TALK" "Companion" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on method #219 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/lang/String;" ")V" }
+Annotations on method #221 'getEntries'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Lkotlin/enums/EnumEntries<" "Lua/krupa/spanish/ai/AIScenario;" ">;" }
+
+Class #10            -

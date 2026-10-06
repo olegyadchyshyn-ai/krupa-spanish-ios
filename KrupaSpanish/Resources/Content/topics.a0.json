@@ -1,0 +1,65 @@
+{
+  "contentVersion": 1,
+  "topics": [
+    {
+      "id": "t_a0_greetings",
+      "level": "A0",
+      "titleEs": "Saludos",
+      "titleUk": "Привітання",
+      "descriptionUk": "Вітаємося й прощаємося, питаємо «як справи», називаємо частини дня та найпростіші ввічливі слова.",
+      "iconKey": "greetings",
+      "orderIndex": 1,
+      "grammarTags": ["polite", "question_words"]
+    },
+    {
+      "id": "t_a0_introductions",
+      "level": "A0",
+      "titleEs": "Presentaciones",
+      "titleUk": "Знайомство",
+      "descriptionUk": "Кажемо, як нас звати, звідки ми, скільки нам років і якими мовами ми говоримо.",
+      "iconKey": "person",
+      "orderIndex": 2,
+      "grammarTags": ["ser_estar", "present_regular", "question_words"]
+    },
+    {
+      "id": "t_a0_courtesy",
+      "level": "A0",
+      "titleEs": "Cortesía",
+      "titleUk": "Ввічливість",
+      "descriptionUk": "Просимо, дякуємо, вибачаємося, погоджуємося й відмовляємо — увічливо та природно.",
+      "iconKey": "polite",
+      "orderIndex": 3,
+      "grammarTags": ["polite", "negation", "articles", "gender_number"]
+    },
+    {
+      "id": "t_a0_numbers_0_20",
+      "level": "A0",
+      "titleEs": "Los números del 0 al 20",
+      "titleUk": "Числа від 0 до 20",
+      "descriptionUk": "Рахуємо від нуля до двадцяти, називаємо ціну, телефон, час і вік.",
+      "iconKey": "numbers",
+      "orderIndex": 4,
+      "grammarTags": ["numbers", "question_words", "gender_number", "present_regular"]
+    },
+    {
+      "id": "t_a0_basic_verbs",
+      "level": "A0",
+      "titleEs": "Verbos básicos",
+      "titleUk": "Базові дієслова",
+      "descriptionUk": "Найпотрібніші дієслова: ser, estar, tener, querer, ir, comer, beber, hablar та їхні друзі.",
+      "iconKey": "verbs",
+      "orderIndex": 5,
+      "grammarTags": ["present_regular", "ser_estar", "present_irregular", "negation"]
+    },
+    {
+      "id": "t_a0_survival",
+      "level": "A0",
+      "titleEs": "Frases de supervivencia",
+      "titleUk": "Фрази для виживання",
+      "descriptionUk": "Коли не розумієш: просимо повторити, питаємо, як сказати, і дізнаємося, скільки коштує.",
+      "iconKey": "survival",
+      "orderIndex": 6,
+      "grammarTags": ["question_words", "negation", "polite", "present_regular"]
+    }
+  ]
+}

@@ -1,0 +1,2635 @@
+{
+  "contentVersion": 1,
+  "sentences": [
+    {
+      "id": "s_a1_001",
+      "spanish": "Tengo dos hermanos y una hermana.",
+      "translationUk": "У мене двоє братів і одна сестра.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "numbers",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_dos",
+        "w_a1_hermano",
+        "w_a1_hermana"
+      ],
+      "audioHint": "h німа у слові hermanos"
+    },
+    {
+      "id": "s_a1_002",
+      "spanish": "El café cuesta dos euros y cincuenta céntimos.",
+      "translationUk": "Кава коштує два євро п'ятдесят центів.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_cafe",
+        "w_a1_costar",
+        "w_a1_dos",
+        "w_a1_euro",
+        "w_a1_centimo"
+      ],
+      "audioHint": "c перед e/i = [θ]: КЕН-ті-мос"
+    },
+    {
+      "id": "s_a1_003",
+      "spanish": "¿Cuánto cuesta este libro?",
+      "translationUk": "Скільки коштує ця книжка?",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "demonstratives"
+      ],
+      "wordIds": [
+        "w_a1_cuanto",
+        "w_a1_costar",
+        "w_a1_libro"
+      ],
+      "audioHint": "¿…? обов'язкові; cuesta = КУЕС-та"
+    },
+    {
+      "id": "s_a1_004",
+      "spanish": "Un kilo de patatas cuesta un euro.",
+      "translationUk": "Кілограм картоплі коштує одне євро.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_kilo",
+        "w_a1_patata",
+        "w_a1_costar",
+        "w_a1_uno",
+        "w_a1_euro"
+      ],
+      "audioHint": "голос падає в кінці розповідного речення"
+    },
+    {
+      "id": "s_a1_005",
+      "spanish": "Hay veinte personas en la clase.",
+      "translationUk": "У класі двадцять людей.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_hay",
+        "w_a1_veinte",
+        "w_a1_persona"
+      ],
+      "audioHint": "h у слові hay німа: [ай]"
+    },
+    {
+      "id": "s_a1_006",
+      "spanish": "Somos cuatro en casa: mis padres y mis dos hijos.",
+      "translationUk": "Нас четверо вдома: мої батьки й двоє синів.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "story",
+      "grammarTags": [
+        "present_irregular",
+        "numbers",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_ser",
+        "w_a1_cuatro",
+        "w_a1_casa",
+        "w_a1_padres",
+        "w_a1_hijo"
+      ],
+      "audioHint": "h у словах hijo, hay німа"
+    },
+    {
+      "id": "s_a1_007",
+      "spanish": "Mil euros es mucho dinero.",
+      "translationUk": "Тисяча євро — це великі гроші.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_mil",
+        "w_a1_euro",
+        "w_a1_mucho",
+        "w_a1_dinero"
+      ],
+      "audioHint": "mil вимовляємо з м'яким [л']: міль"
+    },
+    {
+      "id": "s_a1_008",
+      "spanish": "El billete cuesta quince euros.",
+      "translationUk": "Квиток коштує п'ятнадцять євро.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_billete",
+        "w_a1_costar",
+        "w_a1_quince",
+        "w_a1_euro"
+      ],
+      "audioHint": "ll = [й]: бі-ЙЕ-те; qu = [к]"
+    },
+    {
+      "id": "s_a1_009",
+      "spanish": "¿Tienes cambio de veinte euros?",
+      "translationUk": "У тебе є решта з двадцяти євро?",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_cambio",
+        "w_a1_veinte",
+        "w_a1_euro"
+      ],
+      "audioHint": "¿…? і висхідна інтонація"
+    },
+    {
+      "id": "s_a1_010",
+      "spanish": "No tengo dinero en efectivo.",
+      "translationUk": "У мене немає готівки.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "negation",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_dinero",
+        "w_a1_en_efectivo"
+      ],
+      "audioHint": "заперечення no стоїть перед дієсловом"
+    },
+    {
+      "id": "s_a1_011",
+      "spanish": "La cuenta, por favor.",
+      "translationUk": "Рахунок, будь ласка.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "polite",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_cuenta",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "усталена фраза в кафе; голос спокійний, рівний"
+    },
+    {
+      "id": "s_a1_012",
+      "spanish": "Pago con tarjeta, gracias.",
+      "translationUk": "Я плачу карткою, дякую.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_pagar",
+        "w_a1_tarjeta"
+      ],
+      "audioHint": "j = [х]: тар-ХЕ-та"
+    },
+    {
+      "id": "s_a1_013",
+      "spanish": "Este móvil es muy caro.",
+      "translationUk": "Цей телефон занадто дорогий.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "demonstratives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_movil",
+        "w_a1_caro",
+        "w_a1_ser"
+      ],
+      "audioHint": "este = ЕС-те, вказує на річ поруч"
+    },
+    {
+      "id": "s_a1_014",
+      "spanish": "Hay trescientos euros en la caja.",
+      "translationUk": "У касі триста євро.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_hay",
+        "w_a1_trescientos",
+        "w_a1_euro",
+        "w_a1_caja"
+      ],
+      "audioHint": "c/z = [θ]: трес-СЬЄН-тос"
+    },
+    {
+      "id": "s_a1_015",
+      "spanish": "Necesito cien gramos de queso.",
+      "translationUk": "Мені потрібно сто грамів сиру.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_cien",
+        "w_a1_gramo",
+        "w_a1_queso"
+      ],
+      "audioHint": "qu = [к]: КЕ-со"
+    },
+    {
+      "id": "s_a1_016",
+      "spanish": "El precio es más o menos veinte euros.",
+      "translationUk": "Ціна приблизно двадцять євро.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_precio",
+        "w_a1_mas_o_menos",
+        "w_a1_veinte",
+        "w_a1_euro"
+      ],
+      "audioHint": "más o menos — «більш-менш», без паузи"
+    },
+    {
+      "id": "s_a1_017",
+      "spanish": "Compro un litro de leche y una docena de huevos.",
+      "translationUk": "Я купую літр молока й дюжину яєць.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_comprar",
+        "w_a1_litro",
+        "w_a1_leche",
+        "w_a1_docena",
+        "w_a1_huevo"
+      ],
+      "audioHint": "huevos: h німа, [УЕ-бос]"
+    },
+    {
+      "id": "s_a1_018",
+      "spanish": "—¿Cuánto cuesta? —Diez euros, por favor.",
+      "translationUk": "—Скільки коштує? —Десять євро, будь ласка.",
+      "level": "A1",
+      "topicId": "t_a1_numbers_big",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "numbers",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_cuanto",
+        "w_a1_costar",
+        "w_a1_diez",
+        "w_a1_euro",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "у діалозі міняємо голос: питання вгору, відповідь униз"
+    },
+    {
+      "id": "s_a1_019",
+      "spanish": "¿Qué hora es? Son las ocho y media.",
+      "translationUk": "Котра година? Пів на дев'яту.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_que_hora_es",
+        "w_a1_ocho",
+        "w_a1_media"
+      ],
+      "audioHint": "h у hora німа: О-ра"
+    },
+    {
+      "id": "s_a1_020",
+      "spanish": "Me levanto a las siete de la mañana.",
+      "translationUk": "Я встаю о сьомій ранку.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_levantarse",
+        "w_a1_siete",
+        "w_a1_manana"
+      ],
+      "audioHint": "me levanto — зворотна форма, наголос на ВАН"
+    },
+    {
+      "id": "s_a1_021",
+      "spanish": "Hoy es lunes y mañana es martes.",
+      "translationUk": "Сьогодні понеділок, а завтра вівторок.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_hoy",
+        "w_a1_lunes",
+        "w_a1_manana",
+        "w_a1_martes"
+      ],
+      "audioHint": "hoy = [ой]: h німа"
+    },
+    {
+      "id": "s_a1_022",
+      "spanish": "La clase empieza a las nueve en punto.",
+      "translationUk": "Заняття починається рівно о дев'ятій.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_empezar",
+        "w_a1_nueve",
+        "w_a1_en_punto"
+      ],
+      "audioHint": "z = [θ]: ем-ПЬЕ-са"
+    },
+    {
+      "id": "s_a1_023",
+      "spanish": "Mi cumpleaños es el tres de junio.",
+      "translationUk": "Мій день народження третього червня.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_cumpleanos",
+        "w_a1_tres",
+        "w_a1_junio"
+      ],
+      "audioHint": "ñ = [нь]: кум-пле-А-ньос; j = [х]: ХУ-ньо"
+    },
+    {
+      "id": "s_a1_024",
+      "spanish": "Los sábados no trabajo, pero los lunes sí.",
+      "translationUk": "По суботах я не працюю, а по понеділках — так.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "negation",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_sabado",
+        "w_a1_lunes"
+      ],
+      "audioHint": "los sábados = «щосуботи»"
+    },
+    {
+      "id": "s_a1_025",
+      "spanish": "Son las dos menos cuarto.",
+      "translationUk": "За чверть друга.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_dos",
+        "w_a1_menos_cuarto"
+      ],
+      "audioHint": "менше години кажемо через menos"
+    },
+    {
+      "id": "s_a1_026",
+      "spanish": "Por la mañana desayuno café con leche.",
+      "translationUk": "Уранці я снідаю кавою з молоком.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_por_la_manana",
+        "w_a1_desayunar",
+        "w_a1_cafe",
+        "w_a1_leche"
+      ],
+      "audioHint": "ñ = [нь]; ch = [ч] у leche"
+    },
+    {
+      "id": "s_a1_027",
+      "spanish": "El tren llega a las diez y cuarto.",
+      "translationUk": "Поїзд прибуває о чверть на одинадцяту.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_llegar",
+        "w_a1_diez",
+        "w_a1_cuarto"
+      ],
+      "audioHint": "ll = [й]: льє-ГАР"
+    },
+    {
+      "id": "s_a1_028",
+      "spanish": "Espero el autobús quince minutos.",
+      "translationUk": "Я чекаю автобус п'ятнадцять хвилин.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_esperar",
+        "w_a1_minuto",
+        "w_a1_quince"
+      ],
+      "audioHint": "qu = [к]: КІН-се"
+    },
+    {
+      "id": "s_a1_029",
+      "spanish": "El horario de la tienda es de nueve a ocho.",
+      "translationUk": "Магазин працює з дев'ятої до восьмої.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_horario",
+        "w_a1_tienda",
+        "w_a1_nueve",
+        "w_a1_ocho"
+      ],
+      "audioHint": "h у horario німа: о-РА-ріо"
+    },
+    {
+      "id": "s_a1_030",
+      "spanish": "Estudio español todos los días.",
+      "translationUk": "Я займаюся іспанською щодня.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_todos_los_dias"
+      ],
+      "audioHint": "ñ = [нь]: іс-па-НЬОЛЬ"
+    },
+    {
+      "id": "s_a1_031",
+      "spanish": "A veces ceno con mi familia a las nueve.",
+      "translationUk": "Іноді я вечеряю з родиною о дев'ятій.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_a_veces",
+        "w_a1_cenar",
+        "w_a1_familia",
+        "w_a1_nueve"
+      ],
+      "audioHint": "vez = [бес]: z = [θ]"
+    },
+    {
+      "id": "s_a1_032",
+      "spanish": "El lunes tengo clase por la tarde.",
+      "translationUk": "У понеділок у мене заняття після обіду.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_lunes",
+        "w_a1_tener",
+        "w_a1_por_la_tarde"
+      ],
+      "audioHint": "tengo = ТЕН-го"
+    },
+    {
+      "id": "s_a1_033",
+      "spanish": "Nunca llego tarde al trabajo.",
+      "translationUk": "Я ніколи не запізнююся на роботу.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "negation",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_nunca",
+        "w_a1_llegar"
+      ],
+      "audioHint": "ll = [й]; nunca = НУН-ка"
+    },
+    {
+      "id": "s_a1_034",
+      "spanish": "—¿Está abierto el museo? —No, está cerrado.",
+      "translationUk": "—Музей відчинений? —Ні, зачинено.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "dialogue",
+      "grammarTags": [
+        "ser_estar",
+        "question_words"
+      ],
+      "wordIds": [
+        "w_a1_abierto",
+        "w_a1_cerrado"
+      ],
+      "audioHint": "c перед e = [θ]: се-РРА-до"
+    },
+    {
+      "id": "s_a1_035",
+      "spanish": "En diciembre los días son cortos.",
+      "translationUk": "У грудні дні короткі.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_diciembre",
+        "w_a1_dia",
+        "w_a1_corto"
+      ],
+      "audioHint": "c перед e = [θ]: ді-СЬЄМ-бре"
+    },
+    {
+      "id": "s_a1_036",
+      "spanish": "El curso termina el veinte de septiembre.",
+      "translationUk": "Курс закінчується двадцятого вересня.",
+      "level": "A1",
+      "topicId": "t_a1_time_days",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_terminar",
+        "w_a1_veinte",
+        "w_a1_septiembre"
+      ],
+      "audioHint": "p у septiembre не читається: се-ТЬЄМ-бре"
+    },
+    {
+      "id": "s_a1_037",
+      "spanish": "Mi familia es grande: somos cinco.",
+      "translationUk": "Моя родина велика: нас п'ятеро.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "ser_estar",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_familia",
+        "w_a1_grande",
+        "w_a1_ser",
+        "w_a1_cinco"
+      ],
+      "audioHint": "familia = фа-МІ-ліа"
+    },
+    {
+      "id": "s_a1_038",
+      "spanish": "Mi madre se llama Ana y mi padre, Pedro.",
+      "translationUk": "Мою маму звати Ана, а тата — Педро.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_madre",
+        "w_a1_llamarse",
+        "w_a1_padre"
+      ],
+      "audioHint": "ll = [й]: ЙА-ма"
+    },
+    {
+      "id": "s_a1_039",
+      "spanish": "Tengo dos hermanas y un hermano menor.",
+      "translationUk": "У мене дві сестри й молодший брат.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "comparatives"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_hermana",
+        "w_a1_hermano",
+        "w_a1_menor"
+      ],
+      "audioHint": "h німа: ер-МА-нас"
+    },
+    {
+      "id": "s_a1_040",
+      "spanish": "Mis abuelos viven en el campo.",
+      "translationUk": "Мої бабуся й дідусь живуть у селі.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_abuelo",
+        "w_a1_vivir",
+        "w_a1_campo"
+      ],
+      "audioHint": "v = [б]: БІ-бен"
+    },
+    {
+      "id": "s_a1_041",
+      "spanish": "—¿Cuántos años tienes? —Tengo treinta y cinco.",
+      "translationUk": "—Скільки тобі років? —Тридцять п'ять.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_cuantos_anos_tienes",
+        "w_a1_tener",
+        "w_a1_treinta",
+        "w_a1_cinco"
+      ],
+      "audioHint": "ñ = [нь]: А-ньос"
+    },
+    {
+      "id": "s_a1_042",
+      "spanish": "Mi sobrina tiene ocho años.",
+      "translationUk": "Моїй племінниці вісім років.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_sobrina",
+        "w_a1_tener",
+        "w_a1_ocho"
+      ],
+      "audioHint": "tiene = ТЬЄ-не"
+    },
+    {
+      "id": "s_a1_043",
+      "spanish": "Mi tío está casado y vive en Sevilla.",
+      "translationUk": "Мій дядько одружений і живе в Севільї.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_tio",
+        "w_a1_casado",
+        "w_a1_vivir"
+      ],
+      "audioHint": "ll = [й] у Sevilla: се-БІ-йа"
+    },
+    {
+      "id": "s_a1_044",
+      "spanish": "Mi primo es más alto que yo.",
+      "translationUk": "Мій двоюрідний брат вищий за мене.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "comparatives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_primo",
+        "w_a1_alto"
+      ],
+      "audioHint": "más … que — схема порівняння"
+    },
+    {
+      "id": "s_a1_045",
+      "spanish": "Su hija es muy inteligente y simpática.",
+      "translationUk": "Його донька дуже розумна й привітна.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_hija",
+        "w_a1_inteligente",
+        "w_a1_simpatico"
+      ],
+      "audioHint": "g перед e = [х]: ін-те-лі-ХЕН-те"
+    },
+    {
+      "id": "s_a1_046",
+      "spanish": "Mi abuela tiene el pelo blanco.",
+      "translationUk": "У моєї бабусі сиве волосся.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_abuela",
+        "w_a1_tener",
+        "w_a1_pelo",
+        "w_a1_blanco"
+      ],
+      "audioHint": "pelo = ПЕ-ло"
+    },
+    {
+      "id": "s_a1_047",
+      "spanish": "Mis padres están en casa.",
+      "translationUk": "Мої батьки вдома.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_padres",
+        "w_a1_estar",
+        "w_a1_casa"
+      ],
+      "audioHint": "están = ес-ТАН"
+    },
+    {
+      "id": "s_a1_048",
+      "spanish": "Mi hermana está soltera.",
+      "translationUk": "Моя сестра неодружена.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_hermana",
+        "w_a1_soltero"
+      ],
+      "audioHint": "стан описуємо через estar"
+    },
+    {
+      "id": "s_a1_049",
+      "spanish": "¿Cómo se llama tu hermano?",
+      "translationUk": "Як звати твого брата?",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "reflexive"
+      ],
+      "wordIds": [
+        "w_a1_llamarse",
+        "w_a1_hermano"
+      ],
+      "audioHint": "¿…? і ll = [й]"
+    },
+    {
+      "id": "s_a1_050",
+      "spanish": "Mi marido cocina muy bien.",
+      "translationUk": "Мій чоловік дуже добре готує.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_marido",
+        "w_a1_cocinar"
+      ],
+      "audioHint": "cocina = ко-СІ-на"
+    },
+    {
+      "id": "s_a1_051",
+      "spanish": "Tengo parientes en Valencia y en Madrid.",
+      "translationUk": "У мене є родичі у Валенсії та в Мадриді.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_pariente"
+      ],
+      "audioHint": "Valencia = ба-ЛЕН-сіа"
+    },
+    {
+      "id": "s_a1_052",
+      "spanish": "El bebé duerme doce horas.",
+      "translationUk": "Немовля спить дванадцять годин.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_bebe",
+        "w_a1_dormir",
+        "w_a1_doce",
+        "w_a1_hora"
+      ],
+      "audioHint": "duerme: o → ue"
+    },
+    {
+      "id": "s_a1_053",
+      "spanish": "Mi suegra es una persona muy amable.",
+      "translationUk": "Моя свекруха — дуже приязна людина.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_suegra",
+        "w_a1_persona",
+        "w_a1_amable"
+      ],
+      "audioHint": "suegra = СУЕ-гра"
+    },
+    {
+      "id": "s_a1_054",
+      "spanish": "—¿Tienes hermanos? —Sí, tengo una hermana pequeña.",
+      "translationUk": "—У тебе є брати чи сестри? —Так, у мене є молодша сестра.",
+      "level": "A1",
+      "topicId": "t_a1_family",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_hermano",
+        "w_a1_hermana",
+        "w_a1_pequeno"
+      ],
+      "audioHint": "ñ = [нь]: пе-КЕНЬ-о"
+    },
+    {
+      "id": "s_a1_055",
+      "spanish": "Me gusta el café con leche.",
+      "translationUk": "Я люблю каву з молоком.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "gustar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_gustar",
+        "w_a1_cafe",
+        "w_a1_leche"
+      ],
+      "audioHint": "gustar: дієслово в однині з одниною"
+    },
+    {
+      "id": "s_a1_056",
+      "spanish": "—¿Qué quieres comer? —Una sopa de verduras.",
+      "translationUk": "—Що ти хочеш з'їсти? —Овочевий суп.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_querer",
+        "w_a1_comer",
+        "w_a1_sopa",
+        "w_a1_verdura"
+      ],
+      "audioHint": "qu = [к]: КЕ-рес"
+    },
+    {
+      "id": "s_a1_057",
+      "spanish": "Desayuno tostadas con aceite y un café.",
+      "translationUk": "На сніданок я їм тости з олією та каву.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_desayunar",
+        "w_a1_aceite",
+        "w_a1_cafe"
+      ],
+      "audioHint": "tostadas = тос-ТА-дас"
+    },
+    {
+      "id": "s_a1_058",
+      "spanish": "En el bar hay tapas gratis los domingos.",
+      "translationUk": "У барі по неділях безкоштовні тапас.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_bar",
+        "w_a1_hay",
+        "w_a1_tapa",
+        "w_a1_gratis",
+        "w_a1_domingo"
+      ],
+      "audioHint": "h у hay німа: [ай]"
+    },
+    {
+      "id": "s_a1_059",
+      "spanish": "El menú del día cuesta doce euros.",
+      "translationUk": "Комплексний обід коштує дванадцять євро.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_menu",
+        "w_a1_costar",
+        "w_a1_doce",
+        "w_a1_euro"
+      ],
+      "audioHint": "menú — наголос на останньому складі"
+    },
+    {
+      "id": "s_a1_060",
+      "spanish": "¿Nos trae la carta, por favor?",
+      "translationUk": "Принесете нам меню, будь ласка?",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "polite",
+        "question_words"
+      ],
+      "wordIds": [
+        "w_a1_carta",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "ввічливе питання: ¿…? і por favor"
+    },
+    {
+      "id": "s_a1_061",
+      "spanish": "No me gusta la comida picante.",
+      "translationUk": "Я не люблю гостру їжу.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "negation",
+        "gustar"
+      ],
+      "wordIds": [
+        "w_a1_gustar",
+        "w_a1_comida",
+        "w_a1_picante"
+      ],
+      "audioHint": "no стоїть перед gusta"
+    },
+    {
+      "id": "s_a1_062",
+      "spanish": "La tortilla de patatas está muy rica.",
+      "translationUk": "Омлет із картоплею дуже смачний.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_tortilla",
+        "w_a1_patata",
+        "w_a1_rico"
+      ],
+      "audioHint": "ll = [й]: тор-ТІ-йа"
+    },
+    {
+      "id": "s_a1_063",
+      "spanish": "Como fruta y verdura todos los días.",
+      "translationUk": "Я їм фрукти й овочі щодня.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_comer",
+        "w_a1_fruta",
+        "w_a1_verdura",
+        "w_a1_todos_los_dias"
+      ],
+      "audioHint": "como = КО-мо"
+    },
+    {
+      "id": "s_a1_064",
+      "spanish": "Tengo hambre, quiero un bocadillo de jamón.",
+      "translationUk": "Я голодний, хочу бутерброд із шинкою.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_tener_hambre",
+        "w_a1_querer",
+        "w_a1_bocadillo",
+        "w_a1_jamon"
+      ],
+      "audioHint": "h у hambre німа: АМ-бре; j = [х]"
+    },
+    {
+      "id": "s_a1_065",
+      "spanish": "Un vaso de agua, por favor.",
+      "translationUk": "Склянку води, будь ласка.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "polite",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_vaso",
+        "w_a1_agua",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "v = [б]: БА-со"
+    },
+    {
+      "id": "s_a1_066",
+      "spanish": "El pescado está delicioso.",
+      "translationUk": "Риба дуже смачна.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_pescado",
+        "w_a1_delicioso"
+      ],
+      "audioHint": "está = ес-ТА"
+    },
+    {
+      "id": "s_a1_067",
+      "spanish": "Pido un zumo de naranja natural.",
+      "translationUk": "Я замовляю свіжовичавлений апельсиновий сік.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_pedir",
+        "w_a1_zumo",
+        "w_a1_naranja"
+      ],
+      "audioHint": "z = [θ] у zumo: СУ-мо"
+    },
+    {
+      "id": "s_a1_068",
+      "spanish": "¿Quieres té con limón o café solo?",
+      "translationUk": "Хочеш чай з лимоном чи чорну каву?",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_querer",
+        "w_a1_te",
+        "w_a1_limon",
+        "w_a1_cafe"
+      ],
+      "audioHint": "питання з вибором: інтонація вгору на кожній частині"
+    },
+    {
+      "id": "s_a1_069",
+      "spanish": "Mi padre cocina arroz con pollo los domingos.",
+      "translationUk": "Мій тато по неділях готує рис із куркою.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_padre",
+        "w_a1_cocinar",
+        "w_a1_arroz",
+        "w_a1_pollo",
+        "w_a1_domingo"
+      ],
+      "audioHint": "ll = [й]: ПО-йо"
+    },
+    {
+      "id": "s_a1_070",
+      "spanish": "En España la cena es a las nueve o a las diez.",
+      "translationUk": "В Іспанії вечеряють о дев'ятій або десятій.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "time_expressions",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_cena",
+        "w_a1_nueve",
+        "w_a1_diez"
+      ],
+      "audioHint": "ñ = [нь]: іс-ПА-нья"
+    },
+    {
+      "id": "s_a1_071",
+      "spanish": "Tengo sed, ¿me das agua, por favor?",
+      "translationUk": "Я хочу пити, даси мені води, будь ласка?",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_tener_sed",
+        "w_a1_agua",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "sed = [сед] із міжзубним [θ]"
+    },
+    {
+      "id": "s_a1_072",
+      "spanish": "—¿Qué desea? —Una cerveza fría, por favor.",
+      "translationUk": "—Що бажаєте? —Одне холодне пиво, будь ласка.",
+      "level": "A1",
+      "topicId": "t_a1_food_drink",
+      "kind": "dialogue",
+      "grammarTags": [
+        "polite",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_cerveza",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "c перед e = [θ]: сер-БЕ-са"
+    },
+    {
+      "id": "s_a1_073",
+      "spanish": "En el salón hay un sofá y una mesa.",
+      "translationUk": "У вітальні є диван і стіл.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_salon",
+        "w_a1_hay",
+        "w_a1_sofa",
+        "w_a1_mesa"
+      ],
+      "audioHint": "h у hay німа: [ай]"
+    },
+    {
+      "id": "s_a1_074",
+      "spanish": "Mi habitación tiene una ventana grande.",
+      "translationUk": "У моїй кімнаті велике вікно.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_habitacion",
+        "w_a1_tener",
+        "w_a1_ventana",
+        "w_a1_grande"
+      ],
+      "audioHint": "h німа: а-бі-та-СЬОН"
+    },
+    {
+      "id": "s_a1_075",
+      "spanish": "Me levanto a las siete y me ducho.",
+      "translationUk": "Я встаю о сьомій і приймаю душ.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_levantarse",
+        "w_a1_siete",
+        "w_a1_ducharse"
+      ],
+      "audioHint": "ch = [ч]: ДУ-чо"
+    },
+    {
+      "id": "s_a1_076",
+      "spanish": "Después del desayuno me visto.",
+      "translationUk": "Після сніданку я вдягаюся.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_despues",
+        "w_a1_desayuno",
+        "w_a1_vestirse"
+      ],
+      "audioHint": "me visto: e → i"
+    },
+    {
+      "id": "s_a1_077",
+      "spanish": "Hago la cama antes de salir de casa.",
+      "translationUk": "Я застеляю ліжко перед виходом з дому.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_hacer_la_cama",
+        "w_a1_antes",
+        "w_a1_salir",
+        "w_a1_casa"
+      ],
+      "audioHint": "hago = А-го: h німа"
+    },
+    {
+      "id": "s_a1_078",
+      "spanish": "La cocina está limpia y ordenada.",
+      "translationUk": "Кухня чиста й прибрана.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_cocina",
+        "w_a1_limpio",
+        "w_a1_ordenado"
+      ],
+      "audioHint": "стан описуємо через está"
+    },
+    {
+      "id": "s_a1_079",
+      "spanish": "—¿Dónde está el baño? —Al final del pasillo.",
+      "translationUk": "—Де ванна кімната? —У кінці коридору.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_bano",
+        "w_a1_pasillo"
+      ],
+      "audioHint": "ñ = [нь]: БА-ньо"
+    },
+    {
+      "id": "s_a1_080",
+      "spanish": "Pongo la lavadora los sábados.",
+      "translationUk": "Я запускаю прання по суботах.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_lavadora",
+        "w_a1_sabado"
+      ],
+      "audioHint": "pongo — неправильна форма від poner"
+    },
+    {
+      "id": "s_a1_081",
+      "spanish": "La leche está en la nevera.",
+      "translationUk": "Молоко в холодильнику.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_leche",
+        "w_a1_nevera"
+      ],
+      "audioHint": "v = [б]: не-БЕ-ра"
+    },
+    {
+      "id": "s_a1_082",
+      "spanish": "Mi vecino es muy tranquilo.",
+      "translationUk": "Мій сусід дуже спокійний.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_vecino",
+        "w_a1_tranquilo"
+      ],
+      "audioHint": "v = [б]: бе-СІ-но"
+    },
+    {
+      "id": "s_a1_083",
+      "spanish": "Vivo en un piso pequeño en el centro.",
+      "translationUk": "Я живу в маленькій квартирі в центрі.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_vivir",
+        "w_a1_piso",
+        "w_a1_pequeno"
+      ],
+      "audioHint": "ñ = [нь]: пе-КЕНЬ-о"
+    },
+    {
+      "id": "s_a1_084",
+      "spanish": "Me acuesto a las once y duermo ocho horas.",
+      "translationUk": "Я лягаю об одинадцятій і сплю вісім годин.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "numbers"
+      ],
+      "wordIds": [
+        "w_a1_acostarse",
+        "w_a1_once",
+        "w_a1_dormir",
+        "w_a1_hora"
+      ],
+      "audioHint": "o → ue: me acuesto, duermo"
+    },
+    {
+      "id": "s_a1_085",
+      "spanish": "El ascensor no funciona hoy.",
+      "translationUk": "Сьогодні ліфт не працює.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "negation",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_ascensor",
+        "w_a1_hoy"
+      ],
+      "audioHint": "no — перед дієсловом"
+    },
+    {
+      "id": "s_a1_086",
+      "spanish": "Hay una lámpara al lado de la cama.",
+      "translationUk": "Біля ліжка є лампа.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_hay",
+        "w_a1_lampara",
+        "w_a1_cama"
+      ],
+      "audioHint": "al lado de = «поруч із»"
+    },
+    {
+      "id": "s_a1_087",
+      "spanish": "Trabajo con el ordenador en el salón.",
+      "translationUk": "Я працюю за комп'ютером у вітальні.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_ordenador",
+        "w_a1_salon"
+      ],
+      "audioHint": "j = [х] у trabajo: тра-БА-хо"
+    },
+    {
+      "id": "s_a1_088",
+      "spanish": "Los muebles del salón son nuevos.",
+      "translationUk": "Меблі у вітальні нові.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "gender_number",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_mueble",
+        "w_a1_salon",
+        "w_a1_nuevo"
+      ],
+      "audioHint": "son nuevos — узгодження в множині"
+    },
+    {
+      "id": "s_a1_089",
+      "spanish": "¿Tienes las llaves de casa?",
+      "translationUk": "У тебе є ключі від дому?",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_tener",
+        "w_a1_llave",
+        "w_a1_casa"
+      ],
+      "audioHint": "ll = [й]: ЙА-бес"
+    },
+    {
+      "id": "s_a1_090",
+      "spanish": "Me cepillo los dientes después de cenar.",
+      "translationUk": "Я чищу зуби після вечері.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_cepillarse_los_dientes",
+        "w_a1_despues",
+        "w_a1_cenar"
+      ],
+      "audioHint": "ll = [й]: се-ПІ-йо"
+    },
+    {
+      "id": "s_a1_091",
+      "spanish": "Voy a limpiar la casa por la mañana.",
+      "translationUk": "Уранці я приберу в домі.",
+      "level": "A1",
+      "topicId": "t_a1_home",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_ir",
+        "w_a1_limpiar",
+        "w_a1_casa",
+        "w_a1_por_la_manana"
+      ],
+      "audioHint": "ir a + інфінітив = найближче майбутнє"
+    },
+    {
+      "id": "s_a1_092",
+      "spanish": "Me gusta esa camisa blanca.",
+      "translationUk": "Мені подобається та біла сорочка.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "gustar",
+        "demonstratives"
+      ],
+      "wordIds": [
+        "w_a1_gustar",
+        "w_a1_camisa",
+        "w_a1_blanco"
+      ],
+      "audioHint": "esa — вказує на річ далі від нас"
+    },
+    {
+      "id": "s_a1_093",
+      "spanish": "Estos pantalones son muy largos para mí.",
+      "translationUk": "Ці штани занадто довгі для мене.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "demonstratives",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_pantalon",
+        "w_a1_largo"
+      ],
+      "audioHint": "estos — множина чоловічого роду"
+    },
+    {
+      "id": "s_a1_094",
+      "spanish": "¿Tiene esta falda en la talla mediana?",
+      "translationUk": "У вас є ця спідниця середнього розміру?",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_falda",
+        "w_a1_talla",
+        "w_a1_mediano"
+      ],
+      "audioHint": "¿…? і ввічлива форма tiene"
+    },
+    {
+      "id": "s_a1_095",
+      "spanish": "¿Cuánto cuesta esta chaqueta?",
+      "translationUk": "Скільки коштує ця куртка?",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "demonstratives"
+      ],
+      "wordIds": [
+        "w_a1_cuanto",
+        "w_a1_costar",
+        "w_a1_chaqueta"
+      ],
+      "audioHint": "ch = [ч]: ча-КЕ-та"
+    },
+    {
+      "id": "s_a1_096",
+      "spanish": "Voy a comprar un regalo para mi madre.",
+      "translationUk": "Я збираюся купити подарунок для мами.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "possessives"
+      ],
+      "wordIds": [
+        "w_a1_ir",
+        "w_a1_comprar",
+        "w_a1_regalo",
+        "w_a1_madre"
+      ],
+      "audioHint": "voy a comprar = «куплю» (найближчий план)"
+    },
+    {
+      "id": "s_a1_097",
+      "spanish": "Me pruebo el vestido azul en el probador.",
+      "translationUk": "Я міряю синю сукню у примірочній.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_probarse",
+        "w_a1_vestido",
+        "w_a1_azul",
+        "w_a1_probador"
+      ],
+      "audioHint": "o → ue: me pruebo"
+    },
+    {
+      "id": "s_a1_098",
+      "spanish": "Esta camiseta es más barata que esa.",
+      "translationUk": "Ця футболка дешевша за ту.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "comparatives",
+        "demonstratives"
+      ],
+      "wordIds": [
+        "w_a1_camiseta",
+        "w_a1_barato"
+      ],
+      "audioHint": "más + прикметник + que"
+    },
+    {
+      "id": "s_a1_099",
+      "spanish": "En las rebajas compro ropa de invierno.",
+      "translationUk": "На розпродажі я купую зимовий одяг.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "articles",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_rebajas",
+        "w_a1_comprar",
+        "w_a1_ropa",
+        "w_a1_invierno"
+      ],
+      "audioHint": "j = [х]: рре-БА-хас"
+    },
+    {
+      "id": "s_a1_100",
+      "spanish": "Los zapatos negros son de cuero.",
+      "translationUk": "Чорні черевики — шкіряні.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "gender_number",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_zapato",
+        "w_a1_negro"
+      ],
+      "audioHint": "z = [θ]: са-ПА-тос"
+    },
+    {
+      "id": "s_a1_101",
+      "spanish": "Pago en la caja con tarjeta.",
+      "translationUk": "Я плачу на касі карткою.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_pagar",
+        "w_a1_caja",
+        "w_a1_tarjeta"
+      ],
+      "audioHint": "j = [х]: КА-ха"
+    },
+    {
+      "id": "s_a1_102",
+      "spanish": "La dependienta es muy amable.",
+      "translationUk": "Продавчиня дуже привітна.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_dependiente",
+        "w_a1_amable"
+      ],
+      "audioHint": "dependienta = де-пен-ДЬЄН-та"
+    },
+    {
+      "id": "s_a1_103",
+      "spanish": "¿Me lo puedo probar, por favor?",
+      "translationUk": "Можна це приміряти, будь ласка?",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "polite",
+        "question_words"
+      ],
+      "wordIds": [
+        "w_a1_me_lo_puedo_probar",
+        "w_a1_por_favor"
+      ],
+      "audioHint": "lo замінює назву речі"
+    },
+    {
+      "id": "s_a1_104",
+      "spanish": "El jersey gris me queda bien.",
+      "translationUk": "Сірий светр мені пасує.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "demonstratives",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_jersey",
+        "w_a1_gris",
+        "w_a1_quedar"
+      ],
+      "audioHint": "j = [х]: хер-СЕЙ"
+    },
+    {
+      "id": "s_a1_105",
+      "spanish": "Compro la bolsa en el supermercado.",
+      "translationUk": "Я купую пакет у супермаркеті.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_comprar",
+        "w_a1_bolsa",
+        "w_a1_supermercado"
+      ],
+      "audioHint": "c перед e = [θ]: су-пер-мер-КА-до"
+    },
+    {
+      "id": "s_a1_106",
+      "spanish": "Voy de compras al centro comercial.",
+      "translationUk": "Я йду за покупками в торговий центр.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_ir_de_compras",
+        "w_a1_centro_comercial"
+      ],
+      "audioHint": "ir de compras — стала фраза"
+    },
+    {
+      "id": "s_a1_107",
+      "spanish": "Devuelvo la chaqueta porque es estrecha.",
+      "translationUk": "Я повертаю куртку, бо вона вузька.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_devolver",
+        "w_a1_chaqueta",
+        "w_a1_estrecho"
+      ],
+      "audioHint": "o → ue: devuelvo"
+    },
+    {
+      "id": "s_a1_108",
+      "spanish": "El escaparate de esa tienda es bonito.",
+      "translationUk": "Вітрина того магазину гарна.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "phrase",
+      "grammarTags": [
+        "demonstratives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_escaparate",
+        "w_a1_tienda"
+      ],
+      "audioHint": "tienda = ТЬЄН-да"
+    },
+    {
+      "id": "s_a1_109",
+      "spanish": "—¿Cuánto es? —Veinte euros, gracias.",
+      "translationUk": "—Скільки з мене? —Двадцять євро, дякую.",
+      "level": "A1",
+      "topicId": "t_a1_shopping",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "numbers",
+        "polite"
+      ],
+      "wordIds": [
+        "w_a1_cuanto",
+        "w_a1_veinte",
+        "w_a1_euro"
+      ],
+      "audioHint": "у касі кажуть ¿Cuánto es?"
+    },
+    {
+      "id": "s_a1_110",
+      "spanish": "—¿Qué tiempo hace hoy? —Hace sol y hace calor.",
+      "translationUk": "—Яка сьогодні погода? —Сонячно й тепло.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "dialogue",
+      "grammarTags": [
+        "question_words",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_que_tiempo_hace",
+        "w_a1_hoy",
+        "w_a1_hacer_sol",
+        "w_a1_hacer_calor"
+      ],
+      "audioHint": "h німа: А-се соль"
+    },
+    {
+      "id": "s_a1_111",
+      "spanish": "En invierno hace frío y nieva en la montaña.",
+      "translationUk": "Узимку холодно, і в горах іде сніг.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_invierno",
+        "w_a1_hacer_frio",
+        "w_a1_nevar",
+        "w_a1_montana"
+      ],
+      "audioHint": "ñ = [нь]: мон-ТА-нья"
+    },
+    {
+      "id": "s_a1_112",
+      "spanish": "En verano vamos a la playa.",
+      "translationUk": "Улітку ми їдемо на пляж.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_verano",
+        "w_a1_ir",
+        "w_a1_playa"
+      ],
+      "audioHint": "v = [б]: бе-РА-но; ll = [й]: ПЛА-йа"
+    },
+    {
+      "id": "s_a1_113",
+      "spanish": "Hoy está nublado y hace viento.",
+      "translationUk": "Сьогодні хмарно й вітряно.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_estar_nublado",
+        "w_a1_hacer_viento"
+      ],
+      "audioHint": "v = [б]: БЬЄН-то"
+    },
+    {
+      "id": "s_a1_114",
+      "spanish": "Está lloviendo, coge el paraguas.",
+      "translationUk": "Іде дощ, бери парасольку.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "periphrasis",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_esta_lloviendo",
+        "w_a1_paraguas"
+      ],
+      "audioHint": "ll = [й]: йо-БЬЄН-до"
+    },
+    {
+      "id": "s_a1_115",
+      "spanish": "La temperatura es de veinte grados.",
+      "translationUk": "Температура — двадцять градусів.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_temperatura",
+        "w_a1_veinte",
+        "w_a1_grado"
+      ],
+      "audioHint": "grados = ГРА-дос"
+    },
+    {
+      "id": "s_a1_116",
+      "spanish": "En otoño llueve mucho en el norte.",
+      "translationUk": "Восени на півночі часто дощить.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_otono",
+        "w_a1_llover",
+        "w_a1_norte"
+      ],
+      "audioHint": "ll = [й]: ЙО-но; llueve = ЙУЕ-бе"
+    },
+    {
+      "id": "s_a1_117",
+      "spanish": "En primavera todo está verde.",
+      "translationUk": "Навесні все зелене.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_primavera",
+        "w_a1_todo",
+        "w_a1_verde"
+      ],
+      "audioHint": "v = [б]: прі-ма-БЕ-ра"
+    },
+    {
+      "id": "s_a1_118",
+      "spanish": "En enero estamos a cinco grados bajo cero.",
+      "translationUk": "У січні в нас п'ять градусів нижче нуля.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "numbers",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_enero",
+        "w_a1_cinco",
+        "w_a1_grado",
+        "w_a1_bajo_cero"
+      ],
+      "audioHint": "j = [х] у bajo: БА-хо"
+    },
+    {
+      "id": "s_a1_119",
+      "spanish": "El mar está tranquilo hoy.",
+      "translationUk": "Сьогодні море спокійне.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_mar",
+        "w_a1_tranquilo",
+        "w_a1_hoy"
+      ],
+      "audioHint": "hoy = [ой]"
+    },
+    {
+      "id": "s_a1_120",
+      "spanish": "Mi estación favorita es el verano.",
+      "translationUk": "Моя улюблена пора року — літо.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_estacion",
+        "w_a1_favorito",
+        "w_a1_verano"
+      ],
+      "audioHint": "c перед i = [θ]: ес-та-СЬОН"
+    },
+    {
+      "id": "s_a1_121",
+      "spanish": "El cielo está lleno de nubes.",
+      "translationUk": "Небо затягнуте хмарами.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_cielo",
+        "w_a1_nube"
+      ],
+      "audioHint": "ll = [й]: ЙЕ-но"
+    },
+    {
+      "id": "s_a1_122",
+      "spanish": "En el sur hace más calor que en el norte.",
+      "translationUk": "На півдні спекотніше, ніж на півночі.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "comparatives",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_sur",
+        "w_a1_hacer_calor",
+        "w_a1_norte"
+      ],
+      "audioHint": "más … que — порівняння"
+    },
+    {
+      "id": "s_a1_123",
+      "spanish": "Hay niebla en la carretera esta mañana.",
+      "translationUk": "Сьогодні вранці на дорозі туман.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_hay",
+        "w_a1_niebla",
+        "w_a1_esta_manana"
+      ],
+      "audioHint": "ñ = [нь]: НЬЄ-бла"
+    },
+    {
+      "id": "s_a1_124",
+      "spanish": "Me gusta el clima templado de primavera.",
+      "translationUk": "Мені подобається м'який весняний клімат.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "gustar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_gustar",
+        "w_a1_clima",
+        "w_a1_templado",
+        "w_a1_primavera"
+      ],
+      "audioHint": "clima = КЛІ-ма"
+    },
+    {
+      "id": "s_a1_125",
+      "spanish": "El viento sopla muy fuerte en la costa.",
+      "translationUk": "На узбережжі вітер дме дуже сильно.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_viento",
+        "w_a1_soplar"
+      ],
+      "audioHint": "v = [б]: БЬЄН-то"
+    },
+    {
+      "id": "s_a1_126",
+      "spanish": "Estoy resfriado y no salgo de casa.",
+      "translationUk": "Я застуджений і не виходжу з дому.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "negation"
+      ],
+      "wordIds": [
+        "w_a1_resfriado",
+        "w_a1_salir",
+        "w_a1_casa"
+      ],
+      "audioHint": "no перед дієсловом salgo"
+    },
+    {
+      "id": "s_a1_127",
+      "spanish": "Después de la lluvia hay un arco iris.",
+      "translationUk": "Після дощу з'являється веселка.",
+      "level": "A1",
+      "topicId": "t_a1_weather_seasons",
+      "kind": "phrase",
+      "grammarTags": [
+        "hay",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_despues",
+        "w_a1_lluvia",
+        "w_a1_hay",
+        "w_a1_arco_iris"
+      ],
+      "audioHint": "ll = [й]: ЙУ-біа"
+    },
+    {
+      "id": "s_a1_128",
+      "spanish": "Me gusta mucho escuchar música.",
+      "translationUk": "Мені дуже подобається слухати музику.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "gustar",
+        "present_regular"
+      ],
+      "wordIds": [
+        "w_a1_me_gusta_mucho",
+        "w_a1_escuchar",
+        "w_a1_musica"
+      ],
+      "audioHint": "після gusta ставимо інфінітив"
+    },
+    {
+      "id": "s_a1_129",
+      "spanish": "¿Qué te gusta hacer en tu tiempo libre?",
+      "translationUk": "Що ти любиш робити у вільний час?",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "gustar"
+      ],
+      "wordIds": [
+        "w_a1_que_te_gusta_hacer",
+        "w_a1_tiempo_libre"
+      ],
+      "audioHint": "¿…? і h німа в hacer"
+    },
+    {
+      "id": "s_a1_130",
+      "spanish": "Juego al fútbol con mis amigos los sábados.",
+      "translationUk": "По суботах я граю у футбол із друзями.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_jugar_al_futbol",
+        "w_a1_sabado"
+      ],
+      "audioHint": "j = [х]: ХУЕ-го"
+    },
+    {
+      "id": "s_a1_131",
+      "spanish": "Los domingos voy al cine con mi hermana.",
+      "translationUk": "По неділях я ходжу в кіно з сестрою.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_domingo",
+        "w_a1_ir",
+        "w_a1_cine",
+        "w_a1_hermana"
+      ],
+      "audioHint": "voy al cine = voy a + el cine"
+    },
+    {
+      "id": "s_a1_132",
+      "spanish": "Mi afición favorita es la lectura.",
+      "translationUk": "Моє улюблене захоплення — читання.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "ser_estar"
+      ],
+      "wordIds": [
+        "w_a1_aficion",
+        "w_a1_favorito",
+        "w_a1_lectura"
+      ],
+      "audioHint": "c перед i = [θ]: а-фі-СЬОН"
+    },
+    {
+      "id": "s_a1_133",
+      "spanish": "Prefiero leer que ver la tele.",
+      "translationUk": "Я волію читати, а не дивитися телевізор.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "comparatives"
+      ],
+      "wordIds": [
+        "w_a1_preferir",
+        "w_a1_leer",
+        "w_a1_ver_la_tele"
+      ],
+      "audioHint": "e → ie: prefiero"
+    },
+    {
+      "id": "s_a1_134",
+      "spanish": "Hago deporte tres veces por semana.",
+      "translationUk": "Я займаюся спортом тричі на тиждень.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_hacer_deporte",
+        "w_a1_tres",
+        "w_a1_vez",
+        "w_a1_semana"
+      ],
+      "audioHint": "h німа: А-го"
+    },
+    {
+      "id": "s_a1_135",
+      "spanish": "Toco la guitarra y canto un poco.",
+      "translationUk": "Я граю на гітарі й трохи співаю.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_tocar_la_guitarra",
+        "w_a1_cantar",
+        "w_a1_poco"
+      ],
+      "audioHint": "gu перед i: u не читається, гі-ТА-рра"
+    },
+    {
+      "id": "s_a1_136",
+      "spanish": "En verano nado en el mar.",
+      "translationUk": "Улітку я плаваю в морі.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_regular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_verano",
+        "w_a1_nadar",
+        "w_a1_mar"
+      ],
+      "audioHint": "v = [б]: бе-РА-но"
+    },
+    {
+      "id": "s_a1_137",
+      "spanish": "Voy al gimnasio antes del trabajo.",
+      "translationUk": "Я ходжу в спортзал перед роботою.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "ir_a",
+        "prepositions"
+      ],
+      "wordIds": [
+        "w_a1_gimnasio",
+        "w_a1_antes"
+      ],
+      "audioHint": "g перед i = [х]: хім-НА-сьо"
+    },
+    {
+      "id": "s_a1_138",
+      "spanish": "Me encanta el cine español.",
+      "translationUk": "Я дуже люблю іспанське кіно.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "gustar",
+        "articles"
+      ],
+      "wordIds": [
+        "w_a1_encantar",
+        "w_a1_cine"
+      ],
+      "audioHint": "encanta працює як gusta"
+    },
+    {
+      "id": "s_a1_139",
+      "spanish": "Salgo a pasear por el parque por la tarde.",
+      "translationUk": "Після обіду я виходжу погуляти в парк.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "time_expressions"
+      ],
+      "wordIds": [
+        "w_a1_salir",
+        "w_a1_pasear",
+        "w_a1_parque",
+        "w_a1_por_la_tarde"
+      ],
+      "audioHint": "salgo — форма з g"
+    },
+    {
+      "id": "s_a1_140",
+      "spanish": "Mi equipo favorito juega hoy.",
+      "translationUk": "Моя улюблена команда грає сьогодні.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "possessives",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_equipo",
+        "w_a1_favorito",
+        "w_a1_jugar",
+        "w_a1_hoy"
+      ],
+      "audioHint": "j = [х]: ХУЕ-га"
+    },
+    {
+      "id": "s_a1_141",
+      "spanish": "Hago fotos con la cámara nueva.",
+      "translationUk": "Я фотографую новим фотоапаратом.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "present_irregular",
+        "gender_number"
+      ],
+      "wordIds": [
+        "w_a1_foto",
+        "w_a1_camara",
+        "w_a1_nuevo"
+      ],
+      "audioHint": "cámara = КА-ма-ра"
+    },
+    {
+      "id": "s_a1_142",
+      "spanish": "Estoy cansado y me quedo en casa.",
+      "translationUk": "Я втомлений і залишаюся вдома.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "ser_estar",
+        "reflexive"
+      ],
+      "wordIds": [
+        "w_a1_cansado",
+        "w_a1_quedarse_en_casa"
+      ],
+      "audioHint": "qu = [к]: КЕ-до"
+    },
+    {
+      "id": "s_a1_143",
+      "spanish": "¿Juegas al balón con los niños?",
+      "translationUk": "Ти граєш у м'яча з дітьми?",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "question_words",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_jugar",
+        "w_a1_balon",
+        "w_a1_nino"
+      ],
+      "audioHint": "u → ue: juegas"
+    },
+    {
+      "id": "s_a1_144",
+      "spanish": "Me divierto mucho en las fiestas.",
+      "translationUk": "Я добре розважаюся на вечірках.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "phrase",
+      "grammarTags": [
+        "reflexive",
+        "present_irregular"
+      ],
+      "wordIds": [
+        "w_a1_divertirse",
+        "w_a1_mucho",
+        "w_a1_fiesta"
+      ],
+      "audioHint": "e → ie: me divierto"
+    },
+    {
+      "id": "s_a1_145",
+      "spanish": "—¿Qué haces el fin de semana? —Voy a nadar.",
+      "translationUk": "—Що ти робиш на вихідних? —Піду поплаваю.",
+      "level": "A1",
+      "topicId": "t_a1_hobbies",
+      "kind": "dialogue",
+      "grammarTags": [
+        "ir_a",
+        "question_words"
+      ],
+      "wordIds": [
+        "w_a1_hacer",
+        "w_a1_fin_de_semana",
+        "w_a1_ir",
+        "w_a1_nadar"
+      ],
+      "audioHint": "voy a nadar = найближчий план"
+    }
+  ]
+}

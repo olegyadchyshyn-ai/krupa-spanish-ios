@@ -1,0 +1,117 @@
+{
+  "contentVersion": 1,
+  "topics": [
+    {
+      "id": "t_a1_numbers_big",
+      "level": "A1",
+      "titleEs": "Números y cantidades",
+      "titleUk": "Числа й кількість",
+      "descriptionUk": "Числа до 1000, кількість, ціни й оплата.",
+      "iconKey": "numbers",
+      "orderIndex": 1,
+      "grammarTags": [
+        "numbers",
+        "gender_number",
+        "question_words"
+      ]
+    },
+    {
+      "id": "t_a1_time_days",
+      "level": "A1",
+      "titleEs": "La hora y los días",
+      "titleUk": "Котра година і дні",
+      "descriptionUk": "Котра година, дні тижня, місяці й дати.",
+      "iconKey": "clock",
+      "orderIndex": 2,
+      "grammarTags": [
+        "time_expressions",
+        "numbers",
+        "question_words"
+      ]
+    },
+    {
+      "id": "t_a1_family",
+      "level": "A1",
+      "titleEs": "La familia",
+      "titleUk": "Родина",
+      "descriptionUk": "Родина й родичі, вік, опис людини.",
+      "iconKey": "family",
+      "orderIndex": 3,
+      "grammarTags": [
+        "possessives",
+        "ser_estar",
+        "present_irregular"
+      ]
+    },
+    {
+      "id": "t_a1_food_drink",
+      "level": "A1",
+      "titleEs": "Comida y bebida",
+      "titleUk": "Їжа й напої",
+      "descriptionUk": "Їжа, напої, смаки та прийоми їжі.",
+      "iconKey": "food",
+      "orderIndex": 4,
+      "grammarTags": [
+        "gustar",
+        "articles",
+        "present_irregular"
+      ]
+    },
+    {
+      "id": "t_a1_home",
+      "level": "A1",
+      "titleEs": "La casa y la rutina",
+      "titleUk": "Дім і розпорядок дня",
+      "descriptionUk": "Кімнати, меблі та щоденні справи.",
+      "iconKey": "home",
+      "orderIndex": 5,
+      "grammarTags": [
+        "reflexive",
+        "hay",
+        "prepositions"
+      ]
+    },
+    {
+      "id": "t_a1_shopping",
+      "level": "A1",
+      "titleEs": "De compras",
+      "titleUk": "За покупками",
+      "descriptionUk": "Одяг, кольори, розміри й покупки.",
+      "iconKey": "shopping",
+      "orderIndex": 6,
+      "grammarTags": [
+        "demonstratives",
+        "comparatives",
+        "pronouns_object"
+      ]
+    },
+    {
+      "id": "t_a1_weather_seasons",
+      "level": "A1",
+      "titleEs": "El tiempo y las estaciones",
+      "titleUk": "Погода й пори року",
+      "descriptionUk": "Погода, пори року та температури.",
+      "iconKey": "weather",
+      "orderIndex": 7,
+      "grammarTags": [
+        "present_irregular",
+        "hay",
+        "time_expressions"
+      ]
+    },
+    {
+      "id": "t_a1_hobbies",
+      "level": "A1",
+      "titleEs": "Aficiones y tiempo libre",
+      "titleUk": "Хобі та вільний час",
+      "descriptionUk": "Хобі, спорт і вподобання (gustar).",
+      "iconKey": "hobby",
+      "orderIndex": 8,
+      "grammarTags": [
+        "gustar",
+        "present_regular",
+        "ir_a"
+      ]
+    }
+  ]
+}

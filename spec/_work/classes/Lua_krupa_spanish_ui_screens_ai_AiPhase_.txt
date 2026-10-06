@@ -1,0 +1,168 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+  Access flags      : 0x4011 (PUBLIC FINAL ENUM)
+  Superclass        : 'Ljava/lang/Enum;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : '$ENTRIES'
+      type          : 'Lkotlin/enums/EnumEntries;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : '$VALUES'
+      type          : '[Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'CHAT'
+      type          : 'Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'REVIEW'
+      type          : 'Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'SETUP'
+      type          : 'Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : '$values'
+      type          : '()[Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+      code          -
+      registers     : 3
+      ins           : 0
+      outs          : 3
+      insns size    : 11 16-bit code units
+00ff30:                                        |[00ff30] ua.krupa.spanish.ui.screens.ai.AiPhase.$values:()[Lua/krupa/spanish/ui/screens/ai/AiPhase;
+00ff40: 6200 bf00                              |0000: sget-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.SETUP:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bf
+00ff44: 6201 bd00                              |0002: sget-object v1, Lua/krupa/spanish/ui/screens/ai/AiPhase;.CHAT:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bd
+00ff48: 6202 be00                              |0004: sget-object v2, Lua/krupa/spanish/ui/screens/ai/AiPhase;.REVIEW:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00be
+00ff4c: 2430 6701 1002                         |0006: filled-new-array {v0, v1, v2}, [Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@0167
+00ff52: 0c00                                   |0009: move-result-object v0
+00ff54: 1100                                   |000a: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 0
+      outs          : 3
+      insns size    : 47 16-bit code units
+00ff7c:                                        |[00ff7c] ua.krupa.spanish.ui.screens.ai.AiPhase.<clinit>:()V
+00ff8c: 2200 1d01                              |0000: new-instance v0, Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@011d
+00ff90: 1a01 f103                              |0002: const-string v1, "SETUP" // string@03f1
+00ff94: 1202                                   |0004: const/4 v2, #int 0 // #0
+00ff96: 7030 3b02 1002                         |0005: invoke-direct {v0, v1, v2}, Lua/krupa/spanish/ui/screens/ai/AiPhase;.<init>:(Ljava/lang/String;I)V // method@023b
+00ff9c: 6900 bf00                              |0008: sput-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.SETUP:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bf
+00ffa0: 2200 1d01                              |000a: new-instance v0, Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@011d
+00ffa4: 1a01 ef01                              |000c: const-string v1, "CHAT" // string@01ef
+00ffa8: 1212                                   |000e: const/4 v2, #int 1 // #1
+00ffaa: 7030 3b02 1002                         |000f: invoke-direct {v0, v1, v2}, Lua/krupa/spanish/ui/screens/ai/AiPhase;.<init>:(Ljava/lang/String;I)V // method@023b
+00ffb0: 6900 bd00                              |0012: sput-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.CHAT:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bd
+00ffb4: 2200 1d01                              |0014: new-instance v0, Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@011d
+00ffb8: 1a01 ea03                              |0016: const-string v1, "REVIEW" // string@03ea
+00ffbc: 1222                                   |0018: const/4 v2, #int 2 // #2
+00ffbe: 7030 3b02 1002                         |0019: invoke-direct {v0, v1, v2}, Lua/krupa/spanish/ui/screens/ai/AiPhase;.<init>:(Ljava/lang/String;I)V // method@023b
+00ffc4: 6900 be00                              |001c: sput-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.REVIEW:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00be
+00ffc8: 7100 3902 0000                         |001e: invoke-static {}, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$values:()[Lua/krupa/spanish/ui/screens/ai/AiPhase; // method@0239
+00ffce: 0c00                                   |0021: move-result-object v0
+00ffd0: 6900 bc00                              |0022: sput-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$VALUES:[Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bc
+00ffd4: 6200 bc00                              |0024: sget-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$VALUES:[Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bc
+00ffd8: 1f00 5f01                              |0026: check-cast v0, [Ljava/lang/Enum; // type@015f
+00ffdc: 7110 d900 0000                         |0028: invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;.enumEntries:([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries; // method@00d9
+00ffe2: 0c00                                   |002b: move-result-object v0
+00ffe4: 6900 bb00                              |002c: sput-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$ENTRIES:Lkotlin/enums/EnumEntries; // field@00bb
+00ffe8: 0e00                                   |002e: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=45
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : '<init>'
+      type          : '(Ljava/lang/String;I)V'
+      access        : 0x10002 (PRIVATE CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 3
+      outs          : 3
+      insns size    : 4 16-bit code units
+00ffec:                                        |[00ffec] ua.krupa.spanish.ui.screens.ai.AiPhase.<init>:(Ljava/lang/String;I)V
+00fffc: 7030 9500 1002                         |0000: invoke-direct {v0, v1, v2}, Ljava/lang/Enum;.<init>:(Ljava/lang/String;I)V // method@0095
+010002: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=45
+      locals        :
+        0x0000 - 0x0004 reg=0 this Lua/krupa/spanish/ui/screens/ai/AiPhase;
+        0x0000 - 0x0004 reg=1 $enum$name Ljava/lang/String;
+        0x0000 - 0x0004 reg=2 $enum$ordinal I
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'getEntries'
+      type          : '()Lkotlin/enums/EnumEntries;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 3 16-bit code units
+00fef4:                                        |[00fef4] ua.krupa.spanish.ui.screens.ai.AiPhase.getEntries:()Lkotlin/enums/EnumEntries;
+00ff04: 6200 bb00                              |0000: sget-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$ENTRIES:Lkotlin/enums/EnumEntries; // field@00bb
+00ff08: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'valueOf'
+      type          : '(Ljava/lang/String;)Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 2
+      insns size    : 9 16-bit code units
+00ff0c:                                        |[00ff0c] ua.krupa.spanish.ui.screens.ai.AiPhase.valueOf:(Ljava/lang/String;)Lua/krupa/spanish/ui/screens/ai/AiPhase;
+00ff1c: 1c00 1d01                              |0000: const-class v0, Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@011d
+00ff20: 7120 9600 1000                         |0002: invoke-static {v0, v1}, Ljava/lang/Enum;.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum; // method@0096
+00ff26: 0c00                                   |0005: move-result-object v0
+00ff28: 1f00 1d01                              |0006: check-cast v0, Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@011d
+00ff2c: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ui/screens/ai/AiPhase;)
+      name          : 'values'
+      type          : '()[Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 9 16-bit code units
+00ff58:                                        |[00ff58] ua.krupa.spanish.ui.screens.ai.AiPhase.values:()[Lua/krupa/spanish/ui/screens/ai/AiPhase;
+00ff68: 6200 bc00                              |0000: sget-object v0, Lua/krupa/spanish/ui/screens/ai/AiPhase;.$VALUES:[Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bc
+00ff6c: 6e10 6103 0000                         |0002: invoke-virtual {v0}, [Ljava/lang/Object;.clone:()Ljava/lang/Object; // method@0361
+00ff72: 0c00                                   |0005: move-result-object v0
+00ff74: 1f00 6701                              |0006: check-cast v0, [Lua/krupa/spanish/ui/screens/ai/AiPhase; // type@0167
+00ff78: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+  source_file_idx   : 405 (AiDialogViewModel.kt)
+
+Class #50 annotations:
+Annotations on class
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��(\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485048\484951\n��\n\484850\485048\484954\n\484850\b\484850\n\484850\485048\t\n\484850\b\485048\n\484850\485048\b\n\484850\b\484850\b\b\485148��2\4848500\484849B'\485050\484854\485048\484850\485150\4848500\484851\485050\484854\485048\484852\485150\4848500\484853\485050\484854\485048\484854\485150\4848500\484853\485050\b\b\484850\485048\484855\485150\4848500\b¢\484854\484850\485048\tJ\t\485048\485049\485150\4848500\484851HÆ\484851J\t\485048\485050\485150\4848500\484853HÆ\484851J\t\485048\485051\485150\4848500\484853HÆ\484851J\t\485048\485052\485150\4848500\bHÆ\484851J1\485048\485053\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\b\b\484850\485048\484852\485150\4848500\4848532\b\b\484850\485048\484854\485150\4848500\4848532\b\b\484850\485048\484855\485150\4848500\bHÆ\484849J\485051\485048\485054\485150\4848500\4848512\b\485048\485055\485150\484852\485148\4848490\484849HÖ\484851J\t\485048\485148\485150\4848500\485149HÖ\484849J\t\485048\485150\485150\4848500\484853HÖ\484849R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\n\485048\484951R\485049\485048\484854\485150\4848500\484853¢\484854\b\n��\485150\484852\b\f\485048\rR\485049\485048\484852\485150\4848500\484853¢\484854\b\n��\485150\484852\b\484954\485048\rR\485049\485048\484855\485150\4848500\b¢\484854\b\n��\485150\484852\b\484955\485048\485048¨\484854\485151" } d2={ "Lua/krupa/spanish/ui/screens/ai/ChatMessage;" "" "fromUser" "" "spanish" "" "hintUk" "timestamp" "" "(ZLjava/lang/String;Ljava/lang/String;J)V" "getFromUser" "()Z" "getHintUk" "()Ljava/lang/String;" "getSpanish" "getTimestamp" "()J" "component1" "component2" "component3" "component4" "copy" "equals" "other" "hashCode" "" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+
+Class #50            -

@@ -1,0 +1,65 @@
+# XcodeGen — опис проєкту. З нього генерується KrupaSpanish.xcodeproj.
+#   xcodegen generate        (у теці KrupaSpanish)
+#
+# Цільова платформа: iOS 17.0 — тобто застосунок працює і на iOS 17.7.
+
+name: KrupaSpanish
+
+options:
+  bundleIdPrefix: ua.krupa
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: false
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    CLANG_ENABLE_MODULES: YES
+    ALWAYS_SEARCH_USER_PATHS: NO
+    ENABLE_BITCODE: NO
+
+targets:
+  KrupaSpanish:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_NAME: KrupaSpanish
+        PRODUCT_BUNDLE_IDENTIFIER: ua.krupa.spanish
+        INFOPLIST_FILE: Supporting/Info.plist
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        # Застосунок не потребує жодних special entitlements, тому підписується
+        # навіть безкоштовним Apple ID (Sideloadly / AltStore).
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_EMIT_LOC_STRINGS: YES
+        GENERATE_INFOPLIST_FILE: NO
+
+schemes:
+  KrupaSpanish:
+    build:
+      targets:
+        KrupaSpanish: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

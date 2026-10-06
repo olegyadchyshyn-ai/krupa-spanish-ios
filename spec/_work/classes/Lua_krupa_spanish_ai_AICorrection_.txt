@@ -1,0 +1,341 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AICorrection;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'correctText'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'explanationUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'wrongText'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+0027e0:                                        |[0027e0] ua.krupa.spanish.ai.AICorrection.<clinit>:()V
+0027f0: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : '<init>'
+      type          : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 4
+      outs          : 2
+      insns size    : 25 16-bit code units
+0027f4:                                        |[0027f4] ua.krupa.spanish.ai.AICorrection.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+002804: 1a00 b802                              |0000: const-string v0, "wrongText" // string@02b8
+002808: 7120 7700 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00280e: 1a00 de01                              |0005: const-string v0, "correctText" // string@01de
+002812: 7120 7700 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+002818: 1a00 f001                              |000a: const-string v0, "explanationUk" // string@01f0
+00281c: 7120 7700 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+002822: 7010 5d00 0100                         |000f: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@005d
+002828: 5b12 1b00                              |0012: iput-object v2, v1, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+00282c: 5b13 1900                              |0014: iput-object v3, v1, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+002830: 5b14 1a00                              |0016: iput-object v4, v1, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+002834: 0e00                                   |0018: return-void
+      catches       : (none)
+      positions     :
+        0x000f line=69
+        0x0012 line=70
+        0x0014 line=71
+        0x0016 line=72
+        0x0018 line=69
+      locals        :
+        0x0000 - 0x0019 reg=1 this Lua/krupa/spanish/ai/AICorrection;
+        0x0000 - 0x0019 reg=2 wrongText Ljava/lang/String;
+        0x0000 - 0x0019 reg=3 correctText Ljava/lang/String;
+        0x0000 - 0x0019 reg=4 explanationUk Ljava/lang/String;
+
+    #2              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'copy$default'
+      type          : '(Lua/krupa/spanish/ai/AICorrection;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lua/krupa/spanish/ai/AICorrection;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 6
+      ins           : 6
+      outs          : 4
+      insns size    : 23 16-bit code units
+002764:                                        |[002764] ua.krupa.spanish.ai.AICorrection.copy$default:(Lua/krupa/spanish/ai/AICorrection;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lua/krupa/spanish/ai/AICorrection;
+002774: dd05 0401                              |0000: and-int/lit8 v5, v4, #int 1 // #01
+002778: 3805 0400                              |0002: if-eqz v5, 0006 // +0004
+00277c: 5401 1b00                              |0004: iget-object v1, v0, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+002780: dd05 0402                              |0006: and-int/lit8 v5, v4, #int 2 // #02
+002784: 3805 0400                              |0008: if-eqz v5, 000c // +0004
+002788: 5402 1900                              |000a: iget-object v2, v0, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+00278c: dd04 0404                              |000c: and-int/lit8 v4, v4, #int 4 // #04
+002790: 3804 0400                              |000e: if-eqz v4, 0012 // +0004
+002794: 5403 1a00                              |0010: iget-object v3, v0, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+002798: 6e40 8c00 1032                         |0012: invoke-virtual {v0, v1, v2, v3}, Lua/krupa/spanish/ai/AICorrection;.copy:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/ai/AICorrection; // method@008c
+00279e: 0c00                                   |0015: move-result-object v0
+0027a0: 1100                                   |0016: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'component1'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00265c:                                        |[00265c] ua.krupa.spanish.ai.AICorrection.component1:()Ljava/lang/String;
+00266c: 5410 1b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+002670: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'component2'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+002674:                                        |[002674] ua.krupa.spanish.ai.AICorrection.component2:()Ljava/lang/String;
+002684: 5410 1900                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+002688: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'component3'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00268c:                                        |[00268c] ua.krupa.spanish.ai.AICorrection.component3:()Ljava/lang/String;
+00269c: 5410 1a00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+0026a0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'copy'
+      type          : '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/ai/AICorrection;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 4
+      outs          : 4
+      insns size    : 21 16-bit code units
+0027a4:                                        |[0027a4] ua.krupa.spanish.ai.AICorrection.copy:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lua/krupa/spanish/ai/AICorrection;
+0027b4: 1a00 b802                              |0000: const-string v0, "wrongText" // string@02b8
+0027b8: 7120 7700 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+0027be: 1a00 de01                              |0005: const-string v0, "correctText" // string@01de
+0027c2: 7120 7700 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+0027c8: 1a00 f001                              |000a: const-string v0, "explanationUk" // string@01f0
+0027cc: 7120 7700 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+0027d2: 2200 7300                              |000f: new-instance v0, Lua/krupa/spanish/ai/AICorrection; // type@0073
+0027d6: 7040 8800 2043                         |0011: invoke-direct {v0, v2, v3, v4}, Lua/krupa/spanish/ai/AICorrection;.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@0088
+0027dc: 1100                                   |0014: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'equals'
+      type          : '(Ljava/lang/Object;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 47 16-bit code units
+0025a8:                                        |[0025a8] ua.krupa.spanish.ai.AICorrection.equals:(Ljava/lang/Object;)Z
+0025b8: 1210                                   |0000: const/4 v0, #int 1 // #1
+0025ba: 3365 0300                              |0001: if-ne v5, v6, 0004 // +0003
+0025be: 0f00                                   |0003: return v0
+0025c0: 2061 7300                              |0004: instance-of v1, v6, Lua/krupa/spanish/ai/AICorrection; // type@0073
+0025c4: 1202                                   |0006: const/4 v2, #int 0 // #0
+0025c6: 3901 0300                              |0007: if-nez v1, 000a // +0003
+0025ca: 0f02                                   |0009: return v2
+0025cc: 0761                                   |000a: move-object v1, v6
+0025ce: 1f01 7300                              |000b: check-cast v1, Lua/krupa/spanish/ai/AICorrection; // type@0073
+0025d2: 5453 1b00                              |000d: iget-object v3, v5, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+0025d6: 5414 1b00                              |000f: iget-object v4, v1, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+0025da: 7120 7600 4300                         |0011: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+0025e0: 0a03                                   |0014: move-result v3
+0025e2: 3903 0300                              |0015: if-nez v3, 0018 // +0003
+0025e6: 0f02                                   |0017: return v2
+0025e8: 5453 1900                              |0018: iget-object v3, v5, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+0025ec: 5414 1900                              |001a: iget-object v4, v1, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+0025f0: 7120 7600 4300                         |001c: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+0025f6: 0a03                                   |001f: move-result v3
+0025f8: 3903 0300                              |0020: if-nez v3, 0023 // +0003
+0025fc: 0f02                                   |0022: return v2
+0025fe: 5453 1a00                              |0023: iget-object v3, v5, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+002602: 5411 1a00                              |0025: iget-object v1, v1, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+002606: 7120 7600 1300                         |0027: invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+00260c: 0a01                                   |002a: move-result v1
+00260e: 3901 0300                              |002b: if-nez v1, 002e // +0003
+002612: 0f02                                   |002d: return v2
+002614: 0f00                                   |002e: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'getCorrectText'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0026a4:                                        |[0026a4] ua.krupa.spanish.ai.AICorrection.getCorrectText:()Ljava/lang/String;
+0026b4: 5410 1900                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+0026b8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=71
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AICorrection;
+
+    #6              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'getExplanationUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0026bc:                                        |[0026bc] ua.krupa.spanish.ai.AICorrection.getExplanationUk:()Ljava/lang/String;
+0026cc: 5410 1a00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+0026d0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=72
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AICorrection;
+
+    #7              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'getWrongText'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0026d4:                                        |[0026d4] ua.krupa.spanish.ai.AICorrection.getWrongText:()Ljava/lang/String;
+0026e4: 5410 1b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+0026e8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=70
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AICorrection;
+
+    #8              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'hashCode'
+      type          : '()I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 1
+      insns size    : 25 16-bit code units
+002618:                                        |[002618] ua.krupa.spanish.ai.AICorrection.hashCode:()I
+002628: 5430 1b00                              |0000: iget-object v0, v3, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+00262c: 6e10 5f00 0000                         |0002: invoke-virtual {v0}, Ljava/lang/String;.hashCode:()I // method@005f
+002632: 0a00                                   |0005: move-result v0
+002634: da01 001f                              |0006: mul-int/lit8 v1, v0, #int 31 // #1f
+002638: 5432 1900                              |0008: iget-object v2, v3, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+00263c: 6e10 5f00 0200                         |000a: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@005f
+002642: 0a02                                   |000d: move-result v2
+002644: b021                                   |000e: add-int/2addr v1, v2
+002646: da00 011f                              |000f: mul-int/lit8 v0, v1, #int 31 // #1f
+00264a: 5432 1a00                              |0011: iget-object v2, v3, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+00264e: 6e10 5f00 0200                         |0013: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@005f
+002654: 0a02                                   |0016: move-result v2
+002656: b020                                   |0017: add-int/2addr v0, v2
+002658: 0f00                                   |0018: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #9              : (in Lua/krupa/spanish/ai/AICorrection;)
+      name          : 'toString'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 1
+      outs          : 2
+      insns size    : 52 16-bit code units
+0026ec:                                        |[0026ec] ua.krupa.spanish.ai.AICorrection.toString:()Ljava/lang/String;
+0026fc: 5450 1b00                              |0000: iget-object v0, v5, Lua/krupa/spanish/ai/AICorrection;.wrongText:Ljava/lang/String; // field@001b
+002700: 5451 1900                              |0002: iget-object v1, v5, Lua/krupa/spanish/ai/AICorrection;.correctText:Ljava/lang/String; // field@0019
+002704: 5452 1a00                              |0004: iget-object v2, v5, Lua/krupa/spanish/ai/AICorrection;.explanationUk:Ljava/lang/String; // field@001a
+002708: 2203 5900                              |0006: new-instance v3, Ljava/lang/StringBuilder; // type@0059
+00270c: 7010 6000 0300                         |0008: invoke-direct {v3}, Ljava/lang/StringBuilder;.<init>:()V // method@0060
+002712: 1a04 9500                              |000b: const-string v4, "AICorrection(wrongText=" // string@0095
+002716: 6e20 6300 4300                         |000d: invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+00271c: 0c03                                   |0010: move-result-object v3
+00271e: 6e20 6300 0300                         |0011: invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+002724: 0c00                                   |0014: move-result-object v0
+002726: 1a03 7900                              |0015: const-string v3, ", correctText=" // string@0079
+00272a: 6e20 6300 3000                         |0017: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+002730: 0c00                                   |001a: move-result-object v0
+002732: 6e20 6300 1000                         |001b: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+002738: 0c00                                   |001e: move-result-object v0
+00273a: 1a01 7c00                              |001f: const-string v1, ", explanationUk=" // string@007c
+00273e: 6e20 6300 1000                         |0021: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+002744: 0c00                                   |0024: move-result-object v0
+002746: 6e20 6300 2000                         |0025: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+00274c: 0c00                                   |0028: move-result-object v0
+00274e: 1a01 7600                              |0029: const-string v1, ")" // string@0076
+002752: 6e20 6300 1000                         |002b: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+002758: 0c00                                   |002e: move-result-object v0
+00275a: 6e10 6500 0000                         |002f: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+002760: 0c00                                   |0032: move-result-object v0
+002762: 1100                                   |0033: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #3 annotations:
+Annotations on class
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "�� \n\484850\485148\484850\n\484850\485048��\n��\n\484850\485048\484951\n��\n\484850\485048\484954\n\484850\b\484954\n\484850\485048\b\n\484850\b\484850\b\b\485148��2\4848500\484849B\485155\485050\484854\485048\484850\485150\4848500\484851\485050\484854\485048\484852\485150\4848500\484853\485050\b\b\484850\485048\484854\485150\4848500\484853¢\484854\484850\485048\484855J\t\485048\r\485150\4848500\484851HÆ\484851J\t\485048\484954\485150\4848500\484853HÆ\484851J\t\485048\484955\485150\4848500\484853HÆ\484851J'\485048\485048\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\b\b\484850\485048\484852\485150\4848500\4848532\b\b\484850\485048\484854\485150\4848500\484853HÆ\484849J\485051\485048\485049\485150\4848500\4848512\b\485048\485050\485150\484852\485148\4848490\484849HÖ\484851J\t\485048\485051\485150\4848500\485052HÖ\484849J\t\485048\485053\485150\4848500\484853HÖ\484849R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\b\485048\tR\485049\485048\484854\485150\4848500\484853¢\484854\b\n��\485150\484852\b\n\485048\484951R\485049\485048\484852\485150\4848500\484853¢\484854\b\n��\485150\484852\b\f\485048\484951¨\484854\485054" } d2={ "Lua/krupa/spanish/ai/AIMessage;" "" "fromUser" "" "spanish" "" "hintUk" "(ZLjava/lang/String;Ljava/lang/String;)V" "getFromUser" "()Z" "getHintUk" "()Ljava/lang/String;" "getSpanish" "component1" "component2" "component3" "copy" "equals" "other" "hashCode" "" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+
+Class #3            -

@@ -1,0 +1,427 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Lkotlin/coroutines/jvm/internal/SuspendLambda;'
+  Interfaces        -
+    #0              : 'Lkotlin/jvm/functions/Function2;'
+  Static fields     -
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : '$history'
+      type          : 'Ljava/util/List;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'L$0'
+      type          : 'Ljava/lang/Object;'
+      access        : 0x0000 ()
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'label'
+      type          : 'I'
+      access        : 0x0000 ()
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'this$0'
+      type          : 'Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;Ljava/util/List;Lkotlin/coroutines/Continuation;)V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 5
+      ins           : 4
+      outs          : 3
+      insns size    : 9 16-bit code units
+00e7f8:                                        |[00e7f8] ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$send$1.<init>:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+00e808: 5b12 aa00                              |0000: iput-object v2, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e80c: 5b13 a700                              |0002: iput-object v3, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.$history:Ljava/util/List; // field@00a7
+00e810: 1220                                   |0004: const/4 v0, #int 2 // #2
+00e812: 7030 d800 0104                         |0005: invoke-direct {v1, v0, v4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;.<init>:(ILkotlin/coroutines/Continuation;)V // method@00d8
+00e818: 0e00                                   |0008: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'create'
+      type          : '(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 6
+      ins           : 3
+      outs          : 4
+      insns size    : 12 16-bit code units
+00e7d0:                                        |[00e7d0] ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$send$1.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+00e7e0: 2200 1801                              |0000: new-instance v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1; // type@0118
+00e7e4: 5431 aa00                              |0002: iget-object v1, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e7e8: 5432 a700                              |0004: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.$history:Ljava/util/List; // field@00a7
+00e7ec: 7040 1002 1052                         |0006: invoke-direct {v0, v1, v2, v5}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.<init>:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;Ljava/util/List;Lkotlin/coroutines/Continuation;)V // method@0210
+00e7f2: 1f00 a400                              |0009: check-cast v0, Lkotlin/coroutines/Continuation; // type@00a4
+00e7f6: 1100                                   |000b: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'invoke'
+      type          : '(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 3
+      outs          : 3
+      insns size    : 9 16-bit code units
+00e440:                                        |[00e440] ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$send$1.invoke:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+00e450: 1f02 be00                              |0000: check-cast v2, Lkotlinx/coroutines/CoroutineScope; // type@00be
+00e454: 1f03 a400                              |0002: check-cast v3, Lkotlin/coroutines/Continuation; // type@00a4
+00e458: 6e30 1302 2103                         |0004: invoke-virtual {v1, v2, v3}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.invoke:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@0213
+00e45e: 0c00                                   |0007: move-result-object v0
+00e460: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'invoke'
+      type          : '(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 3
+      insns size    : 13 16-bit code units
+00e464:                                        |[00e464] ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$send$1.invoke:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+00e474: 6e30 1102 3204                         |0000: invoke-virtual {v2, v3, v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation; // method@0211
+00e47a: 0c00                                   |0003: move-result-object v0
+00e47c: 1f00 1801                              |0004: check-cast v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1; // type@0118
+00e480: 6201 1100                              |0006: sget-object v1, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+00e484: 6e20 1402 1000                         |0008: invoke-virtual {v0, v1}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object; // method@0214
+00e48a: 0c00                                   |000b: move-result-object v0
+00e48c: 1100                                   |000c: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;)
+      name          : 'invokeSuspend'
+      type          : '(Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 23
+      ins           : 2
+      outs          : 15
+      insns size    : 408 16-bit code units
+00e490:                                        |[00e490] ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$send$1.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object;
+00e4a0: 7100 d400 0000                         |0000: invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;.getCOROUTINE_SUSPENDED:()Ljava/lang/Object; // method@00d4
+00e4a6: 0c00                                   |0003: move-result-object v0
+00e4a8: 0801 1500                              |0004: move-object/from16 v1, v21
+00e4ac: 5212 a900                              |0006: iget v2, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.label:I // field@00a9
+00e4b0: 2b02 8401 0000                         |0008: packed-switch v2, 0000018c // +00000184
+00e4b6: 2200 8700                              |000b: new-instance v0, Ljava/lang/IllegalStateException; // type@0087
+00e4ba: 1a01 ba04                              |000d: const-string v1, "call to 'resume' before 'invoke' with coroutine" // string@04ba
+00e4be: 7020 9700 1000                         |000f: invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;.<init>:(Ljava/lang/String;)V // method@0097
+00e4c4: 2700                                   |0012: throw v0
+00e4c6: 0800 1500                              |0013: move-object/from16 v0, v21
+00e4ca: 0801 1600                              |0015: move-object/from16 v1, v22
+00e4ce: 7110 bc00 0100                         |0017: invoke-static {v1}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00bc
+00e4d4: 0712                                   |001a: move-object v2, v1
+00e4d6: 2900 ec00                              |001b: goto/16 0107 // +00ec
+00e4da: 0801 1500                              |001d: move-object/from16 v1, v21
+00e4de: 0802 1600                              |001f: move-object/from16 v2, v22
+00e4e2: 5413 a800                              |0021: iget-object v3, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.L$0:Ljava/lang/Object; // field@00a8
+00e4e6: 1f03 de00                              |0023: check-cast v3, Lua/krupa/spanish/domain/model/UserProfile; // type@00de
+00e4ea: 7110 bc00 0200                         |0025: invoke-static {v2}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00bc
+00e4f0: 0724                                   |0028: move-object v4, v2
+00e4f2: 2851                                   |0029: goto 007a // +0051
+00e4f4: 0801 1500                              |002a: move-object/from16 v1, v21
+00e4f8: 0802 1600                              |002c: move-object/from16 v2, v22
+00e4fc: 7110 bc00 0200                         |002e: invoke-static {v2}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00bc
+00e502: 0723                                   |0031: move-object v3, v2
+00e504: 2824                                   |0032: goto 0056 // +0024
+00e506: 7701 bc00 1600                         |0033: invoke-static/range {v22}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00bc
+00e50c: 0801 1500                              |0036: move-object/from16 v1, v21
+00e510: 0802 1600                              |0038: move-object/from16 v2, v22
+00e514: 5413 aa00                              |003a: iget-object v3, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e518: 7110 2202 0300                         |003c: invoke-static {v3}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$getContainer$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lua/krupa/spanish/core/AppContainer; // method@0222
+00e51e: 0c03                                   |003f: move-result-object v3
+00e520: 6e10 3401 0300                         |0040: invoke-virtual {v3}, Lua/krupa/spanish/core/AppContainer;.getUsers:()Lua/krupa/spanish/domain/repository/UserRepository; // method@0134
+00e526: 0c03                                   |0043: move-result-object v3
+00e528: 0714                                   |0044: move-object v4, v1
+00e52a: 1f04 a400                              |0045: check-cast v4, Lkotlin/coroutines/Continuation; // type@00a4
+00e52e: 1215                                   |0047: const/4 v5, #int 1 // #1
+00e530: 5915 a900                              |0048: iput v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.label:I // field@00a9
+00e534: 7220 5801 4300                         |004a: invoke-interface {v3, v4}, Lua/krupa/spanish/domain/repository/UserRepository;.profile:(Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@0158
+00e53a: 0c03                                   |004d: move-result-object v3
+00e53c: 3303 0300                              |004e: if-ne v3, v0, 0051 // +0003
+00e540: 1100                                   |0050: return-object v0
+00e542: 0814 0300                              |0051: move-object/from16 v20, v3
+00e546: 0723                                   |0053: move-object v3, v2
+00e548: 0802 1400                              |0054: move-object/from16 v2, v20
+00e54c: 1f02 de00                              |0056: check-cast v2, Lua/krupa/spanish/domain/model/UserProfile; // type@00de
+00e550: 5414 aa00                              |0058: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e554: 7110 2202 0400                         |005a: invoke-static {v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$getContainer$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lua/krupa/spanish/core/AppContainer; // method@0222
+00e55a: 0c04                                   |005d: move-result-object v4
+00e55c: 6e10 2e01 0400                         |005e: invoke-virtual {v4}, Lua/krupa/spanish/core/AppContainer;.getAiProviders:()Lua/krupa/spanish/ai/AIProviderRegistry; // method@012e
+00e562: 0c04                                   |0061: move-result-object v4
+00e564: 6e10 4f01 0200                         |0062: invoke-virtual {v2}, Lua/krupa/spanish/domain/model/UserProfile;.getAiProviderId:()Ljava/lang/String; // method@014f
+00e56a: 0c05                                   |0065: move-result-object v5
+00e56c: 0716                                   |0066: move-object v6, v1
+00e56e: 1f06 a400                              |0067: check-cast v6, Lkotlin/coroutines/Continuation; // type@00a4
+00e572: 5b12 a800                              |0069: iput-object v2, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.L$0:Ljava/lang/Object; // field@00a8
+00e576: 1227                                   |006b: const/4 v7, #int 2 // #2
+00e578: 5917 a900                              |006c: iput v7, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.label:I // field@00a9
+00e57c: 6e30 fe00 5406                         |006e: invoke-virtual {v4, v5, v6}, Lua/krupa/spanish/ai/AIProviderRegistry;.resolve:(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@00fe
+00e582: 0c04                                   |0071: move-result-object v4
+00e584: 3304 0300                              |0072: if-ne v4, v0, 0075 // +0003
+00e588: 1100                                   |0074: return-object v0
+00e58a: 0814 0300                              |0075: move-object/from16 v20, v3
+00e58e: 0723                                   |0077: move-object v3, v2
+00e590: 0802 1400                              |0078: move-object/from16 v2, v20
+00e594: 1f04 ca00                              |007a: check-cast v4, Lua/krupa/spanish/ai/AIProvider; // type@00ca
+00e598: 0000                                   |007c: nop // spacer
+00e59a: 0000                                   |007d: nop // spacer
+00e59c: 5415 aa00                              |007e: iget-object v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e5a0: 7110 2302 0500                         |0080: invoke-static {v5}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$get_state$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow; // method@0223
+00e5a6: 0c05                                   |0083: move-result-object v5
+00e5a8: 7210 eb00 0500                         |0084: invoke-interface {v5}, Lkotlinx/coroutines/flow/MutableStateFlow;.getValue:()Ljava/lang/Object; // method@00eb
+00e5ae: 0c05                                   |0087: move-result-object v5
+00e5b0: 1f05 1101                              |0088: check-cast v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00e5b4: 6e10 f501 0500                         |008a: invoke-virtual {v5}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.getMode:()Lua/krupa/spanish/ai/AIConversationMode; // method@01f5
+00e5ba: 0c07                                   |008d: move-result-object v7
+00e5bc: 5415 aa00                              |008e: iget-object v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e5c0: 7110 2302 0500                         |0090: invoke-static {v5}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$get_state$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow; // method@0223
+00e5c6: 0c05                                   |0093: move-result-object v5
+00e5c8: 7210 eb00 0500                         |0094: invoke-interface {v5}, Lkotlinx/coroutines/flow/MutableStateFlow;.getValue:()Ljava/lang/Object; // method@00eb
+00e5ce: 0c05                                   |0097: move-result-object v5
+00e5d0: 1f05 1101                              |0098: check-cast v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00e5d4: 6e10 f901 0500                         |009a: invoke-virtual {v5}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.getScenario:()Lua/krupa/spanish/ai/AIScenario; // method@01f9
+00e5da: 0c08                                   |009d: move-result-object v8
+00e5dc: 6e10 5101 0300                         |009e: invoke-virtual {v3}, Lua/krupa/spanish/domain/model/UserProfile;.getLevel:()Lua/krupa/spanish/domain/model/Level; // method@0151
+00e5e2: 0c09                                   |00a1: move-result-object v9
+00e5e4: 5413 a700                              |00a2: iget-object v3, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.$history:Ljava/util/List; // field@00a7
+00e5e8: 1f03 8900                              |00a4: check-cast v3, Ljava/lang/Iterable; // type@0089
+00e5ec: 1205                                   |00a6: const/4 v5, #int 0 // #0
+00e5ee: 2206 9200                              |00a7: new-instance v6, Ljava/util/ArrayList; // type@0092
+00e5f2: 130a 0a00                              |00a9: const/16 v10, #int 10 // #a
+00e5f6: 7120 c300 a300                         |00ab: invoke-static {v3, v10}, Lkotlin/collections/CollectionsKt;.collectionSizeOrDefault:(Ljava/lang/Iterable;I)I // method@00c3
+00e5fc: 0a0a                                   |00ae: move-result v10
+00e5fe: 7020 ad00 a600                         |00af: invoke-direct {v6, v10}, Ljava/util/ArrayList;.<init>:(I)V // method@00ad
+00e604: 1f06 9300                              |00b2: check-cast v6, Ljava/util/Collection; // type@0093
+00e608: 120a                                   |00b4: const/4 v10, #int 0 // #0
+00e60a: 7210 9a00 0300                         |00b5: invoke-interface {v3}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@009a
+00e610: 0c0b                                   |00b8: move-result-object v11
+00e612: 7210 b300 0b00                         |00b9: invoke-interface {v11}, Ljava/util/Iterator;.hasNext:()Z // method@00b3
+00e618: 0a03                                   |00bc: move-result v3
+00e61a: 3803 2500                              |00bd: if-eqz v3, 00e2 // +0025
+00e61e: 7210 b400 0b00                         |00bf: invoke-interface {v11}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@00b4
+00e624: 0c03                                   |00c2: move-result-object v3
+00e626: 073c                                   |00c3: move-object v12, v3
+00e628: 1f0c 1e01                              |00c4: check-cast v12, Lua/krupa/spanish/ui/screens/ai/ChatMessage; // type@011e
+00e62c: 120d                                   |00c6: const/4 v13, #int 0 // #0
+00e62e: 220e c900                              |00c7: new-instance v14, Lua/krupa/spanish/ai/AIMessage; // type@00c9
+00e632: 6e10 4b02 0c00                         |00c9: invoke-virtual {v12}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.getFromUser:()Z // method@024b
+00e638: 0a0f                                   |00cc: move-result v15
+00e63a: 0815 0200                              |00cd: move-object/from16 v21, v2
+00e63e: 6e10 4d02 0c00                         |00cf: invoke-virtual {v12}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.getSpanish:()Ljava/lang/String; // method@024d
+00e644: 0c02                                   |00d2: move-result-object v2
+00e646: 0816 0300                              |00d3: move-object/from16 v22, v3
+00e64a: 6e10 4c02 0c00                         |00d5: invoke-virtual {v12}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.getHintUk:()Ljava/lang/String; // method@024c
+00e650: 0c03                                   |00d8: move-result-object v3
+00e652: 7040 f900 fe32                         |00d9: invoke-direct {v14, v15, v2, v3}, Lua/krupa/spanish/ai/AIMessage;.<init>:(ZLjava/lang/String;Ljava/lang/String;)V // method@00f9
+00e658: 7220 af00 e600                         |00dc: invoke-interface {v6, v14}, Ljava/util/Collection;.add:(Ljava/lang/Object;)Z // method@00af
+00e65e: 0802 1500                              |00df: move-object/from16 v2, v21
+00e662: 28d8                                   |00e1: goto 00b9 // -0028
+00e664: 0815 0200                              |00e2: move-object/from16 v21, v2
+00e668: 076a                                   |00e4: move-object v10, v6
+00e66a: 1f0a 9700                              |00e5: check-cast v10, Ljava/util/List; // type@0097
+00e66e: 0000                                   |00e7: nop // spacer
+00e670: 2202 cc00                              |00e8: new-instance v2, Lua/krupa/spanish/ai/AIRequest; // type@00cc
+00e674: 120b                                   |00ea: const/4 v11, #int 0 // #0
+00e676: 120c                                   |00eb: const/4 v12, #int 0 // #0
+00e678: 130d 3000                              |00ec: const/16 v13, #int 48 // #30
+00e67c: 120e                                   |00ee: const/4 v14, #int 0 // #0
+00e67e: 0726                                   |00ef: move-object v6, v2
+00e680: 7609 ff00 0600                         |00f0: invoke-direct/range {v6, v7, v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ai/AIRequest;.<init>:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V // method@00ff
+00e686: 0713                                   |00f3: move-object v3, v1
+00e688: 1f03 a400                              |00f4: check-cast v3, Lkotlin/coroutines/Continuation; // type@00a4
+00e68c: 1205                                   |00f6: const/4 v5, #int 0 // #0
+00e68e: 5b15 a800                              |00f7: iput-object v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.L$0:Ljava/lang/Object; // field@00a8
+00e692: 1235                                   |00f9: const/4 v5, #int 3 // #3
+00e694: 5915 a900                              |00fa: iput v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.label:I // field@00a9
+00e698: 7230 fc00 2403                         |00fc: invoke-interface {v4, v2, v3}, Lua/krupa/spanish/ai/AIProvider;.reply:(Lua/krupa/spanish/ai/AIRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@00fc
+00e69e: 0c02                                   |00ff: move-result-object v2
+00e6a0: 3302 0300                              |0100: if-ne v2, v0, 0103 // +0003
+00e6a4: 1100                                   |0102: return-object v0
+00e6a6: 0710                                   |0103: move-object v0, v1
+00e6a8: 0721                                   |0104: move-object v1, v2
+00e6aa: 0802 1500                              |0105: move-object/from16 v2, v21
+00e6ae: 1f01 cd00                              |0107: check-cast v1, Lua/krupa/spanish/ai/AIResponse; // type@00cd
+00e6b2: 5403 aa00                              |0109: iget-object v3, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e6b6: 7110 2102 0300                         |010b: invoke-static {v3}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$getAllCorrections$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Ljava/util/List; // method@0221
+00e6bc: 0c03                                   |010e: move-result-object v3
+00e6be: 1f03 9300                              |010f: check-cast v3, Ljava/util/Collection; // type@0093
+00e6c2: 6e10 0501 0100                         |0111: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIResponse;.getCorrections:()Ljava/util/List; // method@0105
+00e6c8: 0c04                                   |0114: move-result-object v4
+00e6ca: 1f04 8900                              |0115: check-cast v4, Ljava/lang/Iterable; // type@0089
+00e6ce: 7120 c200 4300                         |0117: invoke-static {v3, v4}, Lkotlin/collections/CollectionsKt;.addAll:(Ljava/util/Collection;Ljava/lang/Iterable;)Z // method@00c2
+00e6d4: 5403 aa00                              |011a: iget-object v3, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e6d8: 7110 2302 0300                         |011c: invoke-static {v3}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$get_state$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow; // method@0223
+00e6de: 0c03                                   |011f: move-result-object v3
+00e6e0: 5404 aa00                              |0120: iget-object v4, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e6e4: 7110 2302 0400                         |0122: invoke-static {v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$get_state$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow; // method@0223
+00e6ea: 0c04                                   |0125: move-result-object v4
+00e6ec: 7210 eb00 0400                         |0126: invoke-interface {v4}, Lkotlinx/coroutines/flow/MutableStateFlow;.getValue:()Ljava/lang/Object; // method@00eb
+00e6f2: 0c04                                   |0129: move-result-object v4
+00e6f4: 0745                                   |012a: move-object v5, v4
+00e6f6: 1f05 1101                              |012b: check-cast v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00e6fa: 5404 aa00                              |012d: iget-object v4, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e6fe: 7110 2302 0400                         |012f: invoke-static {v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$get_state$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Lkotlinx/coroutines/flow/MutableStateFlow; // method@0223
+00e704: 0c04                                   |0132: move-result-object v4
+00e706: 7210 eb00 0400                         |0133: invoke-interface {v4}, Lkotlinx/coroutines/flow/MutableStateFlow;.getValue:()Ljava/lang/Object; // method@00eb
+00e70c: 0c04                                   |0136: move-result-object v4
+00e70e: 1f04 1101                              |0137: check-cast v4, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00e712: 6e10 f401 0400                         |0139: invoke-virtual {v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.getMessages:()Ljava/util/List; // method@01f4
+00e718: 0c04                                   |013c: move-result-object v4
+00e71a: 1f04 9300                              |013d: check-cast v4, Ljava/util/Collection; // type@0093
+00e71e: 220e 1e01                              |013f: new-instance v14, Lua/krupa/spanish/ui/screens/ai/ChatMessage; // type@011e
+00e722: 0000                                   |0141: nop // spacer
+00e724: 6e10 0701 0100                         |0142: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIResponse;.getSpanish:()Ljava/lang/String; // method@0107
+00e72a: 0c08                                   |0145: move-result-object v8
+00e72c: 6e10 0601 0100                         |0146: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIResponse;.getHintUk:()Ljava/lang/String; // method@0106
+00e732: 0c09                                   |0149: move-result-object v9
+00e734: 130c 0800                              |014a: const/16 v12, #int 8 // #8
+00e738: 120d                                   |014c: const/4 v13, #int 0 // #0
+00e73a: 1207                                   |014d: const/4 v7, #int 0 // #0
+00e73c: 160a 0000                              |014e: const-wide/16 v10, #int 0 // #0
+00e740: 07e6                                   |0150: move-object v6, v14
+00e742: 7608 4302 0600                         |0151: invoke-direct/range {v6, v7, v8, v9, v10, v11, v12, v13}, Lua/krupa/spanish/ui/screens/ai/ChatMessage;.<init>:(ZLjava/lang/String;Ljava/lang/String;JILkotlin/jvm/internal/DefaultConstructorMarker;)V // method@0243
+00e748: 7120 cb00 e400                         |0154: invoke-static {v4, v14}, Lkotlin/collections/CollectionsKt;.plus:(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/List; // method@00cb
+00e74e: 0c09                                   |0157: move-result-object v9
+00e750: 5404 aa00                              |0158: iget-object v4, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e754: 7110 2102 0400                         |015a: invoke-static {v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.access$getAllCorrections$p:(Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;)Ljava/util/List; // method@0221
+00e75a: 0c04                                   |015d: move-result-object v4
+00e75c: 1f04 8900                              |015e: check-cast v4, Ljava/lang/Iterable; // type@0089
+00e760: 7110 d000 0400                         |0160: invoke-static {v4}, Lkotlin/collections/CollectionsKt;.toList:(Ljava/lang/Iterable;)Ljava/util/List; // method@00d0
+00e766: 0c0c                                   |0163: move-result-object v12
+00e768: 0000                                   |0164: nop // spacer
+00e76a: 0000                                   |0165: nop // spacer
+00e76c: 0000                                   |0166: nop // spacer
+00e76e: 0000                                   |0167: nop // spacer
+00e770: 0000                                   |0168: nop // spacer
+00e772: 1312 970f                              |0169: const/16 v18, #int 3991 // #f97
+00e776: 1313 0000                              |016b: const/16 v19, #int 0 // #0
+00e77a: 1206                                   |016d: const/4 v6, #int 0 // #0
+00e77c: 1207                                   |016e: const/4 v7, #int 0 // #0
+00e77e: 1208                                   |016f: const/4 v8, #int 0 // #0
+00e780: 120a                                   |0170: const/4 v10, #int 0 // #0
+00e782: 120b                                   |0171: const/4 v11, #int 0 // #0
+00e784: 120e                                   |0172: const/4 v14, #int 0 // #0
+00e786: 120f                                   |0173: const/4 v15, #int 0 // #0
+00e788: 1310 0000                              |0174: const/16 v16, #int 0 // #0
+00e78c: 1311 0000                              |0176: const/16 v17, #int 0 // #0
+00e790: 770f ef01 0500                         |0178: invoke-static/range {v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.copy$default:(Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILjava/lang/Object;)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // method@01ef
+00e796: 0c04                                   |017b: move-result-object v4
+00e798: 7220 ec00 4300                         |017c: invoke-interface {v3, v4}, Lkotlinx/coroutines/flow/MutableStateFlow;.setValue:(Ljava/lang/Object;)V // method@00ec
+00e79e: 5403 aa00                              |017f: iget-object v3, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;.this$0:Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel; // field@00aa
+00e7a2: 6e10 0701 0100                         |0181: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIResponse;.getSpanish:()Ljava/lang/String; // method@0107
+00e7a8: 0c04                                   |0184: move-result-object v4
+00e7aa: 6e20 3202 4300                         |0185: invoke-virtual {v3, v4}, Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;.speak:(Ljava/lang/String;)V // method@0232
+00e7b0: 6203 1100                              |0188: sget-object v3, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+00e7b4: 1103                                   |018a: return-object v3
+00e7b6: 0000                                   |018b: nop // spacer
+00e7b8: 0001 0400 0000 0000 2b00 0000 2200 ... |018c: packed-switch-data (12 units)
+      catches       : (none)
+      positions     :
+        0x0004 line=141
+        0x003a line=142
+        0x0050 line=141
+        0x0051 line=142
+        0x0056 line=141
+        0x0058 line=143
+        0x0074 line=141
+        0x0075 line=143
+        0x007a line=141
+        0x007c line=144
+        0x007d line=145
+        0x007e line=146
+        0x008e line=147
+        0x009e line=148
+        0x00a2 line=149
+        0x00a7 line=269
+        0x00b5 line=270
+        0x00c3 line=271
+        0x00c7 line=149
+        0x00dc line=271
+        0x00e2 line=272
+        0x00e7 line=269
+        0x00e8 line=145
+        0x00f6 line=144
+        0x0102 line=141
+        0x0103 line=144
+        0x0107 line=141
+        0x0109 line=153
+        0x011a line=154
+        0x012d line=156
+        0x0141 line=157
+        0x0142 line=158
+        0x0146 line=159
+        0x014a line=156
+        0x0158 line=161
+        0x0164 line=154
+        0x0165 line=156
+        0x0166 line=154
+        0x0167 line=155
+        0x0168 line=161
+        0x0169 line=154
+        0x017f line=163
+        0x0188 line=164
+      locals        :
+        0x0015 - 0x001d reg=0 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x0017 - 0x001d reg=1 $result Ljava/lang/Object;
+        0x001f - 0x002a reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x0021 - 0x002a reg=2 $result Ljava/lang/Object;
+        0x0025 - 0x002a reg=3 profile Lua/krupa/spanish/domain/model/UserProfile;
+        0x002c - 0x0033 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x002e - 0x0033 reg=2 $result Ljava/lang/Object;
+        0x003a - 0x0056 reg=2 $result Ljava/lang/Object;
+        0x0058 - 0x007a reg=2 profile Lua/krupa/spanish/domain/model/UserProfile;
+        0x0056 - 0x007a reg=3 $result Ljava/lang/Object;
+        0x007c - 0x007d reg=4 provider Lua/krupa/spanish/ai/AIProvider;
+        0x007a - 0x00a2 reg=3 profile Lua/krupa/spanish/domain/model/UserProfile;
+        0x00a6 - 0x00b4 reg=3 $this$map$iv Ljava/lang/Iterable;
+        0x00b4 - 0x00b9 reg=3 $this$mapTo$iv$iv Ljava/lang/Iterable;
+        0x007a - 0x00cf reg=2 $result Ljava/lang/Object;
+        0x0000 - 0x00cf reg=21 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x00c3 - 0x00d5 reg=3 item$iv$iv Ljava/lang/Object;
+        0x0000 - 0x00d5 reg=22 (null) Ljava/lang/Object;
+        0x00c6 - 0x00dc reg=12 it Lua/krupa/spanish/ui/screens/ai/ChatMessage;
+        0x00c7 - 0x00dc reg=13 $i$a$-map-AiDialogViewModel$send$1$response$1 I
+        0x00cf - 0x00e2 reg=21 $result Ljava/lang/Object;
+        0x00d5 - 0x00e2 reg=22 item$iv$iv Ljava/lang/Object;
+        0x00e2 - 0x00e4 reg=2 $result Ljava/lang/Object;
+        0x00b4 - 0x00e4 reg=6 destination$iv$iv Ljava/util/Collection;
+        0x00b5 - 0x00e4 reg=10 $i$f$mapTo I
+        0x00a7 - 0x00e8 reg=5 $i$f$map I
+        0x0038 - 0x0107 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x00e4 - 0x0107 reg=21 $result Ljava/lang/Object;
+        0x0107 - 0x0198 reg=0 this Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$send$1;
+        0x0109 - 0x0198 reg=1 response Lua/krupa/spanish/ai/AIResponse;
+        0x0107 - 0x0198 reg=2 $result Ljava/lang/Object;
+
+  source_file_idx   : 405 (AiDialogViewModel.kt)
+
+Class #45 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingMethod; value=speak
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/coroutines/jvm/internal/SuspendLambda;" "Lkotlin/jvm/functions/Function2<" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;" "Ljava/lang/Object;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\n\n��\n\484850\485048\484850\n\484850\485148\484850\485048��\485150\4848500\484849*\4848500\484850H@" } d2={ "<anonymous>" "" "Lkotlinx/coroutines/CoroutineScope;" } k=3 mv={ 1 9 0 } xi=48
+  VISIBILITY_RUNTIME Lkotlin/coroutines/jvm/internal/DebugMetadata; c="ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$speak$1" f="AiDialogViewModel.kt" i={ } l={ 246 247 } m="invokeSuspend" n={ } s={ }
+Annotations on method #533 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;" "Ljava/lang/String;" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$speak$1;" ">;)V" }
+Annotations on method #534 'create'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/Object;" "Lkotlin/coroutines/Continuation<" "*>;)" "Lkotlin/coroutines/Continuation<" "Lkotlin/Unit;" ">;" }
+Annotations on method #536 'invoke'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;)" "Ljava/lang/Object;" }
+
+Class #45            -

@@ -1,0 +1,474 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AIScenario;'
+  Access flags      : 0x4011 (PUBLIC FINAL ENUM)
+  Superclass        : 'Ljava/lang/Enum;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : '$ENTRIES'
+      type          : 'Lkotlin/enums/EnumEntries;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : '$VALUES'
+      type          : '[Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+    #2              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'AIRPORT'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #3              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'Companion'
+      type          : 'Lua/krupa/spanish/ai/AIScenario$Companion;'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+    #4              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'DOCTOR'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #5              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'FREE_TALK'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #6              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'HOTEL'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #7              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'INTRODUCTIONS'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #8              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'RENTING'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #9              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'RESTAURANT'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #10              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'SHOP'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+    #11              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'WORK'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x4019 (PUBLIC STATIC FINAL ENUM)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'code'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'openingHintUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'openingSpanish'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #3              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'titleUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : '$values'
+      type          : '()[Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x101a (PRIVATE STATIC FINAL SYNTHETIC)
+      code          -
+      registers     : 9
+      ins           : 0
+      outs          : 9
+      insns size    : 23 16-bit code units
+003880:                                        |[003880] ua.krupa.spanish.ai.AIScenario.$values:()[Lua/krupa/spanish/ai/AIScenario;
+003890: 6200 3c00                              |0000: sget-object v0, Lua/krupa/spanish/ai/AIScenario;.INTRODUCTIONS:Lua/krupa/spanish/ai/AIScenario; // field@003c
+003894: 6201 3e00                              |0002: sget-object v1, Lua/krupa/spanish/ai/AIScenario;.RESTAURANT:Lua/krupa/spanish/ai/AIScenario; // field@003e
+003898: 6202 3f00                              |0004: sget-object v2, Lua/krupa/spanish/ai/AIScenario;.SHOP:Lua/krupa/spanish/ai/AIScenario; // field@003f
+00389c: 6203 3b00                              |0006: sget-object v3, Lua/krupa/spanish/ai/AIScenario;.HOTEL:Lua/krupa/spanish/ai/AIScenario; // field@003b
+0038a0: 6204 3700                              |0008: sget-object v4, Lua/krupa/spanish/ai/AIScenario;.AIRPORT:Lua/krupa/spanish/ai/AIScenario; // field@0037
+0038a4: 6205 3900                              |000a: sget-object v5, Lua/krupa/spanish/ai/AIScenario;.DOCTOR:Lua/krupa/spanish/ai/AIScenario; // field@0039
+0038a8: 6206 4000                              |000c: sget-object v6, Lua/krupa/spanish/ai/AIScenario;.WORK:Lua/krupa/spanish/ai/AIScenario; // field@0040
+0038ac: 6207 3d00                              |000e: sget-object v7, Lua/krupa/spanish/ai/AIScenario;.RENTING:Lua/krupa/spanish/ai/AIScenario; // field@003d
+0038b0: 6208 3a00                              |0010: sget-object v8, Lua/krupa/spanish/ai/AIScenario;.FREE_TALK:Lua/krupa/spanish/ai/AIScenario; // field@003a
+0038b4: 2509 9300 0000                         |0012: filled-new-array/range {v0, v1, v2, v3, v4, v5, v6, v7, v8}, [Lua/krupa/spanish/ai/AIScenario; // type@0093
+0038ba: 0c00                                   |0015: move-result-object v0
+0038bc: 1100                                   |0016: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 15
+      ins           : 0
+      outs          : 7
+      insns size    : 233 16-bit code units
+0038e4:                                        |[0038e4] ua.krupa.spanish.ai.AIScenario.<clinit>:()V
+0038f4: 2207 7b00                              |0000: new-instance v7, Lua/krupa/spanish/ai/AIScenario; // type@007b
+0038f8: 0000                                   |0002: nop // spacer
+0038fa: 0000                                   |0003: nop // spacer
+0038fc: 0000                                   |0004: nop // spacer
+0038fe: 0000                                   |0005: nop // spacer
+003900: 1a01 c700                              |0006: const-string v1, "INTRODUCTIONS" // string@00c7
+003904: 1202                                   |0008: const/4 v2, #int 0 // #0
+003906: 1a03 4802                              |0009: const-string v3, "introductions" // string@0248
+00390a: 1a04 cf02                              |000b: const-string v4, "Знайомство" // string@02cf
+00390e: 1a05 bc02                              |000d: const-string v5, "¡Hola! Me llamo Ana. ¿Y tú? ¿Cómo te llamas?" // string@02bc
+003912: 1a06 d502                              |000f: const-string v6, "Привіт! Мене звати Ана. А ти?" // string@02d5
+003916: 0770                                   |0011: move-object v0, v7
+003918: 7607 db00 0000                         |0012: invoke-direct/range {v0, v1, v2, v3, v4, v5, v6}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+00391e: 6907 3c00                              |0015: sput-object v7, Lua/krupa/spanish/ai/AIScenario;.INTRODUCTIONS:Lua/krupa/spanish/ai/AIScenario; // field@003c
+003922: 2200 7b00                              |0017: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003926: 0000                                   |0019: nop // spacer
+003928: 0000                                   |001a: nop // spacer
+00392a: 0000                                   |001b: nop // spacer
+00392c: 0000                                   |001c: nop // spacer
+00392e: 1a09 8101                              |001d: const-string v9, "RESTAURANT" // string@0181
+003932: 121a                                   |001f: const/4 v10, #int 1 // #1
+003934: 1a0b 7f02                              |0020: const-string v11, "restaurant" // string@027f
+003938: 1a0c da02                              |0022: const-string v12, "Ресторан" // string@02da
+00393c: 1a0d 9d00                              |0024: const-string v13, "Buenas tardes, bienvenido. ¿Mesa para cuántas personas?" // string@009d
+003940: 1a0e cb02                              |0026: const-string v14, "Доброго дня, вітаю. Столик на скільки осіб?" // string@02cb
+003944: 0708                                   |0028: move-object v8, v0
+003946: 7607 db00 0800                         |0029: invoke-direct/range {v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+00394c: 6900 3e00                              |002c: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.RESTAURANT:Lua/krupa/spanish/ai/AIScenario; // field@003e
+003950: 2200 7b00                              |002e: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003954: 0000                                   |0030: nop // spacer
+003956: 0000                                   |0031: nop // spacer
+003958: 0000                                   |0032: nop // spacer
+00395a: 0000                                   |0033: nop // spacer
+00395c: 1a02 8401                              |0034: const-string v2, "SHOP" // string@0184
+003960: 1223                                   |0036: const/4 v3, #int 2 // #2
+003962: 1a04 8602                              |0037: const-string v4, "shop" // string@0286
+003966: 1a05 d102                              |0039: const-string v5, "Магазин" // string@02d1
+00396a: 1a06 bd00                              |003b: const-string v6, "Hola, ¿le puedo ayudar en algo?" // string@00bd
+00396e: 1a07 c602                              |003d: const-string v7, "Вітаю, можу чимось допомогти?" // string@02c6
+003972: 0701                                   |003f: move-object v1, v0
+003974: 7607 db00 0100                         |0040: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+00397a: 6900 3f00                              |0043: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.SHOP:Lua/krupa/spanish/ai/AIScenario; // field@003f
+00397e: 2200 7b00                              |0045: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003982: 0000                                   |0047: nop // spacer
+003984: 0000                                   |0048: nop // spacer
+003986: 0000                                   |0049: nop // spacer
+003988: 0000                                   |004a: nop // spacer
+00398a: 1a09 bb00                              |004b: const-string v9, "HOTEL" // string@00bb
+00398e: 123a                                   |004d: const/4 v10, #int 3 // #3
+003990: 1a0b 4402                              |004e: const-string v11, "hotel" // string@0244
+003994: 1a0c c902                              |0050: const-string v12, "Готель" // string@02c9
+003998: 1a0d 9c00                              |0052: const-string v13, "Buenas noches. ¿Tiene una reserva a su nombre?" // string@009c
+00399c: 1a0e ca02                              |0054: const-string v14, "Доброго вечора. У вас є бронювання?" // string@02ca
+0039a0: 0708                                   |0056: move-object v8, v0
+0039a2: 7607 db00 0800                         |0057: invoke-direct/range {v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+0039a8: 6900 3b00                              |005a: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.HOTEL:Lua/krupa/spanish/ai/AIScenario; // field@003b
+0039ac: 2200 7b00                              |005c: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+0039b0: 0000                                   |005e: nop // spacer
+0039b2: 0000                                   |005f: nop // spacer
+0039b4: 0000                                   |0060: nop // spacer
+0039b6: 0000                                   |0061: nop // spacer
+0039b8: 1a02 9800                              |0062: const-string v2, "AIRPORT" // string@0098
+0039bc: 1243                                   |0064: const/4 v3, #int 4 // #4
+0039be: 1a04 be01                              |0065: const-string v4, "airport" // string@01be
+0039c2: 1a05 c002                              |0067: const-string v5, "Аеропорт" // string@02c0
+0039c6: 1a06 9f00                              |0069: const-string v6, "Buenos días. ¿Me enseña su pasaporte, por favor?" // string@009f
+0039ca: 1a07 cc02                              |006b: const-string v7, "Доброго ранку. Покажіть, будь ласка, паспорт." // string@02cc
+0039ce: 0701                                   |006d: move-object v1, v0
+0039d0: 7607 db00 0100                         |006e: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+0039d6: 6900 3700                              |0071: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.AIRPORT:Lua/krupa/spanish/ai/AIScenario; // field@0037
+0039da: 2200 7b00                              |0073: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+0039de: 0000                                   |0075: nop // spacer
+0039e0: 0000                                   |0076: nop // spacer
+0039e2: 0000                                   |0077: nop // spacer
+0039e4: 0000                                   |0078: nop // spacer
+0039e6: 1a09 b600                              |0079: const-string v9, "DOCTOR" // string@00b6
+0039ea: 125a                                   |007b: const/4 v10, #int 5 // #5
+0039ec: 1a0b e701                              |007c: const-string v11, "doctor" // string@01e7
+0039f0: 1a0c d002                              |007e: const-string v12, "Лікар" // string@02d0
+0039f4: 1a0d 9e00                              |0080: const-string v13, "Buenos días. Cuénteme, ¿qué le pasa?" // string@009e
+0039f8: 1a0e cd02                              |0082: const-string v14, "Доброго ранку. Розкажіть, що вас турбує?" // string@02cd
+0039fc: 0708                                   |0084: move-object v8, v0
+0039fe: 7607 db00 0800                         |0085: invoke-direct/range {v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+003a04: 6900 3900                              |0088: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.DOCTOR:Lua/krupa/spanish/ai/AIScenario; // field@0039
+003a08: 2200 7b00                              |008a: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003a0c: 0000                                   |008c: nop // spacer
+003a0e: 0000                                   |008d: nop // spacer
+003a10: 0000                                   |008e: nop // spacer
+003a12: 0000                                   |008f: nop // spacer
+003a14: 1a02 b301                              |0090: const-string v2, "WORK" // string@01b3
+003a18: 1263                                   |0092: const/4 v3, #int 6 // #6
+003a1a: 1a04 b702                              |0093: const-string v4, "work" // string@02b7
+003a1e: 1a05 db02                              |0095: const-string v5, "Робота" // string@02db
+003a22: 1a06 bc00                              |0097: const-string v6, "Hola, soy Marta de recursos humanos. Cuéntame un poco sobre ti." // string@00bc
+003a26: 1a07 c702                              |0099: const-string v7, "Вітаю, я Марта з відділу кадрів. Розкажи трохи про себе." // string@02c7
+003a2a: 0701                                   |009b: move-object v1, v0
+003a2c: 7607 db00 0100                         |009c: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+003a32: 6900 4000                              |009f: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.WORK:Lua/krupa/spanish/ai/AIScenario; // field@0040
+003a36: 2200 7b00                              |00a1: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003a3a: 0000                                   |00a3: nop // spacer
+003a3c: 0000                                   |00a4: nop // spacer
+003a3e: 0000                                   |00a5: nop // spacer
+003a40: 0000                                   |00a6: nop // spacer
+003a42: 1a09 8001                              |00a7: const-string v9, "RENTING" // string@0180
+003a46: 127a                                   |00a9: const/4 v10, #int 7 // #7
+003a48: 1a0b 7a02                              |00aa: const-string v11, "renting" // string@027a
+003a4c: 1a0c d202                              |00ac: const-string v12, "Оренда житла" // string@02d2
+003a50: 1a0d be00                              |00ae: const-string v13, "Hola, ¿llama por el piso del centro? Todavía está disponible." // string@00be
+003a54: 1a0e c502                              |00b0: const-string v14, "Вітаю, ви телефонуєте щодо квартири в центрі? Вона ще вільна." // string@02c5
+003a58: 0708                                   |00b2: move-object v8, v0
+003a5a: 7607 db00 0800                         |00b3: invoke-direct/range {v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+003a60: 6900 3d00                              |00b6: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.RENTING:Lua/krupa/spanish/ai/AIScenario; // field@003d
+003a64: 2200 7b00                              |00b8: new-instance v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003a68: 0000                                   |00ba: nop // spacer
+003a6a: 0000                                   |00bb: nop // spacer
+003a6c: 0000                                   |00bc: nop // spacer
+003a6e: 0000                                   |00bd: nop // spacer
+003a70: 1a02 b900                              |00be: const-string v2, "FREE_TALK" // string@00b9
+003a74: 1303 0800                              |00c0: const/16 v3, #int 8 // #8
+003a78: 1a04 f601                              |00c2: const-string v4, "free_talk" // string@01f6
+003a7c: 1a05 c402                              |00c4: const-string v5, "Вільна розмова" // string@02c4
+003a80: 1a06 bd02                              |00c6: const-string v6, "¡Hola! ¿Qué tal? ¿Cómo llevas el español?" // string@02bd
+003a84: 1a07 d602                              |00c8: const-string v7, "Привіт! Як справи? Як тобі дається іспанська?" // string@02d6
+003a88: 0701                                   |00ca: move-object v1, v0
+003a8a: 7607 db00 0100                         |00cb: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7}, Lua/krupa/spanish/ai/AIScenario;.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V // method@00db
+003a90: 6900 3a00                              |00ce: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.FREE_TALK:Lua/krupa/spanish/ai/AIScenario; // field@003a
+003a94: 7100 d900 0000                         |00d0: invoke-static {}, Lua/krupa/spanish/ai/AIScenario;.$values:()[Lua/krupa/spanish/ai/AIScenario; // method@00d9
+003a9a: 0c00                                   |00d3: move-result-object v0
+003a9c: 6900 3600                              |00d4: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.$VALUES:[Lua/krupa/spanish/ai/AIScenario; // field@0036
+003aa0: 6200 3600                              |00d6: sget-object v0, Lua/krupa/spanish/ai/AIScenario;.$VALUES:[Lua/krupa/spanish/ai/AIScenario; // field@0036
+003aa4: 1f00 9000                              |00d8: check-cast v0, [Ljava/lang/Enum; // type@0090
+003aa8: 7110 7400 0000                         |00da: invoke-static {v0}, Lkotlin/enums/EnumEntriesKt;.enumEntries:([Ljava/lang/Enum;)Lkotlin/enums/EnumEntries; // method@0074
+003aae: 0c00                                   |00dd: move-result-object v0
+003ab0: 6900 3500                              |00de: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.$ENTRIES:Lkotlin/enums/EnumEntries; // field@0035
+003ab4: 2200 7a00                              |00e0: new-instance v0, Lua/krupa/spanish/ai/AIScenario$Companion; // type@007a
+003ab8: 1201                                   |00e2: const/4 v1, #int 0 // #0
+003aba: 7020 d700 1000                         |00e3: invoke-direct {v0, v1}, Lua/krupa/spanish/ai/AIScenario$Companion;.<init>:(Lkotlin/jvm/internal/DefaultConstructorMarker;)V // method@00d7
+003ac0: 6900 3800                              |00e6: sput-object v0, Lua/krupa/spanish/ai/AIScenario;.Companion:Lua/krupa/spanish/ai/AIScenario$Companion; // field@0038
+003ac4: 0e00                                   |00e8: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=96
+        0x0002 line=97
+        0x0003 line=98
+        0x0004 line=99
+        0x0005 line=100
+        0x0006 line=96
+        0x0017 line=102
+        0x0019 line=103
+        0x001a line=104
+        0x001b line=105
+        0x001c line=106
+        0x001d line=102
+        0x002e line=108
+        0x0030 line=109
+        0x0031 line=110
+        0x0032 line=111
+        0x0033 line=112
+        0x0034 line=108
+        0x0045 line=114
+        0x0047 line=115
+        0x0048 line=116
+        0x0049 line=117
+        0x004a line=118
+        0x004b line=114
+        0x005c line=120
+        0x005e line=121
+        0x005f line=122
+        0x0060 line=123
+        0x0061 line=124
+        0x0062 line=120
+        0x0073 line=126
+        0x0075 line=127
+        0x0076 line=128
+        0x0077 line=129
+        0x0078 line=130
+        0x0079 line=126
+        0x008a line=132
+        0x008c line=133
+        0x008d line=134
+        0x008e line=135
+        0x008f line=136
+        0x0090 line=132
+        0x00a1 line=138
+        0x00a3 line=139
+        0x00a4 line=140
+        0x00a5 line=141
+        0x00a6 line=142
+        0x00a7 line=138
+        0x00b8 line=144
+        0x00ba line=145
+        0x00bb line=146
+        0x00bc line=147
+        0x00bd line=148
+        0x00be line=144
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : '<init>'
+      type          : '(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V'
+      access        : 0x10002 (PRIVATE CONSTRUCTOR)
+      code          -
+      registers     : 7
+      ins           : 7
+      outs          : 3
+      insns size    : 12 16-bit code units
+003ac8:                                        |[003ac8] ua.krupa.spanish.ai.AIScenario.<init>:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+003ad8: 7030 5600 1002                         |0000: invoke-direct {v0, v1, v2}, Ljava/lang/Enum;.<init>:(Ljava/lang/String;I)V // method@0056
+003ade: 5b03 4100                              |0003: iput-object v3, v0, Lua/krupa/spanish/ai/AIScenario;.code:Ljava/lang/String; // field@0041
+003ae2: 5b04 4400                              |0005: iput-object v4, v0, Lua/krupa/spanish/ai/AIScenario;.titleUk:Ljava/lang/String; // field@0044
+003ae6: 5b05 4300                              |0007: iput-object v5, v0, Lua/krupa/spanish/ai/AIScenario;.openingSpanish:Ljava/lang/String; // field@0043
+003aea: 5b06 4200                              |0009: iput-object v6, v0, Lua/krupa/spanish/ai/AIScenario;.openingHintUk:Ljava/lang/String; // field@0042
+003aee: 0e00                                   |000b: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=90
+        0x0003 line=91
+        0x0005 line=92
+        0x0007 line=93
+        0x0009 line=94
+        0x000b line=90
+      locals        :
+        0x0000 - 0x000c reg=0 this Lua/krupa/spanish/ai/AIScenario;
+        0x0000 - 0x000c reg=1 $enum$name Ljava/lang/String;
+        0x0000 - 0x000c reg=2 $enum$ordinal I
+        0x0000 - 0x000c reg=3 code Ljava/lang/String;
+        0x0000 - 0x000c reg=4 titleUk Ljava/lang/String;
+        0x0000 - 0x000c reg=5 openingSpanish Ljava/lang/String;
+        0x0000 - 0x000c reg=6 openingHintUk Ljava/lang/String;
+
+    #3              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'getEntries'
+      type          : '()Lkotlin/enums/EnumEntries;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 3 16-bit code units
+003844:                                        |[003844] ua.krupa.spanish.ai.AIScenario.getEntries:()Lkotlin/enums/EnumEntries;
+003854: 6200 3500                              |0000: sget-object v0, Lua/krupa/spanish/ai/AIScenario;.$ENTRIES:Lkotlin/enums/EnumEntries; // field@0035
+003858: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'valueOf'
+      type          : '(Ljava/lang/String;)Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 2
+      insns size    : 9 16-bit code units
+00385c:                                        |[00385c] ua.krupa.spanish.ai.AIScenario.valueOf:(Ljava/lang/String;)Lua/krupa/spanish/ai/AIScenario;
+00386c: 1c00 7b00                              |0000: const-class v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+003870: 7120 5700 1000                         |0002: invoke-static {v0, v1}, Ljava/lang/Enum;.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum; // method@0057
+003876: 0c00                                   |0005: move-result-object v0
+003878: 1f00 7b00                              |0006: check-cast v0, Lua/krupa/spanish/ai/AIScenario; // type@007b
+00387c: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'values'
+      type          : '()[Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 9 16-bit code units
+0038c0:                                        |[0038c0] ua.krupa.spanish.ai.AIScenario.values:()[Lua/krupa/spanish/ai/AIScenario;
+0038d0: 6200 3600                              |0000: sget-object v0, Lua/krupa/spanish/ai/AIScenario;.$VALUES:[Lua/krupa/spanish/ai/AIScenario; // field@0036
+0038d4: 6e10 1601 0000                         |0002: invoke-virtual {v0}, [Ljava/lang/Object;.clone:()Ljava/lang/Object; // method@0116
+0038da: 0c00                                   |0005: move-result-object v0
+0038dc: 1f00 9300                              |0006: check-cast v0, [Lua/krupa/spanish/ai/AIScenario; // type@0093
+0038e0: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'getCode'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0037e4:                                        |[0037e4] ua.krupa.spanish.ai.AIScenario.getCode:()Ljava/lang/String;
+0037f4: 5410 4100                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIScenario;.code:Ljava/lang/String; // field@0041
+0037f8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=91
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIScenario;
+
+    #1              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'getOpeningHintUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0037fc:                                        |[0037fc] ua.krupa.spanish.ai.AIScenario.getOpeningHintUk:()Ljava/lang/String;
+00380c: 5410 4200                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIScenario;.openingHintUk:Ljava/lang/String; // field@0042
+003810: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=94
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIScenario;
+
+    #2              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'getOpeningSpanish'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003814:                                        |[003814] ua.krupa.spanish.ai.AIScenario.getOpeningSpanish:()Ljava/lang/String;
+003824: 5410 4300                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIScenario;.openingSpanish:Ljava/lang/String; // field@0043
+003828: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=93
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIScenario;
+
+    #3              : (in Lua/krupa/spanish/ai/AIScenario;)
+      name          : 'getTitleUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00382c:                                        |[00382c] ua.krupa.spanish.ai.AIScenario.getTitleUk:()Ljava/lang/String;
+00383c: 5410 4400                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIScenario;.titleUk:Ljava/lang/String; // field@0044
+003840: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=92
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIScenario;
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #11 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingClass; value=Lua/krupa/spanish/ui/learn/ComposableSingletons$LearningComponentsKt;
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/jvm/internal/Lambda;" "Lkotlin/jvm/functions/Function2<" "Landroidx/compose/runtime/Composer;" "Ljava/lang/Integer;" "Lkotlin/Unit;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\n\n��\n\484850\485048\484850\n\484850\b\484850\485048��\485150\4848500\484849H\484951¢\484854\484852\b\484850\485048\484851" } d2={ "<anonymous>" "" "invoke" "(Landroidx/compose/runtime/Composer;I)V" } k=3 mv={ 1 9 0 } xi=48
+
+Class #11            -

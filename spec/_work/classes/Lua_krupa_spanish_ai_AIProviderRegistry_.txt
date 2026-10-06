@@ -1,0 +1,396 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AIProviderRegistry;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : 'providers'
+      type          : 'Ljava/util/List;'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 5 16-bit code units
+002de4:                                        |[002de4] ua.krupa.spanish.ai.AIProviderRegistry.<clinit>:()V
+002df4: 1300 0800                              |0000: const/16 v0, #int 8 // #8
+002df8: 6700 2700                              |0002: sput v0, Lua/krupa/spanish/ai/AIProviderRegistry;.$stable:I // field@0027
+002dfc: 0e00                                   |0004: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : '<init>'
+      type          : '(Ljava/util/List;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 11 16-bit code units
+002e00:                                        |[002e00] ua.krupa.spanish.ai.AIProviderRegistry.<init>:(Ljava/util/List;)V
+002e10: 1a00 7802                              |0000: const-string v0, "providers" // string@0278
+002e14: 7120 7700 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+002e1a: 7010 5d00 0100                         |0005: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@005d
+002e20: 5b12 2800                              |0008: iput-object v2, v1, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002e24: 0e00                                   |000a: return-void
+      catches       : (none)
+      positions     :
+        0x0005 line=159
+      locals        :
+        0x0000 - 0x000b reg=1 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x0000 - 0x000b reg=2 providers Ljava/util/List;
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : 'all'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+002d40:                                        |[002d40] ua.krupa.spanish.ai.AIProviderRegistry.all:()Ljava/util/List;
+002d50: 5410 2800                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002d54: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=161
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIProviderRegistry;
+
+    #1              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : 'byId'
+      type          : '(Ljava/lang/String;)Lua/krupa/spanish/ai/AIProvider;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 2
+      insns size    : 43 16-bit code units
+002d58:                                        |[002d58] ua.krupa.spanish.ai.AIProviderRegistry.byId:(Ljava/lang/String;)Lua/krupa/spanish/ai/AIProvider;
+002d68: 1a00 4602                              |0000: const-string v0, "id" // string@0246
+002d6c: 7120 7700 0800                         |0002: invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+002d72: 5470 2800                              |0005: iget-object v0, v7, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002d76: 1f00 5500                              |0007: check-cast v0, Ljava/lang/Iterable; // type@0055
+002d7a: 1201                                   |0009: const/4 v1, #int 0 // #0
+002d7c: 7210 5b00 0000                         |000a: invoke-interface {v0}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@005b
+002d82: 0c02                                   |000d: move-result-object v2
+002d84: 7210 6800 0200                         |000e: invoke-interface {v2}, Ljava/util/Iterator;.hasNext:()Z // method@0068
+002d8a: 0a03                                   |0011: move-result v3
+002d8c: 3803 1500                              |0012: if-eqz v3, 0027 // +0015
+002d90: 7210 6900 0200                         |0014: invoke-interface {v2}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@0069
+002d96: 0c03                                   |0017: move-result-object v3
+002d98: 0734                                   |0018: move-object v4, v3
+002d9a: 1f04 7500                              |0019: check-cast v4, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002d9e: 1205                                   |001b: const/4 v5, #int 0 // #0
+002da0: 7210 a200 0400                         |001c: invoke-interface {v4}, Lua/krupa/spanish/ai/AIProvider;.getId:()Ljava/lang/String; // method@00a2
+002da6: 0c06                                   |001f: move-result-object v6
+002da8: 7120 7600 8600                         |0020: invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+002dae: 0a04                                   |0023: move-result v4
+002db0: 3804 eaff                              |0024: if-eqz v4, 000e // -0016
+002db4: 2802                                   |0026: goto 0028 // +0002
+002db6: 1203                                   |0027: const/4 v3, #int 0 // #0
+002db8: 1f03 7500                              |0028: check-cast v3, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002dbc: 1103                                   |002a: return-object v3
+      catches       : (none)
+      positions     :
+        0x0005 line=163
+        0x000a line=173
+        0x001c line=163
+        0x0024 line=173
+        0x0027 line=174
+        0x002a line=163
+      locals        :
+        0x001b - 0x0024 reg=4 it Lua/krupa/spanish/ai/AIProvider;
+        0x001c - 0x0024 reg=5 $i$a$-firstOrNull-AIProviderRegistry$byId$1 I
+        0x0018 - 0x0027 reg=3 element$iv Ljava/lang/Object;
+        0x0009 - 0x0028 reg=0 $this$firstOrNull$iv Ljava/lang/Iterable;
+        0x000a - 0x0028 reg=1 $i$f$firstOrNull I
+        0x0000 - 0x002b reg=7 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x0000 - 0x002b reg=8 id Ljava/lang/String;
+
+    #2              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : 'default'
+      type          : '()Lua/krupa/spanish/ai/AIProvider;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 1
+      insns size    : 9 16-bit code units
+002dc0:                                        |[002dc0] ua.krupa.spanish.ai.AIProviderRegistry.default:()Lua/krupa/spanish/ai/AIProvider;
+002dd0: 5410 2800                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002dd4: 7110 7000 0000                         |0002: invoke-static {v0}, Lkotlin/collections/CollectionsKt;.first:(Ljava/util/List;)Ljava/lang/Object; // method@0070
+002dda: 0c00                                   |0005: move-result-object v0
+002ddc: 1f00 7500                              |0006: check-cast v0, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002de0: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=165
+      locals        :
+        0x0000 - 0x0009 reg=1 this Lua/krupa/spanish/ai/AIProviderRegistry;
+
+    #3              : (in Lua/krupa/spanish/ai/AIProviderRegistry;)
+      name          : 'resolve'
+      type          : '(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 15
+      ins           : 3
+      outs          : 3
+      insns size    : 264 16-bit code units
+002b20:                                        |[002b20] ua.krupa.spanish.ai.AIProviderRegistry.resolve:(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+002b30: 20e0 7600                              |0000: instance-of v0, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1; // type@0076
+002b34: 3800 1200                              |0002: if-eqz v0, 0014 // +0012
+002b38: 07e0                                   |0004: move-object v0, v14
+002b3a: 1f00 7600                              |0005: check-cast v0, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1; // type@0076
+002b3e: 5201 2400                              |0007: iget v1, v0, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002b42: 1502 0080                              |0009: const/high16 v2, #int -2147483648 // #8000
+002b46: b521                                   |000b: and-int/2addr v1, v2
+002b48: 3801 0800                              |000c: if-eqz v1, 0014 // +0008
+002b4c: 520e 2400                              |000e: iget v14, v0, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002b50: b12e                                   |0010: sub-int/2addr v14, v2
+002b52: 590e 2400                              |0011: iput v14, v0, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002b56: 2806                                   |0013: goto 0019 // +0006
+002b58: 2200 7600                              |0014: new-instance v0, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1; // type@0076
+002b5c: 7030 a700 c00e                         |0016: invoke-direct {v0, v12, v14}, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.<init>:(Lua/krupa/spanish/ai/AIProviderRegistry;Lkotlin/coroutines/Continuation;)V // method@00a7
+002b62: 070e                                   |0019: move-object v14, v0
+002b64: 54e0 2500                              |001a: iget-object v0, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.result:Ljava/lang/Object; // field@0025
+002b68: 7100 7200 0000                         |001c: invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;.getCOROUTINE_SUSPENDED:()Ljava/lang/Object; // method@0072
+002b6e: 0c01                                   |001f: move-result-object v1
+002b70: 52e2 2400                              |0020: iget v2, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002b74: 1213                                   |0022: const/4 v3, #int 1 // #1
+002b76: 1204                                   |0023: const/4 v4, #int 0 // #0
+002b78: 2b02 da00 0000                         |0024: packed-switch v2, 000000fe // +000000da
+002b7e: 220d 5300                              |0027: new-instance v13, Ljava/lang/IllegalStateException; // type@0053
+002b82: 1a0e ca01                              |0029: const-string v14, "call to 'resume' before 'invoke' with coroutine" // string@01ca
+002b86: 7020 5900 ed00                         |002b: invoke-direct {v13, v14}, Ljava/lang/IllegalStateException;.<init>:(Ljava/lang/String;)V // method@0059
+002b8c: 270d                                   |002e: throw v13
+002b8e: 120d                                   |002f: const/4 v13, #int 0 // #0
+002b90: 1202                                   |0030: const/4 v2, #int 0 // #0
+002b92: 54e3 2200                              |0031: iget-object v3, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$2:Ljava/lang/Object; // field@0022
+002b96: 54e5 2100                              |0033: iget-object v5, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$1:Ljava/lang/Object; // field@0021
+002b9a: 1f05 5c00                              |0035: check-cast v5, Ljava/util/Iterator; // type@005c
+002b9e: 54e6 2000                              |0037: iget-object v6, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$0:Ljava/lang/Object; // field@0020
+002ba2: 1f06 7700                              |0039: check-cast v6, Lua/krupa/spanish/ai/AIProviderRegistry; // type@0077
+002ba6: 7110 6e00 0000                         |003b: invoke-static {v0}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@006e
+002bac: 0127                                   |003e: move v7, v2
+002bae: 0712                                   |003f: move-object v2, v1
+002bb0: 0701                                   |0040: move-object v1, v0
+002bb2: 2900 9f00                              |0041: goto/16 00e0 // +009f
+002bb6: 120d                                   |0043: const/4 v13, #int 0 // #0
+002bb8: 1202                                   |0044: const/4 v2, #int 0 // #0
+002bba: 54e5 2300                              |0045: iget-object v5, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$3:Ljava/lang/Object; // field@0023
+002bbe: 54e6 2200                              |0047: iget-object v6, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$2:Ljava/lang/Object; // field@0022
+002bc2: 1f06 5c00                              |0049: check-cast v6, Ljava/util/Iterator; // type@005c
+002bc6: 54e7 2100                              |004b: iget-object v7, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$1:Ljava/lang/Object; // field@0021
+002bca: 1f07 5800                              |004d: check-cast v7, Ljava/lang/String; // type@0058
+002bce: 54e8 2000                              |004f: iget-object v8, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$0:Ljava/lang/Object; // field@0020
+002bd2: 1f08 7700                              |0051: check-cast v8, Lua/krupa/spanish/ai/AIProviderRegistry; // type@0077
+002bd6: 7110 6e00 0000                         |0053: invoke-static {v0}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@006e
+002bdc: 0129                                   |0056: move v9, v2
+002bde: 0712                                   |0057: move-object v2, v1
+002be0: 0701                                   |0058: move-object v1, v0
+002be2: 2840                                   |0059: goto 0099 // +0040
+002be4: 7110 6e00 0000                         |005a: invoke-static {v0}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@006e
+002bea: 07c2                                   |005d: move-object v2, v12
+002bec: 5425 2800                              |005e: iget-object v5, v2, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002bf0: 1f05 5500                              |0060: check-cast v5, Ljava/lang/Iterable; // type@0055
+002bf4: 1206                                   |0062: const/4 v6, #int 0 // #0
+002bf6: 7210 5b00 0500                         |0063: invoke-interface {v5}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@005b
+002bfc: 0c07                                   |0066: move-result-object v7
+002bfe: 0728                                   |0067: move-object v8, v2
+002c00: 077b                                   |0068: move-object v11, v7
+002c02: 07d7                                   |0069: move-object v7, v13
+002c04: 016d                                   |006a: move v13, v6
+002c06: 07b6                                   |006b: move-object v6, v11
+002c08: 7210 6800 0600                         |006c: invoke-interface {v6}, Ljava/util/Iterator;.hasNext:()Z // method@0068
+002c0e: 0a02                                   |006f: move-result v2
+002c10: 3802 3b00                              |0070: if-eqz v2, 00ab // +003b
+002c14: 7210 6900 0600                         |0072: invoke-interface {v6}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@0069
+002c1a: 0c05                                   |0075: move-result-object v5
+002c1c: 0752                                   |0076: move-object v2, v5
+002c1e: 1f02 7500                              |0077: check-cast v2, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002c22: 1209                                   |0079: const/4 v9, #int 0 // #0
+002c24: 7210 a200 0200                         |007a: invoke-interface {v2}, Lua/krupa/spanish/ai/AIProvider;.getId:()Ljava/lang/String; // method@00a2
+002c2a: 0c0a                                   |007d: move-result-object v10
+002c2c: 7120 7600 7a00                         |007e: invoke-static {v10, v7}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+002c32: 0a0a                                   |0081: move-result v10
+002c34: 380a 2500                              |0082: if-eqz v10, 00a7 // +0025
+002c38: 5be8 2000                              |0084: iput-object v8, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$0:Ljava/lang/Object; // field@0020
+002c3c: 5be7 2100                              |0086: iput-object v7, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$1:Ljava/lang/Object; // field@0021
+002c40: 5be6 2200                              |0088: iput-object v6, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$2:Ljava/lang/Object; // field@0022
+002c44: 5be5 2300                              |008a: iput-object v5, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$3:Ljava/lang/Object; // field@0023
+002c48: 59e3 2400                              |008c: iput v3, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002c4c: 7220 a500 e200                         |008e: invoke-interface {v2, v14}, Lua/krupa/spanish/ai/AIProvider;.isAvailable:(Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@00a5
+002c52: 0c02                                   |0091: move-result-object v2
+002c54: 3312 0300                              |0092: if-ne v2, v1, 0095 // +0003
+002c58: 1101                                   |0094: return-object v1
+002c5a: 071b                                   |0095: move-object v11, v1
+002c5c: 0701                                   |0096: move-object v1, v0
+002c5e: 0720                                   |0097: move-object v0, v2
+002c60: 07b2                                   |0098: move-object v2, v11
+002c62: 1f00 4e00                              |0099: check-cast v0, Ljava/lang/Boolean; // type@004e
+002c66: 6e10 5400 0000                         |009b: invoke-virtual {v0}, Ljava/lang/Boolean;.booleanValue:()Z // method@0054
+002c6c: 0a00                                   |009e: move-result v0
+002c6e: 3800 0600                              |009f: if-eqz v0, 00a5 // +0006
+002c72: 0710                                   |00a1: move-object v0, v1
+002c74: 0721                                   |00a2: move-object v1, v2
+002c76: 0132                                   |00a3: move v2, v3
+002c78: 2804                                   |00a4: goto 00a8 // +0004
+002c7a: 0710                                   |00a5: move-object v0, v1
+002c7c: 0721                                   |00a6: move-object v1, v2
+002c7e: 1202                                   |00a7: const/4 v2, #int 0 // #0
+002c80: 3802 c4ff                              |00a8: if-eqz v2, 006c // -003c
+002c84: 2802                                   |00aa: goto 00ac // +0002
+002c86: 0745                                   |00ab: move-object v5, v4
+002c88: 1f05 7500                              |00ac: check-cast v5, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002c8c: 3905 4f00                              |00ae: if-nez v5, 00fd // +004f
+002c90: 548d 2800                              |00b0: iget-object v13, v8, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002c94: 1f0d 5500                              |00b2: check-cast v13, Ljava/lang/Iterable; // type@0055
+002c98: 1202                                   |00b4: const/4 v2, #int 0 // #0
+002c9a: 7210 5b00 0d00                         |00b5: invoke-interface {v13}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@005b
+002ca0: 0c03                                   |00b8: move-result-object v3
+002ca2: 012d                                   |00b9: move v13, v2
+002ca4: 0735                                   |00ba: move-object v5, v3
+002ca6: 0786                                   |00bb: move-object v6, v8
+002ca8: 7210 6800 0500                         |00bc: invoke-interface {v5}, Ljava/util/Iterator;.hasNext:()Z // method@0068
+002cae: 0a02                                   |00bf: move-result v2
+002cb0: 3802 2e00                              |00c0: if-eqz v2, 00ee // +002e
+002cb4: 7210 6900 0500                         |00c2: invoke-interface {v5}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@0069
+002cba: 0c03                                   |00c5: move-result-object v3
+002cbc: 0732                                   |00c6: move-object v2, v3
+002cbe: 1f02 7500                              |00c7: check-cast v2, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002cc2: 1207                                   |00c9: const/4 v7, #int 0 // #0
+002cc4: 5be6 2000                              |00ca: iput-object v6, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$0:Ljava/lang/Object; // field@0020
+002cc8: 5be5 2100                              |00cc: iput-object v5, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$1:Ljava/lang/Object; // field@0021
+002ccc: 5be3 2200                              |00ce: iput-object v3, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$2:Ljava/lang/Object; // field@0022
+002cd0: 5be4 2300                              |00d0: iput-object v4, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.L$3:Ljava/lang/Object; // field@0023
+002cd4: 1228                                   |00d2: const/4 v8, #int 2 // #2
+002cd6: 59e8 2400                              |00d3: iput v8, v14, Lua/krupa/spanish/ai/AIProviderRegistry$resolve$1;.label:I // field@0024
+002cda: 7220 a500 e200                         |00d5: invoke-interface {v2, v14}, Lua/krupa/spanish/ai/AIProvider;.isAvailable:(Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@00a5
+002ce0: 0c02                                   |00d8: move-result-object v2
+002ce2: 3312 0300                              |00d9: if-ne v2, v1, 00dc // +0003
+002ce6: 1101                                   |00db: return-object v1
+002ce8: 071b                                   |00dc: move-object v11, v1
+002cea: 0701                                   |00dd: move-object v1, v0
+002cec: 0720                                   |00de: move-object v0, v2
+002cee: 07b2                                   |00df: move-object v2, v11
+002cf0: 1f00 4e00                              |00e0: check-cast v0, Ljava/lang/Boolean; // type@004e
+002cf4: 6e10 5400 0000                         |00e2: invoke-virtual {v0}, Ljava/lang/Boolean;.booleanValue:()Z // method@0054
+002cfa: 0a00                                   |00e5: move-result v0
+002cfc: 3800 0500                              |00e6: if-eqz v0, 00eb // +0005
+002d00: 0710                                   |00e8: move-object v0, v1
+002d02: 0734                                   |00e9: move-object v4, v3
+002d04: 2805                                   |00ea: goto 00ef // +0005
+002d06: 0710                                   |00eb: move-object v0, v1
+002d08: 0721                                   |00ec: move-object v1, v2
+002d0a: 28cf                                   |00ed: goto 00bc // -0031
+002d0c: 0000                                   |00ee: nop // spacer
+002d0e: 0745                                   |00ef: move-object v5, v4
+002d10: 1f05 7500                              |00f0: check-cast v5, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002d14: 3905 0b00                              |00f2: if-nez v5, 00fd // +000b
+002d18: 546d 2800                              |00f4: iget-object v13, v6, Lua/krupa/spanish/ai/AIProviderRegistry;.providers:Ljava/util/List; // field@0028
+002d1c: 7110 7000 0d00                         |00f6: invoke-static {v13}, Lkotlin/collections/CollectionsKt;.first:(Ljava/util/List;)Ljava/lang/Object; // method@0070
+002d22: 0c0d                                   |00f9: move-result-object v13
+002d24: 07d5                                   |00fa: move-object v5, v13
+002d26: 1f05 7500                              |00fb: check-cast v5, Lua/krupa/spanish/ai/AIProvider; // type@0075
+002d2a: 1105                                   |00fd: return-object v5
+002d2c: 0001 0300 0000 0000 3600 0000 1f00 ... |00fe: packed-switch-data (10 units)
+      catches       : (none)
+      positions     :
+        0x0020 line=167
+        0x005e line=168
+        0x0063 line=175
+        0x007a line=168
+        0x0094 line=167
+        0x0095 line=168
+        0x00a8 line=175
+        0x00ab line=176
+        0x00ac line=168
+        0x00b0 line=169
+        0x00b5 line=177
+        0x00ca line=169
+        0x00db line=167
+        0x00dc line=169
+        0x00e6 line=177
+        0x00ee line=178
+        0x00ef line=169
+        0x00f2 line=168
+        0x00f4 line=170
+      locals        :
+        0x0000 - 0x001a reg=14 (null) Lkotlin/coroutines/Continuation;
+        0x001c - 0x0027 reg=0 $result Ljava/lang/Object;
+        0x001a - 0x0027 reg=14 $continuation Lkotlin/coroutines/Continuation;
+        0x0000 - 0x0030 reg=13 (null) Ljava/lang/String;
+        0x0031 - 0x0043 reg=2 $i$a$-firstOrNull-AIProviderRegistry$resolve$3 I
+        0x0033 - 0x0043 reg=3 element$iv Ljava/lang/Object;
+        0x003b - 0x0043 reg=6 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x0030 - 0x0043 reg=13 $i$f$firstOrNull I
+        0x0045 - 0x005a reg=2 $i$a$-firstOrNull-AIProviderRegistry$resolve$2 I
+        0x0047 - 0x005a reg=5 element$iv Ljava/lang/Object;
+        0x004f - 0x005a reg=7 preferredId Ljava/lang/String;
+        0x0053 - 0x005a reg=8 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x0044 - 0x005a reg=13 $i$f$firstOrNull I
+        0x005e - 0x006c reg=2 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x0062 - 0x006c reg=5 $this$firstOrNull$iv Ljava/lang/Iterable;
+        0x0063 - 0x006c reg=6 $i$f$firstOrNull I
+        0x005e - 0x006c reg=13 preferredId Ljava/lang/String;
+        0x0079 - 0x0092 reg=2 it Lua/krupa/spanish/ai/AIProvider;
+        0x002f - 0x0099 reg=0 $result Ljava/lang/Object;
+        0x0099 - 0x00a7 reg=1 $result Ljava/lang/Object;
+        0x007a - 0x00a8 reg=9 $i$a$-firstOrNull-AIProviderRegistry$resolve$2 I
+        0x0076 - 0x00ab reg=5 element$iv Ljava/lang/Object;
+        0x006c - 0x00ab reg=7 preferredId Ljava/lang/String;
+        0x006c - 0x00ac reg=13 $i$f$firstOrNull I
+        0x00b5 - 0x00bc reg=2 $i$f$firstOrNull I
+        0x006c - 0x00bc reg=8 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x00b4 - 0x00bc reg=13 $this$firstOrNull$iv Ljava/lang/Iterable;
+        0x00c9 - 0x00d9 reg=2 it Lua/krupa/spanish/ai/AIProvider;
+        0x00a7 - 0x00e0 reg=0 $result Ljava/lang/Object;
+        0x00ca - 0x00e6 reg=7 $i$a$-firstOrNull-AIProviderRegistry$resolve$3 I
+        0x00e0 - 0x00ee reg=1 $result Ljava/lang/Object;
+        0x00c6 - 0x00ee reg=3 element$iv Ljava/lang/Object;
+        0x00bc - 0x00ef reg=13 $i$f$firstOrNull I
+        0x00bc - 0x00fd reg=6 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x00ee - 0x0108 reg=0 $result Ljava/lang/Object;
+        0x0000 - 0x0108 reg=12 this Lua/krupa/spanish/ai/AIProviderRegistry;
+        0x002f - 0x0108 reg=14 $continuation Lkotlin/coroutines/Continuation;
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #7 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nAIProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AIProvider.kt\nua/krupa/spanish/ai/AIRequest\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,172:1\n533#2,6:173\n1774#2,4:179\n*S KotlinDebug\n*F\n+ 1 AIProvider.kt\nua/krupa/spanish/ai/AIRequest\n*L\n47#1:173,6\n48#1:179,4\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��>\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485148\484850\n��\n\484850\485148\484850\n��\n\484850\485148\484850\n��\n\484850\485048 \n\484850\485148\484850\n��\n\484850\485048\484954\n\484850\b\485048\n\484850\485048\b\n\484850\b\n\n\484850\485048\484951\n\484850\b\484852\b\b\485148��2\4848500\484849BE\485050\484854\485048\484850\485150\4848500\484851\485050\484854\485048\484852\485150\4848500\484853\485050\484854\485048\484854\485150\4848500\484855\485050\f\485048\b\485150\b\485050\484852\485050\4848500\n0\t\485050\b\b\484850\485048\484951\485150\4848500\f\485050\484954\b\484850\485048\r\485150\b\485050\484852\485050\4848500\f0\t¢\484854\484850\485048\484954J\t\485048 \485150\4848500\484851HÆ\484851J\t\485048!\485150\4848500\484853HÆ\484851J\t\485048\"\485150\4848500\484855HÆ\484851J\484955\485048#\485150\b\485050\484852\485050\4848500\n0\tHÆ\484851J\t\485048$\485150\4848500\fHÆ\484851J\484955\485048%\485150\b\485050\484852\485050\4848500\f0\tHÆ\484851JQ\485048&\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\b\b\484850\485048\484852\485150\4848500\4848532\b\b\484850\485048\484854\485150\4848500\4848552\484954\b\484850\485048\b\485150\b\485050\484852\485050\4848500\n0\t2\b\b\484850\485048\484951\485150\4848500\f2\484954\b\484850\485048\r\485150\b\485050\484852\485050\4848500\f0\tHÆ\484849J\485051\485048'\485150\4848500(2\b\485048)\485150\484852\485148\4848490\484849HÖ\484851J\t\485048*\485150\4848500\485153HÖ\484849J\t\485048+\485150\4848500\fHÖ\484849R\485055\485048\r\485150\b\485050\484852\485050\4848500\f0\t¢\484854\b\n��\485150\484852\b\484955\485048\485048R\485055\485048\b\485150\b\485050\484852\485050\4848500\n0\t¢\484854\b\n��\485150\484852\b\485049\485048\485048R\485049\485048\485050\485150\4848500\f8F¢\484854\484854\485150\484852\b\485051\485048\485052R\485049\485048\484854\485150\4848500\484855¢\484854\b\n��\485150\484852\b\485053\485048\485054R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\485055\485048\485148R\485049\485048\484852\485150\4848500\484853¢\484854\b\n��\485150\484852\b\485149\485048\485150R\485049\485048\484951\485150\4848500\f¢\484854\b\n��\485150\484852\b\485151\485048\485052R\485049\485048\485152\485150\4848500\4851538F¢\484854\484854\485150\484852\b\485154\485048\485155¨\484854," } d2={ "Lua/krupa/spanish/ai/AIRequest;" "" "mode" "Lua/krupa/spanish/ai/AIConversationMode;" "scenario" "Lua/krupa/spanish/ai/AIScenario;" "level" "Lua/krupa/spanish/domain/model/Level;" "history" "" "Lua/krupa/spanish/ai/AIMessage;" "topicTitleUk" "" "focusWords" "(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)V" "getFocusWords" "()Ljava/util/List;" "getHistory" "lastUserMessage" "getLastUserMessage" "()Ljava/lang/String;" "getLevel" "()Lua/krupa/spanish/domain/model/Level;" "getMode" "()Lua/krupa/spanish/ai/AIConversationMode;" "getScenario" "()Lua/krupa/spanish/ai/AIScenario;" "getTopicTitleUk" "turnIndex" "" "getTurnIndex" "()I" "component1" "component2" "component3" "component4" "component5" "component6" "copy" "equals" "" "other" "hashCode" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #42 'focusWords'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on field #43 'history'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Lua/krupa/spanish/ai/AIMessage;" ">;" }
+Annotations on method #176 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ai/AIConversationMode;" "Lua/krupa/spanish/ai/AIScenario;" "Lua/krupa/spanish/domain/model/Level;" "Ljava/util/List<" "Lua/krupa/spanish/ai/AIMessage;" ">;" "Ljava/lang/String;" "Ljava/util/List<" "Ljava/lang/String;" ">;)V" }
+Annotations on method #181 'component4'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/ai/AIMessage;" ">;" }
+Annotations on method #183 'component6'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #184 'copy'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ai/AIConversationMode;" "Lua/krupa/spanish/ai/AIScenario;" "Lua/krupa/spanish/domain/model/Level;" "Ljava/util/List<" "Lua/krupa/spanish/ai/AIMessage;" ">;" "Ljava/lang/String;" "Ljava/util/List<" "Ljava/lang/String;" ">;)" "Lua/krupa/spanish/ai/AIRequest;" }
+Annotations on method #187 'getFocusWords'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #188 'getHistory'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/ai/AIMessage;" ">;" }
+
+Class #7            -

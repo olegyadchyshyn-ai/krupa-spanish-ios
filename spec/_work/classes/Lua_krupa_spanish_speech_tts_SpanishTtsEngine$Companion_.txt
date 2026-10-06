@@ -1,0 +1,90 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10002 (PRIVATE CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0091ec:                                        |[0091ec] ua.krupa.spanish.speech.tts.SpanishTtsEngine$Companion.<init>:()V
+0091fc: 7010 ab00 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@00ab
+009202: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=192
+      locals        :
+        0x0000 - 0x0004 reg=0 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;
+
+    #1              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;)
+      name          : '<init>'
+      type          : '(Lkotlin/jvm/internal/DefaultConstructorMarker;)V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 2
+      ins           : 2
+      outs          : 1
+      insns size    : 4 16-bit code units
+009204:                                        |[009204] ua.krupa.spanish.speech.tts.SpanishTtsEngine$Companion.<init>:(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+009214: 7010 b501 0000                         |0000: invoke-direct {v0}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;.<init>:()V // method@01b5
+00921a: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;)
+      name          : 'getFEMALE_MARKERS'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 5 16-bit code units
+0091b4:                                        |[0091b4] ua.krupa.spanish.speech.tts.SpanishTtsEngine$Companion.getFEMALE_MARKERS:()Ljava/util/List;
+0091c4: 7100 e101 0000                         |0000: invoke-static {}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine;.access$getFEMALE_MARKERS$cp:()Ljava/util/List; // method@01e1
+0091ca: 0c00                                   |0003: move-result-object v0
+0091cc: 1100                                   |0004: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=195
+      locals        :
+        0x0000 - 0x0005 reg=1 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;
+
+    #1              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;)
+      name          : 'getMALE_MARKERS'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 5 16-bit code units
+0091d0:                                        |[0091d0] ua.krupa.spanish.speech.tts.SpanishTtsEngine$Companion.getMALE_MARKERS:()Ljava/util/List;
+0091e0: 7100 e201 0000                         |0000: invoke-static {}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine;.access$getMALE_MARKERS$cp:()Ljava/util/List; // method@01e2
+0091e6: 0c00                                   |0003: move-result-object v0
+0091e8: 1100                                   |0004: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=196
+      locals        :
+        0x0000 - 0x0005 reg=1 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion;
+
+  source_file_idx   : 1213 (SpanishTtsEngine.kt)
+
+Class #8 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingClass; value=Lua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender;
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=25 name="Companion"
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nSpanishTtsEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpanishTtsEngine.kt\nua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,214:1\n288#2,2:215\n*S KotlinDebug\n*F\n+ 1 SpanishTtsEngine.kt\nua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender$Companion\n*L\n188#1:215,2\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\485148\n\484850\485148\484850\n\484850\485048��\n\484850\b\484850\n\484850\485148\484850\n��\n\484850\485048\484954\n��\b\484851\485148��2\4848500\484849B\484855\b\484850¢\484854\484850\485048\484850J\484954\485048\484851\485150\4848500\4848522\484854\485048\484853\485150\4848500\484854¨\484854\484855" } d2={ "Lua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender$Companion;" "" "()V" "fromCode" "Lua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender;" "code" "" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+
+Class #8            -

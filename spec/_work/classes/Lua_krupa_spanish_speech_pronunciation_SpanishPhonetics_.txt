@@ -1,0 +1,728 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'ACCENT_MARKS'
+      type          : 'Lkotlin/text/Regex;'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'INSTANCE'
+      type          : 'Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+    #3              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'NON_PHONETIC'
+      type          : 'Lkotlin/text/Regex;'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+    #4              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'WHITESPACE'
+      type          : 'Lkotlin/text/Regex;'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 2
+      ins           : 0
+      outs          : 2
+      insns size    : 39 16-bit code units
+0182d8:                                        |[0182d8] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.<clinit>:()V
+0182e8: 2200 1001                              |0000: new-instance v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics; // type@0110
+0182ec: 7010 1204 0000                         |0002: invoke-direct {v0}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.<init>:()V // method@0412
+0182f2: 6900 b801                              |0005: sput-object v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.INSTANCE:Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics; // field@01b8
+0182f6: 2200 ad00                              |0007: new-instance v0, Lkotlin/text/Regex; // type@00ad
+0182fa: 1a01 4606                              |0009: const-string v1, "\\p{Mn}+" // string@0646
+0182fe: 7020 f500 1000                         |000b: invoke-direct {v0, v1}, Lkotlin/text/Regex;.<init>:(Ljava/lang/String;)V // method@00f5
+018304: 6900 b701                              |000e: sput-object v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.ACCENT_MARKS:Lkotlin/text/Regex; // field@01b7
+018308: 2200 ad00                              |0010: new-instance v0, Lkotlin/text/Regex; // type@00ad
+01830c: 1a01 4706                              |0012: const-string v1, "\\s+" // string@0647
+018310: 7020 f500 1000                         |0014: invoke-direct {v0, v1}, Lkotlin/text/Regex;.<init>:(Ljava/lang/String;)V // method@00f5
+018316: 6900 ba01                              |0017: sput-object v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.WHITESPACE:Lkotlin/text/Regex; // field@01ba
+01831a: 2200 ad00                              |0019: new-instance v0, Lkotlin/text/Regex; // type@00ad
+01831e: 1a01 4306                              |001b: const-string v1, "[^а-яіїєґйθ]" // string@0643
+018322: 7020 f500 1000                         |001d: invoke-direct {v0, v1}, Lkotlin/text/Regex;.<init>:(Ljava/lang/String;)V // method@00f5
+018328: 6900 b901                              |0020: sput-object v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.NON_PHONETIC:Lkotlin/text/Regex; // field@01b9
+01832c: 1300 0800                              |0022: const/16 v0, #int 8 // #8
+018330: 6700 b601                              |0024: sput v0, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.$stable:I // field@01b6
+018334: 0e00                                   |0026: return-void
+      catches       : (none)
+      positions     :
+        0x0007 line=129
+        0x0010 line=130
+        0x0019 line=131
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10002 (PRIVATE CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+018338:                                        |[018338] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.<init>:()V
+018348: 7010 9400 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0094
+01834e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=21
+      locals        :
+        0x0000 - 0x0004 reg=0 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'mapping'
+      type          : '(C)C'
+      access        : 0x0012 (PRIVATE FINAL)
+      code          -
+      registers     : 4
+      ins           : 2
+      outs          : 0
+      insns size    : 212 16-bit code units
+017c08:                                        |[017c08] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.mapping:(C)C
+017c18: 0000                                   |0000: nop // spacer
+017c1a: 1300 6100                              |0001: const/16 v0, #int 97 // #61
+017c1e: 1301 3004                              |0003: const/16 v1, #int 1072 // #430
+017c22: 3303 0400                              |0005: if-ne v3, v0, 0009 // +0004
+017c26: 2900 cc00                              |0007: goto/16 00d3 // +00cc
+017c2a: 1300 e100                              |0009: const/16 v0, #int 225 // #e1
+017c2e: 3303 0400                              |000b: if-ne v3, v0, 000f // +0004
+017c32: 2900 c600                              |000d: goto/16 00d3 // +00c6
+017c36: 1300 6500                              |000f: const/16 v0, #int 101 // #65
+017c3a: 1301 3504                              |0011: const/16 v1, #int 1077 // #435
+017c3e: 3303 0400                              |0013: if-ne v3, v0, 0017 // +0004
+017c42: 2900 be00                              |0015: goto/16 00d3 // +00be
+017c46: 1300 e900                              |0017: const/16 v0, #int 233 // #e9
+017c4a: 3303 0400                              |0019: if-ne v3, v0, 001d // +0004
+017c4e: 2900 b800                              |001b: goto/16 00d3 // +00b8
+017c52: 1300 6900                              |001d: const/16 v0, #int 105 // #69
+017c56: 1301 5604                              |001f: const/16 v1, #int 1110 // #456
+017c5a: 3303 0400                              |0021: if-ne v3, v0, 0025 // +0004
+017c5e: 2900 b000                              |0023: goto/16 00d3 // +00b0
+017c62: 1300 ed00                              |0025: const/16 v0, #int 237 // #ed
+017c66: 3303 0400                              |0027: if-ne v3, v0, 002b // +0004
+017c6a: 2900 aa00                              |0029: goto/16 00d3 // +00aa
+017c6e: 1300 7900                              |002b: const/16 v0, #int 121 // #79
+017c72: 3303 0600                              |002d: if-ne v3, v0, 0033 // +0006
+017c76: 1301 3904                              |002f: const/16 v1, #int 1081 // #439
+017c7a: 2900 a200                              |0031: goto/16 00d3 // +00a2
+017c7e: 1300 6f00                              |0033: const/16 v0, #int 111 // #6f
+017c82: 1301 3e04                              |0035: const/16 v1, #int 1086 // #43e
+017c86: 3303 0400                              |0037: if-ne v3, v0, 003b // +0004
+017c8a: 2900 9a00                              |0039: goto/16 00d3 // +009a
+017c8e: 1300 f300                              |003b: const/16 v0, #int 243 // #f3
+017c92: 3303 0400                              |003d: if-ne v3, v0, 0041 // +0004
+017c96: 2900 9400                              |003f: goto/16 00d3 // +0094
+017c9a: 1300 7500                              |0041: const/16 v0, #int 117 // #75
+017c9e: 1301 4304                              |0043: const/16 v1, #int 1091 // #443
+017ca2: 3303 0400                              |0045: if-ne v3, v0, 0049 // +0004
+017ca6: 2900 8c00                              |0047: goto/16 00d3 // +008c
+017caa: 1300 fa00                              |0049: const/16 v0, #int 250 // #fa
+017cae: 3303 0400                              |004b: if-ne v3, v0, 004f // +0004
+017cb2: 2900 8600                              |004d: goto/16 00d3 // +0086
+017cb6: 1300 fc00                              |004f: const/16 v0, #int 252 // #fc
+017cba: 3303 0400                              |0051: if-ne v3, v0, 0055 // +0004
+017cbe: 2900 8000                              |0053: goto/16 00d3 // +0080
+017cc2: 1300 6200                              |0055: const/16 v0, #int 98 // #62
+017cc6: 1301 3104                              |0057: const/16 v1, #int 1073 // #431
+017cca: 3303 0400                              |0059: if-ne v3, v0, 005d // +0004
+017cce: 2900 7800                              |005b: goto/16 00d3 // +0078
+017cd2: 1300 7600                              |005d: const/16 v0, #int 118 // #76
+017cd6: 3303 0400                              |005f: if-ne v3, v0, 0063 // +0004
+017cda: 2900 7200                              |0061: goto/16 00d3 // +0072
+017cde: 1300 6300                              |0063: const/16 v0, #int 99 // #63
+017ce2: 1301 3a04                              |0065: const/16 v1, #int 1082 // #43a
+017ce6: 3303 0400                              |0067: if-ne v3, v0, 006b // +0004
+017cea: 2900 6a00                              |0069: goto/16 00d3 // +006a
+017cee: 1300 6400                              |006b: const/16 v0, #int 100 // #64
+017cf2: 3303 0600                              |006d: if-ne v3, v0, 0073 // +0006
+017cf6: 1301 3404                              |006f: const/16 v1, #int 1076 // #434
+017cfa: 2900 6200                              |0071: goto/16 00d3 // +0062
+017cfe: 1300 6600                              |0073: const/16 v0, #int 102 // #66
+017d02: 3303 0600                              |0075: if-ne v3, v0, 007b // +0006
+017d06: 1301 4404                              |0077: const/16 v1, #int 1092 // #444
+017d0a: 2900 5a00                              |0079: goto/16 00d3 // +005a
+017d0e: 1300 6700                              |007b: const/16 v0, #int 103 // #67
+017d12: 3303 0500                              |007d: if-ne v3, v0, 0082 // +0005
+017d16: 1301 9104                              |007f: const/16 v1, #int 1169 // #491
+017d1a: 2852                                   |0081: goto 00d3 // +0052
+017d1c: 1300 6a00                              |0082: const/16 v0, #int 106 // #6a
+017d20: 3303 0500                              |0084: if-ne v3, v0, 0089 // +0005
+017d24: 1301 4504                              |0086: const/16 v1, #int 1093 // #445
+017d28: 284b                                   |0088: goto 00d3 // +004b
+017d2a: 1300 6b00                              |0089: const/16 v0, #int 107 // #6b
+017d2e: 3303 0300                              |008b: if-ne v3, v0, 008e // +0003
+017d32: 2846                                   |008d: goto 00d3 // +0046
+017d34: 1300 6c00                              |008e: const/16 v0, #int 108 // #6c
+017d38: 3303 0500                              |0090: if-ne v3, v0, 0095 // +0005
+017d3c: 1301 3b04                              |0092: const/16 v1, #int 1083 // #43b
+017d40: 283f                                   |0094: goto 00d3 // +003f
+017d42: 1300 6d00                              |0095: const/16 v0, #int 109 // #6d
+017d46: 3303 0500                              |0097: if-ne v3, v0, 009c // +0005
+017d4a: 1301 3c04                              |0099: const/16 v1, #int 1084 // #43c
+017d4e: 2838                                   |009b: goto 00d3 // +0038
+017d50: 1300 6e00                              |009c: const/16 v0, #int 110 // #6e
+017d54: 1301 3d04                              |009e: const/16 v1, #int 1085 // #43d
+017d58: 3303 0300                              |00a0: if-ne v3, v0, 00a3 // +0003
+017d5c: 2831                                   |00a2: goto 00d3 // +0031
+017d5e: 1300 f100                              |00a3: const/16 v0, #int 241 // #f1
+017d62: 3303 0300                              |00a5: if-ne v3, v0, 00a8 // +0003
+017d66: 282c                                   |00a7: goto 00d3 // +002c
+017d68: 1300 7000                              |00a8: const/16 v0, #int 112 // #70
+017d6c: 3303 0500                              |00aa: if-ne v3, v0, 00af // +0005
+017d70: 1301 3f04                              |00ac: const/16 v1, #int 1087 // #43f
+017d74: 2825                                   |00ae: goto 00d3 // +0025
+017d76: 1300 7200                              |00af: const/16 v0, #int 114 // #72
+017d7a: 3303 0500                              |00b1: if-ne v3, v0, 00b6 // +0005
+017d7e: 1301 4004                              |00b3: const/16 v1, #int 1088 // #440
+017d82: 281e                                   |00b5: goto 00d3 // +001e
+017d84: 1300 7300                              |00b6: const/16 v0, #int 115 // #73
+017d88: 3303 0500                              |00b8: if-ne v3, v0, 00bd // +0005
+017d8c: 1301 4104                              |00ba: const/16 v1, #int 1089 // #441
+017d90: 2817                                   |00bc: goto 00d3 // +0017
+017d92: 1300 7400                              |00bd: const/16 v0, #int 116 // #74
+017d96: 3303 0500                              |00bf: if-ne v3, v0, 00c4 // +0005
+017d9a: 1301 4204                              |00c1: const/16 v1, #int 1090 // #442
+017d9e: 2810                                   |00c3: goto 00d3 // +0010
+017da0: 1300 7700                              |00c4: const/16 v0, #int 119 // #77
+017da4: 3303 0500                              |00c6: if-ne v3, v0, 00cb // +0005
+017da8: 1301 3204                              |00c8: const/16 v1, #int 1074 // #432
+017dac: 2809                                   |00ca: goto 00d3 // +0009
+017dae: 1300 e700                              |00cb: const/16 v0, #int 231 // #e7
+017db2: 3303 0500                              |00cd: if-ne v3, v0, 00d2 // +0005
+017db6: 1301 b803                              |00cf: const/16 v1, #int 952 // #3b8
+017dba: 2802                                   |00d1: goto 00d3 // +0002
+017dbc: 0131                                   |00d2: move v1, v3
+017dbe: 0f01                                   |00d3: return v1
+      catches       : (none)
+      positions     :
+        0x0000 line=92
+        0x0001 line=93
+        0x0009 line=94
+        0x000f line=95
+        0x0017 line=96
+        0x001d line=97
+        0x0025 line=98
+        0x002b line=99
+        0x0033 line=100
+        0x003b line=101
+        0x0041 line=102
+        0x0049 line=103
+        0x004f line=104
+        0x0055 line=105
+        0x005d line=106
+        0x0063 line=107
+        0x006b line=108
+        0x0073 line=109
+        0x007b line=110
+        0x0082 line=111
+        0x0089 line=112
+        0x008e line=113
+        0x0095 line=114
+        0x009c line=115
+        0x00a3 line=116
+        0x00a8 line=117
+        0x00af line=118
+        0x00b6 line=119
+        0x00bd line=120
+        0x00c4 line=121
+        0x00cb line=122
+        0x00d2 line=123
+        0x00d3 line=124
+      locals        :
+        0x0000 - 0x00d4 reg=2 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x00d4 reg=3 char C
+
+    #3              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'stripPunctuation'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 17 16-bit code units
+017e64:                                        |[017e64] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.stripPunctuation:(Ljava/lang/String;)Ljava/lang/String;
+017e74: 0740                                   |0000: move-object v0, v4
+017e76: 1f00 6f00                              |0001: check-cast v0, Ljava/lang/CharSequence; // type@006f
+017e7a: 2201 ad00                              |0003: new-instance v1, Lkotlin/text/Regex; // type@00ad
+017e7e: 1a02 4506                              |0005: const-string v2, "[¡¿!?.,;:\"«»()\\[\\]…—–]" // string@0645
+017e82: 7020 f500 2100                         |0007: invoke-direct {v1, v2}, Lkotlin/text/Regex;.<init>:(Ljava/lang/String;)V // method@00f5
+017e88: 1a02 3800                              |000a: const-string v2, " " // string@0038
+017e8c: 6e30 f600 0102                         |000c: invoke-virtual {v1, v0, v2}, Lkotlin/text/Regex;.replace:(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String; // method@00f6
+017e92: 0c00                                   |000f: move-result-object v0
+017e94: 1100                                   |0010: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=127
+      locals        :
+        0x0000 - 0x0011 reg=3 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x0011 reg=4 text Ljava/lang/String;
+
+    #4              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'transliterate'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+      code          -
+      registers     : 13
+      ins           : 2
+      outs          : 2
+      insns size    : 344 16-bit code units
+017f00:                                        |[017f00] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.transliterate:(Ljava/lang/String;)Ljava/lang/String;
+017f10: 2200 7e00                              |0000: new-instance v0, Ljava/lang/StringBuilder; // type@007e
+017f14: 6e10 9900 0c00                         |0002: invoke-virtual {v12}, Ljava/lang/String;.length:()I // method@0099
+017f1a: 0a01                                   |0005: move-result v1
+017f1c: 7020 9c00 1000                         |0006: invoke-direct {v0, v1}, Ljava/lang/StringBuilder;.<init>:(I)V // method@009c
+017f22: 1201                                   |0009: const/4 v1, #int 0 // #0
+017f24: 6e10 9900 0c00                         |000a: invoke-virtual {v12}, Ljava/lang/String;.length:()I // method@0099
+017f2a: 0a02                                   |000d: move-result v2
+017f2c: 3521 4001                              |000e: if-ge v1, v2, 014e // +0140
+017f30: 07c2                                   |0010: move-object v2, v12
+017f32: 1f02 6f00                              |0011: check-cast v2, Ljava/lang/CharSequence; // type@006f
+017f36: d803 0101                              |0013: add-int/lit8 v3, v1, #int 1 // #01
+017f3a: 7120 fa00 3200                         |0015: invoke-static {v2, v3}, Lkotlin/text/StringsKt;.getOrNull:(Ljava/lang/CharSequence;I)Ljava/lang/Character; // method@00fa
+017f40: 0c02                                   |0018: move-result-object v2
+017f42: 07c3                                   |0019: move-object v3, v12
+017f44: 1f03 6f00                              |001a: check-cast v3, Ljava/lang/CharSequence; // type@006f
+017f48: d804 0102                              |001c: add-int/lit8 v4, v1, #int 2 // #02
+017f4c: 7120 fa00 4300                         |001e: invoke-static {v3, v4}, Lkotlin/text/StringsKt;.getOrNull:(Ljava/lang/CharSequence;I)Ljava/lang/Character; // method@00fa
+017f52: 0c03                                   |0021: move-result-object v3
+017f54: 0000                                   |0022: nop // spacer
+017f56: 6e20 9700 1c00                         |0023: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+017f5c: 0a04                                   |0026: move-result v4
+017f5e: 1305 6800                              |0027: const/16 v5, #int 104 // #68
+017f62: 1306 6300                              |0029: const/16 v6, #int 99 // #63
+017f66: 3364 1300                              |002b: if-ne v4, v6, 003e // +0013
+017f6a: 3902 0300                              |002d: if-nez v2, 0030 // +0003
+017f6e: 280f                                   |002f: goto 003e // +000f
+017f70: 6e10 7e00 0200                         |0030: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+017f76: 0a04                                   |0033: move-result v4
+017f78: 3354 0a00                              |0034: if-ne v4, v5, 003e // +000a
+017f7c: 1304 4704                              |0036: const/16 v4, #int 1095 // #447
+017f80: 6e20 9d00 4000                         |0038: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+017f86: d801 0102                              |003b: add-int/lit8 v1, v1, #int 2 // #02
+017f8a: 28cd                                   |003d: goto 000a // -0033
+017f8c: 6e20 9700 1c00                         |003e: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+017f92: 0a04                                   |0041: move-result v4
+017f94: 1307 6c00                              |0042: const/16 v7, #int 108 // #6c
+017f98: 3374 1300                              |0044: if-ne v4, v7, 0057 // +0013
+017f9c: 3902 0300                              |0046: if-nez v2, 0049 // +0003
+017fa0: 280f                                   |0048: goto 0057 // +000f
+017fa2: 6e10 7e00 0200                         |0049: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+017fa8: 0a04                                   |004c: move-result v4
+017faa: 3374 0a00                              |004d: if-ne v4, v7, 0057 // +000a
+017fae: 1304 3904                              |004f: const/16 v4, #int 1081 // #439
+017fb2: 6e20 9d00 4000                         |0051: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+017fb8: d801 0102                              |0054: add-int/lit8 v1, v1, #int 2 // #02
+017fbc: 28b4                                   |0056: goto 000a // -004c
+017fbe: 6e20 9700 1c00                         |0057: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+017fc4: 0a04                                   |005a: move-result v4
+017fc6: 1307 7100                              |005b: const/16 v7, #int 113 // #71
+017fca: 1308 7500                              |005d: const/16 v8, #int 117 // #75
+017fce: 3374 1300                              |005f: if-ne v4, v7, 0072 // +0013
+017fd2: 3902 0300                              |0061: if-nez v2, 0064 // +0003
+017fd6: 280f                                   |0063: goto 0072 // +000f
+017fd8: 6e10 7e00 0200                         |0064: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+017fde: 0a04                                   |0067: move-result v4
+017fe0: 3384 0a00                              |0068: if-ne v4, v8, 0072 // +000a
+017fe4: 1304 3a04                              |006a: const/16 v4, #int 1082 // #43a
+017fe8: 6e20 9d00 4000                         |006c: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+017fee: d801 0102                              |006f: add-int/lit8 v1, v1, #int 2 // #02
+017ff2: 2899                                   |0071: goto 000a // -0067
+017ff4: 6e20 9700 1c00                         |0072: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+017ffa: 0a04                                   |0075: move-result v4
+017ffc: 1307 6700                              |0076: const/16 v7, #int 103 // #67
+018000: 1309 6900                              |0078: const/16 v9, #int 105 // #69
+018004: 130a 6500                              |007a: const/16 v10, #int 101 // #65
+018008: 3374 2600                              |007c: if-ne v4, v7, 00a2 // +0026
+01800c: 3902 0300                              |007e: if-nez v2, 0081 // +0003
+018010: 2822                                   |0080: goto 00a2 // +0022
+018012: 6e10 7e00 0200                         |0081: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+018018: 0a04                                   |0084: move-result v4
+01801a: 3384 1d00                              |0085: if-ne v4, v8, 00a2 // +001d
+01801e: 3903 0300                              |0087: if-nez v3, 008a // +0003
+018022: 2807                                   |0089: goto 0090 // +0007
+018024: 6e10 7e00 0300                         |008a: invoke-virtual {v3}, Ljava/lang/Character;.charValue:()C // method@007e
+01802a: 0a04                                   |008d: move-result v4
+01802c: 32a4 0b00                              |008e: if-eq v4, v10, 0099 // +000b
+018030: 3903 0300                              |0090: if-nez v3, 0093 // +0003
+018034: 2810                                   |0092: goto 00a2 // +0010
+018036: 6e10 7e00 0300                         |0093: invoke-virtual {v3}, Ljava/lang/Character;.charValue:()C // method@007e
+01803c: 0a04                                   |0096: move-result v4
+01803e: 3394 0b00                              |0097: if-ne v4, v9, 00a2 // +000b
+018042: 1304 9104                              |0099: const/16 v4, #int 1169 // #491
+018046: 6e20 9d00 4000                         |009b: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+01804c: d801 0102                              |009e: add-int/lit8 v1, v1, #int 2 // #02
+018050: 2900 6aff                              |00a0: goto/16 000a // -0096
+018054: 6e20 9700 1c00                         |00a2: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+01805a: 0a04                                   |00a5: move-result v4
+01805c: 3374 1d00                              |00a6: if-ne v4, v7, 00c3 // +001d
+018060: 3902 0300                              |00a8: if-nez v2, 00ab // +0003
+018064: 2807                                   |00aa: goto 00b1 // +0007
+018066: 6e10 7e00 0200                         |00ab: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+01806c: 0a04                                   |00ae: move-result v4
+01806e: 32a4 0b00                              |00af: if-eq v4, v10, 00ba // +000b
+018072: 3902 0300                              |00b1: if-nez v2, 00b4 // +0003
+018076: 2810                                   |00b3: goto 00c3 // +0010
+018078: 6e10 7e00 0200                         |00b4: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+01807e: 0a04                                   |00b7: move-result v4
+018080: 3394 0b00                              |00b8: if-ne v4, v9, 00c3 // +000b
+018084: 1304 4504                              |00ba: const/16 v4, #int 1093 // #445
+018088: 6e20 9d00 4000                         |00bc: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+01808e: d801 0102                              |00bf: add-int/lit8 v1, v1, #int 2 // #02
+018092: 2900 49ff                              |00c1: goto/16 000a // -00b7
+018096: 6e20 9700 1c00                         |00c3: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+01809c: 0a04                                   |00c6: move-result v4
+01809e: 1307 b803                              |00c7: const/16 v7, #int 952 // #3b8
+0180a2: 3364 1b00                              |00c9: if-ne v4, v6, 00e4 // +001b
+0180a6: 3902 0300                              |00cb: if-nez v2, 00ce // +0003
+0180aa: 2807                                   |00cd: goto 00d4 // +0007
+0180ac: 6e10 7e00 0200                         |00ce: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+0180b2: 0a04                                   |00d1: move-result v4
+0180b4: 32a4 0b00                              |00d2: if-eq v4, v10, 00dd // +000b
+0180b8: 3902 0300                              |00d4: if-nez v2, 00d7 // +0003
+0180bc: 280e                                   |00d6: goto 00e4 // +000e
+0180be: 6e10 7e00 0200                         |00d7: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+0180c4: 0a04                                   |00da: move-result v4
+0180c6: 3394 0900                              |00db: if-ne v4, v9, 00e4 // +0009
+0180ca: 6e20 9d00 7000                         |00dd: invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+0180d0: d801 0102                              |00e0: add-int/lit8 v1, v1, #int 2 // #02
+0180d4: 2900 28ff                              |00e2: goto/16 000a // -00d8
+0180d8: 6e20 9700 1c00                         |00e4: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+0180de: 0a04                                   |00e7: move-result v4
+0180e0: 1308 7a00                              |00e8: const/16 v8, #int 122 // #7a
+0180e4: 3384 0900                              |00ea: if-ne v4, v8, 00f3 // +0009
+0180e8: 6e20 9d00 7000                         |00ec: invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+0180ee: d801 0101                              |00ef: add-int/lit8 v1, v1, #int 1 // #01
+0180f2: 2900 19ff                              |00f1: goto/16 000a // -00e7
+0180f6: 6e20 9700 1c00                         |00f3: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+0180fc: 0a04                                   |00f6: move-result v4
+0180fe: 1308 7200                              |00f7: const/16 v8, #int 114 // #72
+018102: 3384 1400                              |00f9: if-ne v4, v8, 010d // +0014
+018106: 3902 0300                              |00fb: if-nez v2, 00fe // +0003
+01810a: 2810                                   |00fd: goto 010d // +0010
+01810c: 6e10 7e00 0200                         |00fe: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+018112: 0a04                                   |0101: move-result v4
+018114: 3384 0b00                              |0102: if-ne v4, v8, 010d // +000b
+018118: 1304 4004                              |0104: const/16 v4, #int 1088 // #440
+01811c: 6e20 9d00 4000                         |0106: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+018122: d801 0102                              |0109: add-int/lit8 v1, v1, #int 2 // #02
+018126: 2900 fffe                              |010b: goto/16 000a // -0101
+01812a: 6e20 9700 1c00                         |010d: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+018130: 0a04                                   |0110: move-result v4
+018132: 3364 1400                              |0111: if-ne v4, v6, 0125 // +0014
+018136: 3902 0300                              |0113: if-nez v2, 0116 // +0003
+01813a: 2810                                   |0115: goto 0125 // +0010
+01813c: 6e10 7e00 0200                         |0116: invoke-virtual {v2}, Ljava/lang/Character;.charValue:()C // method@007e
+018142: 0a04                                   |0119: move-result v4
+018144: 1306 b800                              |011a: const/16 v6, #int 184 // #b8
+018148: 3364 0900                              |011c: if-ne v4, v6, 0125 // +0009
+01814c: 6e20 9d00 7000                         |011e: invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+018152: d801 0102                              |0121: add-int/lit8 v1, v1, #int 2 // #02
+018156: 2900 e7fe                              |0123: goto/16 000a // -0119
+01815a: 6e20 9700 1c00                         |0125: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+018160: 0a04                                   |0128: move-result v4
+018162: 1306 e700                              |0129: const/16 v6, #int 231 // #e7
+018166: 3364 0900                              |012b: if-ne v4, v6, 0134 // +0009
+01816a: 6e20 9d00 7000                         |012d: invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+018170: d801 0101                              |0130: add-int/lit8 v1, v1, #int 1 // #01
+018174: 2900 d8fe                              |0132: goto/16 000a // -0128
+018178: 6e20 9700 1c00                         |0134: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+01817e: 0a04                                   |0137: move-result v4
+018180: 3354 0600                              |0138: if-ne v4, v5, 013e // +0006
+018184: d801 0101                              |013a: add-int/lit8 v1, v1, #int 1 // #01
+018188: 2900 cefe                              |013c: goto/16 000a // -0132
+01818c: 6e20 9700 1c00                         |013e: invoke-virtual {v12, v1}, Ljava/lang/String;.charAt:(I)C // method@0097
+018192: 0a04                                   |0141: move-result v4
+018194: 7020 1304 4b00                         |0142: invoke-direct {v11, v4}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.mapping:(C)C // method@0413
+01819a: 0a04                                   |0145: move-result v4
+01819c: 6e20 9d00 4000                         |0146: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(C)Ljava/lang/StringBuilder; // method@009d
+0181a2: 0000                                   |0149: nop // spacer
+0181a4: d801 0101                              |014a: add-int/lit8 v1, v1, #int 1 // #01
+0181a8: 2900 befe                              |014c: goto/16 000a // -0142
+0181ac: 6e10 a500 0000                         |014e: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@00a5
+0181b2: 0c02                                   |0151: move-result-object v2
+0181b4: 1a03 e409                              |0152: const-string v3, "toString(...)" // string@09e4
+0181b8: 7120 e900 3200                         |0154: invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e9
+0181be: 1102                                   |0157: return-object v2
+      catches       : (none)
+      positions     :
+        0x0000 line=38
+        0x0009 line=39
+        0x000a line=40
+        0x0010 line=41
+        0x0019 line=42
+        0x0022 line=43
+        0x0023 line=45
+        0x0036 line=46
+        0x003e line=49
+        0x004f line=50
+        0x0057 line=53
+        0x006a line=54
+        0x0072 line=57
+        0x0099 line=58
+        0x00a2 line=61
+        0x00ba line=62
+        0x00c3 line=65
+        0x00dd line=66
+        0x00e4 line=68
+        0x00ec line=69
+        0x00f3 line=72
+        0x0104 line=73
+        0x010d line=76
+        0x011e line=77
+        0x0125 line=79
+        0x012d line=80
+        0x0134 line=82
+        0x013e line=84
+        0x0149 line=85
+        0x014e line=89
+      locals        :
+        0x0019 - 0x014a reg=2 next Ljava/lang/Character;
+        0x0022 - 0x014a reg=3 third Ljava/lang/Character;
+        0x0009 - 0x0158 reg=0 builder Ljava/lang/StringBuilder;
+        0x000a - 0x0158 reg=1 index I
+        0x0000 - 0x0158 reg=11 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x0158 reg=12 word Ljava/lang/String;
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'phonemize'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 3
+      insns size    : 73 16-bit code units
+017dc0:                                        |[017dc0] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.phonemize:(Ljava/lang/String;)Ljava/lang/String;
+017dd0: 1a00 cb09                              |0000: const-string v0, "text" // string@09cb
+017dd4: 7120 ea00 0600                         |0002: invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+017dda: 0760                                   |0005: move-object v0, v6
+017ddc: 1f00 6f00                              |0006: check-cast v0, Ljava/lang/CharSequence; // type@006f
+017de0: 7110 fb00 0000                         |0008: invoke-static {v0}, Lkotlin/text/StringsKt;.isBlank:(Ljava/lang/CharSequence;)Z // method@00fb
+017de6: 0a00                                   |000b: move-result v0
+017de8: 1a01 0000                              |000c: const-string v1, "" // string@0000
+017dec: 3800 0300                              |000e: if-eqz v0, 0011 // +0003
+017df0: 1101                                   |0010: return-object v1
+017df2: 6200 1200                              |0011: sget-object v0, Ljava/util/Locale;.ROOT:Ljava/util/Locale; // field@0012
+017df6: 6e20 9a00 0600                         |0013: invoke-virtual {v6, v0}, Ljava/lang/String;.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String; // method@009a
+017dfc: 0c00                                   |0016: move-result-object v0
+017dfe: 1a02 df09                              |0017: const-string v2, "toLowerCase(...)" // string@09df
+017e02: 7120 e900 2000                         |0019: invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e9
+017e08: 7020 1504 0500                         |001c: invoke-direct {v5, v0}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.stripPunctuation:(Ljava/lang/String;)Ljava/lang/String; // method@0415
+017e0e: 0c00                                   |001f: move-result-object v0
+017e10: 1f00 6f00                              |0020: check-cast v0, Ljava/lang/CharSequence; // type@006f
+017e14: 6202 1100                              |0022: sget-object v2, Ljava/text/Normalizer$Form;.NFD:Ljava/text/Normalizer$Form; // field@0011
+017e18: 7120 a800 2000                         |0024: invoke-static {v0, v2}, Ljava/text/Normalizer;.normalize:(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String; // method@00a8
+017e1e: 0c00                                   |0027: move-result-object v0
+017e20: 7110 e800 0000                         |0028: invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNull:(Ljava/lang/Object;)V // method@00e8
+017e26: 0702                                   |002b: move-object v2, v0
+017e28: 1f02 6f00                              |002c: check-cast v2, Ljava/lang/CharSequence; // type@006f
+017e2c: 6203 b701                              |002e: sget-object v3, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.ACCENT_MARKS:Lkotlin/text/Regex; // field@01b7
+017e30: 6e30 f600 2301                         |0030: invoke-virtual {v3, v2, v1}, Lkotlin/text/Regex;.replace:(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String; // method@00f6
+017e36: 0c02                                   |0033: move-result-object v2
+017e38: 7020 1804 2500                         |0034: invoke-direct {v5, v2}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.transliterate:(Ljava/lang/String;)Ljava/lang/String; // method@0418
+017e3e: 0c03                                   |0037: move-result-object v3
+017e40: 1f03 6f00                              |0038: check-cast v3, Ljava/lang/CharSequence; // type@006f
+017e44: 6204 ba01                              |003a: sget-object v4, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.WHITESPACE:Lkotlin/text/Regex; // field@01ba
+017e48: 6e30 f600 3401                         |003c: invoke-virtual {v4, v3, v1}, Lkotlin/text/Regex;.replace:(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String; // method@00f6
+017e4e: 0c03                                   |003f: move-result-object v3
+017e50: 1f03 6f00                              |0040: check-cast v3, Ljava/lang/CharSequence; // type@006f
+017e54: 6204 b901                              |0042: sget-object v4, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.NON_PHONETIC:Lkotlin/text/Regex; // field@01b9
+017e58: 6e30 f600 3401                         |0044: invoke-virtual {v4, v3, v1}, Lkotlin/text/Regex;.replace:(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String; // method@00f6
+017e5e: 0c01                                   |0047: move-result-object v1
+017e60: 1101                                   |0048: return-object v1
+      catches       : (none)
+      positions     :
+        0x0005 line=25
+        0x0011 line=26
+        0x0028 line=27
+        0x0034 line=28
+        0x003a line=29
+        0x0042 line=30
+        0x0048 line=28
+      locals        :
+        0x0028 - 0x0049 reg=0 normalized Ljava/lang/String;
+        0x0034 - 0x0049 reg=2 withoutAccent Ljava/lang/String;
+        0x0000 - 0x0049 reg=5 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x0049 reg=6 text Ljava/lang/String;
+
+    #1              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'syllabify'
+      type          : '(Ljava/lang/String;)Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 12
+      ins           : 2
+      outs          : 3
+      insns size    : 131 16-bit code units
+0181c0:                                        |[0181c0] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.syllabify:(Ljava/lang/String;)Ljava/util/List;
+0181d0: 1a00 cb09                              |0000: const-string v0, "text" // string@09cb
+0181d4: 7120 ea00 0b00                         |0002: invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+0181da: 6200 1200                              |0005: sget-object v0, Ljava/util/Locale;.ROOT:Ljava/util/Locale; // field@0012
+0181de: 6e20 9a00 0b00                         |0007: invoke-virtual {v11, v0}, Ljava/lang/String;.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String; // method@009a
+0181e4: 0c00                                   |000a: move-result-object v0
+0181e6: 1a01 df09                              |000b: const-string v1, "toLowerCase(...)" // string@09df
+0181ea: 7120 e900 1000                         |000d: invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e9
+0181f0: 1f00 6f00                              |0010: check-cast v0, Ljava/lang/CharSequence; // type@006f
+0181f4: 2201 ad00                              |0012: new-instance v1, Lkotlin/text/Regex; // type@00ad
+0181f8: 1a02 4206                              |0014: const-string v2, "[\\s.,;:!?¡¿]+" // string@0642
+0181fc: 7020 f500 2100                         |0016: invoke-direct {v1, v2}, Lkotlin/text/Regex;.<init>:(Ljava/lang/String;)V // method@00f5
+018202: 1202                                   |0019: const/4 v2, #int 0 // #0
+018204: 6e30 f700 0102                         |001a: invoke-virtual {v1, v0, v2}, Lkotlin/text/Regex;.split:(Ljava/lang/CharSequence;I)Ljava/util/List; // method@00f7
+01820a: 0c00                                   |001d: move-result-object v0
+01820c: 1f00 7700                              |001e: check-cast v0, Ljava/lang/Iterable; // type@0077
+018210: 1201                                   |0020: const/4 v1, #int 0 // #0
+018212: 2202 8200                              |0021: new-instance v2, Ljava/util/ArrayList; // type@0082
+018216: 7010 a900 0200                         |0023: invoke-direct {v2}, Ljava/util/ArrayList;.<init>:()V // method@00a9
+01821c: 1f02 8300                              |0026: check-cast v2, Ljava/util/Collection; // type@0083
+018220: 0703                                   |0028: move-object v3, v0
+018222: 1204                                   |0029: const/4 v4, #int 0 // #0
+018224: 7210 8a00 0300                         |002a: invoke-interface {v3}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@008a
+01822a: 0c05                                   |002d: move-result-object v5
+01822c: 7210 b000 0500                         |002e: invoke-interface {v5}, Ljava/util/Iterator;.hasNext:()Z // method@00b0
+018232: 0a06                                   |0031: move-result v6
+018234: 3806 1900                              |0032: if-eqz v6, 004b // +0019
+018238: 7210 b100 0500                         |0034: invoke-interface {v5}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@00b1
+01823e: 0c06                                   |0037: move-result-object v6
+018240: 0767                                   |0038: move-object v7, v6
+018242: 1f07 7d00                              |0039: check-cast v7, Ljava/lang/String; // type@007d
+018246: 1208                                   |003b: const/4 v8, #int 0 // #0
+018248: 0779                                   |003c: move-object v9, v7
+01824a: 1f09 6f00                              |003d: check-cast v9, Ljava/lang/CharSequence; // type@006f
+01824e: 7110 fb00 0900                         |003f: invoke-static {v9}, Lkotlin/text/StringsKt;.isBlank:(Ljava/lang/CharSequence;)Z // method@00fb
+018254: 0a09                                   |0042: move-result v9
+018256: df09 0901                              |0043: xor-int/lit8 v9, v9, #int 1 // #01
+01825a: 3809 e9ff                              |0045: if-eqz v9, 002e // -0017
+01825e: 7220 ac00 6200                         |0047: invoke-interface {v2, v6}, Ljava/util/Collection;.add:(Ljava/lang/Object;)Z // method@00ac
+018264: 28e4                                   |004a: goto 002e // -001c
+018266: 0000                                   |004b: nop // spacer
+018268: 1f02 8600                              |004c: check-cast v2, Ljava/util/List; // type@0086
+01826c: 0000                                   |004e: nop // spacer
+01826e: 1f02 7700                              |004f: check-cast v2, Ljava/lang/Iterable; // type@0077
+018272: 0720                                   |0051: move-object v0, v2
+018274: 1201                                   |0052: const/4 v1, #int 0 // #0
+018276: 2202 8200                              |0053: new-instance v2, Ljava/util/ArrayList; // type@0082
+01827a: 1303 0a00                              |0055: const/16 v3, #int 10 // #a
+01827e: 7120 c500 3000                         |0057: invoke-static {v0, v3}, Lkotlin/collections/CollectionsKt;.collectionSizeOrDefault:(Ljava/lang/Iterable;I)I // method@00c5
+018284: 0a03                                   |005a: move-result v3
+018286: 7020 aa00 3200                         |005b: invoke-direct {v2, v3}, Ljava/util/ArrayList;.<init>:(I)V // method@00aa
+01828c: 1f02 8300                              |005e: check-cast v2, Ljava/util/Collection; // type@0083
+018290: 0703                                   |0060: move-object v3, v0
+018292: 1204                                   |0061: const/4 v4, #int 0 // #0
+018294: 7210 8a00 0300                         |0062: invoke-interface {v3}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@008a
+01829a: 0c05                                   |0065: move-result-object v5
+01829c: 7210 b000 0500                         |0066: invoke-interface {v5}, Ljava/util/Iterator;.hasNext:()Z // method@00b0
+0182a2: 0a06                                   |0069: move-result v6
+0182a4: 3806 1400                              |006a: if-eqz v6, 007e // +0014
+0182a8: 7210 b100 0500                         |006c: invoke-interface {v5}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@00b1
+0182ae: 0c06                                   |006f: move-result-object v6
+0182b0: 0767                                   |0070: move-object v7, v6
+0182b2: 1f07 7d00                              |0071: check-cast v7, Ljava/lang/String; // type@007d
+0182b6: 1208                                   |0073: const/4 v8, #int 0 // #0
+0182b8: 6209 b801                              |0074: sget-object v9, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.INSTANCE:Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics; // field@01b8
+0182bc: 6e20 1404 7900                         |0076: invoke-virtual {v9, v7}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.phonemize:(Ljava/lang/String;)Ljava/lang/String; // method@0414
+0182c2: 0c07                                   |0079: move-result-object v7
+0182c4: 7220 ac00 7200                         |007a: invoke-interface {v2, v7}, Ljava/util/Collection;.add:(Ljava/lang/Object;)Z // method@00ac
+0182ca: 28e9                                   |007d: goto 0066 // -0017
+0182cc: 0000                                   |007e: nop // spacer
+0182ce: 1f02 8600                              |007f: check-cast v2, Ljava/util/List; // type@0086
+0182d2: 0000                                   |0081: nop // spacer
+0182d4: 1102                                   |0082: return-object v2
+      catches       : (none)
+      positions     :
+        0x0005 line=35
+        0x0021 line=143
+        0x002a line=144
+        0x003c line=35
+        0x0045 line=144
+        0x004b line=145
+        0x004e line=143
+        0x0051 line=35
+        0x0053 line=146
+        0x0062 line=147
+        0x0070 line=148
+        0x0074 line=35
+        0x007a line=148
+        0x007e line=149
+        0x0081 line=146
+        0x0082 line=35
+      locals        :
+        0x003b - 0x0045 reg=7 it Ljava/lang/String;
+        0x003c - 0x0045 reg=8 $i$a$-filter-SpanishPhonetics$syllabify$1 I
+        0x0038 - 0x004b reg=6 element$iv$iv Ljava/lang/Object;
+        0x0028 - 0x004c reg=2 destination$iv$iv Ljava/util/Collection;
+        0x0029 - 0x004c reg=3 $this$filterTo$iv$iv Ljava/lang/Iterable;
+        0x002a - 0x004c reg=4 $i$f$filterTo I
+        0x0020 - 0x004f reg=0 $this$filter$iv Ljava/lang/Iterable;
+        0x0021 - 0x004f reg=1 $i$f$filter I
+        0x0073 - 0x007a reg=7 it Ljava/lang/String;
+        0x0074 - 0x007a reg=8 $i$a$-map-SpanishPhonetics$syllabify$2 I
+        0x0070 - 0x007e reg=6 item$iv$iv Ljava/lang/Object;
+        0x0060 - 0x007f reg=2 destination$iv$iv Ljava/util/Collection;
+        0x0061 - 0x007f reg=3 $this$mapTo$iv$iv Ljava/lang/Iterable;
+        0x0062 - 0x007f reg=4 $i$f$mapTo I
+        0x0052 - 0x0082 reg=0 $this$map$iv Ljava/lang/Iterable;
+        0x0053 - 0x0082 reg=1 $i$f$map I
+        0x0000 - 0x0083 reg=10 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x0083 reg=11 text Ljava/lang/String;
+
+    #2              : (in Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;)
+      name          : 'toUkrHint'
+      type          : '(Ljava/lang/String;)Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 2
+      outs          : 3
+      insns size    : 44 16-bit code units
+017e98:                                        |[017e98] ua.krupa.spanish.speech.pronunciation.SpanishPhonetics.toUkrHint:(Ljava/lang/String;)Ljava/lang/String;
+017ea8: 1a00 520a                              |0000: const-string v0, "word" // string@0a52
+017eac: 7120 ea00 0400                         |0002: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00ea
+017eb2: 6200 1200                              |0005: sget-object v0, Ljava/util/Locale;.ROOT:Ljava/util/Locale; // field@0012
+017eb6: 6e20 9a00 0400                         |0007: invoke-virtual {v4, v0}, Ljava/lang/String;.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String; // method@009a
+017ebc: 0c00                                   |000a: move-result-object v0
+017ebe: 1a01 df09                              |000b: const-string v1, "toLowerCase(...)" // string@09df
+017ec2: 7120 e900 1000                         |000d: invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e9
+017ec8: 1f00 6f00                              |0010: check-cast v0, Ljava/lang/CharSequence; // type@006f
+017ecc: 6201 1100                              |0012: sget-object v1, Ljava/text/Normalizer$Form;.NFD:Ljava/text/Normalizer$Form; // field@0011
+017ed0: 7120 a800 1000                         |0014: invoke-static {v0, v1}, Ljava/text/Normalizer;.normalize:(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String; // method@00a8
+017ed6: 0c00                                   |0017: move-result-object v0
+017ed8: 1a01 fa08                              |0018: const-string v1, "normalize(...)" // string@08fa
+017edc: 7120 e900 1000                         |001a: invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e9
+017ee2: 1f00 6f00                              |001d: check-cast v0, Ljava/lang/CharSequence; // type@006f
+017ee6: 6201 b701                              |001f: sget-object v1, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.ACCENT_MARKS:Lkotlin/text/Regex; // field@01b7
+017eea: 1a02 0000                              |0021: const-string v2, "" // string@0000
+017eee: 6e30 f600 0102                         |0023: invoke-virtual {v1, v0, v2}, Lkotlin/text/Regex;.replace:(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String; // method@00f6
+017ef4: 0c00                                   |0026: move-result-object v0
+017ef6: 7020 1804 0300                         |0027: invoke-direct {v3, v0}, Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;.transliterate:(Ljava/lang/String;)Ljava/lang/String; // method@0418
+017efc: 0c01                                   |002a: move-result-object v1
+017efe: 1101                                   |002b: return-object v1
+      catches       : (none)
+      positions     :
+        0x0005 line=138
+        0x0027 line=139
+      locals        :
+        0x0027 - 0x002c reg=0 plain Ljava/lang/String;
+        0x0000 - 0x002c reg=3 this Lua/krupa/spanish/speech/pronunciation/SpanishPhonetics;
+        0x0000 - 0x002c reg=4 word Ljava/lang/String;
+
+  source_file_idx   : 1463 (SpanishPhonetics.kt)
+
+Class #59 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingClass; value=Lua/krupa/spanish/ui/screens/session/ComposableSingletons$SessionScreenKt;
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/jvm/internal/Lambda;" "Lkotlin/jvm/functions/Function3<" "Landroidx/compose/foundation/layout/RowScope;" "Landroidx/compose/runtime/Composer;" "Ljava/lang/Integer;" "Lkotlin/Unit;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\484954\n��\n\484850\485048\484850\n\484850\485148\484850\n\484850\b\484850\485048��\485150\4848500\484849*\4848500\484850H\484951¢\484854\484852\b\484851\485048\484852" } d2={ "<anonymous>" "" "Landroidx/compose/foundation/layout/RowScope;" "invoke" "(Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)V" } k=3 mv={ 1 9 0 } xi=48
+
+Class #59            -

@@ -1,0 +1,27 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;'
+  Access flags      : 0x0601 (PUBLIC INTERFACE ABSTRACT)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+  Virtual methods   -
+  source_file_idx   : 1212 (SpanishSpeechRecognizer.kt)
+
+Class #1 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingClass; value=Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=25 name="Result"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��.\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485048\484954\n��\n\484850\485048 \n��\n\484850\485048\484855\n\484850\b\f\n\484850\485048\484951\n\484850\b\484850\n\484850\485048\b\n\484850\b\484850\b\b\485148��2\4848500\484849B#\485050\484854\485048\484850\485150\4848500\484851\485050\f\485048\484852\485150\b\485050\484852\485050\4848500\4848510\484853\485050\484854\485048\484854\485150\4848500\484855¢\484854\484850\485048\bJ\t\485048\484955\485150\4848500\484851HÆ\484851J\484955\485048\485048\485150\b\485050\484852\485050\4848500\4848510\484853HÆ\484851J\t\485048\485049\485150\4848500\484855HÆ\484851J-\485048\485050\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\484954\b\484850\485048\484852\485150\b\485050\484852\485050\4848500\4848510\4848532\b\b\484850\485048\484854\485150\4848500\484855HÆ\484849J\485051\485048\485051\485150\4848500\4850522\b\485048\485053\485150\484852\485148\4848490\484849HÖ\484851J\t\485048\485054\485150\4848500\485055HÖ\484849J\t\485048\485148\485150\4848500\484851HÖ\484849R\485055\485048\484852\485150\b\485050\484852\485050\4848500\4848510\484853¢\484854\b\n��\485150\484852\b\t\485048\nR\485049\485048\484854\485150\4848500\484855¢\484854\b\n��\485150\484852\b\484951\485048\fR\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\r\485048\484954¨\484854\485149" } d2={ "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Result;" "" "text" "" "alternatives" "" "confidence" "" "(Ljava/lang/String;Ljava/util/List;F)V" "getAlternatives" "()Ljava/util/List;" "getConfidence" "()F" "getText" "()Ljava/lang/String;" "component1" "component2" "component3" "copy" "equals" "" "other" "hashCode" "" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #37 'alternatives'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #395 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/util/List<" "Ljava/lang/String;" ">;F)V" }
+Annotations on method #397 'component2'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on method #399 'copy'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/util/List<" "Ljava/lang/String;" ">;F)" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Result;" }
+Annotations on method #402 'getAlternatives'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+
+Class #1            -

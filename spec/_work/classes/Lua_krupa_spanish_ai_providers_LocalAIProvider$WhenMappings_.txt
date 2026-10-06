@@ -1,0 +1,91 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/providers/LocalAIProvider$WhenMappings;'
+  Access flags      : 0x1011 (PUBLIC FINAL SYNTHETIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ai/providers/LocalAIProvider$WhenMappings;)
+      name          : '$EnumSwitchMapping$0'
+      type          : '[I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/providers/LocalAIProvider$WhenMappings;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 0
+      outs          : 1
+      insns size    : 54 16-bit code units
+006888:                                        |[006888] ua.krupa.spanish.ai.providers.LocalAIProvider$WhenMappings.<clinit>:()V
+006898: 7100 f400 0000                         |0000: invoke-static {}, Lua/krupa/spanish/ai/AIConversationMode;.values:()[Lua/krupa/spanish/ai/AIConversationMode; // method@00f4
+00689e: 0c00                                   |0003: move-result-object v0
+0068a0: 2100                                   |0004: array-length v0, v0
+0068a2: 2300 5e01                              |0005: new-array v0, v0, [I // type@015e
+0068a6: 6201 1400                              |0007: sget-object v1, Lua/krupa/spanish/ai/AIConversationMode;.PARTNER:Lua/krupa/spanish/ai/AIConversationMode; // field@0014
+0068aa: 6e10 f300 0100                         |0009: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIConversationMode;.ordinal:()I // method@00f3
+0068b0: 0a01                                   |000c: move-result v1
+0068b2: 1212                                   |000d: const/4 v2, #int 1 // #1
+0068b4: 4b02 0001                              |000e: aput v2, v0, v1
+0068b8: 2802                                   |0010: goto 0012 // +0002
+0068ba: 0d01                                   |0011: move-exception v1
+0068bc: 6201 1600                              |0012: sget-object v1, Lua/krupa/spanish/ai/AIConversationMode;.TEACHER:Lua/krupa/spanish/ai/AIConversationMode; // field@0016
+0068c0: 6e10 f300 0100                         |0014: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIConversationMode;.ordinal:()I // method@00f3
+0068c6: 0a01                                   |0017: move-result v1
+0068c8: 1222                                   |0018: const/4 v2, #int 2 // #2
+0068ca: 4b02 0001                              |0019: aput v2, v0, v1
+0068ce: 2802                                   |001b: goto 001d // +0002
+0068d0: 0d01                                   |001c: move-exception v1
+0068d2: 6201 1300                              |001d: sget-object v1, Lua/krupa/spanish/ai/AIConversationMode;.HINTS:Lua/krupa/spanish/ai/AIConversationMode; // field@0013
+0068d6: 6e10 f300 0100                         |001f: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIConversationMode;.ordinal:()I // method@00f3
+0068dc: 0a01                                   |0022: move-result v1
+0068de: 1232                                   |0023: const/4 v2, #int 3 // #3
+0068e0: 4b02 0001                              |0024: aput v2, v0, v1
+0068e4: 2802                                   |0026: goto 0028 // +0002
+0068e6: 0d01                                   |0027: move-exception v1
+0068e8: 6201 1500                              |0028: sget-object v1, Lua/krupa/spanish/ai/AIConversationMode;.ROLEPLAY:Lua/krupa/spanish/ai/AIConversationMode; // field@0015
+0068ec: 6e10 f300 0100                         |002a: invoke-virtual {v1}, Lua/krupa/spanish/ai/AIConversationMode;.ordinal:()I // method@00f3
+0068f2: 0a01                                   |002d: move-result v1
+0068f4: 1242                                   |002e: const/4 v2, #int 4 // #4
+0068f6: 4b02 0001                              |002f: aput v2, v0, v1
+0068fa: 2802                                   |0031: goto 0033 // +0002
+0068fc: 0d01                                   |0032: move-exception v1
+0068fe: 6900 2200                              |0033: sput-object v0, Lua/krupa/spanish/ai/providers/LocalAIProvider$WhenMappings;.$EnumSwitchMapping$0:[I // field@0022
+006902: 0e00                                   |0035: return-void
+      catches       : 4
+        0x0007 - 0x0010
+          Ljava/lang/NoSuchFieldError; -> 0x0011
+        0x0012 - 0x001b
+          Ljava/lang/NoSuchFieldError; -> 0x001c
+        0x001d - 0x0026
+          Ljava/lang/NoSuchFieldError; -> 0x0027
+        0x0028 - 0x0031
+          Ljava/lang/NoSuchFieldError; -> 0x0032
+      positions     :
+      locals        :
+
+  Virtual methods   -
+  source_file_idx   : 825 (LocalAIProvider.kt)
+
+Class #3 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/MemberClasses; value={ Lua/krupa/spanish/ai/providers/LocalAIProvider$Companion; Lua/krupa/spanish/ai/providers/LocalAIProvider$ScriptLine; Lua/krupa/spanish/ai/providers/LocalAIProvider$WhenMappings; }
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nLocalAIProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LocalAIProvider.kt\nua/krupa/spanish/ai/providers/LocalAIProvider\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n*L\n1#1,257:1\n1855#2,2:258\n1855#2,2:260\n1855#2,2:265\n1655#2,8:267\n1099#3,3:262\n*S KotlinDebug\n*F\n+ 1 LocalAIProvider.kt\nua/krupa/spanish/ai/providers/LocalAIProvider\n*L\n67#1:258,2\n88#1:260,2\n129#1:265,2\n149#1:267,8\n111#1:262,3\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��6\n\484850\485148\484850\n\484850\485148\484850\n\484850\b\484850\n\484850\485048\484954\n\484850\b\484851\n\484850\485048\484951\n\484850\b\484855\n\484850\485048 \n\484850\485148\484850\n\484850\b\t\n\484850\485148\484850\n��\n\484850\485148\484850\n\484850\b\484852\b\484855\485148�� \4851552\4848500\484849:\484850\485155 B\484853¢\484854\484850\485048\484850J&\485048\r\485150\4848500\4848522\484854\485048\484954\485150\4848500\4848522\f\485048\484955\485150\b\485050\484852\485050\4848500\4850490\4850482\484854\485048\485050\485150\4848500\484852H\484850J\485052\485048\485051\485150\b\485050\484852\485050\4848500\4850490\4850482\484854\485048\485052\485150\4848500\484852J\484954\485048\485053\485150\4848500\bH@¢\484854\484850\485048\485054J\484954\485048\485055\485150\4848500\b2\484854\485048\485052\485150\4848500\484852J\484954\485048\485148\485150\4848500\4848522\484854\485048\485149\485150\4848500\484852J\485054\485048\485150\485150\4848500\4851512\484854\485048\485152\485150\4848500\485153H@¢\484854\484850\485048\485154R\485052\485048\484851\485150\4848500\484852XD¢\484854\b\n��\485150\484852\b\484853\485048\484854R\485052\485048\484855\485150\4848500\bXD¢\484854\b\n��\485150\484852\b\t\485048\nR\485052\485048\484951\485150\4848500\484852XD¢\484854\b\n��\485150\484852\b\f\485048\484854¨\484854!" } d2={ "Lua/krupa/spanish/ai/providers/LocalAIProvider;" "Lua/krupa/spanish/ai/AIProvider;" "()V" "id" "" "getId" "()Ljava/lang/String;" "requiresNetwork" "" "getRequiresNetwork" "()Z" "titleUk" "getTitleUk" "buildTeacherHint" "baseHint" "corrections" "" "Lua/krupa/spanish/ai/AICorrection;" "userText" "detectCorrections" "text" "isAvailable" "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" "looksSpanish" "pronunciationHint" "word" "reply" "Lua/krupa/spanish/ai/AIResponse;" "request" "Lua/krupa/spanish/ai/AIRequest;" "(Lua/krupa/spanish/ai/AIRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" "Companion" "ScriptLine" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #36 'ARTICLE_MISMATCHES'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Lkotlin/Triple<" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/lang/String;" ">;>;" }
+Annotations on field #38 'GENDER_TRAPS'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Lkotlin/Triple<" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/lang/String;" ">;>;" }
+Annotations on field #39 'SCRIPTS'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/Map<" "Lua/krupa/spanish/ai/AIScenario;" "Ljava/util/List<" "Lua/krupa/spanish/ai/providers/LocalAIProvider$ScriptLine;" ">;>;" }
+Annotations on method #293 'buildTeacherHint'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" "Ljava/lang/String;" ")" "Ljava/lang/String;" }
+Annotations on method #294 'detectCorrections'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" ")" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" }
+Annotations on method #298 'isAvailable'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlin/coroutines/Continuation<" "-" "Ljava/lang/Boolean;" ">;)" "Ljava/lang/Object;" }
+Annotations on method #301 'reply'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ai/AIRequest;" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/ai/AIResponse;" ">;)" "Ljava/lang/Object;" }
+
+Class #3            -

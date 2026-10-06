@@ -1,0 +1,1122 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'allowExternalAi'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'corrections'
+      type          : 'Ljava/util/List;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'input'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'isListening'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'messages'
+      type          : 'Ljava/util/List;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #5              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'mode'
+      type          : 'Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #6              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'phase'
+      type          : 'Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #7              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'providerTitle'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #8              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'requiresNetwork'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+    #9              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'scenario'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #10              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'speechAvailable'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+    #11              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'thinking'
+      type          : 'Z'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 5 16-bit code units
+00dc2c:                                        |[00dc2c] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.<clinit>:()V
+00dc3c: 1300 0800                              |0000: const/16 v0, #int 8 // #8
+00dc40: 6700 8100                              |0002: sput v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.$stable:I // field@0081
+00dc44: 0e00                                   |0004: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 16
+      ins           : 1
+      outs          : 15
+      insns size    : 20 16-bit code units
+00dc48:                                        |[00dc48] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.<init>:()V
+00dc58: 130d ff0f                              |0000: const/16 v13, #int 4095 // #fff
+00dc5c: 120e                                   |0002: const/4 v14, #int 0 // #0
+00dc5e: 1201                                   |0003: const/4 v1, #int 0 // #0
+00dc60: 1202                                   |0004: const/4 v2, #int 0 // #0
+00dc62: 1203                                   |0005: const/4 v3, #int 0 // #0
+00dc64: 1204                                   |0006: const/4 v4, #int 0 // #0
+00dc66: 1205                                   |0007: const/4 v5, #int 0 // #0
+00dc68: 1206                                   |0008: const/4 v6, #int 0 // #0
+00dc6a: 1207                                   |0009: const/4 v7, #int 0 // #0
+00dc6c: 1208                                   |000a: const/4 v8, #int 0 // #0
+00dc6e: 1209                                   |000b: const/4 v9, #int 0 // #0
+00dc70: 120a                                   |000c: const/4 v10, #int 0 // #0
+00dc72: 120b                                   |000d: const/4 v11, #int 0 // #0
+00dc74: 120c                                   |000e: const/4 v12, #int 0 // #0
+00dc76: 07f0                                   |000f: move-object v0, v15
+00dc78: 760f e101 0000                         |0010: invoke-direct/range {v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.<init>:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V // method@01e1
+00dc7e: 0e00                                   |0013: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 14
+      ins           : 13
+      outs          : 2
+      insns size    : 63 16-bit code units
+00dc80:                                        |[00dc80] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.<init>:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)V
+00dc90: 1a00 0506                              |0000: const-string v0, "phase" // string@0605
+00dc94: 7120 e000 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dc9a: 1a00 e205                              |0005: const-string v0, "mode" // string@05e2
+00dc9e: 7120 e000 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dca4: 1a00 3006                              |000a: const-string v0, "scenario" // string@0630
+00dca8: 7120 e000 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dcae: 1a00 e005                              |000f: const-string v0, "messages" // string@05e0
+00dcb2: 7120 e000 0500                         |0011: invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dcb8: 1a00 a205                              |0014: const-string v0, "input" // string@05a2
+00dcbc: 7120 e000 0600                         |0016: invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dcc2: 1a00 ea04                              |0019: const-string v0, "corrections" // string@04ea
+00dcc6: 7120 e000 0800                         |001b: invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dccc: 1a00 1306                              |001e: const-string v0, "providerTitle" // string@0613
+00dcd0: 7120 e000 0900                         |0020: invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dcd6: 7010 9d00 0100                         |0023: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@009d
+00dcdc: 5b12 8800                              |0026: iput-object v2, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00dce0: 5b13 8700                              |0028: iput-object v3, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00dce4: 5b14 8b00                              |002a: iput-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00dce8: 5b15 8600                              |002c: iput-object v5, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00dcec: 5b16 8400                              |002e: iput-object v6, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00dcf0: 5c17 8d00                              |0030: iput-boolean v7, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00dcf4: 5b18 8300                              |0032: iput-object v8, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00dcf8: 5b19 8900                              |0034: iput-object v9, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00dcfc: 5c1a 8a00                              |0036: iput-boolean v10, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00dd00: 5c1b 8200                              |0038: iput-boolean v11, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00dd04: 5c1c 8c00                              |003a: iput-boolean v12, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00dd08: 5c1d 8500                              |003c: iput-boolean v13, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00dd0c: 0e00                                   |003e: return-void
+      catches       : (none)
+      positions     :
+        0x0023 line=23
+        0x0026 line=24
+        0x0028 line=25
+        0x002a line=26
+        0x002c line=27
+        0x002e line=28
+        0x0030 line=29
+        0x0032 line=30
+        0x0034 line=31
+        0x0036 line=32
+        0x0038 line=33
+        0x003a line=34
+        0x003c line=35
+        0x003e line=23
+      locals        :
+        0x0000 - 0x003f reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+        0x0000 - 0x003f reg=2 phase Lua/krupa/spanish/ui/screens/ai/AiPhase;
+        0x0000 - 0x003f reg=3 mode Lua/krupa/spanish/ai/AIConversationMode;
+        0x0000 - 0x003f reg=4 scenario Lua/krupa/spanish/ai/AIScenario;
+        0x0000 - 0x003f reg=5 messages Ljava/util/List;
+        0x0000 - 0x003f reg=6 input Ljava/lang/String;
+        0x0000 - 0x003f reg=7 thinking Z
+        0x0000 - 0x003f reg=8 corrections Ljava/util/List;
+        0x0000 - 0x003f reg=9 providerTitle Ljava/lang/String;
+        0x0000 - 0x003f reg=10 requiresNetwork Z
+        0x0000 - 0x003f reg=11 allowExternalAi Z
+        0x0000 - 0x003f reg=12 speechAvailable Z
+        0x0000 - 0x003f reg=13 isListening Z
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 28
+      ins           : 15
+      outs          : 13
+      insns size    : 132 16-bit code units
+00dd10:                                        |[00dd10] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.<init>:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+00dd20: 0200 1a00                              |0000: move/from16 v0, v26
+00dd24: dd01 0001                              |0002: and-int/lit8 v1, v0, #int 1 // #01
+00dd28: 3801 0500                              |0004: if-eqz v1, 0009 // +0005
+00dd2c: 6201 bf00                              |0006: sget-object v1, Lua/krupa/spanish/ui/screens/ai/AiPhase;.SETUP:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@00bf
+00dd30: 2802                                   |0008: goto 000a // +0002
+00dd32: 07e1                                   |0009: move-object v1, v14
+00dd34: dd02 0002                              |000a: and-int/lit8 v2, v0, #int 2 // #02
+00dd38: 3802 0500                              |000c: if-eqz v2, 0011 // +0005
+00dd3c: 6202 1300                              |000e: sget-object v2, Lua/krupa/spanish/ai/AIConversationMode;.HINTS:Lua/krupa/spanish/ai/AIConversationMode; // field@0013
+00dd40: 2802                                   |0010: goto 0012 // +0002
+00dd42: 07f2                                   |0011: move-object v2, v15
+00dd44: dd03 0004                              |0012: and-int/lit8 v3, v0, #int 4 // #04
+00dd48: 3803 0500                              |0014: if-eqz v3, 0019 // +0005
+00dd4c: 6203 1900                              |0016: sget-object v3, Lua/krupa/spanish/ai/AIScenario;.FREE_TALK:Lua/krupa/spanish/ai/AIScenario; // field@0019
+00dd50: 2803                                   |0018: goto 001b // +0003
+00dd52: 0803 1000                              |0019: move-object/from16 v3, v16
+00dd56: dd04 0008                              |001b: and-int/lit8 v4, v0, #int 8 // #08
+00dd5a: 3804 0700                              |001d: if-eqz v4, 0024 // +0007
+00dd5e: 7100 c400 0000                         |001f: invoke-static {}, Lkotlin/collections/CollectionsKt;.emptyList:()Ljava/util/List; // method@00c4
+00dd64: 0c04                                   |0022: move-result-object v4
+00dd66: 2803                                   |0023: goto 0026 // +0003
+00dd68: 0804 1100                              |0024: move-object/from16 v4, v17
+00dd6c: dd05 0010                              |0026: and-int/lit8 v5, v0, #int 16 // #10
+00dd70: 1a06 0000                              |0028: const-string v6, "" // string@0000
+00dd74: 3805 0400                              |002a: if-eqz v5, 002e // +0004
+00dd78: 0765                                   |002c: move-object v5, v6
+00dd7a: 2803                                   |002d: goto 0030 // +0003
+00dd7c: 0805 1200                              |002e: move-object/from16 v5, v18
+00dd80: dd07 0020                              |0030: and-int/lit8 v7, v0, #int 32 // #20
+00dd84: 1208                                   |0032: const/4 v8, #int 0 // #0
+00dd86: 3807 0400                              |0033: if-eqz v7, 0037 // +0004
+00dd8a: 0187                                   |0035: move v7, v8
+00dd8c: 2803                                   |0036: goto 0039 // +0003
+00dd8e: 0207 1300                              |0037: move/from16 v7, v19
+00dd92: dd09 0040                              |0039: and-int/lit8 v9, v0, #int 64 // #40
+00dd96: 3809 0700                              |003b: if-eqz v9, 0042 // +0007
+00dd9a: 7100 c400 0000                         |003d: invoke-static {}, Lkotlin/collections/CollectionsKt;.emptyList:()Ljava/util/List; // method@00c4
+00dda0: 0c09                                   |0040: move-result-object v9
+00dda2: 2803                                   |0041: goto 0044 // +0003
+00dda4: 0809 1400                              |0042: move-object/from16 v9, v20
+00dda8: d50a 8000                              |0044: and-int/lit16 v10, v0, #int 128 // #0080
+00ddac: 380a 0300                              |0046: if-eqz v10, 0049 // +0003
+00ddb0: 2803                                   |0048: goto 004b // +0003
+00ddb2: 0806 1500                              |0049: move-object/from16 v6, v21
+00ddb6: d50a 0001                              |004b: and-int/lit16 v10, v0, #int 256 // #0100
+00ddba: 380a 0400                              |004d: if-eqz v10, 0051 // +0004
+00ddbe: 018a                                   |004f: move v10, v8
+00ddc0: 2803                                   |0050: goto 0053 // +0003
+00ddc2: 020a 1600                              |0051: move/from16 v10, v22
+00ddc6: d50b 0002                              |0053: and-int/lit16 v11, v0, #int 512 // #0200
+00ddca: 380b 0400                              |0055: if-eqz v11, 0059 // +0004
+00ddce: 018b                                   |0057: move v11, v8
+00ddd0: 2803                                   |0058: goto 005b // +0003
+00ddd2: 020b 1700                              |0059: move/from16 v11, v23
+00ddd6: d50c 0004                              |005b: and-int/lit16 v12, v0, #int 1024 // #0400
+00ddda: 380c 0400                              |005d: if-eqz v12, 0061 // +0004
+00ddde: 018c                                   |005f: move v12, v8
+00dde0: 2803                                   |0060: goto 0063 // +0003
+00dde2: 020c 1800                              |0061: move/from16 v12, v24
+00dde6: d500 0008                              |0063: and-int/lit16 v0, v0, #int 2048 // #0800
+00ddea: 3800 0300                              |0065: if-eqz v0, 0068 // +0003
+00ddee: 2803                                   |0067: goto 006a // +0003
+00ddf0: 0208 1900                              |0068: move/from16 v8, v25
+00ddf4: 071e                                   |006a: move-object v14, v1
+00ddf6: 072f                                   |006b: move-object v15, v2
+00ddf8: 0810 0300                              |006c: move-object/from16 v16, v3
+00ddfc: 0811 0400                              |006e: move-object/from16 v17, v4
+00de00: 0812 0500                              |0070: move-object/from16 v18, v5
+00de04: 0213 0700                              |0072: move/from16 v19, v7
+00de08: 0814 0900                              |0074: move-object/from16 v20, v9
+00de0c: 0815 0600                              |0076: move-object/from16 v21, v6
+00de10: 0216 0a00                              |0078: move/from16 v22, v10
+00de14: 0217 0b00                              |007a: move/from16 v23, v11
+00de18: 0218 0c00                              |007c: move/from16 v24, v12
+00de1c: 0219 0800                              |007e: move/from16 v25, v8
+00de20: 760d e001 0d00                         |0080: invoke-direct/range {v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.<init>:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)V // method@01e0
+00de26: 0e00                                   |0083: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=23
+        0x0006 line=24
+        0x0009 line=23
+        0x000e line=25
+        0x0011 line=23
+        0x0016 line=26
+        0x0019 line=23
+        0x001f line=27
+        0x0024 line=23
+        0x002c line=28
+        0x002e line=23
+        0x0035 line=29
+        0x0037 line=23
+        0x003d line=30
+        0x0042 line=23
+        0x0048 line=31
+        0x0049 line=23
+        0x004f line=32
+        0x0051 line=23
+        0x0057 line=33
+        0x0059 line=23
+        0x005f line=34
+        0x0061 line=23
+        0x0067 line=35
+        0x0068 line=23
+        0x0083 line=36
+      locals        :
+        0x0000 - 0x0084 reg=13 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+        0x0000 - 0x0084 reg=14 (null) Lua/krupa/spanish/ui/screens/ai/AiPhase;
+        0x0000 - 0x0084 reg=15 (null) Lua/krupa/spanish/ai/AIConversationMode;
+        0x0000 - 0x0084 reg=16 (null) Lua/krupa/spanish/ai/AIScenario;
+        0x0000 - 0x0084 reg=17 (null) Ljava/util/List;
+        0x0000 - 0x0084 reg=18 (null) Ljava/lang/String;
+        0x0000 - 0x0084 reg=19 (null) Z
+        0x0000 - 0x0084 reg=20 (null) Ljava/util/List;
+        0x0000 - 0x0084 reg=21 (null) Ljava/lang/String;
+        0x0000 - 0x0084 reg=22 (null) Z
+        0x0000 - 0x0084 reg=23 (null) Z
+        0x0000 - 0x0084 reg=24 (null) Z
+        0x0000 - 0x0084 reg=25 (null) Z
+        0x0000 - 0x0084 reg=26 (null) I
+        0x0000 - 0x0084 reg=27 (null) Lkotlin/jvm/internal/DefaultConstructorMarker;
+
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'copy$default'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILjava/lang/Object;)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 28
+      ins           : 15
+      outs          : 13
+      insns size    : 136 16-bit code units
+00da30:                                        |[00da30] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.copy$default:(Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZILjava/lang/Object;)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+00da40: 07d0                                   |0000: move-object v0, v13
+00da42: 0201 1a00                              |0001: move/from16 v1, v26
+00da46: dd02 0101                              |0003: and-int/lit8 v2, v1, #int 1 // #01
+00da4a: 3802 0500                              |0005: if-eqz v2, 000a // +0005
+00da4e: 5402 8800                              |0007: iget-object v2, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00da52: 2802                                   |0009: goto 000b // +0002
+00da54: 07e2                                   |000a: move-object v2, v14
+00da56: dd03 0102                              |000b: and-int/lit8 v3, v1, #int 2 // #02
+00da5a: 3803 0500                              |000d: if-eqz v3, 0012 // +0005
+00da5e: 5403 8700                              |000f: iget-object v3, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00da62: 2802                                   |0011: goto 0013 // +0002
+00da64: 07f3                                   |0012: move-object v3, v15
+00da66: dd04 0104                              |0013: and-int/lit8 v4, v1, #int 4 // #04
+00da6a: 3804 0500                              |0015: if-eqz v4, 001a // +0005
+00da6e: 5404 8b00                              |0017: iget-object v4, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00da72: 2803                                   |0019: goto 001c // +0003
+00da74: 0804 1000                              |001a: move-object/from16 v4, v16
+00da78: dd05 0108                              |001c: and-int/lit8 v5, v1, #int 8 // #08
+00da7c: 3805 0500                              |001e: if-eqz v5, 0023 // +0005
+00da80: 5405 8600                              |0020: iget-object v5, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00da84: 2803                                   |0022: goto 0025 // +0003
+00da86: 0805 1100                              |0023: move-object/from16 v5, v17
+00da8a: dd06 0110                              |0025: and-int/lit8 v6, v1, #int 16 // #10
+00da8e: 3806 0500                              |0027: if-eqz v6, 002c // +0005
+00da92: 5406 8400                              |0029: iget-object v6, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00da96: 2803                                   |002b: goto 002e // +0003
+00da98: 0806 1200                              |002c: move-object/from16 v6, v18
+00da9c: dd07 0120                              |002e: and-int/lit8 v7, v1, #int 32 // #20
+00daa0: 3807 0500                              |0030: if-eqz v7, 0035 // +0005
+00daa4: 5507 8d00                              |0032: iget-boolean v7, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00daa8: 2803                                   |0034: goto 0037 // +0003
+00daaa: 0207 1300                              |0035: move/from16 v7, v19
+00daae: dd08 0140                              |0037: and-int/lit8 v8, v1, #int 64 // #40
+00dab2: 3808 0500                              |0039: if-eqz v8, 003e // +0005
+00dab6: 5408 8300                              |003b: iget-object v8, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00daba: 2803                                   |003d: goto 0040 // +0003
+00dabc: 0808 1400                              |003e: move-object/from16 v8, v20
+00dac0: d519 8000                              |0040: and-int/lit16 v9, v1, #int 128 // #0080
+00dac4: 3809 0500                              |0042: if-eqz v9, 0047 // +0005
+00dac8: 5409 8900                              |0044: iget-object v9, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00dacc: 2803                                   |0046: goto 0049 // +0003
+00dace: 0809 1500                              |0047: move-object/from16 v9, v21
+00dad2: d51a 0001                              |0049: and-int/lit16 v10, v1, #int 256 // #0100
+00dad6: 380a 0500                              |004b: if-eqz v10, 0050 // +0005
+00dada: 550a 8a00                              |004d: iget-boolean v10, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00dade: 2803                                   |004f: goto 0052 // +0003
+00dae0: 020a 1600                              |0050: move/from16 v10, v22
+00dae4: d51b 0002                              |0052: and-int/lit16 v11, v1, #int 512 // #0200
+00dae8: 380b 0500                              |0054: if-eqz v11, 0059 // +0005
+00daec: 550b 8200                              |0056: iget-boolean v11, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00daf0: 2803                                   |0058: goto 005b // +0003
+00daf2: 020b 1700                              |0059: move/from16 v11, v23
+00daf6: d51c 0004                              |005b: and-int/lit16 v12, v1, #int 1024 // #0400
+00dafa: 380c 0500                              |005d: if-eqz v12, 0062 // +0005
+00dafe: 550c 8c00                              |005f: iget-boolean v12, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00db02: 2803                                   |0061: goto 0064 // +0003
+00db04: 020c 1800                              |0062: move/from16 v12, v24
+00db08: d511 0008                              |0064: and-int/lit16 v1, v1, #int 2048 // #0800
+00db0c: 3801 0500                              |0066: if-eqz v1, 006b // +0005
+00db10: 5501 8500                              |0068: iget-boolean v1, v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00db14: 2803                                   |006a: goto 006d // +0003
+00db16: 0201 1900                              |006b: move/from16 v1, v25
+00db1a: 072e                                   |006d: move-object v14, v2
+00db1c: 073f                                   |006e: move-object v15, v3
+00db1e: 0810 0400                              |006f: move-object/from16 v16, v4
+00db22: 0811 0500                              |0071: move-object/from16 v17, v5
+00db26: 0812 0600                              |0073: move-object/from16 v18, v6
+00db2a: 0213 0700                              |0075: move/from16 v19, v7
+00db2e: 0814 0800                              |0077: move-object/from16 v20, v8
+00db32: 0815 0900                              |0079: move-object/from16 v21, v9
+00db36: 0216 0a00                              |007b: move/from16 v22, v10
+00db3a: 0217 0b00                              |007d: move/from16 v23, v11
+00db3e: 0218 0c00                              |007f: move/from16 v24, v12
+00db42: 0219 0100                              |0081: move/from16 v25, v1
+00db46: 740d ee01 0d00                         |0083: invoke-virtual/range {v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.copy:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // method@01ee
+00db4c: 0c00                                   |0086: move-result-object v0
+00db4e: 1100                                   |0087: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component1'
+      type          : '()Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00dbfc:                                        |[00dbfc] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component1:()Lua/krupa/spanish/ui/screens/ai/AiPhase;
+00dc0c: 5410 8800                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00dc10: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component10'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d4f8:                                        |[00d4f8] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component10:()Z
+00d508: 5510 8200                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d50c: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component11'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d510:                                        |[00d510] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component11:()Z
+00d520: 5510 8c00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d524: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component12'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d528:                                        |[00d528] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component12:()Z
+00d538: 5510 8500                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d53c: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component2'
+      type          : '()Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d9d0:                                        |[00d9d0] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component2:()Lua/krupa/spanish/ai/AIConversationMode;
+00d9e0: 5410 8700                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d9e4: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component3'
+      type          : '()Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00da00:                                        |[00da00] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component3:()Lua/krupa/spanish/ai/AIScenario;
+00da10: 5410 8b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00da14: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component4'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d970:                                        |[00d970] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component4:()Ljava/util/List;
+00d980: 5410 8600                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d984: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #7              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component5'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d7c0:                                        |[00d7c0] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component5:()Ljava/lang/String;
+00d7d0: 5410 8400                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d7d4: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #8              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component6'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d540:                                        |[00d540] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component6:()Z
+00d550: 5510 8d00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d554: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #9              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component7'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d988:                                        |[00d988] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component7:()Ljava/util/List;
+00d998: 5410 8300                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d99c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #10              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component8'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d7d8:                                        |[00d7d8] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component8:()Ljava/lang/String;
+00d7e8: 5410 8900                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d7ec: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #11              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'component9'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d558:                                        |[00d558] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.component9:()Z
+00d568: 5510 8a00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d56c: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #12              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'copy'
+      type          : '(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 29
+      ins           : 13
+      outs          : 13
+      insns size    : 78 16-bit code units
+00db50:                                        |[00db50] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.copy:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+00db60: 1a00 0506                              |0000: const-string v0, "phase" // string@0605
+00db64: 080e 1100                              |0002: move-object/from16 v14, v17
+00db68: 7120 e000 0e00                         |0004: invoke-static {v14, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00db6e: 1a00 e205                              |0007: const-string v0, "mode" // string@05e2
+00db72: 080f 1200                              |0009: move-object/from16 v15, v18
+00db76: 7120 e000 0f00                         |000b: invoke-static {v15, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00db7c: 1a00 3006                              |000e: const-string v0, "scenario" // string@0630
+00db80: 080d 1300                              |0010: move-object/from16 v13, v19
+00db84: 7120 e000 0d00                         |0012: invoke-static {v13, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00db8a: 1a00 e005                              |0015: const-string v0, "messages" // string@05e0
+00db8e: 080c 1400                              |0017: move-object/from16 v12, v20
+00db92: 7120 e000 0c00                         |0019: invoke-static {v12, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00db98: 1a00 a205                              |001c: const-string v0, "input" // string@05a2
+00db9c: 080b 1500                              |001e: move-object/from16 v11, v21
+00dba0: 7120 e000 0b00                         |0020: invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dba6: 1a00 ea04                              |0023: const-string v0, "corrections" // string@04ea
+00dbaa: 080a 1700                              |0025: move-object/from16 v10, v23
+00dbae: 7120 e000 0a00                         |0027: invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dbb4: 1a00 1306                              |002a: const-string v0, "providerTitle" // string@0613
+00dbb8: 0809 1800                              |002c: move-object/from16 v9, v24
+00dbbc: 7120 e000 0900                         |002e: invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@00e0
+00dbc2: 2200 1101                              |0031: new-instance v0, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00dbc6: 0701                                   |0033: move-object v1, v0
+00dbc8: 0802 1100                              |0034: move-object/from16 v2, v17
+00dbcc: 0803 1200                              |0036: move-object/from16 v3, v18
+00dbd0: 0804 1300                              |0038: move-object/from16 v4, v19
+00dbd4: 0805 1400                              |003a: move-object/from16 v5, v20
+00dbd8: 0806 1500                              |003c: move-object/from16 v6, v21
+00dbdc: 0207 1600                              |003e: move/from16 v7, v22
+00dbe0: 0808 1700                              |0040: move-object/from16 v8, v23
+00dbe4: 020a 1900                              |0042: move/from16 v10, v25
+00dbe8: 020b 1a00                              |0044: move/from16 v11, v26
+00dbec: 020c 1b00                              |0046: move/from16 v12, v27
+00dbf0: 020d 1c00                              |0048: move/from16 v13, v28
+00dbf4: 760d e001 0100                         |004a: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13}, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.<init>:(Lua/krupa/spanish/ui/screens/ai/AiPhase;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Ljava/util/List;Ljava/lang/String;ZLjava/util/List;Ljava/lang/String;ZZZZ)V // method@01e0
+00dbfa: 1100                                   |004d: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #13              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'equals'
+      type          : '(Ljava/lang/Object;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 114 16-bit code units
+00d570:                                        |[00d570] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.equals:(Ljava/lang/Object;)Z
+00d580: 1210                                   |0000: const/4 v0, #int 1 // #1
+00d582: 3365 0300                              |0001: if-ne v5, v6, 0004 // +0003
+00d586: 0f00                                   |0003: return v0
+00d588: 2061 1101                              |0004: instance-of v1, v6, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00d58c: 1202                                   |0006: const/4 v2, #int 0 // #0
+00d58e: 3901 0300                              |0007: if-nez v1, 000a // +0003
+00d592: 0f02                                   |0009: return v2
+00d594: 0761                                   |000a: move-object v1, v6
+00d596: 1f01 1101                              |000b: check-cast v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState; // type@0111
+00d59a: 5453 8800                              |000d: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00d59e: 5414 8800                              |000f: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00d5a2: 3243 0300                              |0011: if-eq v3, v4, 0014 // +0003
+00d5a6: 0f02                                   |0013: return v2
+00d5a8: 5453 8700                              |0014: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d5ac: 5414 8700                              |0016: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d5b0: 3243 0300                              |0018: if-eq v3, v4, 001b // +0003
+00d5b4: 0f02                                   |001a: return v2
+00d5b6: 5453 8b00                              |001b: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00d5ba: 5414 8b00                              |001d: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00d5be: 3243 0300                              |001f: if-eq v3, v4, 0022 // +0003
+00d5c2: 0f02                                   |0021: return v2
+00d5c4: 5453 8600                              |0022: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d5c8: 5414 8600                              |0024: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d5cc: 7120 de00 4300                         |0026: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+00d5d2: 0a03                                   |0029: move-result v3
+00d5d4: 3903 0300                              |002a: if-nez v3, 002d // +0003
+00d5d8: 0f02                                   |002c: return v2
+00d5da: 5453 8400                              |002d: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d5de: 5414 8400                              |002f: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d5e2: 7120 de00 4300                         |0031: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+00d5e8: 0a03                                   |0034: move-result v3
+00d5ea: 3903 0300                              |0035: if-nez v3, 0038 // +0003
+00d5ee: 0f02                                   |0037: return v2
+00d5f0: 5553 8d00                              |0038: iget-boolean v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d5f4: 5514 8d00                              |003a: iget-boolean v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d5f8: 3243 0300                              |003c: if-eq v3, v4, 003f // +0003
+00d5fc: 0f02                                   |003e: return v2
+00d5fe: 5453 8300                              |003f: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d602: 5414 8300                              |0041: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d606: 7120 de00 4300                         |0043: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+00d60c: 0a03                                   |0046: move-result v3
+00d60e: 3903 0300                              |0047: if-nez v3, 004a // +0003
+00d612: 0f02                                   |0049: return v2
+00d614: 5453 8900                              |004a: iget-object v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d618: 5414 8900                              |004c: iget-object v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d61c: 7120 de00 4300                         |004e: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@00de
+00d622: 0a03                                   |0051: move-result v3
+00d624: 3903 0300                              |0052: if-nez v3, 0055 // +0003
+00d628: 0f02                                   |0054: return v2
+00d62a: 5553 8a00                              |0055: iget-boolean v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d62e: 5514 8a00                              |0057: iget-boolean v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d632: 3243 0300                              |0059: if-eq v3, v4, 005c // +0003
+00d636: 0f02                                   |005b: return v2
+00d638: 5553 8200                              |005c: iget-boolean v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d63c: 5514 8200                              |005e: iget-boolean v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d640: 3243 0300                              |0060: if-eq v3, v4, 0063 // +0003
+00d644: 0f02                                   |0062: return v2
+00d646: 5553 8c00                              |0063: iget-boolean v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d64a: 5514 8c00                              |0065: iget-boolean v4, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d64e: 3243 0300                              |0067: if-eq v3, v4, 006a // +0003
+00d652: 0f02                                   |0069: return v2
+00d654: 5553 8500                              |006a: iget-boolean v3, v5, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d658: 5511 8500                              |006c: iget-boolean v1, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d65c: 3213 0300                              |006e: if-eq v3, v1, 0071 // +0003
+00d660: 0f02                                   |0070: return v2
+00d662: 0f00                                   |0071: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #14              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getAllowExternalAi'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d664:                                        |[00d664] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getAllowExternalAi:()Z
+00d674: 5510 8200                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d678: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=33
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #15              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getCorrections'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d9a0:                                        |[00d9a0] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getCorrections:()Ljava/util/List;
+00d9b0: 5410 8300                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d9b4: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=30
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #16              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getInput'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d7f0:                                        |[00d7f0] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getInput:()Ljava/lang/String;
+00d800: 5410 8400                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d804: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=28
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #17              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getMessages'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d9b8:                                        |[00d9b8] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getMessages:()Ljava/util/List;
+00d9c8: 5410 8600                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d9cc: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=27
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #18              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getMode'
+      type          : '()Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d9e8:                                        |[00d9e8] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getMode:()Lua/krupa/spanish/ai/AIConversationMode;
+00d9f8: 5410 8700                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d9fc: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=25
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #19              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getPhase'
+      type          : '()Lua/krupa/spanish/ui/screens/ai/AiPhase;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00dc14:                                        |[00dc14] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getPhase:()Lua/krupa/spanish/ui/screens/ai/AiPhase;
+00dc24: 5410 8800                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00dc28: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=24
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #20              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getProviderTitle'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d808:                                        |[00d808] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getProviderTitle:()Ljava/lang/String;
+00d818: 5410 8900                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d81c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=31
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #21              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getRequiresNetwork'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d67c:                                        |[00d67c] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getRequiresNetwork:()Z
+00d68c: 5510 8a00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d690: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=32
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #22              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getScenario'
+      type          : '()Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00da18:                                        |[00da18] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getScenario:()Lua/krupa/spanish/ai/AIScenario;
+00da28: 5410 8b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00da2c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=26
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #23              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getSpeechAvailable'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d694:                                        |[00d694] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getSpeechAvailable:()Z
+00d6a4: 5510 8c00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d6a8: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=34
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #24              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'getThinking'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d6ac:                                        |[00d6ac] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.getThinking:()Z
+00d6bc: 5510 8d00                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d6c0: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=29
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #25              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'hashCode'
+      type          : '()I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 1
+      insns size    : 106 16-bit code units
+00d6dc:                                        |[00d6dc] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.hashCode:()I
+00d6ec: 5430 8800                              |0000: iget-object v0, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00d6f0: 6e10 3d02 0000                         |0002: invoke-virtual {v0}, Lua/krupa/spanish/ui/screens/ai/AiPhase;.hashCode:()I // method@023d
+00d6f6: 0a00                                   |0005: move-result v0
+00d6f8: da01 001f                              |0006: mul-int/lit8 v1, v0, #int 31 // #1f
+00d6fc: 5432 8700                              |0008: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d700: 6e10 f200 0200                         |000a: invoke-virtual {v2}, Lua/krupa/spanish/ai/AIConversationMode;.hashCode:()I // method@00f2
+00d706: 0a02                                   |000d: move-result v2
+00d708: b021                                   |000e: add-int/2addr v1, v2
+00d70a: da00 011f                              |000f: mul-int/lit8 v0, v1, #int 31 // #1f
+00d70e: 5432 8b00                              |0011: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00d712: 6e10 0d01 0200                         |0013: invoke-virtual {v2}, Lua/krupa/spanish/ai/AIScenario;.hashCode:()I // method@010d
+00d718: 0a02                                   |0016: move-result v2
+00d71a: b020                                   |0017: add-int/2addr v0, v2
+00d71c: da01 001f                              |0018: mul-int/lit8 v1, v0, #int 31 // #1f
+00d720: 5432 8600                              |001a: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d724: 6e10 9e00 0200                         |001c: invoke-virtual {v2}, Ljava/lang/Object;.hashCode:()I // method@009e
+00d72a: 0a02                                   |001f: move-result v2
+00d72c: b021                                   |0020: add-int/2addr v1, v2
+00d72e: da00 011f                              |0021: mul-int/lit8 v0, v1, #int 31 // #1f
+00d732: 5432 8400                              |0023: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d736: 6e10 a000 0200                         |0025: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@00a0
+00d73c: 0a02                                   |0028: move-result v2
+00d73e: b020                                   |0029: add-int/2addr v0, v2
+00d740: da01 001f                              |002a: mul-int/lit8 v1, v0, #int 31 // #1f
+00d744: 5532 8d00                              |002c: iget-boolean v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d748: 7110 9100 0200                         |002e: invoke-static {v2}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+00d74e: 0a02                                   |0031: move-result v2
+00d750: b021                                   |0032: add-int/2addr v1, v2
+00d752: da00 011f                              |0033: mul-int/lit8 v0, v1, #int 31 // #1f
+00d756: 5432 8300                              |0035: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d75a: 6e10 9e00 0200                         |0037: invoke-virtual {v2}, Ljava/lang/Object;.hashCode:()I // method@009e
+00d760: 0a02                                   |003a: move-result v2
+00d762: b020                                   |003b: add-int/2addr v0, v2
+00d764: da01 001f                              |003c: mul-int/lit8 v1, v0, #int 31 // #1f
+00d768: 5432 8900                              |003e: iget-object v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d76c: 6e10 a000 0200                         |0040: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@00a0
+00d772: 0a02                                   |0043: move-result v2
+00d774: b021                                   |0044: add-int/2addr v1, v2
+00d776: da00 011f                              |0045: mul-int/lit8 v0, v1, #int 31 // #1f
+00d77a: 5532 8a00                              |0047: iget-boolean v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d77e: 7110 9100 0200                         |0049: invoke-static {v2}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+00d784: 0a02                                   |004c: move-result v2
+00d786: b020                                   |004d: add-int/2addr v0, v2
+00d788: da01 001f                              |004e: mul-int/lit8 v1, v0, #int 31 // #1f
+00d78c: 5532 8200                              |0050: iget-boolean v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d790: 7110 9100 0200                         |0052: invoke-static {v2}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+00d796: 0a02                                   |0055: move-result v2
+00d798: b021                                   |0056: add-int/2addr v1, v2
+00d79a: da00 011f                              |0057: mul-int/lit8 v0, v1, #int 31 // #1f
+00d79e: 5532 8c00                              |0059: iget-boolean v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d7a2: 7110 9100 0200                         |005b: invoke-static {v2}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+00d7a8: 0a02                                   |005e: move-result v2
+00d7aa: b020                                   |005f: add-int/2addr v0, v2
+00d7ac: da01 001f                              |0060: mul-int/lit8 v1, v0, #int 31 // #1f
+00d7b0: 5532 8500                              |0062: iget-boolean v2, v3, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d7b4: 7110 9100 0200                         |0064: invoke-static {v2}, Ljava/lang/Boolean;.hashCode:(Z)I // method@0091
+00d7ba: 0a02                                   |0067: move-result v2
+00d7bc: b021                                   |0068: add-int/2addr v1, v2
+00d7be: 0f01                                   |0069: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #26              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'isListening'
+      type          : '()Z'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00d6c4:                                        |[00d6c4] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.isListening:()Z
+00d6d4: 5510 8500                              |0000: iget-boolean v0, v1, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d6d8: 0f00                                   |0002: return v0
+      catches       : (none)
+      positions     :
+        0x0000 line=35
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;
+
+    #27              : (in Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;)
+      name          : 'toString'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 15
+      ins           : 1
+      outs          : 2
+      insns size    : 160 16-bit code units
+00d820:                                        |[00d820] ua.krupa.spanish.ui.screens.ai.AiDialogUiState.toString:()Ljava/lang/String;
+00d830: 54e0 8800                              |0000: iget-object v0, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.phase:Lua/krupa/spanish/ui/screens/ai/AiPhase; // field@0088
+00d834: 54e1 8700                              |0002: iget-object v1, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@0087
+00d838: 54e2 8b00                              |0004: iget-object v2, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@008b
+00d83c: 54e3 8600                              |0006: iget-object v3, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.messages:Ljava/util/List; // field@0086
+00d840: 54e4 8400                              |0008: iget-object v4, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.input:Ljava/lang/String; // field@0084
+00d844: 55e5 8d00                              |000a: iget-boolean v5, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.thinking:Z // field@008d
+00d848: 54e6 8300                              |000c: iget-object v6, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.corrections:Ljava/util/List; // field@0083
+00d84c: 54e7 8900                              |000e: iget-object v7, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.providerTitle:Ljava/lang/String; // field@0089
+00d850: 55e8 8a00                              |0010: iget-boolean v8, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.requiresNetwork:Z // field@008a
+00d854: 55e9 8200                              |0012: iget-boolean v9, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.allowExternalAi:Z // field@0082
+00d858: 55ea 8c00                              |0014: iget-boolean v10, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.speechAvailable:Z // field@008c
+00d85c: 55eb 8500                              |0016: iget-boolean v11, v14, Lua/krupa/spanish/ui/screens/ai/AiDialogUiState;.isListening:Z // field@0085
+00d860: 220c 8f00                              |0018: new-instance v12, Ljava/lang/StringBuilder; // type@008f
+00d864: 7010 a300 0c00                         |001a: invoke-direct {v12}, Ljava/lang/StringBuilder;.<init>:()V // method@00a3
+00d86a: 1a0d 9401                              |001d: const-string v13, "AiDialogUiState(phase=" // string@0194
+00d86e: 6e20 a800 dc00                         |001f: invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d874: 0c0c                                   |0022: move-result-object v12
+00d876: 6e20 a700 0c00                         |0023: invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a7
+00d87c: 0c00                                   |0026: move-result-object v0
+00d87e: 1a0c 4901                              |0027: const-string v12, ", mode=" // string@0149
+00d882: 6e20 a800 c000                         |0029: invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d888: 0c00                                   |002c: move-result-object v0
+00d88a: 6e20 a700 1000                         |002d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a7
+00d890: 0c00                                   |0030: move-result-object v0
+00d892: 1a01 4c01                              |0031: const-string v1, ", scenario=" // string@014c
+00d896: 6e20 a800 1000                         |0033: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d89c: 0c00                                   |0036: move-result-object v0
+00d89e: 6e20 a700 2000                         |0037: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a7
+00d8a4: 0c00                                   |003a: move-result-object v0
+00d8a6: 1a01 4801                              |003b: const-string v1, ", messages=" // string@0148
+00d8aa: 6e20 a800 1000                         |003d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d8b0: 0c00                                   |0040: move-result-object v0
+00d8b2: 6e20 a700 3000                         |0041: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a7
+00d8b8: 0c00                                   |0044: move-result-object v0
+00d8ba: 1a01 4301                              |0045: const-string v1, ", input=" // string@0143
+00d8be: 6e20 a800 1000                         |0047: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d8c4: 0c00                                   |004a: move-result-object v0
+00d8c6: 6e20 a800 4000                         |004b: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d8cc: 0c00                                   |004e: move-result-object v0
+00d8ce: 1a01 4f01                              |004f: const-string v1, ", thinking=" // string@014f
+00d8d2: 6e20 a800 1000                         |0051: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d8d8: 0c00                                   |0054: move-result-object v0
+00d8da: 6e20 a900 5000                         |0055: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+00d8e0: 0c00                                   |0058: move-result-object v0
+00d8e2: 1a01 4001                              |0059: const-string v1, ", corrections=" // string@0140
+00d8e6: 6e20 a800 1000                         |005b: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d8ec: 0c00                                   |005e: move-result-object v0
+00d8ee: 6e20 a700 6000                         |005f: invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@00a7
+00d8f4: 0c00                                   |0062: move-result-object v0
+00d8f6: 1a01 4a01                              |0063: const-string v1, ", providerTitle=" // string@014a
+00d8fa: 6e20 a800 1000                         |0065: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d900: 0c00                                   |0068: move-result-object v0
+00d902: 6e20 a800 7000                         |0069: invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d908: 0c00                                   |006c: move-result-object v0
+00d90a: 1a01 4b01                              |006d: const-string v1, ", requiresNetwork=" // string@014b
+00d90e: 6e20 a800 1000                         |006f: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d914: 0c00                                   |0072: move-result-object v0
+00d916: 6e20 a900 8000                         |0073: invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+00d91c: 0c00                                   |0076: move-result-object v0
+00d91e: 1a01 3f01                              |0077: const-string v1, ", allowExternalAi=" // string@013f
+00d922: 6e20 a800 1000                         |0079: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d928: 0c00                                   |007c: move-result-object v0
+00d92a: 6e20 a900 9000                         |007d: invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+00d930: 0c00                                   |0080: move-result-object v0
+00d932: 1a01 4e01                              |0081: const-string v1, ", speechAvailable=" // string@014e
+00d936: 6e20 a800 1000                         |0083: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d93c: 0c00                                   |0086: move-result-object v0
+00d93e: 6e20 a900 a000                         |0087: invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+00d944: 0c00                                   |008a: move-result-object v0
+00d946: 1a01 4401                              |008b: const-string v1, ", isListening=" // string@0144
+00d94a: 6e20 a800 1000                         |008d: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d950: 0c00                                   |0090: move-result-object v0
+00d952: 6e20 a900 b000                         |0091: invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;.append:(Z)Ljava/lang/StringBuilder; // method@00a9
+00d958: 0c00                                   |0094: move-result-object v0
+00d95a: 1a01 3601                              |0095: const-string v1, ")" // string@0136
+00d95e: 6e20 a800 1000                         |0097: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@00a8
+00d964: 0c00                                   |009a: move-result-object v0
+00d966: 6e10 aa00 0000                         |009b: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@00aa
+00d96c: 0c00                                   |009e: move-result-object v0
+00d96e: 1100                                   |009f: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 405 (AiDialogViewModel.kt)
+
+Class #38 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingMethod; value=<init>
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/coroutines/jvm/internal/SuspendLambda;" "Lkotlin/jvm/functions/Function2<" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;" "Ljava/lang/Object;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\n\n��\n\484850\485048\484850\n\484850\485148\484850\485048��\485150\4848500\484849*\4848500\484850H@" } d2={ "<anonymous>" "" "Lkotlinx/coroutines/CoroutineScope;" } k=3 mv={ 1 9 0 } xi=48
+  VISIBILITY_RUNTIME Lkotlin/coroutines/jvm/internal/DebugMetadata; c="ua.krupa.spanish.ui.screens.ai.AiDialogViewModel$1" f="AiDialogViewModel.kt" i={ 1 } l={ 66 67 } m="invokeSuspend" n={ "profile" } s={ "L$0" }
+Annotations on method #511 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel;" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/ui/screens/ai/AiDialogViewModel$1;" ">;)V" }
+Annotations on method #512 'create'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/Object;" "Lkotlin/coroutines/Continuation<" "*>;)" "Lkotlin/coroutines/Continuation<" "Lkotlin/Unit;" ">;" }
+Annotations on method #514 'invoke'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlinx/coroutines/CoroutineScope;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;)" "Ljava/lang/Object;" }
+
+Class #38            -

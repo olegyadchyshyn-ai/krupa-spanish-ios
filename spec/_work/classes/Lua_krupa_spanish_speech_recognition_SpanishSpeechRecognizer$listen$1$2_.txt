@@ -1,0 +1,149 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Lkotlin/jvm/internal/Lambda;'
+  Interfaces        -
+    #0              : 'Lkotlin/jvm/functions/Function0;'
+  Static fields     -
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;)
+      name          : '$$this$callbackFlow'
+      type          : 'Lkotlinx/coroutines/channels/ProducerScope;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;)
+      name          : '$recognizer'
+      type          : 'Landroid/speech/SpeechRecognizer;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;)
+      name          : '<init>'
+      type          : '(Lkotlinx/coroutines/channels/ProducerScope;Landroid/speech/SpeechRecognizer;)V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 4
+      ins           : 3
+      outs          : 2
+      insns size    : 9 16-bit code units
+008b64:                                        |[008b64] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1$2.<init>:(Lkotlinx/coroutines/channels/ProducerScope;Landroid/speech/SpeechRecognizer;)V
+008b74: 5b12 2a00                              |0000: iput-object v2, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$$this$callbackFlow:Lkotlinx/coroutines/channels/ProducerScope; // field@002a
+008b78: 5b13 2b00                              |0002: iput-object v3, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$recognizer:Landroid/speech/SpeechRecognizer; // field@002b
+008b7c: 1200                                   |0004: const/4 v0, #int 0 // #0
+008b7e: 7020 f200 0100                         |0005: invoke-direct {v1, v0}, Lkotlin/jvm/internal/Lambda;.<init>:(I)V // method@00f2
+008b84: 0e00                                   |0008: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;)
+      name          : 'invoke'
+      type          : '()Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 1
+      insns size    : 6 16-bit code units
+008b48:                                        |[008b48] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1$2.invoke:()Ljava/lang/Object;
+008b58: 6e10 a301 0100                         |0000: invoke-virtual {v1}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.invoke:()V // method@01a3
+008b5e: 6200 1100                              |0003: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008b62: 1100                                   |0005: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=138
+      locals        :
+        0x0000 - 0x0006 reg=1 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;
+
+    #1              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;)
+      name          : 'invoke'
+      type          : '()V'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 1
+      insns size    : 79 16-bit code units
+008b88:                                        |[008b88] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1$2.invoke:()V
+008b98: 5430 2a00                              |0000: iget-object v0, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$$this$callbackFlow:Lkotlinx/coroutines/channels/ProducerScope; // field@002a
+008b9c: 5431 2b00                              |0002: iget-object v1, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$recognizer:Landroid/speech/SpeechRecognizer; // field@002b
+008ba0: 6202 1000                              |0004: sget-object v2, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008ba4: 1202                                   |0006: const/4 v2, #int 0 // #0
+008ba6: 6e10 1000 0100                         |0007: invoke-virtual {v1}, Landroid/speech/SpeechRecognizer;.stopListening:()V // method@0010
+008bac: 6200 1100                              |000a: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008bb0: 7110 d200 0000                         |000c: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008bb6: 280b                                   |000f: goto 001a // +000b
+008bb8: 0d00                                   |0010: move-exception v0
+008bba: 6201 1000                              |0011: sget-object v1, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008bbe: 7110 d400 0000                         |0013: invoke-static {v0}, Lkotlin/ResultKt;.createFailure:(Ljava/lang/Throwable;)Ljava/lang/Object; // method@00d4
+008bc4: 0c00                                   |0016: move-result-object v0
+008bc6: 7110 d200 0000                         |0017: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008bcc: 5430 2a00                              |001a: iget-object v0, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$$this$callbackFlow:Lkotlinx/coroutines/channels/ProducerScope; // field@002a
+008bd0: 5431 2b00                              |001c: iget-object v1, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$recognizer:Landroid/speech/SpeechRecognizer; // field@002b
+008bd4: 6202 1000                              |001e: sget-object v2, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008bd8: 1202                                   |0020: const/4 v2, #int 0 // #0
+008bda: 6e10 0a00 0100                         |0021: invoke-virtual {v1}, Landroid/speech/SpeechRecognizer;.cancel:()V // method@000a
+008be0: 6200 1100                              |0024: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008be4: 7110 d200 0000                         |0026: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008bea: 280b                                   |0029: goto 0034 // +000b
+008bec: 0d00                                   |002a: move-exception v0
+008bee: 6201 1000                              |002b: sget-object v1, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008bf2: 7110 d400 0000                         |002d: invoke-static {v0}, Lkotlin/ResultKt;.createFailure:(Ljava/lang/Throwable;)Ljava/lang/Object; // method@00d4
+008bf8: 0c00                                   |0030: move-result-object v0
+008bfa: 7110 d200 0000                         |0031: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008c00: 5430 2a00                              |0034: iget-object v0, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$$this$callbackFlow:Lkotlinx/coroutines/channels/ProducerScope; // field@002a
+008c04: 5431 2b00                              |0036: iget-object v1, v3, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.$recognizer:Landroid/speech/SpeechRecognizer; // field@002b
+008c08: 6202 1000                              |0038: sget-object v2, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008c0c: 1202                                   |003a: const/4 v2, #int 0 // #0
+008c0e: 6e10 0c00 0100                         |003b: invoke-virtual {v1}, Landroid/speech/SpeechRecognizer;.destroy:()V // method@000c
+008c14: 6200 1100                              |003e: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008c18: 7110 d200 0000                         |0040: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008c1e: 280b                                   |0043: goto 004e // +000b
+008c20: 0d00                                   |0044: move-exception v0
+008c22: 6201 1000                              |0045: sget-object v1, Lkotlin/Result;.Companion:Lkotlin/Result$Companion; // field@0010
+008c26: 7110 d400 0000                         |0047: invoke-static {v0}, Lkotlin/ResultKt;.createFailure:(Ljava/lang/Throwable;)Ljava/lang/Object; // method@00d4
+008c2c: 0c00                                   |004a: move-result-object v0
+008c2e: 7110 d200 0000                         |004b: invoke-static {v0}, Lkotlin/Result;.constructor-impl:(Ljava/lang/Object;)Ljava/lang/Object; // method@00d2
+008c34: 0e00                                   |004e: return-void
+      catches       : 3
+        0x0004 - 0x000f
+          <any> -> 0x0010
+        0x001e - 0x0029
+          <any> -> 0x002a
+        0x0038 - 0x0043
+          <any> -> 0x0044
+      positions     :
+        0x0000 line=139
+        0x0006 line=159
+        0x0007 line=139
+        0x001a line=140
+        0x0020 line=159
+        0x0021 line=140
+        0x0034 line=141
+        0x003a line=159
+        0x003b line=141
+        0x004e line=142
+      locals        :
+        0x0006 - 0x000a reg=0 $this$invoke_u24lambda_u240 Lkotlinx/coroutines/channels/ProducerScope;
+        0x0007 - 0x000a reg=2 $i$a$-runCatching-SpanishSpeechRecognizer$listen$1$2$1 I
+        0x0020 - 0x0024 reg=0 $this$invoke_u24lambda_u241 Lkotlinx/coroutines/channels/ProducerScope;
+        0x0021 - 0x0024 reg=2 $i$a$-runCatching-SpanishSpeechRecognizer$listen$1$2$2 I
+        0x003a - 0x003e reg=0 $this$invoke_u24lambda_u242 Lkotlinx/coroutines/channels/ProducerScope;
+        0x003b - 0x003e reg=2 $i$a$-runCatching-SpanishSpeechRecognizer$listen$1$2$3 I
+        0x0000 - 0x004f reg=3 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;
+
+  source_file_idx   : 1212 (SpanishSpeechRecognizer.kt)
+
+Class #4 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/EnclosingMethod; value=listen
+  VISIBILITY_SYSTEM Ldalvik/annotation/InnerClass; accessFlags=24 name=null
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlin/coroutines/jvm/internal/SuspendLambda;" "Lkotlin/jvm/functions/Function2<" "Lkotlinx/coroutines/channels/ProducerScope<" "-" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;" ">;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;" "Ljava/lang/Object;" ">;" }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\484954\n��\n\484850\485048\484850\n\484850\485148\484850\n\484850\485148\484850\485048��\485150\4848500\484849*\b\485050\484852\485050\4848500\4848510\484850H@" } d2={ "<anonymous>" "" "Lkotlinx/coroutines/channels/ProducerScope;" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;" } k=3 mv={ 1 9 0 } xi=48
+  VISIBILITY_RUNTIME Lkotlin/coroutines/jvm/internal/DebugMetadata; c="ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1" f="SpanishSpeechRecognizer.kt" i={ } l={ 138 } m="invokeSuspend" n={ } s={ }
+Annotations on method #420 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;" "Ljava/util/Locale;" "ZJ" "Lkotlin/coroutines/Continuation<" "-" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;" ">;)V" }
+Annotations on method #421 'create'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/Object;" "Lkotlin/coroutines/Continuation<" "*>;)" "Lkotlin/coroutines/Continuation<" "Lkotlin/Unit;" ">;" }
+Annotations on method #423 'invoke'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlinx/coroutines/channels/ProducerScope<" "-" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;" ">;" "Lkotlin/coroutines/Continuation<" "-" "Lkotlin/Unit;" ">;)" "Ljava/lang/Object;" }
+
+Class #4            -

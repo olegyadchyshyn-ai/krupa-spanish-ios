@@ -1,0 +1,87 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$WhenMappings;'
+  Access flags      : 0x1011 (PUBLIC FINAL SYNTHETIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$WhenMappings;)
+      name          : '$EnumSwitchMapping$0'
+      type          : '[I'
+      access        : 0x1019 (PUBLIC STATIC FINAL SYNTHETIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$WhenMappings;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 0
+      outs          : 1
+      insns size    : 54 16-bit code units
+0161f8:                                        |[0161f8] ua.krupa.spanish.speech.pronunciation.PronunciationScorer$WhenMappings.<clinit>:()V
+016208: 7100 f303 0000                         |0000: invoke-static {}, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.values:()[Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; // method@03f3
+01620e: 0c00                                   |0003: move-result-object v0
+016210: 2100                                   |0004: array-length v0, v0
+016212: 2300 8501                              |0005: new-array v0, v0, [I // type@0185
+016216: 6201 a801                              |0007: sget-object v1, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.MATCH:Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; // field@01a8
+01621a: 6e10 f103 0100                         |0009: invoke-virtual {v1}, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.ordinal:()I // method@03f1
+016220: 0a01                                   |000c: move-result v1
+016222: 1212                                   |000d: const/4 v2, #int 1 // #1
+016224: 4b02 0001                              |000e: aput v2, v0, v1
+016228: 2802                                   |0010: goto 0012 // +0002
+01622a: 0d01                                   |0011: move-exception v1
+01622c: 6201 a901                              |0012: sget-object v1, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.SUBSTITUTE:Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; // field@01a9
+016230: 6e10 f103 0100                         |0014: invoke-virtual {v1}, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.ordinal:()I // method@03f1
+016236: 0a01                                   |0017: move-result v1
+016238: 1222                                   |0018: const/4 v2, #int 2 // #2
+01623a: 4b02 0001                              |0019: aput v2, v0, v1
+01623e: 2802                                   |001b: goto 001d // +0002
+016240: 0d01                                   |001c: move-exception v1
+016242: 6201 a601                              |001d: sget-object v1, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.DELETE:Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; // field@01a6
+016246: 6e10 f103 0100                         |001f: invoke-virtual {v1}, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.ordinal:()I // method@03f1
+01624c: 0a01                                   |0022: move-result v1
+01624e: 1232                                   |0023: const/4 v2, #int 3 // #3
+016250: 4b02 0001                              |0024: aput v2, v0, v1
+016254: 2802                                   |0026: goto 0028 // +0002
+016256: 0d01                                   |0027: move-exception v1
+016258: 6201 a701                              |0028: sget-object v1, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.INSERT:Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; // field@01a7
+01625c: 6e10 f103 0100                         |002a: invoke-virtual {v1}, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation;.ordinal:()I // method@03f1
+016262: 0a01                                   |002d: move-result v1
+016264: 1242                                   |002e: const/4 v2, #int 4 // #4
+016266: 4b02 0001                              |002f: aput v2, v0, v1
+01626a: 2802                                   |0031: goto 0033 // +0002
+01626c: 0d01                                   |0032: move-exception v1
+01626e: 6900 ae01                              |0033: sput-object v0, Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$WhenMappings;.$EnumSwitchMapping$0:[I // field@01ae
+016272: 0e00                                   |0035: return-void
+      catches       : 4
+        0x0007 - 0x0010
+          Ljava/lang/NoSuchFieldError; -> 0x0011
+        0x0012 - 0x001b
+          Ljava/lang/NoSuchFieldError; -> 0x001c
+        0x001d - 0x0026
+          Ljava/lang/NoSuchFieldError; -> 0x0027
+        0x0028 - 0x0031
+          Ljava/lang/NoSuchFieldError; -> 0x0032
+      positions     :
+      locals        :
+
+  Virtual methods   -
+  source_file_idx   : 1391 (PronunciationScorer.kt)
+
+Class #57 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/MemberClasses; value={ Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Operation; Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Step; Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$WhenMappings; }
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nPronunciationScorer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PronunciationScorer.kt\nua/krupa/spanish/speech/pronunciation/PronunciationScorer\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,447:1\n1855#2,2:448\n766#2:450\n857#2,2:451\n1549#2:454\n1620#2,3:455\n819#2:458\n847#2,2:459\n1655#2,8:461\n288#2,2:469\n1774#2,4:471\n766#2:475\n857#2,2:476\n1#3:453\n*S KotlinDebug\n*F\n+ 1 PronunciationScorer.kt\nua/krupa/spanish/speech/pronunciation/PronunciationScorer\n*L\n83#1:448,2\n139#1:450\n139#1:451,2\n153#1:454\n153#1:455,3\n154#1:458\n154#1:459,2\n164#1:461,8\n340#1:469,2\n376#1:471,4\n399#1:475\n399#1:476,2\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��T\n\484850\485148\484850\n\484850\485048��\n\484850\b\484850\n\484850\485148\484850\n��\n\484850\485048\484854\n\484850\b\484852\n\484850\485048 \n\484850\485148\484850\n��\n\484850\485048\484954\n\484850\b\484850\n\484850\485148\484850\n��\n\484850\485048$\n��\n\484850\485148\484850\n��\n\484850\485048\b\n��\n\484850\485048\t\n\484850\b\b\n\484850\485148\484850\n\484850\b\n\bÇ\484850\485148��2\4848500\484849:\484850*+B\484855\b\484850¢\484854\484850\485048\484850J*\485048\n\485150\b\485050\484852\485050\4848500\f0\4849512\f\485048\r\485150\b\485050\484852\485050\4848500\4849540\4849512\f\485048\484955\485150\b\485050\484852\485050\4848500\4849540\484951H\484850J>\485048\485048\485150\b\485050\484852\485050\4848500\4850490\4849512\f\485048\r\485150\b\485050\484852\485050\4848500\4849540\4849512\f\485048\484955\485150\b\485050\484852\485050\4848500\4849540\4849512\485050\485048\485050\485150\484954\485050\484852\485050\4848500\484954\485050\484852\485050\4848500\4849540\485051H\484850J\485148\485048\485052\485150\4848500\4850532\484854\485048\r\485150\4848500\4849542\484854\485048\484955\485150\4848500\484954H\484850J,\485048\485054\485150\4848500\4850552\f\485048\484955\485150\b\485050\484852\485050\4848500\4849540\4849512\484854\485048\485148\485150\4848500\4851492\f\485048\485150\485150\b\485050\484852\485050\4848500\f0\484951H\484850J\485148\485048\485151\485150\4848500\4850552\484854\485048\485152\485150\4848500\4849542\484854\485048\485153\485150\4848500\484954H\484850J\484954\485048\485154\485150\4848500\4849542\484854\485048\485155\485150\4848500\484954J\485054\485048 \485150\4848500\4848542\484854\485048\485152\485150\4848500\4849542\484854\485048\485153\485150\4848500\484954J6\485048!\485150\4848500\"2\484854\485048\r\485150\4848500\4849542\484854\485048#\485150\4848500\4849542\b\b\484850\485048\485148\485150\4848500\4851492\485052\b\484850\485048\485050\485150\484954\485050\484852\485050\4848500\484954\485050\484852\485050\4848500\4849540\485051J\485048\485048$\485150\4848500\4848542\484854\485048%\485150\4848500\fH\484850J\485048\485048&\485150\4848500\4849542\484854\485048'\485150\4848500\484954H\484850J\485148\485048(\485150\4848500\4848542\484854\485048\r\485150\4848500\4849542\484854\485048\484955\485150\4848500\484954H\484850J\485054\485048)\485150\b\485050\484852\485050\4848500\4849540\4849512\484854\485048'\485150\4848500\484954H\484850R\484954\485048\484851\485150\4848500\484852X\484852¢\484854\484850\n��R\484954\485048\484853\485150\4848500\484854XT¢\484854\484850\n��R\484954\485048\484855\485150\4848500\484854XT¢\484854\484850\n��R\484954\485048\b\485150\4848500\484854XT¢\484854\484850\n��R\484954\485048\t\485150\4848500\484854XT¢\484854\484850\n��¨\484854," } d2={ "Lua/krupa/spanish/speech/pronunciation/PronunciationScorer;" "" "()V" "ACCENT_MARKS" "Lkotlin/text/Regex;" "EXTRA_PENALTY" "" "MISSING_PENALTY" "PHONETIC_NEAR_PENALTY" "SUBSTITUTION_PENALTY" "align" "" "Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Step;" "expected" "" "heard" "articleIssues" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" "knownGenders" "" "classifySubstitution" "Lua/krupa/spanish/speech/pronunciation/IssueType;" "fluency" "" "durationMs" "" "alignment" "levenshtein" "a" "b" "phoneticHint" "word" "phoneticSimilarity" "score" "Lua/krupa/spanish/speech/pronunciation/PronunciationResult;" "recognized" "stepPenalty" "step" "stripAccents" "text" "substitutionCost" "tokenize" "Operation" "Step" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on method #1028 'align'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/util/List<" "Ljava/lang/String;" ">;" "Ljava/util/List<" "Ljava/lang/String;" ">;)" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Step;" ">;" }
+Annotations on method #1029 'articleIssues'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/util/List<" "Ljava/lang/String;" ">;" "Ljava/util/List<" "Ljava/lang/String;" ">;" "Ljava/util/Map<" "Ljava/lang/String;" "Ljava/lang/String;" ">;)" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationIssue;" ">;" }
+Annotations on method #1031 'fluency'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/util/List<" "Ljava/lang/String;" ">;J" "Ljava/util/List<" "Lua/krupa/spanish/speech/pronunciation/PronunciationScorer$Step;" ">;)I" }
+Annotations on method #1035 'score'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/lang/String;" "J" "Ljava/util/Map<" "Ljava/lang/String;" "Ljava/lang/String;" ">;)" "Lua/krupa/spanish/speech/pronunciation/PronunciationResult;" }
+Annotations on method #1040 'tokenize'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" ")" "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+
+Class #57            -

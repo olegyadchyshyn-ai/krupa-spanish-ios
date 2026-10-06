@@ -1,0 +1,728 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/ai/AIRequest;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : '$stable'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'focusWords'
+      type          : 'Ljava/util/List;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #1              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'history'
+      type          : 'Ljava/util/List;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #2              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'level'
+      type          : 'Lua/krupa/spanish/domain/model/Level;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #3              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'mode'
+      type          : 'Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #4              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'scenario'
+      type          : 'Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0012 (PRIVATE FINAL)
+    #5              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'topicTitleUk'
+      type          : 'Ljava/lang/String;'
+      access        : 0x0012 (PRIVATE FINAL)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 0
+      insns size    : 5 16-bit code units
+0032ec:                                        |[0032ec] ua.krupa.spanish.ai.AIRequest.<clinit>:()V
+0032fc: 1300 0800                              |0000: const/16 v0, #int 8 // #8
+003300: 6700 2900                              |0002: sput v0, Lua/krupa/spanish/ai/AIRequest;.$stable:I // field@0029
+003304: 0e00                                   |0004: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 8
+      ins           : 7
+      outs          : 2
+      insns size    : 46 16-bit code units
+003308:                                        |[003308] ua.krupa.spanish.ai.AIRequest.<init>:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)V
+003318: 1a00 6102                              |0000: const-string v0, "mode" // string@0261
+00331c: 7120 7700 0200                         |0002: invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003322: 1a00 8402                              |0005: const-string v0, "scenario" // string@0284
+003326: 7120 7700 0300                         |0007: invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00332c: 1a00 5c02                              |000a: const-string v0, "level" // string@025c
+003330: 7120 7700 0400                         |000c: invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003336: 1a00 4102                              |000f: const-string v0, "history" // string@0241
+00333a: 7120 7700 0500                         |0011: invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003340: 1a00 9d02                              |0014: const-string v0, "topicTitleUk" // string@029d
+003344: 7120 7700 0600                         |0016: invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00334a: 1a00 f501                              |0019: const-string v0, "focusWords" // string@01f5
+00334e: 7120 7700 0700                         |001b: invoke-static {v7, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003354: 7010 5d00 0100                         |001e: invoke-direct {v1}, Ljava/lang/Object;.<init>:()V // method@005d
+00335a: 5b12 2d00                              |0021: iput-object v2, v1, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+00335e: 5b13 2e00                              |0023: iput-object v3, v1, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+003362: 5b14 2c00                              |0025: iput-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+003366: 5b15 2b00                              |0027: iput-object v5, v1, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+00336a: 5b16 2f00                              |0029: iput-object v6, v1, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+00336e: 5b17 2a00                              |002b: iput-object v7, v1, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+003372: 0e00                                   |002d: return-void
+      catches       : (none)
+      positions     :
+        0x001e line=36
+        0x0021 line=37
+        0x0023 line=38
+        0x0025 line=39
+        0x0027 line=41
+        0x0029 line=43
+        0x002b line=45
+        0x002d line=36
+      locals        :
+        0x0000 - 0x002e reg=1 this Lua/krupa/spanish/ai/AIRequest;
+        0x0000 - 0x002e reg=2 mode Lua/krupa/spanish/ai/AIConversationMode;
+        0x0000 - 0x002e reg=3 scenario Lua/krupa/spanish/ai/AIScenario;
+        0x0000 - 0x002e reg=4 level Lua/krupa/spanish/domain/model/Level;
+        0x0000 - 0x002e reg=5 history Ljava/util/List;
+        0x0000 - 0x002e reg=6 topicTitleUk Ljava/lang/String;
+        0x0000 - 0x002e reg=7 focusWords Ljava/util/List;
+
+    #2              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V'
+      access        : 0x11001 (PUBLIC SYNTHETIC CONSTRUCTOR)
+      code          -
+      registers     : 16
+      ins           : 9
+      outs          : 7
+      insns size    : 29 16-bit code units
+003374:                                        |[003374] ua.krupa.spanish.ai.AIRequest.<init>:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+003384: dd0f 0e10                              |0000: and-int/lit8 v15, v14, #int 16 // #10
+003388: 380f 0600                              |0002: if-eqz v15, 0008 // +0006
+00338c: 1a0c 0000                              |0004: const-string v12, "" // string@0000
+003390: 07c5                                   |0006: move-object v5, v12
+003392: 2802                                   |0007: goto 0009 // +0002
+003394: 07c5                                   |0008: move-object v5, v12
+003396: dd0c 0e20                              |0009: and-int/lit8 v12, v14, #int 32 // #20
+00339a: 380c 0800                              |000b: if-eqz v12, 0013 // +0008
+00339e: 7100 6f00 0000                         |000d: invoke-static {}, Lkotlin/collections/CollectionsKt;.emptyList:()Ljava/util/List; // method@006f
+0033a4: 0c0d                                   |0010: move-result-object v13
+0033a6: 07d6                                   |0011: move-object v6, v13
+0033a8: 2802                                   |0012: goto 0014 // +0002
+0033aa: 07d6                                   |0013: move-object v6, v13
+0033ac: 0770                                   |0014: move-object v0, v7
+0033ae: 0781                                   |0015: move-object v1, v8
+0033b0: 0792                                   |0016: move-object v2, v9
+0033b2: 07a3                                   |0017: move-object v3, v10
+0033b4: 07b4                                   |0018: move-object v4, v11
+0033b6: 7607 b000 0000                         |0019: invoke-direct/range {v0, v1, v2, v3, v4, v5, v6}, Lua/krupa/spanish/ai/AIRequest;.<init>:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)V // method@00b0
+0033bc: 0e00                                   |001c: return-void
+      catches       : (none)
+      positions     :
+        0x0000 line=36
+        0x0004 line=43
+        0x0008 line=36
+        0x000d line=45
+        0x0013 line=36
+        0x001c line=49
+      locals        :
+        0x0000 - 0x001d reg=7 this Lua/krupa/spanish/ai/AIRequest;
+        0x0000 - 0x001d reg=8 (null) Lua/krupa/spanish/ai/AIConversationMode;
+        0x0000 - 0x001d reg=9 (null) Lua/krupa/spanish/ai/AIScenario;
+        0x0000 - 0x001d reg=10 (null) Lua/krupa/spanish/domain/model/Level;
+        0x0000 - 0x001d reg=11 (null) Ljava/util/List;
+        0x0000 - 0x001d reg=12 (null) Ljava/lang/String;
+        0x0000 - 0x001d reg=13 (null) Ljava/util/List;
+        0x0000 - 0x001d reg=14 (null) I
+        0x0000 - 0x001d reg=15 (null) Lkotlin/jvm/internal/DefaultConstructorMarker;
+
+    #3              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'copy$default'
+      type          : '(Lua/krupa/spanish/ai/AIRequest;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lua/krupa/spanish/ai/AIRequest;'
+      access        : 0x1009 (PUBLIC STATIC SYNTHETIC)
+      code          -
+      registers     : 13
+      ins           : 9
+      outs          : 7
+      insns size    : 53 16-bit code units
+0031a8:                                        |[0031a8] ua.krupa.spanish.ai.AIRequest.copy$default:(Lua/krupa/spanish/ai/AIRequest;Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lua/krupa/spanish/ai/AIRequest;
+0031b8: dd0c 0b01                              |0000: and-int/lit8 v12, v11, #int 1 // #01
+0031bc: 380c 0400                              |0002: if-eqz v12, 0006 // +0004
+0031c0: 5445 2d00                              |0004: iget-object v5, v4, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+0031c4: dd0c 0b02                              |0006: and-int/lit8 v12, v11, #int 2 // #02
+0031c8: 380c 0400                              |0008: if-eqz v12, 000c // +0004
+0031cc: 5446 2e00                              |000a: iget-object v6, v4, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+0031d0: 076c                                   |000c: move-object v12, v6
+0031d2: dd06 0b04                              |000d: and-int/lit8 v6, v11, #int 4 // #04
+0031d6: 3806 0400                              |000f: if-eqz v6, 0013 // +0004
+0031da: 5447 2c00                              |0011: iget-object v7, v4, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+0031de: 0770                                   |0013: move-object v0, v7
+0031e0: dd06 0b08                              |0014: and-int/lit8 v6, v11, #int 8 // #08
+0031e4: 3806 0400                              |0016: if-eqz v6, 001a // +0004
+0031e8: 5448 2b00                              |0018: iget-object v8, v4, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+0031ec: 0781                                   |001a: move-object v1, v8
+0031ee: dd06 0b10                              |001b: and-int/lit8 v6, v11, #int 16 // #10
+0031f2: 3806 0400                              |001d: if-eqz v6, 0021 // +0004
+0031f6: 5449 2f00                              |001f: iget-object v9, v4, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+0031fa: 0792                                   |0021: move-object v2, v9
+0031fc: dd06 0b20                              |0022: and-int/lit8 v6, v11, #int 32 // #20
+003200: 3806 0400                              |0024: if-eqz v6, 0028 // +0004
+003204: 544a 2a00                              |0026: iget-object v10, v4, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+003208: 07a3                                   |0028: move-object v3, v10
+00320a: 0746                                   |0029: move-object v6, v4
+00320c: 0757                                   |002a: move-object v7, v5
+00320e: 07c8                                   |002b: move-object v8, v12
+003210: 0709                                   |002c: move-object v9, v0
+003212: 071a                                   |002d: move-object v10, v1
+003214: 072b                                   |002e: move-object v11, v2
+003216: 073c                                   |002f: move-object v12, v3
+003218: 7407 b800 0600                         |0030: invoke-virtual/range {v6, v7, v8, v9, v10, v11, v12}, Lua/krupa/spanish/ai/AIRequest;.copy:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)Lua/krupa/spanish/ai/AIRequest; // method@00b8
+00321e: 0c04                                   |0033: move-result-object v4
+003220: 1104                                   |0034: return-object v4
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component1'
+      type          : '()Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003178:                                        |[003178] ua.krupa.spanish.ai.AIRequest.component1:()Lua/krupa/spanish/ai/AIConversationMode;
+003188: 5410 2d00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+00318c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component2'
+      type          : '()Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+00328c:                                        |[00328c] ua.krupa.spanish.ai.AIRequest.component2:()Lua/krupa/spanish/ai/AIScenario;
+00329c: 5410 2e00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+0032a0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component3'
+      type          : '()Lua/krupa/spanish/domain/model/Level;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0032bc:                                        |[0032bc] ua.krupa.spanish.ai.AIRequest.component3:()Lua/krupa/spanish/domain/model/Level;
+0032cc: 5410 2c00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+0032d0: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component4'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003118:                                        |[003118] ua.krupa.spanish.ai.AIRequest.component4:()Ljava/util/List;
+003128: 5410 2b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+00312c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #4              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component5'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+002fb8:                                        |[002fb8] ua.krupa.spanish.ai.AIRequest.component5:()Ljava/lang/String;
+002fc8: 5410 2f00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+002fcc: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #5              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'component6'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003130:                                        |[003130] ua.krupa.spanish.ai.AIRequest.component6:()Ljava/util/List;
+003140: 5410 2a00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+003144: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #6              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'copy'
+      type          : '(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)Lua/krupa/spanish/ai/AIRequest;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 15
+      ins           : 7
+      outs          : 7
+      insns size    : 43 16-bit code units
+003224:                                        |[003224] ua.krupa.spanish.ai.AIRequest.copy:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)Lua/krupa/spanish/ai/AIRequest;
+003234: 1a00 6102                              |0000: const-string v0, "mode" // string@0261
+003238: 7120 7700 0900                         |0002: invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00323e: 1a00 8402                              |0005: const-string v0, "scenario" // string@0284
+003242: 7120 7700 0a00                         |0007: invoke-static {v10, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003248: 1a00 5c02                              |000a: const-string v0, "level" // string@025c
+00324c: 7120 7700 0b00                         |000c: invoke-static {v11, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003252: 1a00 4102                              |000f: const-string v0, "history" // string@0241
+003256: 7120 7700 0c00                         |0011: invoke-static {v12, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+00325c: 1a00 9d02                              |0014: const-string v0, "topicTitleUk" // string@029d
+003260: 7120 7700 0d00                         |0016: invoke-static {v13, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003266: 1a00 f501                              |0019: const-string v0, "focusWords" // string@01f5
+00326a: 7120 7700 0e00                         |001b: invoke-static {v14, v0}, Lkotlin/jvm/internal/Intrinsics;.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V // method@0077
+003270: 2200 7800                              |001e: new-instance v0, Lua/krupa/spanish/ai/AIRequest; // type@0078
+003274: 0701                                   |0020: move-object v1, v0
+003276: 0792                                   |0021: move-object v2, v9
+003278: 07a3                                   |0022: move-object v3, v10
+00327a: 07b4                                   |0023: move-object v4, v11
+00327c: 07c5                                   |0024: move-object v5, v12
+00327e: 07d6                                   |0025: move-object v6, v13
+003280: 07e7                                   |0026: move-object v7, v14
+003282: 7607 b000 0100                         |0027: invoke-direct/range {v1, v2, v3, v4, v5, v6, v7}, Lua/krupa/spanish/ai/AIRequest;.<init>:(Lua/krupa/spanish/ai/AIConversationMode;Lua/krupa/spanish/ai/AIScenario;Lua/krupa/spanish/domain/model/Level;Ljava/util/List;Ljava/lang/String;Ljava/util/List;)V // method@00b0
+003288: 1100                                   |002a: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #7              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'equals'
+      type          : '(Ljava/lang/Object;)Z'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 68 16-bit code units
+002e28:                                        |[002e28] ua.krupa.spanish.ai.AIRequest.equals:(Ljava/lang/Object;)Z
+002e38: 1210                                   |0000: const/4 v0, #int 1 // #1
+002e3a: 3365 0300                              |0001: if-ne v5, v6, 0004 // +0003
+002e3e: 0f00                                   |0003: return v0
+002e40: 2061 7800                              |0004: instance-of v1, v6, Lua/krupa/spanish/ai/AIRequest; // type@0078
+002e44: 1202                                   |0006: const/4 v2, #int 0 // #0
+002e46: 3901 0300                              |0007: if-nez v1, 000a // +0003
+002e4a: 0f02                                   |0009: return v2
+002e4c: 0761                                   |000a: move-object v1, v6
+002e4e: 1f01 7800                              |000b: check-cast v1, Lua/krupa/spanish/ai/AIRequest; // type@0078
+002e52: 5453 2d00                              |000d: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+002e56: 5414 2d00                              |000f: iget-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+002e5a: 3243 0300                              |0011: if-eq v3, v4, 0014 // +0003
+002e5e: 0f02                                   |0013: return v2
+002e60: 5453 2e00                              |0014: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+002e64: 5414 2e00                              |0016: iget-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+002e68: 3243 0300                              |0018: if-eq v3, v4, 001b // +0003
+002e6c: 0f02                                   |001a: return v2
+002e6e: 5453 2c00                              |001b: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+002e72: 5414 2c00                              |001d: iget-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+002e76: 3243 0300                              |001f: if-eq v3, v4, 0022 // +0003
+002e7a: 0f02                                   |0021: return v2
+002e7c: 5453 2b00                              |0022: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+002e80: 5414 2b00                              |0024: iget-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+002e84: 7120 7600 4300                         |0026: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+002e8a: 0a03                                   |0029: move-result v3
+002e8c: 3903 0300                              |002a: if-nez v3, 002d // +0003
+002e90: 0f02                                   |002c: return v2
+002e92: 5453 2f00                              |002d: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+002e96: 5414 2f00                              |002f: iget-object v4, v1, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+002e9a: 7120 7600 4300                         |0031: invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+002ea0: 0a03                                   |0034: move-result v3
+002ea2: 3903 0300                              |0035: if-nez v3, 0038 // +0003
+002ea6: 0f02                                   |0037: return v2
+002ea8: 5453 2a00                              |0038: iget-object v3, v5, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+002eac: 5411 2a00                              |003a: iget-object v1, v1, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+002eb0: 7120 7600 1300                         |003c: invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z // method@0076
+002eb6: 0a01                                   |003f: move-result v1
+002eb8: 3901 0300                              |0040: if-nez v1, 0043 // +0003
+002ebc: 0f02                                   |0042: return v2
+002ebe: 0f00                                   |0043: return v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #8              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getFocusWords'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003148:                                        |[003148] ua.krupa.spanish.ai.AIRequest.getFocusWords:()Ljava/util/List;
+003158: 5410 2a00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+00315c: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=45
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #9              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getHistory'
+      type          : '()Ljava/util/List;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003160:                                        |[003160] ua.krupa.spanish.ai.AIRequest.getHistory:()Ljava/util/List;
+003170: 5410 2b00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+003174: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=41
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #10              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getLastUserMessage'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 8
+      ins           : 1
+      outs          : 2
+      insns size    : 47 16-bit code units
+002fd0:                                        |[002fd0] ua.krupa.spanish.ai.AIRequest.getLastUserMessage:()Ljava/lang/String;
+002fe0: 5470 2b00                              |0000: iget-object v0, v7, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+002fe4: 1201                                   |0002: const/4 v1, #int 0 // #0
+002fe6: 7210 6b00 0000                         |0003: invoke-interface {v0}, Ljava/util/List;.size:()I // method@006b
+002fec: 0a02                                   |0006: move-result v2
+002fee: 7220 6a00 2000                         |0007: invoke-interface {v0, v2}, Ljava/util/List;.listIterator:(I)Ljava/util/ListIterator; // method@006a
+002ff4: 0c02                                   |000a: move-result-object v2
+002ff6: 7210 6c00 0200                         |000b: invoke-interface {v2}, Ljava/util/ListIterator;.hasPrevious:()Z // method@006c
+002ffc: 0a03                                   |000e: move-result v3
+002ffe: 1204                                   |000f: const/4 v4, #int 0 // #0
+003000: 3803 1100                              |0010: if-eqz v3, 0021 // +0011
+003004: 7210 6d00 0200                         |0012: invoke-interface {v2}, Ljava/util/ListIterator;.previous:()Ljava/lang/Object; // method@006d
+00300a: 0c03                                   |0015: move-result-object v3
+00300c: 0735                                   |0016: move-object v5, v3
+00300e: 1f05 7400                              |0017: check-cast v5, Lua/krupa/spanish/ai/AIMessage; // type@0074
+003012: 1206                                   |0019: const/4 v6, #int 0 // #0
+003014: 6e10 9d00 0500                         |001a: invoke-virtual {v5}, Lua/krupa/spanish/ai/AIMessage;.getFromUser:()Z // method@009d
+00301a: 0a05                                   |001d: move-result v5
+00301c: 3805 edff                              |001e: if-eqz v5, 000b // -0013
+003020: 2802                                   |0020: goto 0022 // +0002
+003022: 0743                                   |0021: move-object v3, v4
+003024: 1f03 7400                              |0022: check-cast v3, Lua/krupa/spanish/ai/AIMessage; // type@0074
+003028: 3803 0600                              |0024: if-eqz v3, 002a // +0006
+00302c: 6e10 9f00 0300                         |0026: invoke-virtual {v3}, Lua/krupa/spanish/ai/AIMessage;.getSpanish:()Ljava/lang/String; // method@009f
+003032: 0c04                                   |0029: move-result-object v4
+003034: 3904 0400                              |002a: if-nez v4, 002e // +0004
+003038: 1a04 0000                              |002c: const-string v4, "" // string@0000
+00303c: 1104                                   |002e: return-object v4
+      catches       : (none)
+      positions     :
+        0x0000 line=47
+        0x0003 line=173
+        0x000b line=174
+        0x0012 line=175
+        0x0016 line=176
+        0x001a line=47
+        0x001e line=176
+        0x0021 line=178
+        0x0022 line=47
+      locals        :
+        0x0019 - 0x001e reg=5 it Lua/krupa/spanish/ai/AIMessage;
+        0x001a - 0x001e reg=6 $i$a$-lastOrNull-AIRequest$lastUserMessage$1 I
+        0x0016 - 0x0021 reg=3 element$iv Ljava/lang/Object;
+        0x0002 - 0x0022 reg=0 $this$lastOrNull$iv Ljava/util/List;
+        0x0003 - 0x0022 reg=1 $i$f$lastOrNull I
+        0x000b - 0x0022 reg=2 iterator$iv Ljava/util/ListIterator;
+        0x0000 - 0x002f reg=7 this Lua/krupa/spanish/ai/AIRequest;
+
+    #11              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getLevel'
+      type          : '()Lua/krupa/spanish/domain/model/Level;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0032d4:                                        |[0032d4] ua.krupa.spanish.ai.AIRequest.getLevel:()Lua/krupa/spanish/domain/model/Level;
+0032e4: 5410 2c00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+0032e8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=39
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #12              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getMode'
+      type          : '()Lua/krupa/spanish/ai/AIConversationMode;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003190:                                        |[003190] ua.krupa.spanish.ai.AIRequest.getMode:()Lua/krupa/spanish/ai/AIConversationMode;
+0031a0: 5410 2d00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+0031a4: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=37
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #13              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getScenario'
+      type          : '()Lua/krupa/spanish/ai/AIScenario;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+0032a4:                                        |[0032a4] ua.krupa.spanish.ai.AIRequest.getScenario:()Lua/krupa/spanish/ai/AIScenario;
+0032b4: 5410 2e00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+0032b8: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=38
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #14              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getTopicTitleUk'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 2
+      ins           : 1
+      outs          : 0
+      insns size    : 3 16-bit code units
+003040:                                        |[003040] ua.krupa.spanish.ai.AIRequest.getTopicTitleUk:()Ljava/lang/String;
+003050: 5410 2f00                              |0000: iget-object v0, v1, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+003054: 1100                                   |0002: return-object v0
+      catches       : (none)
+      positions     :
+        0x0000 line=43
+      locals        :
+        0x0000 - 0x0003 reg=1 this Lua/krupa/spanish/ai/AIRequest;
+
+    #15              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'getTurnIndex'
+      type          : '()I'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 8
+      ins           : 1
+      outs          : 1
+      insns size    : 55 16-bit code units
+002ec0:                                        |[002ec0] ua.krupa.spanish.ai.AIRequest.getTurnIndex:()I
+002ed0: 5470 2b00                              |0000: iget-object v0, v7, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+002ed4: 1f00 5500                              |0002: check-cast v0, Ljava/lang/Iterable; // type@0055
+002ed8: 1201                                   |0004: const/4 v1, #int 0 // #0
+002eda: 2002 5b00                              |0005: instance-of v2, v0, Ljava/util/Collection; // type@005b
+002ede: 3802 0d00                              |0007: if-eqz v2, 0014 // +000d
+002ee2: 0702                                   |0009: move-object v2, v0
+002ee4: 1f02 5b00                              |000a: check-cast v2, Ljava/util/Collection; // type@005b
+002ee8: 7210 6700 0200                         |000c: invoke-interface {v2}, Ljava/util/Collection;.isEmpty:()Z // method@0067
+002eee: 0a02                                   |000f: move-result v2
+002ef0: 3802 0400                              |0010: if-eqz v2, 0014 // +0004
+002ef4: 1202                                   |0012: const/4 v2, #int 0 // #0
+002ef6: 2823                                   |0013: goto 0036 // +0023
+002ef8: 1202                                   |0014: const/4 v2, #int 0 // #0
+002efa: 7210 5b00 0000                         |0015: invoke-interface {v0}, Ljava/lang/Iterable;.iterator:()Ljava/util/Iterator; // method@005b
+002f00: 0c03                                   |0018: move-result-object v3
+002f02: 7210 6800 0300                         |0019: invoke-interface {v3}, Ljava/util/Iterator;.hasNext:()Z // method@0068
+002f08: 0a04                                   |001c: move-result v4
+002f0a: 3804 1800                              |001d: if-eqz v4, 0035 // +0018
+002f0e: 7210 6900 0300                         |001f: invoke-interface {v3}, Ljava/util/Iterator;.next:()Ljava/lang/Object; // method@0069
+002f14: 0c04                                   |0022: move-result-object v4
+002f16: 0745                                   |0023: move-object v5, v4
+002f18: 1f05 7400                              |0024: check-cast v5, Lua/krupa/spanish/ai/AIMessage; // type@0074
+002f1c: 1206                                   |0026: const/4 v6, #int 0 // #0
+002f1e: 6e10 9d00 0500                         |0027: invoke-virtual {v5}, Lua/krupa/spanish/ai/AIMessage;.getFromUser:()Z // method@009d
+002f24: 0a05                                   |002a: move-result v5
+002f26: 3805 eeff                              |002b: if-eqz v5, 0019 // -0012
+002f2a: d802 0201                              |002d: add-int/lit8 v2, v2, #int 1 // #01
+002f2e: 3b02 eaff                              |002f: if-gez v2, 0019 // -0016
+002f32: 7100 7100 0000                         |0031: invoke-static {}, Lkotlin/collections/CollectionsKt;.throwCountOverflow:()V // method@0071
+002f38: 28e5                                   |0034: goto 0019 // -001b
+002f3a: 0000                                   |0035: nop // spacer
+002f3c: 0f02                                   |0036: return v2
+      catches       : (none)
+      positions     :
+        0x0000 line=48
+        0x0005 line=179
+        0x0014 line=180
+        0x0015 line=181
+        0x0027 line=48
+        0x002b line=181
+        0x0035 line=182
+        0x0036 line=48
+      locals        :
+        0x0026 - 0x002b reg=5 it Lua/krupa/spanish/ai/AIMessage;
+        0x0027 - 0x002b reg=6 $i$a$-count-AIRequest$turnIndex$1 I
+        0x0023 - 0x0035 reg=4 element$iv Ljava/lang/Object;
+        0x0004 - 0x0036 reg=0 $this$count$iv Ljava/lang/Iterable;
+        0x0005 - 0x0036 reg=1 $i$f$count I
+        0x0015 - 0x0036 reg=2 count$iv I
+        0x0000 - 0x0037 reg=7 this Lua/krupa/spanish/ai/AIRequest;
+
+    #16              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'hashCode'
+      type          : '()I'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 4
+      ins           : 1
+      outs          : 1
+      insns size    : 52 16-bit code units
+002f40:                                        |[002f40] ua.krupa.spanish.ai.AIRequest.hashCode:()I
+002f50: 5430 2d00                              |0000: iget-object v0, v3, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+002f54: 6e10 8400 0000                         |0002: invoke-virtual {v0}, Lua/krupa/spanish/ai/AIConversationMode;.hashCode:()I // method@0084
+002f5a: 0a00                                   |0005: move-result v0
+002f5c: da01 001f                              |0006: mul-int/lit8 v1, v0, #int 31 // #1f
+002f60: 5432 2e00                              |0008: iget-object v2, v3, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+002f64: 6e10 e100 0200                         |000a: invoke-virtual {v2}, Lua/krupa/spanish/ai/AIScenario;.hashCode:()I // method@00e1
+002f6a: 0a02                                   |000d: move-result v2
+002f6c: b021                                   |000e: add-int/2addr v1, v2
+002f6e: da00 011f                              |000f: mul-int/lit8 v0, v1, #int 31 // #1f
+002f72: 5432 2c00                              |0011: iget-object v2, v3, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+002f76: 6e10 e500 0200                         |0013: invoke-virtual {v2}, Lua/krupa/spanish/domain/model/Level;.hashCode:()I // method@00e5
+002f7c: 0a02                                   |0016: move-result v2
+002f7e: b020                                   |0017: add-int/2addr v0, v2
+002f80: da01 001f                              |0018: mul-int/lit8 v1, v0, #int 31 // #1f
+002f84: 5432 2b00                              |001a: iget-object v2, v3, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+002f88: 6e10 5e00 0200                         |001c: invoke-virtual {v2}, Ljava/lang/Object;.hashCode:()I // method@005e
+002f8e: 0a02                                   |001f: move-result v2
+002f90: b021                                   |0020: add-int/2addr v1, v2
+002f92: da00 011f                              |0021: mul-int/lit8 v0, v1, #int 31 // #1f
+002f96: 5432 2f00                              |0023: iget-object v2, v3, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+002f9a: 6e10 5f00 0200                         |0025: invoke-virtual {v2}, Ljava/lang/String;.hashCode:()I // method@005f
+002fa0: 0a02                                   |0028: move-result v2
+002fa2: b020                                   |0029: add-int/2addr v0, v2
+002fa4: da01 001f                              |002a: mul-int/lit8 v1, v0, #int 31 // #1f
+002fa8: 5432 2a00                              |002c: iget-object v2, v3, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+002fac: 6e10 5e00 0200                         |002e: invoke-virtual {v2}, Ljava/lang/Object;.hashCode:()I // method@005e
+002fb2: 0a02                                   |0031: move-result v2
+002fb4: b021                                   |0032: add-int/2addr v1, v2
+002fb6: 0f01                                   |0033: return v1
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #17              : (in Lua/krupa/spanish/ai/AIRequest;)
+      name          : 'toString'
+      type          : '()Ljava/lang/String;'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 9
+      ins           : 1
+      outs          : 2
+      insns size    : 88 16-bit code units
+003058:                                        |[003058] ua.krupa.spanish.ai.AIRequest.toString:()Ljava/lang/String;
+003068: 5480 2d00                              |0000: iget-object v0, v8, Lua/krupa/spanish/ai/AIRequest;.mode:Lua/krupa/spanish/ai/AIConversationMode; // field@002d
+00306c: 5481 2e00                              |0002: iget-object v1, v8, Lua/krupa/spanish/ai/AIRequest;.scenario:Lua/krupa/spanish/ai/AIScenario; // field@002e
+003070: 5482 2c00                              |0004: iget-object v2, v8, Lua/krupa/spanish/ai/AIRequest;.level:Lua/krupa/spanish/domain/model/Level; // field@002c
+003074: 5483 2b00                              |0006: iget-object v3, v8, Lua/krupa/spanish/ai/AIRequest;.history:Ljava/util/List; // field@002b
+003078: 5484 2f00                              |0008: iget-object v4, v8, Lua/krupa/spanish/ai/AIRequest;.topicTitleUk:Ljava/lang/String; // field@002f
+00307c: 5485 2a00                              |000a: iget-object v5, v8, Lua/krupa/spanish/ai/AIRequest;.focusWords:Ljava/util/List; // field@002a
+003080: 2206 5900                              |000c: new-instance v6, Ljava/lang/StringBuilder; // type@0059
+003084: 7010 6000 0600                         |000e: invoke-direct {v6}, Ljava/lang/StringBuilder;.<init>:()V // method@0060
+00308a: 1a07 9900                              |0011: const-string v7, "AIRequest(mode=" // string@0099
+00308e: 6e20 6300 7600                         |0013: invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+003094: 0c06                                   |0016: move-result-object v6
+003096: 6e20 6200 0600                         |0017: invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+00309c: 0c00                                   |001a: move-result-object v0
+00309e: 1a06 8100                              |001b: const-string v6, ", scenario=" // string@0081
+0030a2: 6e20 6300 6000                         |001d: invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030a8: 0c00                                   |0020: move-result-object v0
+0030aa: 6e20 6200 1000                         |0021: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+0030b0: 0c00                                   |0024: move-result-object v0
+0030b2: 1a01 8000                              |0025: const-string v1, ", level=" // string@0080
+0030b6: 6e20 6300 1000                         |0027: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030bc: 0c00                                   |002a: move-result-object v0
+0030be: 6e20 6200 2000                         |002b: invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+0030c4: 0c00                                   |002e: move-result-object v0
+0030c6: 1a01 7f00                              |002f: const-string v1, ", history=" // string@007f
+0030ca: 6e20 6300 1000                         |0031: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030d0: 0c00                                   |0034: move-result-object v0
+0030d2: 6e20 6200 3000                         |0035: invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+0030d8: 0c00                                   |0038: move-result-object v0
+0030da: 1a01 8300                              |0039: const-string v1, ", topicTitleUk=" // string@0083
+0030de: 6e20 6300 1000                         |003b: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030e4: 0c00                                   |003e: move-result-object v0
+0030e6: 6e20 6300 4000                         |003f: invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030ec: 0c00                                   |0042: move-result-object v0
+0030ee: 1a01 7d00                              |0043: const-string v1, ", focusWords=" // string@007d
+0030f2: 6e20 6300 1000                         |0045: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+0030f8: 0c00                                   |0048: move-result-object v0
+0030fa: 6e20 6200 5000                         |0049: invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder; // method@0062
+003100: 0c00                                   |004c: move-result-object v0
+003102: 1a01 7600                              |004d: const-string v1, ")" // string@0076
+003106: 6e20 6300 1000                         |004f: invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0063
+00310c: 0c00                                   |0052: move-result-object v0
+00310e: 6e10 6500 0000                         |0053: invoke-virtual {v0}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0065
+003114: 0c00                                   |0056: move-result-object v0
+003116: 1100                                   |0057: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+  source_file_idx   : 151 (AIProvider.kt)
+
+Class #8 annotations:
+Annotations on class
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��.\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485048\484954\n\484850\b\484850\n\484850\485048 \n\484850\485148\484850\n\484850\b\b\n\484850\485048\484951\n\484850\b\n\n\484850\485048\b\n\484850\b\484850\b\b\485148��2\4848500\484849B3\485050\484854\485048\484850\485150\4848500\484851\485050\b\b\484850\485048\484852\485150\4848500\484851\485050\484954\b\484850\485048\484853\485150\b\485050\484852\485050\4848500\4848550\484854\485050\n\b\484850\485048\b\485150\484852\485148\4848490\484851¢\484854\484850\485048\tJ\t\485048\485051\485150\4848500\484851HÆ\484851J\t\485048\485052\485150\4848500\484851HÆ\484851J\484955\485048\485053\485150\b\485050\484852\485050\4848500\4848550\484854HÆ\484851J\484951\485048\485054\485150\484852\485148\4848490\484851HÆ\484851J9\485048\485055\485150\4848500��2\b\b\484850\485048\484850\485150\4848500\4848512\b\b\484850\485048\484852\485150\4848500\4848512\484954\b\484850\485048\484853\485150\b\485050\484852\485050\4848500\4848550\4848542\n\b\484850\485048\b\485150\484852\485148\4848490\484851HÆ\484849J\485051\485048\485148\485150\4848500\4850482\b\485048\485149\485150\484852\485148\4848490\484849HÖ\484851J\t\485048\485150\485150\4848500\485151HÖ\484849J\t\485048\485152\485150\4848500\484851HÖ\484849R\485055\485048\484853\485150\b\485050\484852\485050\4848500\4848550\484854¢\484854\b\n��\485150\484852\b\n\485048\484951R\485051\485048\b\485150\484852\485148\4848490\484851¢\484854\b\n��\485150\484852\b\f\485048\rR\485049\485048\484852\485150\4848500\484851¢\484854\b\n��\485150\484852\b\484954\485048\rR\485049\485048\484955\485150\4848500\4850488F¢\484854\484854\485150\484852\b\484955\485048\485049R\485049\485048\484850\485150\4848500\484851¢\484854\b\n��\485150\484852\b\485050\485048\r¨\484854\485153" } d2={ "Lua/krupa/spanish/ai/AIResponse;" "" "spanish" "" "hintUk" "corrections" "" "Lua/krupa/spanish/ai/AICorrection;" "error" "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V" "getCorrections" "()Ljava/util/List;" "getError" "()Ljava/lang/String;" "getHintUk" "isError" "" "()Z" "getSpanish" "component1" "component2" "component3" "component4" "copy" "equals" "other" "hashCode" "" "toString" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #49 'corrections'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" }
+Annotations on method #198 '<init>'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" "Ljava/lang/String;" ")V" }
+Annotations on method #202 'component3'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" }
+Annotations on method #204 'copy'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Ljava/lang/String;" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" "Ljava/lang/String;" ")" "Lua/krupa/spanish/ai/AIResponse;" }
+Annotations on method #207 'getCorrections'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Ljava/util/List<" "Lua/krupa/spanish/ai/AICorrection;" ">;" }
+
+Class #8            -

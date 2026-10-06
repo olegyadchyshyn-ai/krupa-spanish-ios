@@ -1,0 +1,174 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Lkotlin/coroutines/jvm/internal/SuspendLambda;'
+  Interfaces        -
+    #0              : 'Lkotlin/jvm/functions/Function2;'
+  Static fields     -
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : '$deferred'
+      type          : 'Lkotlinx/coroutines/CompletableDeferred;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : 'label'
+      type          : 'I'
+      access        : 0x0000 ()
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : '<init>'
+      type          : '(Lkotlinx/coroutines/CompletableDeferred;Lkotlin/coroutines/Continuation;)V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 4
+      ins           : 3
+      outs          : 3
+      insns size    : 7 16-bit code units
+0098b0:                                        |[0098b0] ua.krupa.spanish.speech.tts.SpanishTtsEngine$speak$2.<init>:(Lkotlinx/coroutines/CompletableDeferred;Lkotlin/coroutines/Continuation;)V
+0098c0: 5b12 4900                              |0000: iput-object v2, v1, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.$deferred:Lkotlinx/coroutines/CompletableDeferred; // field@0049
+0098c4: 1220                                   |0002: const/4 v0, #int 2 // #2
+0098c6: 7030 e700 0103                         |0003: invoke-direct {v1, v0, v3}, Lkotlin/coroutines/jvm/internal/SuspendLambda;.<init>:(ILkotlin/coroutines/Continuation;)V // method@00e7
+0098cc: 0e00                                   |0006: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : 'create'
+      type          : '(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 3
+      insns size    : 10 16-bit code units
+00988c:                                        |[00988c] ua.krupa.spanish.speech.tts.SpanishTtsEngine$speak$2.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+00989c: 2200 1501                              |0000: new-instance v0, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2; // type@0115
+0098a0: 5421 4900                              |0002: iget-object v1, v2, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.$deferred:Lkotlinx/coroutines/CompletableDeferred; // field@0049
+0098a4: 7030 d801 1004                         |0004: invoke-direct {v0, v1, v4}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.<init>:(Lkotlinx/coroutines/CompletableDeferred;Lkotlin/coroutines/Continuation;)V // method@01d8
+0098aa: 1f00 b900                              |0007: check-cast v0, Lkotlin/coroutines/Continuation; // type@00b9
+0098ae: 1100                                   |0009: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : 'invoke'
+      type          : '(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 3
+      outs          : 3
+      insns size    : 9 16-bit code units
+0097c0:                                        |[0097c0] ua.krupa.spanish.speech.tts.SpanishTtsEngine$speak$2.invoke:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+0097d0: 1f02 d800                              |0000: check-cast v2, Lkotlinx/coroutines/CoroutineScope; // type@00d8
+0097d4: 1f03 b900                              |0002: check-cast v3, Lkotlin/coroutines/Continuation; // type@00b9
+0097d8: 6e30 db01 2103                         |0004: invoke-virtual {v1, v2, v3}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.invoke:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@01db
+0097de: 0c00                                   |0007: move-result-object v0
+0097e0: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : 'invoke'
+      type          : '(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 3
+      insns size    : 13 16-bit code units
+0097e4:                                        |[0097e4] ua.krupa.spanish.speech.tts.SpanishTtsEngine$speak$2.invoke:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+0097f4: 6e30 d901 3204                         |0000: invoke-virtual {v2, v3, v4}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation; // method@01d9
+0097fa: 0c00                                   |0003: move-result-object v0
+0097fc: 1f00 1501                              |0004: check-cast v0, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2; // type@0115
+009800: 6201 1100                              |0006: sget-object v1, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+009804: 6e20 dc01 1000                         |0008: invoke-virtual {v0, v1}, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object; // method@01dc
+00980a: 0c00                                   |000b: move-result-object v0
+00980c: 1100                                   |000c: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;)
+      name          : 'invokeSuspend'
+      type          : '(Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 7
+      ins           : 2
+      outs          : 2
+      insns size    : 54 16-bit code units
+009810:                                        |[009810] ua.krupa.spanish.speech.tts.SpanishTtsEngine$speak$2.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object;
+009820: 7100 e400 0000                         |0000: invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;.getCOROUTINE_SUSPENDED:()Ljava/lang/Object; // method@00e4
+009826: 0c00                                   |0003: move-result-object v0
+009828: 5251 4a00                              |0004: iget v1, v5, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.label:I // field@004a
+00982c: 2b01 2800 0000                         |0006: packed-switch v1, 0000002e // +00000028
+009832: 2206 9500                              |0009: new-instance v6, Ljava/lang/IllegalStateException; // type@0095
+009836: 1a00 5205                              |000b: const-string v0, "call to 'resume' before 'invoke' with coroutine" // string@0552
+00983a: 7020 a400 0600                         |000d: invoke-direct {v6, v0}, Ljava/lang/IllegalStateException;.<init>:(Ljava/lang/String;)V // method@00a4
+009840: 2706                                   |0010: throw v6
+009842: 0750                                   |0011: move-object v0, v5
+009844: 7110 d500 0600                         |0012: invoke-static {v6}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00d5
+00984a: 2815                                   |0015: goto 002a // +0015
+00984c: 7110 d500 0600                         |0016: invoke-static {v6}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00d5
+009852: 0751                                   |0019: move-object v1, v5
+009854: 5412 4900                              |001a: iget-object v2, v1, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.$deferred:Lkotlinx/coroutines/CompletableDeferred; // field@0049
+009858: 0713                                   |001c: move-object v3, v1
+00985a: 1f03 b900                              |001d: check-cast v3, Lkotlin/coroutines/Continuation; // type@00b9
+00985e: 1214                                   |001f: const/4 v4, #int 1 // #1
+009860: 5914 4a00                              |0020: iput v4, v1, Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;.label:I // field@004a
+009864: 7220 fd00 3200                         |0022: invoke-interface {v2, v3}, Lkotlinx/coroutines/CompletableDeferred;.await:(Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@00fd
+00986a: 0c02                                   |0025: move-result-object v2
+00986c: 3302 0300                              |0026: if-ne v2, v0, 0029 // +0003
+009870: 1100                                   |0028: return-object v0
+009872: 0710                                   |0029: move-object v0, v1
+009874: 6201 1100                              |002a: sget-object v1, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+009878: 1101                                   |002c: return-object v1
+00987a: 0000                                   |002d: nop // spacer
+00987c: 0001 0200 0000 0000 1000 0000 0b00 ... |002e: packed-switch-data (8 units)
+      catches       : (none)
+      positions     :
+        0x0004 line=153
+      locals        :
+        0x0000 - 0x0012 reg=6 (null) Ljava/lang/Object;
+        0x0012 - 0x0016 reg=0 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;
+        0x0012 - 0x0016 reg=6 $result Ljava/lang/Object;
+        0x001a - 0x002a reg=1 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;
+        0x002a - 0x0036 reg=0 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;
+        0x0000 - 0x0036 reg=5 this Lua/krupa/spanish/speech/tts/SpanishTtsEngine$speak$2;
+        0x001a - 0x0036 reg=6 $result Ljava/lang/Object;
+
+  source_file_idx   : 1213 (SpanishTtsEngine.kt)
+
+Class #17 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/MemberClasses; value={ Lua/krupa/spanish/speech/tts/SpanishTtsEngine$Companion; Lua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender; Lua/krupa/spanish/speech/tts/SpanishTtsEngine$WhenMappings; }
+  VISIBILITY_SYSTEM Ldalvik/annotation/SourceDebugExtension; value="SMAP\nSpanishTtsEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpanishTtsEngine.kt\nua/krupa/spanish/speech/tts/SpanishTtsEngine\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,214:1\n1#2:215\n766#3:216\n857#3,2:217\n819#3:219\n847#3,2:220\n1045#3:222\n288#3:223\n1747#3,3:224\n289#3:227\n288#3:228\n1747#3,3:229\n289#3:232\n288#3,2:233\n1855#3,2:235\n*S KotlinDebug\n*F\n+ 1 SpanishTtsEngine.kt\nua/krupa/spanish/speech/tts/SpanishTtsEngine\n*L\n85#1:216\n85#1:217,2\n86#1:219\n86#1:220,2\n87#1:222\n89#1:223\n89#1:224,3\n89#1:227\n90#1:228\n90#1:229,3\n90#1:232\n127#1:233,2\n167#1:235,2\n*E\n"
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��\\\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485148\484850\n\484850\b\484850\n\484850\485148\484850\n\484850\485148\484850\n��\n\484850\485048%\n\484850\485048\484954\n\484850\485148\484850\n\484850\485048\484850\n��\n\484850\485048\484951\n��\n\484850\485148\484850\n\484850\b\484851\n\484850\485148\484850\n\484850\b\484854\n\484850\485048\484855\n\484850\b\484850\n\484850\485148\484850\n\484850\b\484855\n\484850\485048\t\n\484850\b\484852\b\484855\485148�� (2\4848500\484849:\484850()B\r\485050\484854\485048\484850\485150\4848500\484851¢\484854\484850\485048\484852J\b\485048\485053\485150\4848500\fH\484850J\b\485048\485054\485150\4848500\fH\484850J\484954\485048\485055\485150\4848500\484954H@¢\484854\484850\485048\485148J\484954\485048\485149\485150\4848500\f2\484854\485048\485150\485150\4848500\485151J\484954\485048\485152\485150\4848500\f2\484854\485048\485153\485150\4848500\485154J\484854\485048\485155\485150\4848500\fJ \485048 \485150\4848500\4849542\484854\485048!\485150\4848500\n2\b\b\484850\485048\"\485150\4848500\484954H@¢\484854\484850\485048#J\484954\485048$\485150\4848500\f2\484854\485048!\485150\4848500\nJ\485048\485048%\485150\4848500&2\484854\485048!\485150\4848500\nH\484850J\484854\485048'\485150\4848500\fR\485052\485048\484853\485150\b\485050\484852\485050\4848500\4848550\484854X\484852¢\484854\484850\n��R \485048\b\485150\485052\485050\484852\485050\4848500\n\485050\n\485050\b\485050\484852\485050\4848500\f0\4849510\tX\484852¢\484854\484850\n��R\484954\485048\484850\485150\4848500\484851X\484852¢\484854\484850\n��R\485054\485048\r\485150\n\485050\484852\485050\4848500\484954\485148\4848490\484951X\484954¢\484854\484850\n��R\485055\485048\484955\485150\b\485050\484852\485050\4848500\4848550\485048¢\484854\b\n��\485150\484852\b\485049\485048\485050R\485048\485048\485051\485150\484852\485148\4848490\485052X\484954¢\484854\484850\n��¨\484854*" } d2={ "Lua/krupa/spanish/speech/tts/SpanishTtsEngine;" "" "context" "Landroid/content/Context;" "(Landroid/content/Context;)V" "_state" "Lkotlinx/coroutines/flow/MutableStateFlow;" "Lua/krupa/spanish/speech/tts/TtsState;" "completionDeferred" "" "" "Lkotlinx/coroutines/CompletableDeferred;" "" "initDeferred" "" "state" "Lkotlinx/coroutines/flow/StateFlow;" "getState" "()Lkotlinx/coroutines/flow/StateFlow;" "tts" "Landroid/speech/tts/TextToSpeech;" "applyVoice" "configureEngine" "initialize" "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" "setRate" "rate" "" "setVoiceGender" "gender" "Lua/krupa/spanish/speech/tts/SpanishTtsEngine$VoiceGender;" "shutdown" "speak" "text" "flushQueue" "(Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;" "speakAsync" "speechTimeout" "" "stop" "Companion" "VoiceGender" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on field #77 'FEMALE_MARKERS'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on field #78 'INIT_TIMEOUT_MS'
+  VISIBILITY_RUNTIME Ljava/lang/Deprecated;
+Annotations on field #79 'MALE_MARKERS'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/List<" "Ljava/lang/String;" ">;" }
+Annotations on field #80 'SPANISH_TAG'
+  VISIBILITY_RUNTIME Ljava/lang/Deprecated;
+Annotations on field #81 '_state'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlinx/coroutines/flow/MutableStateFlow<" "Lua/krupa/spanish/speech/tts/TtsState;" ">;" }
+Annotations on field #82 'completionDeferred'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Ljava/util/Map<" "Ljava/lang/String;" "Lkotlinx/coroutines/CompletableDeferred<" "Lkotlin/Unit;" ">;>;" }
+Annotations on field #84 'initDeferred'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlinx/coroutines/CompletableDeferred<" "Ljava/lang/Boolean;" ">;" }
+Annotations on field #85 'state'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "Lkotlinx/coroutines/flow/StateFlow<" "Lua/krupa/spanish/speech/tts/TtsState;" ">;" }
+Annotations on method #485 'getState'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "()" "Lkotlinx/coroutines/flow/StateFlow<" "Lua/krupa/spanish/speech/tts/TtsState;" ">;" }
+Annotations on method #486 'initialize'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Lkotlin/coroutines/Continuation<" "-" "Ljava/lang/Boolean;" ">;)" "Ljava/lang/Object;" }
+Annotations on method #491 'speak'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/lang/String;" "Z" "Lkotlin/coroutines/Continuation<" "-" "Ljava/lang/Boolean;" ">;)" "Ljava/lang/Object;" }
+
+Class #17            -

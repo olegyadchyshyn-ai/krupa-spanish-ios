@@ -1,0 +1,300 @@
+﻿  Class descriptor  : 'Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;'
+  Access flags      : 0x0010 (FINAL)
+  Superclass        : 'Lkotlin/coroutines/jvm/internal/SuspendLambda;'
+  Interfaces        -
+    #0              : 'Lkotlin/jvm/functions/Function2;'
+  Static fields     -
+  Instance fields   -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : '$locale'
+      type          : 'Ljava/util/Locale;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #1              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : '$partialResults'
+      type          : 'Z'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #2              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : '$silenceMs'
+      type          : 'J'
+      access        : 0x1010 (FINAL SYNTHETIC)
+    #3              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'L$0'
+      type          : 'Ljava/lang/Object;'
+      access        : 0x1002 (PRIVATE SYNTHETIC)
+    #4              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'label'
+      type          : 'I'
+      access        : 0x0000 ()
+    #5              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'this$0'
+      type          : 'Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;'
+      access        : 0x1010 (FINAL SYNTHETIC)
+  Direct methods    -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : '<init>'
+      type          : '(Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;Ljava/util/Locale;ZJLkotlin/coroutines/Continuation;)V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 8
+      ins           : 7
+      outs          : 3
+      insns size    : 13 16-bit code units
+008ecc:                                        |[008ecc] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1.<init>:(Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;Ljava/util/Locale;ZJLkotlin/coroutines/Continuation;)V
+008edc: 5b12 3100                              |0000: iput-object v2, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008ee0: 5b13 2c00                              |0002: iput-object v3, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$locale:Ljava/util/Locale; // field@002c
+008ee4: 5c14 2d00                              |0004: iput-boolean v4, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$partialResults:Z // field@002d
+008ee8: 5a15 2e00                              |0006: iput-wide v5, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$silenceMs:J // field@002e
+008eec: 1220                                   |0008: const/4 v0, #int 2 // #2
+008eee: 7030 e700 0107                         |0009: invoke-direct {v1, v0, v7}, Lkotlin/coroutines/jvm/internal/SuspendLambda;.<init>:(ILkotlin/coroutines/Continuation;)V // method@00e7
+008ef4: 0e00                                   |000c: return-void
+      catches       : (none)
+      positions     :
+      locals        :
+
+  Virtual methods   -
+    #0              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'create'
+      type          : '(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 11
+      ins           : 3
+      outs          : 7
+      insns size    : 20 16-bit code units
+008e94:                                        |[008e94] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+008ea4: 2207 0901                              |0000: new-instance v7, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1; // type@0109
+008ea8: 5481 3100                              |0002: iget-object v1, v8, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008eac: 5482 2c00                              |0004: iget-object v2, v8, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$locale:Ljava/util/Locale; // field@002c
+008eb0: 5583 2d00                              |0006: iget-boolean v3, v8, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$partialResults:Z // field@002d
+008eb4: 5384 2e00                              |0008: iget-wide v4, v8, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$silenceMs:J // field@002e
+008eb8: 0770                                   |000a: move-object v0, v7
+008eba: 07a6                                   |000b: move-object v6, v10
+008ebc: 7607 a401 0000                         |000c: invoke-direct/range {v0, v1, v2, v3, v4, v5, v6}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.<init>:(Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;Ljava/util/Locale;ZJLkotlin/coroutines/Continuation;)V // method@01a4
+008ec2: 5b79 2f00                              |000f: iput-object v9, v7, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.L$0:Ljava/lang/Object; // field@002f
+008ec6: 1f07 b900                              |0011: check-cast v7, Lkotlin/coroutines/Continuation; // type@00b9
+008eca: 1107                                   |0013: return-object v7
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #1              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'invoke'
+      type          : '(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x1041 (PUBLIC BRIDGE SYNTHETIC)
+      code          -
+      registers     : 4
+      ins           : 3
+      outs          : 3
+      insns size    : 9 16-bit code units
+008c58:                                        |[008c58] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1.invoke:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+008c68: 1f02 de00                              |0000: check-cast v2, Lkotlinx/coroutines/channels/ProducerScope; // type@00de
+008c6c: 1f03 b900                              |0002: check-cast v3, Lkotlin/coroutines/Continuation; // type@00b9
+008c70: 6e30 a701 2103                         |0004: invoke-virtual {v1, v2, v3}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.invoke:(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@01a7
+008c76: 0c00                                   |0007: move-result-object v0
+008c78: 1100                                   |0008: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #2              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'invoke'
+      type          : '(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 5
+      ins           : 3
+      outs          : 3
+      insns size    : 13 16-bit code units
+008c7c:                                        |[008c7c] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1.invoke:(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+008c8c: 6e30 a501 3204                         |0000: invoke-virtual {v2, v3, v4}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.create:(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation; // method@01a5
+008c92: 0c00                                   |0003: move-result-object v0
+008c94: 1f00 0901                              |0004: check-cast v0, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1; // type@0109
+008c98: 6201 1100                              |0006: sget-object v1, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008c9c: 6e20 a801 1000                         |0008: invoke-virtual {v0, v1}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object; // method@01a8
+008ca2: 0c00                                   |000b: move-result-object v0
+008ca4: 1100                                   |000c: return-object v0
+      catches       : (none)
+      positions     :
+      locals        :
+
+    #3              : (in Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;)
+      name          : 'invokeSuspend'
+      type          : '(Ljava/lang/Object;)Ljava/lang/Object;'
+      access        : 0x0011 (PUBLIC FINAL)
+      code          -
+      registers     : 18
+      ins           : 2
+      outs          : 5
+      insns size    : 238 16-bit code units
+008ca8:                                        |[008ca8] ua.krupa.spanish.speech.recognition.SpanishSpeechRecognizer$listen$1.invokeSuspend:(Ljava/lang/Object;)Ljava/lang/Object;
+008cb8: 7100 e400 0000                         |0000: invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;.getCOROUTINE_SUSPENDED:()Ljava/lang/Object; // method@00e4
+008cbe: 0c00                                   |0003: move-result-object v0
+008cc0: 0801 1000                              |0004: move-object/from16 v1, v16
+008cc4: 5212 3000                              |0006: iget v2, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.label:I // field@0030
+008cc8: 2b02 de00 0000                         |0008: packed-switch v2, 000000e6 // +000000de
+008cce: 2200 9500                              |000b: new-instance v0, Ljava/lang/IllegalStateException; // type@0095
+008cd2: 1a01 5205                              |000d: const-string v1, "call to 'resume' before 'invoke' with coroutine" // string@0552
+008cd6: 7020 a400 1000                         |000f: invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;.<init>:(Ljava/lang/String;)V // method@00a4
+008cdc: 2700                                   |0012: throw v0
+008cde: 0800 1000                              |0013: move-object/from16 v0, v16
+008ce2: 0801 1100                              |0015: move-object/from16 v1, v17
+008ce6: 7110 d500 0100                         |0017: invoke-static {v1}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00d5
+008cec: 2900 c900                              |001a: goto/16 00e3 // +00c9
+008cf0: 7701 d500 1100                         |001c: invoke-static/range {v17}, Lkotlin/ResultKt;.throwOnFailure:(Ljava/lang/Object;)V // method@00d5
+008cf6: 0801 1000                              |001f: move-object/from16 v1, v16
+008cfa: 0802 1100                              |0021: move-object/from16 v2, v17
+008cfe: 5413 2f00                              |0023: iget-object v3, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.L$0:Ljava/lang/Object; // field@002f
+008d02: 1f03 de00                              |0025: check-cast v3, Lkotlinx/coroutines/channels/ProducerScope; // type@00de
+008d06: 5414 3100                              |0027: iget-object v4, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008d0a: 6e10 af01 0400                         |0029: invoke-virtual {v4}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;.isAvailable:()Z // method@01af
+008d10: 0a04                                   |002c: move-result v4
+008d12: 1225                                   |002d: const/4 v5, #int 2 // #2
+008d14: 1216                                   |002e: const/4 v6, #int 1 // #1
+008d16: 1207                                   |002f: const/4 v7, #int 0 // #0
+008d18: 1208                                   |0030: const/4 v8, #int 0 // #0
+008d1a: 3904 1500                              |0031: if-nez v4, 0046 // +0015
+008d1e: 2200 0001                              |0033: new-instance v0, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event$Failed; // type@0100
+008d22: 1a04 3d08                              |0035: const-string v4, "У системі немає сервісу розпізнавання мовлення." // string@083d
+008d26: 7058 6401 4057                         |0037: invoke-direct {v0, v4, v7, v5, v8}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event$Failed;.<init>:(Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V // method@0164
+008d2c: 7220 0301 0300                         |003a: invoke-interface {v3, v0}, Lkotlinx/coroutines/channels/ProducerScope;.trySend-JP2dKIU:(Ljava/lang/Object;)Ljava/lang/Object; // method@0103
+008d32: 0730                                   |003d: move-object v0, v3
+008d34: 1f00 e000                              |003e: check-cast v0, Lkotlinx/coroutines/channels/SendChannel; // type@00e0
+008d38: 7140 0401 8086                         |0040: invoke-static {v0, v8, v6, v8}, Lkotlinx/coroutines/channels/SendChannel$DefaultImpls;.close$default:(Lkotlinx/coroutines/channels/SendChannel;Ljava/lang/Throwable;ILjava/lang/Object;)Z // method@0104
+008d3e: 6200 1100                              |0043: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008d42: 1100                                   |0045: return-object v0
+008d44: 5414 3100                              |0046: iget-object v4, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008d48: 6e10 ae01 0400                         |0048: invoke-virtual {v4}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;.getHasPermission:()Z // method@01ae
+008d4e: 0a04                                   |004b: move-result v4
+008d50: 3904 1500                              |004c: if-nez v4, 0061 // +0015
+008d54: 2200 0001                              |004e: new-instance v0, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event$Failed; // type@0100
+008d58: 1a04 1c08                              |0050: const-string v4, "Немає дозволу на мікрофон." // string@081c
+008d5c: 7058 6401 4057                         |0052: invoke-direct {v0, v4, v7, v5, v8}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event$Failed;.<init>:(Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V // method@0164
+008d62: 7220 0301 0300                         |0055: invoke-interface {v3, v0}, Lkotlinx/coroutines/channels/ProducerScope;.trySend-JP2dKIU:(Ljava/lang/Object;)Ljava/lang/Object; // method@0103
+008d68: 0730                                   |0058: move-object v0, v3
+008d6a: 1f00 e000                              |0059: check-cast v0, Lkotlinx/coroutines/channels/SendChannel; // type@00e0
+008d6e: 7140 0401 8086                         |005b: invoke-static {v0, v8, v6, v8}, Lkotlinx/coroutines/channels/SendChannel$DefaultImpls;.close$default:(Lkotlinx/coroutines/channels/SendChannel;Ljava/lang/Throwable;ILjava/lang/Object;)Z // method@0104
+008d74: 6200 1100                              |005e: sget-object v0, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008d78: 1100                                   |0060: return-object v0
+008d7a: 5414 3100                              |0061: iget-object v4, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008d7e: 7110 ac01 0400                         |0063: invoke-static {v4}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;.access$getContext$p:(Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;)Landroid/content/Context; // method@01ac
+008d84: 0c04                                   |0066: move-result-object v4
+008d86: 7110 0b00 0400                         |0067: invoke-static {v4}, Landroid/speech/SpeechRecognizer;.createSpeechRecognizer:(Landroid/content/Context;)Landroid/speech/SpeechRecognizer; // method@000b
+008d8c: 0c04                                   |006a: move-result-object v4
+008d8e: 2205 0500                              |006b: new-instance v5, Landroid/content/Intent; // type@0005
+008d92: 1a08 2f05                              |006d: const-string v8, "android.speech.action.RECOGNIZE_SPEECH" // string@052f
+008d96: 7020 0300 8500                         |006f: invoke-direct {v5, v8}, Landroid/content/Intent;.<init>:(Ljava/lang/String;)V // method@0003
+008d9c: 5418 2c00                              |0072: iget-object v8, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$locale:Ljava/util/Locale; // field@002c
+008da0: 5519 2d00                              |0074: iget-boolean v9, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$partialResults:Z // field@002d
+008da4: 541a 3100                              |0076: iget-object v10, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008da8: 531b 2e00                              |0078: iget-wide v11, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.$silenceMs:J // field@002e
+008dac: 075d                                   |007a: move-object v13, v5
+008dae: 120e                                   |007b: const/4 v14, #int 0 // #0
+008db0: 1a0f 3105                              |007c: const-string v15, "android.speech.extra.LANGUAGE_MODEL" // string@0531
+008db4: 1a06 cf05                              |007e: const-string v6, "free_form" // string@05cf
+008db8: 6e30 0600 fd06                         |0080: invoke-virtual {v13, v15, v6}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0006
+008dbe: 1a06 3005                              |0083: const-string v6, "android.speech.extra.LANGUAGE" // string@0530
+008dc2: 6e10 c600 0800                         |0085: invoke-virtual {v8}, Ljava/util/Locale;.toLanguageTag:()Ljava/lang/String; // method@00c6
+008dc8: 0c0f                                   |0088: move-result-object v15
+008dca: 6e30 0600 6d0f                         |0089: invoke-virtual {v13, v6, v15}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0006
+008dd0: 1a06 3205                              |008c: const-string v6, "android.speech.extra.LANGUAGE_PREFERENCE" // string@0532
+008dd4: 6e10 c600 0800                         |008e: invoke-virtual {v8}, Ljava/util/Locale;.toLanguageTag:()Ljava/lang/String; // method@00c6
+008dda: 0c08                                   |0091: move-result-object v8
+008ddc: 6e30 0600 6d08                         |0092: invoke-virtual {v13, v6, v8}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0006
+008de2: 1a06 3405                              |0095: const-string v6, "android.speech.extra.ONLY_RETURN_LANGUAGE_PREFERENCE" // string@0534
+008de6: 6e30 0700 6d07                         |0097: invoke-virtual {v13, v6, v7}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Z)Landroid/content/Intent; // method@0007
+008dec: 1a06 3505                              |009a: const-string v6, "android.speech.extra.PARTIAL_RESULTS" // string@0535
+008df0: 6e30 0700 6d09                         |009c: invoke-virtual {v13, v6, v9}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Z)Landroid/content/Intent; // method@0007
+008df6: 1a06 3305                              |009f: const-string v6, "android.speech.extra.MAX_RESULTS" // string@0533
+008dfa: 1237                                   |00a1: const/4 v7, #int 3 // #3
+008dfc: 6e30 0400 6d07                         |00a2: invoke-virtual {v13, v6, v7}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;I)Landroid/content/Intent; // method@0004
+008e02: 7110 ac01 0a00                         |00a5: invoke-static {v10}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;.access$getContext$p:(Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;)Landroid/content/Context; // method@01ac
+008e08: 0c06                                   |00a8: move-result-object v6
+008e0a: 6e10 0200 0600                         |00a9: invoke-virtual {v6}, Landroid/content/Context;.getPackageName:()Ljava/lang/String; // method@0002
+008e10: 0c06                                   |00ac: move-result-object v6
+008e12: 1a07 5405                              |00ad: const-string v7, "calling_package" // string@0554
+008e16: 6e30 0600 7d06                         |00af: invoke-virtual {v13, v7, v6}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent; // method@0006
+008e1c: 1a06 3605                              |00b2: const-string v6, "android.speech.extras.SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS" // string@0536
+008e20: 6e40 0500 6dcb                         |00b4: invoke-virtual {v13, v6, v11, v12}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;J)Landroid/content/Intent; // method@0005
+008e26: 1a06 3705                              |00b7: const-string v6, "android.speech.extras.SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS" // string@0537
+008e2a: 6e40 0500 6dcb                         |00b9: invoke-virtual {v13, v6, v11, v12}, Landroid/content/Intent;.putExtra:(Ljava/lang/String;J)Landroid/content/Intent; // method@0005
+008e30: 0000                                   |00bc: nop // spacer
+008e32: 0000                                   |00bd: nop // spacer
+008e34: 2206 0701                              |00be: new-instance v6, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$1; // type@0107
+008e38: 5417 3100                              |00c0: iget-object v7, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.this$0:Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer; // field@0031
+008e3c: 7030 9701 3607                         |00c2: invoke-direct {v6, v3, v7}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$1;.<init>:(Lkotlinx/coroutines/channels/ProducerScope;Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;)V // method@0197
+008e42: 1f06 0800                              |00c5: check-cast v6, Landroid/speech/RecognitionListener; // type@0008
+008e46: 6e20 0e00 6400                         |00c7: invoke-virtual {v4, v6}, Landroid/speech/SpeechRecognizer;.setRecognitionListener:(Landroid/speech/RecognitionListener;)V // method@000e
+008e4c: 6e20 0f00 5400                         |00ca: invoke-virtual {v4, v5}, Landroid/speech/SpeechRecognizer;.startListening:(Landroid/content/Intent;)V // method@000f
+008e52: 2205 0801                              |00cd: new-instance v5, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2; // type@0108
+008e56: 7030 a101 3504                         |00cf: invoke-direct {v5, v3, v4}, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1$2;.<init>:(Lkotlinx/coroutines/channels/ProducerScope;Landroid/speech/SpeechRecognizer;)V // method@01a1
+008e5c: 1f05 c500                              |00d2: check-cast v5, Lkotlin/jvm/functions/Function0; // type@00c5
+008e60: 0716                                   |00d4: move-object v6, v1
+008e62: 1f06 b900                              |00d5: check-cast v6, Lkotlin/coroutines/Continuation; // type@00b9
+008e66: 1217                                   |00d7: const/4 v7, #int 1 // #1
+008e68: 5917 3000                              |00d8: iput v7, v1, Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;.label:I // field@0030
+008e6c: 7130 0201 5306                         |00da: invoke-static {v3, v5, v6}, Lkotlinx/coroutines/channels/ProduceKt;.awaitClose:(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; // method@0102
+008e72: 0c03                                   |00dd: move-result-object v3
+008e74: 3303 0300                              |00de: if-ne v3, v0, 00e1 // +0003
+008e78: 1100                                   |00e0: return-object v0
+008e7a: 0710                                   |00e1: move-object v0, v1
+008e7c: 0721                                   |00e2: move-object v1, v2
+008e7e: 6202 1100                              |00e3: sget-object v2, Lkotlin/Unit;.INSTANCE:Lkotlin/Unit; // field@0011
+008e82: 1102                                   |00e5: return-object v2
+008e84: 0001 0200 0000 0000 1400 0000 0b00 ... |00e6: packed-switch-data (8 units)
+      catches       : (none)
+      positions     :
+        0x0004 line=61
+        0x0027 line=62
+        0x0033 line=63
+        0x003d line=64
+        0x0043 line=65
+        0x0046 line=67
+        0x004e line=68
+        0x0058 line=69
+        0x005e line=70
+        0x0061 line=73
+        0x006b line=74
+        0x007c line=75
+        0x0083 line=76
+        0x008c line=77
+        0x0095 line=78
+        0x009a line=79
+        0x009f line=80
+        0x00a5 line=81
+        0x00b2 line=82
+        0x00b7 line=83
+        0x00bc line=84
+        0x00bd line=74
+        0x00be line=86
+        0x00ca line=136
+        0x00cd line=138
+        0x00e0 line=61
+        0x00e1 line=138
+        0x00e3 line=143
+      locals        :
+        0x0015 - 0x001c reg=0 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;
+        0x0017 - 0x001c reg=1 $result Ljava/lang/Object;
+        0x0027 - 0x0043 reg=3 $this$callbackFlow Lkotlinx/coroutines/channels/ProducerScope;
+        0x0046 - 0x005e reg=3 $this$callbackFlow Lkotlinx/coroutines/channels/ProducerScope;
+        0x007b - 0x00bd reg=13 $this$invokeSuspend_u24lambda_u240 Landroid/content/Intent;
+        0x007c - 0x00bd reg=14 $i$a$-apply-SpanishSpeechRecognizer$listen$1$intent$1 I
+        0x00be - 0x00cd reg=5 intent Landroid/content/Intent;
+        0x0061 - 0x00de reg=3 $this$callbackFlow Lkotlinx/coroutines/channels/ProducerScope;
+        0x006b - 0x00de reg=4 recognizer Landroid/speech/SpeechRecognizer;
+        0x0023 - 0x00e3 reg=2 $result Ljava/lang/Object;
+        0x0021 - 0x00e3 reg=1 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;
+        0x00e3 - 0x00ee reg=0 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;
+        0x00e3 - 0x00ee reg=1 $result Ljava/lang/Object;
+        0x0000 - 0x00ee reg=16 this Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$listen$1;
+        0x0000 - 0x00ee reg=17 (null) Ljava/lang/Object;
+
+  source_file_idx   : 1212 (SpanishSpeechRecognizer.kt)
+
+Class #5 annotations:
+Annotations on class
+  VISIBILITY_SYSTEM Ldalvik/annotation/MemberClasses; value={ Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event; Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Result; }
+  VISIBILITY_RUNTIME Lkotlin/Metadata; d1={ "��@\n\484850\485148\484850\n\484850\485048��\n��\n\484850\485148\484850\n\484850\b\484850\n\484850\485048\484951\n\484850\b\484852\n\484850\485048\484954\n��\n\484850\485048\b\n��\n\484850\485148\484850\n\484850\485148\484850\n��\n\484850\485148\484850\n\484850\b\484850\n\484850\485048\t\n\484850\b\484852\b\484855\485148��2\4848500\484849:\484850\485055\485148B\r\485050\484854\485048\484850\485150\4848500\484851¢\484854\484850\485048\484852J\485048\485048\n\485150\4848500\4849512\484854\485048\f\485150\4848500\rH\484850J*\485048\484954\485150\b\485050\484852\485050\4848500\4850480\4849552\b\b\484850\485048\485049\485150\4848500\4850502\b\b\484850\485048\485051\485150\4848500\4848542\b\b\484850\485048\485052\485150\4848500\485053J\484854\485048\485054\485150\4848500\484854R\484954\485048\484850\485150\4848500\484851X\484852¢\484854\484850\n��R\485049\485048\484853\485150\4848500\4848548F¢\484854\484854\485150\484852\b\484855\485048\bR\485049\485048\t\485150\4848500\4848548F¢\484854\484854\485150\484852\b\t\485048\b¨\484854\485149" } d2={ "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer;" "" "context" "Landroid/content/Context;" "(Landroid/content/Context;)V" "hasPermission" "" "getHasPermission" "()Z" "isAvailable" "describeError" "" "error" "" "listen" "Lkotlinx/coroutines/flow/Flow;" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;" "locale" "Ljava/util/Locale;" "partialResults" "silenceMs" "" "spanishModelAvailable" "Event" "Result" "app_debug" } k=1 mv={ 1 9 0 } xi=48
+Annotations on method #432 'listen'
+  VISIBILITY_SYSTEM Ldalvik/annotation/Signature; value={ "(" "Ljava/util/Locale;" "ZJ)" "Lkotlinx/coroutines/flow/Flow<" "Lua/krupa/spanish/speech/recognition/SpanishSpeechRecognizer$Event;" ">;" }
+
+Class #5            -

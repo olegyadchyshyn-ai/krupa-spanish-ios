@@ -1,0 +1,426 @@
+{
+  "contentVersion": 1,
+  "listening": [
+    {
+      "id": "l_a2_001",
+      "level": "A2",
+      "topicId": "t_a2_restaurant",
+      "titleEs": "Una cena en el restaurante",
+      "titleUk": "Вечеря в ресторані",
+      "kind": "dialogue",
+      "orderIndex": 1,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenas noches. ¿Tienen una mesa libre para dos personas?", "translationUk": "Доброго вечора. У вас є вільний столик на двох?" },
+        { "speaker": "B", "spanish": "Sí, claro. ¿Han reservado o vienen sin reserva?", "translationUk": "Так, звичайно. Ви бронювали чи прийшли без бронювання?" },
+        { "speaker": "A", "spanish": "No, no hemos reservado. ¿Está libre la mesa del rincón?", "translationUk": "Ні, ми не бронювали. Столик у кутку вільний?" },
+        { "speaker": "B", "spanish": "Sí, esa mesa está libre. Síganme, por favor.", "translationUk": "Так, той столик вільний. Ідіть за мною, будь ласка." },
+        { "speaker": "B", "spanish": "Aquí tienen el menú. ¿Quieren algo de beber?", "translationUk": "Ось меню. Бажаєте щось випити?" },
+        { "speaker": "A", "spanish": "Para mí, agua con gas. Y para mi mujer, vino tinto.", "translationUk": "Мені воду з газом. А моїй дружині — червоне вино." },
+        { "speaker": "B", "spanish": "¿Ya saben qué van a tomar de primero?", "translationUk": "Ви вже знаєте, що візьмете на перше?" },
+        { "speaker": "A", "spanish": "De primero, una ensalada. Y de segundo, pescado.", "translationUk": "На перше — салат. А на друге — рибу." },
+        { "speaker": "B", "spanish": "Muy bien. ¿Y qué van a querer de postre?", "translationUk": "Дуже добре. А що бажаєте на десерт?" },
+        { "speaker": "A", "spanish": "Dos flanes, por favor. Y la cuenta, cuando pueda.", "translationUk": "Два флани, будь ласка. І рахунок, коли зможете." },
+        { "speaker": "B", "spanish": "Enseguida se la traigo. Son cuarenta y dos euros.", "translationUk": "Зараз принесу. З вас сорок два євро." },
+        { "speaker": "A", "spanish": "Aquí tiene. Muchas gracias, todo estaba realmente buenísimo.", "translationUk": "Ось, візьміть. Щиро дякую, усе було справді дуже смачне." }
+      ],
+      "keyWords": [
+        { "spanish": "reservar", "translationUk": "бронювати (столик)" },
+        { "spanish": "el menú", "translationUk": "меню" },
+        { "spanish": "de primero", "translationUk": "на перше" },
+        { "spanish": "de segundo", "translationUk": "на друге" },
+        { "spanish": "el postre", "translationUk": "десерт" },
+        { "spanish": "la cuenta", "translationUk": "рахунок" },
+        { "spanish": "el vino tinto", "translationUk": "червоне вино" },
+        { "spanish": "buenísimo", "translationUk": "дуже смачний" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Чи бронювали відвідувачі столик?",
+          "options": ["No, no han reservado", "Sí, a las nueve", "Sí, para cuatro personas"],
+          "correctIndex": 0,
+          "explanationUk": "Гість відповідає «No, no hemos reservado» — бронювання не було."
+        },
+        {
+          "questionUk": "Що вони замовляють на друге?",
+          "options": ["Ensalada", "Pescado", "Flan"],
+          "correctIndex": 1,
+          "explanationUk": "На перше — салат, а «de segundo, pescado» — на друге рибу."
+        },
+        {
+          "questionUk": "Скільки коштує вечеря?",
+          "options": ["Treinta y dos euros", "Cincuenta euros", "Cuarenta y dos euros"],
+          "correctIndex": 2,
+          "explanationUk": "Офіціант каже «Son cuarenta y dos euros»."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_002",
+      "level": "A2",
+      "topicId": "t_a2_transport",
+      "titleEs": "En la estación de tren",
+      "titleUk": "На вокзалі",
+      "kind": "dialogue",
+      "orderIndex": 2,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenos días. Quería comprar un billete para Valencia.", "translationUk": "Доброго ранку. Я хотів би купити квиток до Валенсії." },
+        { "speaker": "B", "spanish": "¿Para qué día lo quiere y a qué hora?", "translationUk": "На який день і на котру годину?" },
+        { "speaker": "A", "spanish": "Para el viernes por la tarde, sobre las cinco.", "translationUk": "На п’ятницю, після обіду, близько п’ятої." },
+        { "speaker": "B", "spanish": "Hay un tren a las cinco y cuarto.", "translationUk": "Є потяг о чверть на шосту." },
+        { "speaker": "A", "spanish": "¿Cuánto tarda el viaje? ¿Es un tren directo?", "translationUk": "Скільки триває поїздка? Це прямий потяг?" },
+        { "speaker": "B", "spanish": "Tarda unas dos horas y no hay transbordo.", "translationUk": "Близько двох годин, без пересадок." },
+        { "speaker": "A", "spanish": "Perfecto, entonces. ¿De qué vía sale el tren?", "translationUk": "Тоді чудово. З якої колії вирушає потяг?" },
+        { "speaker": "B", "spanish": "Sale de la vía cuatro, pero lleva retraso.", "translationUk": "З четвертої колії, але він із запізненням." },
+        { "speaker": "A", "spanish": "Vaya, qué fastidio. ¿Y cuánto retraso lleva el tren?", "translationUk": "Оце так, прикро. А на скільки запізнюється потяг?" },
+        { "speaker": "B", "spanish": "Unos quince minutos, más o menos. Lo han anunciado ahora.", "translationUk": "Хвилин на п’ятнадцять, приблизно. Щойно оголосили." },
+        { "speaker": "A", "spanish": "Vale, entonces voy a tomar un café mientras espero.", "translationUk": "Гаразд, тоді я вип’ю кави, поки чекаю." },
+        { "speaker": "B", "spanish": "Buen viaje. ¡Espero que llegue a tiempo esta vez!", "translationUk": "Щасливої дороги. Сподіваюся, цього разу ви прибудете вчасно!" }
+      ],
+      "keyWords": [
+        { "spanish": "el billete", "translationUk": "квиток" },
+        { "spanish": "la vía", "translationUk": "колія" },
+        { "spanish": "directo", "translationUk": "прямий, без пересадок" },
+        { "spanish": "tardar", "translationUk": "тривати" },
+        { "spanish": "el retraso", "translationUk": "запізнення" },
+        { "spanish": "anunciar", "translationUk": "оголошувати" },
+        { "spanish": "el viaje", "translationUk": "поїздка" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Коли вирушає потяг?",
+          "options": ["A las cinco", "A las cinco y cuarto", "A las cuatro y cuarto"],
+          "correctIndex": 1,
+          "explanationUk": "Касир каже «Hay un tren a las cinco y cuarto»."
+        },
+        {
+          "questionUk": "Скільки триває поїздка?",
+          "options": ["Dos horas", "Una hora", "Tres horas"],
+          "correctIndex": 0,
+          "explanationUk": "Відповідь: «Tarda unas dos horas y no hay transbordo»."
+        },
+        {
+          "questionUk": "Що оголосили на вокзалі?",
+          "options": ["Un cambio de vía", "La llegada del tren", "Un retraso de quince minutos"],
+          "correctIndex": 2,
+          "explanationUk": "Потяг «lleva retraso» — запізнення близько п’ятнадцяти хвилин."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_003",
+      "level": "A2",
+      "topicId": "t_a2_travel",
+      "titleEs": "Una llamada al hotel",
+      "titleUk": "Дзвінок до готелю",
+      "kind": "dialogue",
+      "orderIndex": 3,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenas tardes, llamaba para reservar una habitación doble.", "translationUk": "Доброго дня, я телефоную, щоб забронювати двомісний номер." },
+        { "speaker": "B", "spanish": "Claro que sí. ¿Para qué fechas, por favor?", "translationUk": "Так, звичайно. На які дати, будь ласка?" },
+        { "speaker": "A", "spanish": "Para el viernes doce de agosto, dos noches.", "translationUk": "На п’ятницю, дванадцяте серпня, на дві ночі." },
+        { "speaker": "B", "spanish": "¿Prefiere usted una habitación doble o una individual?", "translationUk": "Ви бажаєте двомісний номер чи одномісний?" },
+        { "speaker": "A", "spanish": "Una doble con vistas al mar, si es posible.", "translationUk": "Двомісний з видом на море, якщо можливо." },
+        { "speaker": "B", "spanish": "Sí, todavía queda una libre en la cuarta planta.", "translationUk": "Так, ще залишився один вільний на четвертому поверсі." },
+        { "speaker": "A", "spanish": "¿Está incluido el desayuno? ¿Cuánto cuesta en total?", "translationUk": "Сніданок включено? Скільки коштує все разом?" },
+        { "speaker": "B", "spanish": "Sí, el desayuno está incluido y son noventa euros.", "translationUk": "Так, сніданок включено, і це дев’яносто євро." },
+        { "speaker": "A", "spanish": "Muy bien. ¿Puedo pagar al llegar al hotel?", "translationUk": "Дуже добре. Можна заплатити, коли приїду?" },
+        { "speaker": "B", "spanish": "Sin problema. ¿A nombre de quién hago la reserva?", "translationUk": "Без проблем. На чиє ім’я оформити бронювання?" },
+        { "speaker": "A", "spanish": "A nombre de Olena Koval. Llegaremos sobre las seis.", "translationUk": "На ім’я Олени Коваль. Ми приїдемо близько шостої." },
+        { "speaker": "B", "spanish": "Perfecto, la habitación queda reservada. ¡Hasta el viernes!", "translationUk": "Чудово, номер заброньовано. До п’ятниці!" }
+      ],
+      "keyWords": [
+        { "spanish": "reservar", "translationUk": "бронювати" },
+        { "spanish": "la habitación doble", "translationUk": "двомісний номер" },
+        { "spanish": "las vistas al mar", "translationUk": "вид на море" },
+        { "spanish": "incluido", "translationUk": "включений (у ціну)" },
+        { "spanish": "la planta", "translationUk": "поверх" },
+        { "spanish": "a nombre de", "translationUk": "на ім’я" },
+        { "spanish": "pagar al llegar", "translationUk": "заплатити на місці" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Який номер бронює A?",
+          "options": ["Una doble con vistas al mar", "Una individual", "Una doble sin vistas"],
+          "correctIndex": 0,
+          "explanationUk": "A просить «Una doble con vistas al mar, si es posible»."
+        },
+        {
+          "questionUk": "Що входить у ціну?",
+          "options": ["La cena", "El desayuno", "El parking"],
+          "correctIndex": 1,
+          "explanationUk": "Адміністратор каже «el desayuno está incluido»."
+        },
+        {
+          "questionUk": "Коли вони приїдуть до готелю?",
+          "options": ["Por la mañana", "Sobre las ocho", "Sobre las seis"],
+          "correctIndex": 2,
+          "explanationUk": "A каже «Llegaremos sobre las seis»."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_004",
+      "level": "A2",
+      "topicId": "t_a2_health",
+      "titleEs": "En el centro de salud",
+      "titleUk": "У медцентрі",
+      "kind": "dialogue",
+      "orderIndex": 4,
+      "lines": [
+        { "speaker": "A", "spanish": "Buenos días, doctora. Desde el lunes no me encuentro bien.", "translationUk": "Доброго ранку, лікарко. Із понеділка я почуваюся погано." },
+        { "speaker": "B", "spanish": "Cuénteme un poco más, ¿qué le pasa exactamente?", "translationUk": "Розкажіть трохи більше, що саме вас турбує?" },
+        { "speaker": "A", "spanish": "Me duele la garganta y he tenido fiebre.", "translationUk": "У мене болить горло і була температура." },
+        { "speaker": "B", "spanish": "¿Y desde cuándo tiene usted esos síntomas, más o menos?", "translationUk": "А відколи у вас ці симптоми, приблизно?" },
+        { "speaker": "A", "spanish": "Empecé el domingo por la noche, después de la cena.", "translationUk": "Почалося в неділю ввечері, після вечері." },
+        { "speaker": "B", "spanish": "¿Ha tomado algún medicamento o alguna infusión estos días?", "translationUk": "Ви приймали якісь ліки чи трав’яний чай цими днями?" },
+        { "speaker": "A", "spanish": "Solo paracetamol, pero no me ha hecho mucho efecto.", "translationUk": "Лише парацетамол, але він мало допоміг." },
+        { "speaker": "B", "spanish": "Voy a mirarle la garganta. Abra la boca, por favor.", "translationUk": "Зараз я подивлюся ваше горло. Відкрийте рота, будь ласка." },
+        { "speaker": "A", "spanish": "¿Es algo grave? Tengo que trabajar el jueves.", "translationUk": "Це щось серйозне? У четвер мені треба працювати." },
+        { "speaker": "B", "spanish": "No es grave, es una infección leve. Le receto un antibiótico.", "translationUk": "Ні, не серйозне, це легка інфекція. Випишу вам антибіотик." },
+        { "speaker": "A", "spanish": "¿Y cada cuántas horas tengo que tomar el antibiótico?", "translationUk": "А через скільки годин приймати антибіотик?" },
+        { "speaker": "B", "spanish": "Cada ocho horas, siempre después de las comidas. Descanse también.", "translationUk": "Кожні вісім годин, завжди після їди. Ще й відпочивайте." },
+        { "speaker": "A", "spanish": "Muchas gracias, doctora. Nos vemos la próxima semana.", "translationUk": "Дуже дякую, лікарко. Побачимося наступного тижня." }
+      ],
+      "keyWords": [
+        { "spanish": "encontrarse bien", "translationUk": "почуватися добре" },
+        { "spanish": "me duele", "translationUk": "у мене болить" },
+        { "spanish": "la garganta", "translationUk": "горло" },
+        { "spanish": "la fiebre", "translationUk": "температура" },
+        { "spanish": "los síntomas", "translationUk": "симптоми" },
+        { "spanish": "recetar", "translationUk": "виписувати (ліки)" },
+        { "spanish": "leve", "translationUk": "легкий" },
+        { "spanish": "descansar", "translationUk": "відпочивати" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Що болить у пацієнта?",
+          "options": ["La garganta", "La cabeza", "El estómago"],
+          "correctIndex": 0,
+          "explanationUk": "Пацієнт каже «Me duele la garganta»."
+        },
+        {
+          "questionUk": "Коли почалися симптоми?",
+          "options": ["El lunes por la mañana", "El domingo por la noche", "El jueves"],
+          "correctIndex": 1,
+          "explanationUk": "Він каже «Empecé el domingo por la noche, después de la cena»."
+        },
+        {
+          "questionUk": "Що радить лікарка, крім ліків?",
+          "options": ["Trabajar el jueves", "Beber café", "Descansar"],
+          "correctIndex": 2,
+          "explanationUk": "Наприкінці вона каже «Descanse también» — відпочивати."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_005",
+      "level": "A2",
+      "topicId": "t_a2_work",
+      "titleEs": "El primer día en la oficina",
+      "titleUk": "Перший день в офісі",
+      "kind": "dialogue",
+      "orderIndex": 5,
+      "lines": [
+        { "speaker": "A", "spanish": "¡Hola! Tú debes de ser la nueva, ¿verdad?", "translationUk": "Привіт! Ти, мабуть, і є нова працівниця, так?" },
+        { "speaker": "B", "spanish": "Sí, soy Oksana. Hoy es mi primer día.", "translationUk": "Так, я Оксана. Сьогодні мій перший день." },
+        { "speaker": "A", "spanish": "Encantado. Yo soy Javier, del departamento de ventas.", "translationUk": "Дуже приємно. Я Хав’єр, із відділу продажів." },
+        { "speaker": "B", "spanish": "Mucho gusto, Javier. ¿Sabes dónde está mi ordenador?", "translationUk": "Приємно познайомитися, Хав’єре. Не знаєш, де мій комп’ютер?" },
+        { "speaker": "A", "spanish": "En la mesa del fondo. Ahora te lo traigo.", "translationUk": "На столі в кінці. Зараз принесу." },
+        { "speaker": "B", "spanish": "Gracias. ¿Y a qué hora come aquí la gente?", "translationUk": "Дякую. А о котрій тут обідають?" },
+        { "speaker": "A", "spanish": "De dos a tres. Hoy vamos a comer juntos.", "translationUk": "З другої до третьої. Сьогодні обідаємо разом." },
+        { "speaker": "B", "spanish": "¡Perfecto! ¿Y con quién tengo la reunión de equipo?", "translationUk": "Чудово! А з ким у мене нарада команди?" },
+        { "speaker": "A", "spanish": "Con Marta, la jefa. Te ha enviado un correo esta mañana.", "translationUk": "З Мартою, керівницею. Вона надіслала тобі листа зранку." },
+        { "speaker": "B", "spanish": "Ya lo he visto. ¿Trabajamos mucho los viernes?", "translationUk": "Я його вже бачила. А по п’ятницях ми багато працюємо?" },
+        { "speaker": "A", "spanish": "Los viernes salimos a las tres, ya verás.", "translationUk": "По п’ятницях ми виходимо о третій, ось побачиш." },
+        { "speaker": "B", "spanish": "Vale, me parece muy bien. Gracias por la ayuda.", "translationUk": "Гаразд, мені це дуже підходить. Дякую за допомогу." }
+      ],
+      "keyWords": [
+        { "spanish": "el primer día", "translationUk": "перший день" },
+        { "spanish": "el ordenador", "translationUk": "комп’ютер" },
+        { "spanish": "la reunión", "translationUk": "нарада" },
+        { "spanish": "la jefa", "translationUk": "керівниця" },
+        { "spanish": "el correo", "translationUk": "електронний лист" },
+        { "spanish": "el departamento", "translationUk": "відділ" },
+        { "spanish": "la ayuda", "translationUk": "допомога" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Хто така Марта?",
+          "options": ["La jefa", "La nueva compañera", "La recepcionista"],
+          "correctIndex": 0,
+          "explanationUk": "Хав’єр каже «Con Marta, la jefa» — Марта керівниця."
+        },
+        {
+          "questionUk": "О котрій в офісі обідають?",
+          "options": ["De una a dos", "De dos a tres", "De tres a cuatro"],
+          "correctIndex": 1,
+          "explanationUk": "Відповідь Хав’єра: «De dos a tres»."
+        },
+        {
+          "questionUk": "Що відбувається в п’ятницю?",
+          "options": ["Trabajan hasta las ocho", "No trabajan", "Salen a las tres"],
+          "correctIndex": 2,
+          "explanationUk": "Хав’єр каже «Los viernes salimos a las tres»."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_006",
+      "level": "A2",
+      "topicId": "t_a2_daily_errands",
+      "titleEs": "Un día de recados",
+      "titleUk": "День побутових справ",
+      "kind": "monologue",
+      "orderIndex": 6,
+      "lines": [
+        { "speaker": "A", "spanish": "Ayer tuve un día muy ocupado, con muchos recados.", "translationUk": "Учора в мене був дуже зайнятий день, багато справ." },
+        { "speaker": "A", "spanish": "Por la mañana fui al banco para abrir una cuenta.", "translationUk": "Зранку я пішов до банку, щоб відкрити рахунок." },
+        { "speaker": "A", "spanish": "Después pasé por la farmacia y compré unas vitaminas.", "translationUk": "Потім зайшов до аптеки й купив вітаміни." },
+        { "speaker": "A", "spanish": "También llevé unos pantalones a la tintorería del barrio.", "translationUk": "Також заніс штани до хімічної чистки у своєму районі." },
+        { "speaker": "A", "spanish": "A mediodía recogí un paquete en la oficina de correos.", "translationUk": "Опівдні забрав посилку на пошті." },
+        { "speaker": "A", "spanish": "Luego hice la compra en el mercado del barrio.", "translationUk": "Потім зробив покупки на ринку у своєму районі." },
+        { "speaker": "A", "spanish": "Compré patatas, tomates y una barra de pan.", "translationUk": "Купив картоплю, помідори й батон хліба." },
+        { "speaker": "A", "spanish": "Por la tarde pagué la factura de la luz en el móvil.", "translationUk": "Удень оплатив рахунок за електрику через телефон." },
+        { "speaker": "A", "spanish": "A las siete quedé con mi vecina para tomar algo.", "translationUk": "О сьомій я зустрівся із сусідкою, щоб щось випити." },
+        { "speaker": "A", "spanish": "Al final no hice todo lo que quería, pero casi.", "translationUk": "Зрештою я зробив не все, що хотів, але майже." }
+      ],
+      "keyWords": [
+        { "spanish": "los recados", "translationUk": "побутові справи, доручення" },
+        { "spanish": "el banco", "translationUk": "банк" },
+        { "spanish": "la farmacia", "translationUk": "аптека" },
+        { "spanish": "la tintorería", "translationUk": "хімічна чистка" },
+        { "spanish": "correos", "translationUk": "пошта" },
+        { "spanish": "la factura", "translationUk": "рахунок (за послуги)" },
+        { "spanish": "la compra", "translationUk": "покупки" },
+        { "spanish": "quedar con", "translationUk": "зустрітися з" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Куди розповідач пішов зранку?",
+          "options": ["Al banco", "A la tintorería", "Al mercado"],
+          "correctIndex": 0,
+          "explanationUk": "Він каже «Por la mañana fui al banco para abrir una cuenta»."
+        },
+        {
+          "questionUk": "Що він заніс до хімічної чистки?",
+          "options": ["Una camisa", "Unos pantalones", "Un abrigo"],
+          "correctIndex": 1,
+          "explanationUk": "Звучить речення «También llevé unos pantalones a la tintorería»."
+        },
+        {
+          "questionUk": "З ким він зустрівся о сьомій?",
+          "options": ["Con su hermana", "Con un compañero", "Con su vecina"],
+          "correctIndex": 2,
+          "explanationUk": "Він каже «A las siete quedé con mi vecina para tomar algo»."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_007",
+      "level": "A2",
+      "topicId": "t_a2_past_experiences",
+      "titleEs": "Las vacaciones en Asturias",
+      "titleUk": "Відпустка в Астурії",
+      "kind": "story",
+      "orderIndex": 7,
+      "lines": [
+        { "speaker": "A", "spanish": "El verano pasado estuve de vacaciones en Asturias.", "translationUk": "Минулого літа я був у відпустці в Астурії." },
+        { "speaker": "A", "spanish": "Viajé con mi hermana y con mi cuñado.", "translationUk": "Я поїхав із сестрою та її чоловіком." },
+        { "speaker": "A", "spanish": "Alquilamos un piso pequeño cerca de la playa.", "translationUk": "Ми орендували маленьку квартиру біля пляжу." },
+        { "speaker": "A", "spanish": "Todos los días nos levantábamos tarde y desayunábamos fuera.", "translationUk": "Щодня ми вставали пізно й снідали не вдома." },
+        { "speaker": "A", "spanish": "Por las mañanas caminábamos un rato por la montaña.", "translationUk": "Зранку ми трохи гуляли в горах." },
+        { "speaker": "A", "spanish": "El tiempo era bastante bueno, aunque llovía a veces.", "translationUk": "Погода була досить гарна, хоч іноді й дощило." },
+        { "speaker": "A", "spanish": "Un día conocimos a una familia de Bilbao.", "translationUk": "Одного дня ми познайомилися з родиною з Більбао." },
+        { "speaker": "A", "spanish": "Cenamos juntos y hablamos hasta muy tarde, casi de madrugada.", "translationUk": "Ми вечеряли разом і розмовляли до пізньої ночі, майже до ранку." },
+        { "speaker": "A", "spanish": "El último día perdí el móvil en el autobús.", "translationUk": "Останнього дня я загубив телефон в автобусі." },
+        { "speaker": "A", "spanish": "Por suerte, el conductor lo encontró y me lo devolvió.", "translationUk": "На щастя, водій його знайшов і повернув мені." },
+        { "speaker": "A", "spanish": "La verdad es que fueron unas vacaciones inolvidables.", "translationUk": "Чесно кажучи, це була незабутня відпустка." }
+      ],
+      "keyWords": [
+        { "spanish": "el verano pasado", "translationUk": "минулого літа" },
+        { "spanish": "alquilar", "translationUk": "орендувати" },
+        { "spanish": "la playa", "translationUk": "пляж" },
+        { "spanish": "levantarse tarde", "translationUk": "вставати пізно" },
+        { "spanish": "a veces", "translationUk": "іноді" },
+        { "spanish": "perder el móvil", "translationUk": "загубити телефон" },
+        { "spanish": "devolver", "translationUk": "повертати" },
+        { "spanish": "inolvidable", "translationUk": "незабутній" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Де розповідач провів відпустку?",
+          "options": ["En Asturias", "En Bilbao", "En Andalucía"],
+          "correctIndex": 0,
+          "explanationUk": "Перше речення: «El verano pasado estuve de vacaciones en Asturias»."
+        },
+        {
+          "questionUk": "Що вони робили щоранку?",
+          "options": ["Iban a la playa", "Caminaban por la montaña", "Dormían hasta el mediodía"],
+          "correctIndex": 1,
+          "explanationUk": "Звучить «Por las mañanas caminábamos un rato por la montaña»."
+        },
+        {
+          "questionUk": "Що сталося останнього дня?",
+          "options": ["Perdió el pasaporte", "Perdió el tren", "Perdió el móvil"],
+          "correctIndex": 2,
+          "explanationUk": "Він каже «El último día perdí el móvil en el autobús»."
+        }
+      ]
+    },
+    {
+      "id": "l_a2_008",
+      "level": "A2",
+      "topicId": "t_a2_city_directions",
+      "titleEs": "Cómo llegar al museo",
+      "titleUk": "Як дійти до музею",
+      "kind": "podcast",
+      "orderIndex": 8,
+      "lines": [
+        { "speaker": "A", "spanish": "Hola a todos y bienvenidos a un nuevo paseo por la ciudad.", "translationUk": "Вітаю всіх і запрошую на нову прогулянку містом." },
+        { "speaker": "A", "spanish": "Hoy vamos a ver cómo llegar al museo desde la plaza Mayor.", "translationUk": "Сьогодні подивимося, як дійти до музею від площі Майор." },
+        { "speaker": "A", "spanish": "Salimos de la plaza por la calle del Reloj.", "translationUk": "Виходимо з площі на вулицю Годинника." },
+        { "speaker": "A", "spanish": "Seguimos todo recto hasta el semáforo y giramos a la izquierda.", "translationUk": "Ідемо прямо до світлофора й повертаємо ліворуч." },
+        { "speaker": "A", "spanish": "Al lado del quiosco hay una parada de autobús.", "translationUk": "Поруч із кіоском є автобусна зупинка." },
+        { "speaker": "A", "spanish": "Si preferís el metro, la estación está a cinco minutos.", "translationUk": "Якщо ви надаєте перевагу метро, станція за п’ять хвилин." },
+        { "speaker": "A", "spanish": "Tenéis que coger la línea dos y bajar en la tercera parada.", "translationUk": "Треба сісти на другу лінію й вийти на третій зупинці." },
+        { "speaker": "A", "spanish": "La salida del metro da a una plaza muy grande.", "translationUk": "Вихід із метро веде на дуже велику площу." },
+        { "speaker": "A", "spanish": "El museo está enfrente, detrás de la fuente.", "translationUk": "Музей навпроти, за фонтаном." },
+        { "speaker": "A", "spanish": "Se tarda unos veinte minutos andando desde aquí.", "translationUk": "Звідси пішки йти близько двадцяти хвилин." },
+        { "speaker": "A", "spanish": "Si vais en coche, hay un aparcamiento junto al parque.", "translationUk": "Якщо поїдете машиною, біля парку є паркування." },
+        { "speaker": "A", "spanish": "Los domingos la entrada es gratuita por la tarde.", "translationUk": "У неділю після обіду вхід безкоштовний." },
+        { "speaker": "A", "spanish": "Y al salir, os recomiendo un bar de tapas muy cerca.", "translationUk": "А на виході раджу вам бар із тапас зовсім поруч." },
+        { "speaker": "A", "spanish": "¡Nos escuchamos la semana que viene! Hasta entonces.", "translationUk": "Почуємося наступного тижня! До того часу." }
+      ],
+      "keyWords": [
+        { "spanish": "seguir todo recto", "translationUk": "йти прямо" },
+        { "spanish": "giramos a la izquierda", "translationUk": "повертаємо ліворуч" },
+        { "spanish": "la parada", "translationUk": "зупинка" },
+        { "spanish": "la línea", "translationUk": "лінія (метро)" },
+        { "spanish": "la salida", "translationUk": "вихід" },
+        { "spanish": "el aparcamiento", "translationUk": "паркування" },
+        { "spanish": "gratuito", "translationUk": "безкоштовний" },
+        { "spanish": "las tapas", "translationUk": "тапас (закуски)" }
+      ],
+      "comprehensionQuestions": [
+        {
+          "questionUk": "Куди треба повернути біля світлофора?",
+          "options": ["A la izquierda", "A la derecha", "Todo recto"],
+          "correctIndex": 0,
+          "explanationUk": "У записі сказано «giramos a la izquierda» — ліворуч."
+        },
+        {
+          "questionUk": "Скільки часу йти пішки від площі?",
+          "options": ["Unos diez minutos", "Unos veinte minutos", "Una hora"],
+          "correctIndex": 1,
+          "explanationUk": "Звучить «Se tarda unos veinte minutos andando desde aquí»."
+        },
+        {
+          "questionUk": "Коли вхід до музею безкоштовний?",
+          "options": ["Los sábados por la mañana", "Todos los días", "Los domingos por la tarde"],
+          "correctIndex": 2,
+          "explanationUk": "Останні репліки: «Los domingos la entrada es gratuita por la tarde»."
+        }
+      ]
+    }
+  ]
+}
