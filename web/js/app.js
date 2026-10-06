@@ -154,7 +154,7 @@ function buildView(name, params) {
     case 'topic': return renderTopic(app, { id: params.id });
     case 'session': return renderSession(app, { topicId: params.topic || null });
     case 'review': return renderReview(app);
-    case 'words': return renderWords(app, { level: params.level || null });
+    case 'words': return renderWords(app, { level: wordsLevel(params) });
     case 'word': return renderWord(app, { id: params.id });
     case 'grammar': return renderGrammarList(app);
     case 'grammarDetail': return renderGrammarDetail(app, { id: params.id });
@@ -170,6 +170,15 @@ function buildView(name, params) {
     case 'diagnostics': return renderDiagnostics(app);
     default: return renderHome(app);
   }
+}
+
+/**
+ * Рівень зі шляху `#/words/A1` (маршрут зіставляє його як `id`)
+ * або з параметра `?level=`.
+ */
+function wordsLevel(params) {
+  const candidate = String(params.level || params.id || '').toUpperCase();
+  return ['A0', 'A1', 'A2'].includes(candidate) ? candidate : null;
 }
 
 /** Розбирає hash виду `#/word/w_a0_hola?hint=1`. */

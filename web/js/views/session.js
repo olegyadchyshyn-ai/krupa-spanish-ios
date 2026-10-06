@@ -36,16 +36,13 @@ export function renderReview(app) {
 export function reviewOptions(app) {
   const snapshot = app.store.snapshot();
   const soon = dueSoon(app.store, 24);
-  let emptyMessage = 'Наступні картки з\'являться за розкладом інтервального повторення.';
-  if (snapshot.dueToday > 0) {
-    emptyMessage = 'Ще в черзі: ' + snapshot.dueToday + ' ' + plural(snapshot.dueToday, 'картка', 'картки', 'карток') + '.';
-  } else if (soon > 0) {
-    emptyMessage = 'На найближчу добу заплановано ' + soon + ' ' + plural(soon, 'картку', 'картки', 'карток') + '.';
-  }
+  const rest = 'Наступні картки з\'являться за розкладом інтервального повторення.';
+  const queued = 'Ще в черзі: ' + snapshot.dueToday + ' ' + plural(snapshot.dueToday, 'картка', 'картки', 'карток') + '.';
+  const tomorrow = 'На найближчу добу заплановано ' + soon + ' ' + plural(soon, 'картку', 'картки', 'карток') + '.';
   return {
     title: 'Повторення',
     emptyTitle: 'На сьогодні повторень немає',
-    emptyMessage,
+    emptyMessage: snapshot.dueToday > 0 ? queued : (soon > 0 ? tomorrow : rest),
     emptyActionTitle: 'До курсу',
     emptyAction: () => app.navigate('#/learn')
   };
@@ -60,11 +57,11 @@ export function createSessionView(app, plan, options) {
   const box = el('stack');
 
   if (!items.length) {
-    box.appendChild(emptyState(
-      opts.emptyTitle || 'На сьогодні все зроблено',
-      opts.emptyMessage || 'Повторень немає — можна почати нове заняття.',
-      { icon: '✅', actionTitle: opts.emptyActionTitle || 'До курсу', onAction: opts.emptyAction || (() => app.navigate('#/learn')) }
-    ));
+    box.appendChild(emptyState(opts.emptyTitle || 'На сьогодні все зроблено', opts.emptyMessage || 'Повторень немає.', {
+      icon: '✅',
+      actionTitle: opts.emptyActionTitle || 'До курсу',
+      onAction: opts.emptyAction || (() => app.navigate('#/learn'))
+    }));
     return box;
   }
 
@@ -81,34 +78,26 @@ export function createSessionView(app, plan, options) {
 
   function prepareStep() {
     const item = items[state.index];
+    const ex = item.kind === 'exercise' ? item.data : null;
     const data = { item };
-    if (item.kind === 'exercise') {
-      const ex = item.data;
-      if (ex.kind === 'multiple_choice' || ex.kind === 'translation_es_uk') data.choices = exerciseOptions(ex, app);
-      else if (ex.kind === 'sentence_build') data.tokens = tokenState(shuffleArray(buildTokens(ex)));
-      else if (ex.kind === 'match_pairs') Object.assign(data, prepareMatch(ex, app));
-      else if (ex.kind === 'dictation' || ex.kind === 'listening') speak(ex.answerEs);
-    } else if (item.kind === 'listening') {
+    if (ex && (ex.kind === 'multiple_choice' || ex.kind === 'translation_es_uk')) { data.choices = exerciseOptions(ex, app); }
+    else if (ex && ex.kind === 'sentence_build') { data.tokens = tokenState(shuffleArray(buildTokens(ex))); }
+    else if (ex && ex.kind === 'match_pairs') { Object.assign(data, prepareMatch(ex, app)); }
+    else if (ex && TYPED_EXERCISES[ex.kind] && TYPED_EXERCISES[ex.kind].audio) { speak(ex.answerEs); }
+    else if (item.kind === 'listening') {
       data.questions = item.data.comprehensionQuestions || [];
-      data.answers = [];
-      data.question = 0;
-      data.chosen = null;
-      data.showText = false;
-      data.showTranslation = false;
+      data.answers = []; data.question = 0; data.chosen = null; data.showText = false; data.showTranslation = false;
     } else if (item.kind === 'word' || item.kind === 'sentence') {
-      if (item.prompt === 'recognize') data.choices = translationChoices(item, app);
-      else if (item.prompt === 'buildSentence') data.tokens = tokenState(shuffleArray(sentenceTokens(item)));
-      else if (item.prompt === 'listen') speak(spanishText(item));
+      if (item.prompt === 'recognize') { data.choices = translationChoices(item, app); }
+      else if (item.prompt === 'buildSentence') { data.tokens = tokenState(shuffleArray(sentenceTokens(item))); }
+      else if (item.prompt === 'listen') { speak(spanishText(item)); }
     }
     return data;
   }
 
   function render() {
     clear(box);
-    if (state.index >= items.length) {
-      box.appendChild(buildSummary());
-      return;
-    }
+    if (state.index >= items.length) { box.appendChild(buildSummary()); return; }
     if (!step) step = prepareStep();
     appendAll(box, [
       buildTop(),
@@ -141,8 +130,7 @@ export function createSessionView(app, plan, options) {
 
   function buildGrammarBody(note) {
     const nodes = [
-      text('session-spanish', note.titleEs),
-      text('session-title', note.titleUk),
+      text('session-spanish', note.titleEs), text('session-title', note.titleUk),
       infoBox('Схема', note.patternUk),
       note.explanationUk ? text('muted', note.explanationUk) : null
     ];
@@ -158,9 +146,10 @@ export function createSessionView(app, plan, options) {
         speakButton(() => speak(example.spanish))
       ]))));
     }
-    nodes.push(infoBox('Типова помилка', note.commonMistakeUk, { tone: 'error' }));
-    nodes.push(infoBox('Порада для україномовних', note.tipForUkSpeakersUk, { tone: 'success' }));
-    return nodes;
+    return nodes.concat([
+      infoBox('Типова помилка', note.commonMistakeUk, { tone: 'error' }),
+      infoBox('Порада для україномовних', note.tipForUkSpeakersUk, { tone: 'success' })
+    ]);
   }
 
   function buildCardBody(item) {
@@ -187,63 +176,39 @@ export function createSessionView(app, plan, options) {
       ];
     }
     if (item.prompt === 'buildSentence') {
-      return [
-        text('session-prompt', 'Складіть речення зі слів'),
-        text('session-title', sentenceHint(item)),
-        buildTokensView()
-      ];
+      return [text('session-prompt', 'Складіть речення зі слів'), text('session-title', sentenceHint(item)), buildTokensView()];
     }
     const nodes = [text('session-prompt', 'Напишіть іспанською'), text('session-title', data.translationUk)];
     if (data.partOfSpeech) nodes.push(text('muted', 'Частина мови: ' + data.partOfSpeech));
-    nodes.push(buildInput('Напишіть іспанською…'));
-    return nodes;
+    return nodes.concat(buildInput('Напишіть іспанською…'));
   }
 
   function buildExerciseBody(ex) {
     const prompt = ex.promptUk || '';
-    switch (ex.kind) {
-      case 'multiple_choice':
-      case 'translation_es_uk':
-        return [
-          ex.kind === 'translation_es_uk' && ex.promptEs
-            ? el('row-between', [text('session-spanish', ex.promptEs), speakButton(() => speak(ex.promptEs))])
-            : null,
-          text('session-prompt', prompt || 'Оберіть правильний варіант'),
-          buildOptions(step.choices, ex.answerUk || ex.answerEs)
-        ];
-      case 'translation_uk_es':
-        return [text('session-prompt', prompt || 'Перекладіть іспанською'), buildInput('Напишіть іспанською…')];
-      case 'dictation':
-        return [
-          text('session-prompt', prompt || 'Прослухайте й запишіть речення'),
-          audioButton('Прослухати ще раз', ex.answerEs),
-          buildInput('Напишіть, що почули…')
-        ];
-      case 'fill_gap':
-        return [
-          text('session-prompt', prompt || 'Вставте пропущене слово'),
-          text('session-spanish', gapSentence(ex)),
-          buildInput('Впишіть пропущене слово…')
-        ];
-      case 'sentence_build':
-        return [
-          text('session-prompt', prompt || 'Складіть речення зі слів'),
-          ex.answerUk ? text('session-title', ex.answerUk) : null,
-          buildTokensView()
-        ];
-      case 'match_pairs':
-        return [text('session-prompt', prompt || 'Зіставте пари'), buildPairsBody()];
-      case 'listening':
-        return [
-          text('session-prompt', prompt || 'Прослухайте та напишіть'),
-          audioButton('Прослухати', ex.answerEs),
-          buildInput('Напишіть, що почули…')
-        ];
-      case 'speaking':
-        return buildSpeakingBody(ex);
-      default:
-        return [text('session-prompt', prompt || 'Дайте відповідь'), buildInput('Ваша відповідь…')];
+    const sample = ex.kind === 'translation_es_uk' ? (ex.promptEs || '') : '';
+    if (ex.kind === 'multiple_choice' || ex.kind === 'translation_es_uk') {
+      return [
+        sample ? el('row-between', [text('session-spanish', sample), speakButton(() => speak(sample))]) : null,
+        text('session-prompt', prompt || 'Оберіть правильний варіант'),
+        buildOptions(step.choices, ex.answerUk || ex.answerEs)
+      ];
     }
+    if (ex.kind === 'fill_gap') {
+      return [text('session-prompt', prompt || 'Вставте пропущене слово'), text('session-spanish', gapSentence(ex)), buildInput('Впишіть пропущене слово…')];
+    }
+    if (ex.kind === 'sentence_build') {
+      return [text('session-prompt', prompt || 'Складіть речення зі слів'), ex.answerUk ? text('session-title', ex.answerUk) : null, buildTokensView()];
+    }
+    if (ex.kind === 'match_pairs') return [text('session-prompt', prompt || 'Зіставте пари'), buildPairsBody()];
+    if (ex.kind === 'speaking') return buildSpeakingBody(ex);
+    // Вправи з полем введення: диктант і аудіювання ще й озвучуються.
+    const typed = TYPED_EXERCISES[ex.kind];
+    if (!typed) return [text('session-prompt', prompt || 'Дайте відповідь'), buildInput('Ваша відповідь…')];
+    return [
+      text('session-prompt', prompt || typed.prompt),
+      typed.audio ? audioButton('Прослухати', ex.answerEs) : null,
+      buildInput(typed.placeholder)
+    ];
   }
 
   function audioButton(title, value) {
@@ -299,9 +264,7 @@ export function createSessionView(app, plan, options) {
     return el('stack', nodes);
   }
 
-  function tokensAnswer() {
-    return step.tokens.picked.map((index) => step.tokens.pool[index]).join(' ');
-  }
+  function tokensAnswer() { return step.tokens.picked.map((index) => step.tokens.pool[index]).join(' '); }
 
   function toggleToken(index) {
     if (state.feedback) return;
@@ -329,21 +292,14 @@ export function createSessionView(app, plan, options) {
 
   function pickPair(side, value) {
     if (state.feedback) return;
-    if (side === 'es') step.pickedLeft = step.pickedLeft === value ? null : value;
-    else step.pickedRight = step.pickedRight === value ? null : value;
-    if (!step.pickedLeft || !step.pickedRight) {
-      render();
-      return;
-    }
+    if (side === 'es') { step.pickedLeft = step.pickedLeft === value ? null : value; }
+    else { step.pickedRight = step.pickedRight === value ? null : value; }
+    if (!step.pickedLeft || !step.pickedRight) { render(); return; }
     const option = step.right.find((entry) => entry.uk === step.pickedRight);
     if (option && option.key === step.pickedLeft) {
       step.matched.push(step.pickedLeft);
       if (step.matched.length >= step.pairs.length) {
-        submitAnswer(step.answerForCheck, {
-          message: 'Усі пари зібрано!',
-          correct: true,
-          recommended: state.usedHint ? 'HARD' : 'GOOD'
-        });
+        submitAnswer(step.answerForCheck, { message: 'Усі пари зібрано!', correct: true, recommended: state.usedHint ? 'HARD' : 'GOOD' });
         return;
       }
     } else {
@@ -368,13 +324,12 @@ export function createSessionView(app, plan, options) {
     const Recognition = speechRecognition();
     if (Recognition) {
       nodes.push(button(step.recording ? 'Слухаю…' : 'Записати', {
-        icon: '🎤',
-        disabled: Boolean(step.recording),
-        onClick: () => startRecognition(Recognition, answer)
+        icon: '🎤', disabled: Boolean(step.recording), onClick: () => startRecognition(Recognition, answer)
       }));
       if (step.transcript) nodes.push(text('muted', 'Почуто: ' + step.transcript));
       return nodes;
     }
+    // Резервний шлях для Safari: розпізнавання нестабільне — оцінюємо себе самі.
     nodes.push(text('session-prompt', 'Вимовте вголос, потім оцініть себе'));
     nodes.push(el('row', [
       sec('Правильно', () => submitAnswer(answer, {
@@ -416,9 +371,7 @@ export function createSessionView(app, plan, options) {
       render();
     };
     const nodes = [
-      text('session-prompt', 'Аудіювання'),
-      text('session-title', data.titleUk),
-      text('session-spanish', data.titleEs),
+      text('session-prompt', 'Аудіювання'), text('session-title', data.titleUk), text('session-spanish', data.titleEs),
       el('row', [button('Прослухати діалог', { icon: '🎧', onClick: () => speakLines(0) }), sec('Повільно', () => speakLines(0.6))]),
       el('row', [
         ghost(step.showText ? 'Сховати текст' : 'Показати текст', toggle('showText')),
@@ -437,8 +390,7 @@ export function createSessionView(app, plan, options) {
     if (keyWords.length && settings.listeningHints !== false) {
       nodes.push(text('session-prompt', 'Ключові слова'));
       nodes.push(el('tokens', keyWords.map((word) => chip(
-        word.spanish + (word.translationUk ? ' — ' + word.translationUk : ''),
-        { onClick: () => speak(word.spanish) }
+        word.spanish + (word.translationUk ? ' — ' + word.translationUk : ''), { onClick: () => speak(word.spanish) }
       ))));
     }
     return nodes.concat(buildQuestions());
@@ -458,11 +410,7 @@ export function createSessionView(app, plan, options) {
           ? (optionIndex === question.correctIndex ? 'correct' : step.chosen === optionIndex ? 'wrong' : null)
           : (step.chosen === optionIndex ? 'selected' : null),
         disabled: answered,
-        onClick: () => {
-          step.chosen = optionIndex;
-          step.answers[index] = optionIndex === question.correctIndex;
-          render();
-        }
+        onClick: () => { step.chosen = optionIndex; step.answers[index] = optionIndex === question.correctIndex; render(); }
       })))
     ];
     if (!answered) return nodes;
@@ -470,8 +418,10 @@ export function createSessionView(app, plan, options) {
     const last = index + 1 >= questions.length;
     nodes.push(button(last ? 'Завершити' : 'Наступне питання', {
       onClick: () => {
-        if (last) finishListening();
-        else { step.question += 1; step.chosen = null; render(); }
+        if (last) { finishListening(); return; }
+        step.question += 1;
+        step.chosen = null;
+        render();
       }
     }));
     return nodes;
@@ -501,10 +451,10 @@ export function createSessionView(app, plan, options) {
       correctAnswer: patch.correctAnswer !== undefined ? patch.correctAnswer : (result.correctAnswer || ''),
       explanation: result.explanation || ''
     };
-    if (patch.recommended) state.recommended = patch.recommended;
-    else if (!state.recommended) {
-      state.recommended = state.feedback.correct ? (state.usedHint ? 'HARD' : 'GOOD') : 'AGAIN';
-    }
+    // Те саме, що `gradeFor(item, answer, usedHint)`, але придатне й для кроків,
+    // де правильність визначають не рядки (пари, питання діалогу).
+    if (patch.recommended) { state.recommended = patch.recommended; }
+    else if (!state.recommended) { state.recommended = state.feedback.correct ? (state.usedHint ? 'HARD' : 'GOOD') : 'AGAIN'; }
     render();
   }
 
@@ -526,9 +476,7 @@ export function createSessionView(app, plan, options) {
       nodes.push(infoBox('Приклад', data.exampleEs + (data.exampleUk ? ' — ' + data.exampleUk : '')));
     }
     if (item.kind === 'sentence' && data.audioHint) nodes.push(infoBox('Підказка вимови', data.audioHint));
-    if (item.kind === 'word' && settings.showPronunciationHints && data.pronunciation) {
-      nodes.push(infoBox('Вимова', data.pronunciation));
-    }
+    if (item.kind === 'word' && settings.showPronunciationHints && data.pronunciation) { nodes.push(infoBox('Вимова', data.pronunciation)); }
     if (item.kind === 'word' && settings.showIpa && data.ipaHint) nodes.push(infoBox('Наголос та IPA', data.ipaHint));
     if (data.notesUk && data.notesUk !== state.feedback.explanation) nodes.push(infoBox('Нотатка', data.notesUk));
     if (data.cognateNoteUk) nodes.push(infoBox('Схоже на українське', data.cognateNoteUk, { tone: 'success' }));
@@ -538,16 +486,12 @@ export function createSessionView(app, plan, options) {
   function buildActions() {
     const item = step.item;
     if (!itemIsGraded(item)) {
-      return el('stack', [
-        text('muted', 'Довідкова картка — оцінки немає.'),
-        button('Далі', { onClick: () => advance(null) })
-      ]);
+      return el('stack', [text('muted', 'Довідкова картка — оцінки немає.'), button('Далі', { onClick: () => advance(null) })]);
     }
-    const previews = SrsEngine.previews(app.store.cardOrCreate(item));
     const recommended = state.recommended || gradeFor(item, state.answer, state.usedHint);
     return el('stack', [
       text('session-prompt', 'Оцініть, як було (натисніть, щоб змінити)'),
-      el('grades', previews.map((preview) => h('button', {
+      el('grades', SrsEngine.previews(app.store.cardOrCreate(item)).map((preview) => h('button', {
         class: 'grade-btn grade-' + preview.grade + (preview.grade === recommended ? ' grade-recommended' : ''),
         type: 'button',
         'aria-label': GRADE_INFO[preview.grade].title,
@@ -564,31 +508,26 @@ export function createSessionView(app, plan, options) {
     if (grade) {
       app.store.recordAnswer(step.item, grade, Date.now() - state.startedAt, state.usedHint);
       state.results += 1;
-      if (GRADE_INFO[grade].correct) state.correct += 1;
-      else state.wrong += 1;
+      if (GRADE_INFO[grade].correct) { state.correct += 1; } else { state.wrong += 1; }
     }
     state.index += 1;
-    state.answer = '';
-    state.feedback = null;
-    state.usedHint = false;
-    state.recommended = null;
-    state.startedAt = Date.now();
+    state.answer = ''; state.feedback = null; state.usedHint = false;
+    state.recommended = null; state.startedAt = Date.now();
     step = null;
     render();
   }
 
   function buildSummary() {
     const accuracy = state.results ? Math.round((state.correct / state.results) * 100) + '%' : '—';
+    const minutes = formatMinutes((Date.now() - state.sessionStartedAt) / 60000);
     return el('stack', [
-      h('div', { class: 'gradient-header' }, [
+      el('gradient-header', [
         text('section-title', 'Заняття завершено'),
         text('muted', 'Опрацьовано ' + items.length + ' ' + plural(items.length, 'крок', 'кроки', 'кроків'))
       ]),
       el('grid-2', [
-        statTile('Правильно', state.correct, '✓'),
-        statTile('Помилок', state.wrong, '✕'),
-        statTile('Точність', accuracy, '🎯'),
-        statTile('Час', formatMinutes((Date.now() - state.sessionStartedAt) / 60000), '⏱')
+        statTile('Правильно', state.correct, '✓'), statTile('Помилок', state.wrong, '✕'),
+        statTile('Точність', accuracy, '🎯'), statTile('Час', minutes, '⏱')
       ]),
       button('Ще заняття', { onClick: () => app.navigate('#/session') }),
       button('Завершити', { variant: 'secondary', onClick: () => app.navigate('#/') })
@@ -601,30 +540,18 @@ export function createSessionView(app, plan, options) {
 
 // MARK: - Дрібні хелпери DOM
 
-function el(className, children) {
-  return h('div', { class: className }, children);
-}
-
-function text(className, value) {
-  return h('div', { class: className, text: value == null ? '' : String(value) });
-}
-
-function appendAll(parent, children) {
-  for (const child of children || []) if (child) parent.appendChild(child);
-}
+function el(className, children) { return h('div', { class: className }, children); }
+function text(className, value) { return h('div', { class: className, text: value == null ? '' : String(value) }); }
+function appendAll(parent, children) { for (const child of children || []) if (child) parent.appendChild(child); }
 
 /** Який блок плану відповідає кожному кроку (для назви у шапці). */
 function blockKinds(plan, items) {
-  const kinds = new Array(items.length).fill('REVIEW');
-  let cursor = 0;
+  const kinds = [];
   for (const block of (plan && plan.blocks) || []) {
-    for (const item of block.items || []) {
-      if (cursor >= kinds.length) break;
-      kinds[cursor] = block.kind;
-      cursor += 1;
-    }
+    for (let index = 0; index < (block.items || []).length; index++) kinds.push(block.kind);
   }
-  return kinds;
+  while (kinds.length < items.length) kinds.push('REVIEW');
+  return kinds.slice(0, items.length);
 }
 
 function ensureSessionStyles() {
@@ -636,6 +563,13 @@ function ensureSessionStyles() {
 }
 
 // MARK: - Дані кроку
+
+/** Вправи з полем введення: підпис кроку, підказка в полі, автозвук. */
+const TYPED_EXERCISES = {
+  translation_uk_es: { prompt: 'Перекладіть іспанською', placeholder: 'Напишіть іспанською…' },
+  dictation: { prompt: 'Прослухайте й запишіть речення', placeholder: 'Напишіть, що почули…', audio: true },
+  listening: { prompt: 'Прослухайте та напишіть', placeholder: 'Напишіть, що почули…', audio: true }
+};
 
 function spanishText(item) {
   if (item.kind === 'word' && item.prompt === 'recognize') return itemSpanish(item);
@@ -661,15 +595,12 @@ function recognizeCorrect(item) {
 function translationChoices(item, app) {
   const data = item.data;
   const correct = recognizeCorrect(item);
-  const pool = item.kind === 'word'
+  const pool = (item.kind === 'word'
     ? wordsOfLevel(app.content, data.level).map((word) => word.translationUk)
-    : (app.content.sentences || []).filter((sentence) => sentence.level === data.level).map((sentence) => sentence.spanish);
-  const options = [];
-  for (const value of shuffleArray(pool)) {
-    if (options.length >= 3) break;
-    if (value && value !== correct && options.indexOf(value) === -1) options.push(value);
-  }
-  return shuffleArray([correct].concat(options));
+    : (app.content.sentences || []).filter((sentence) => sentence.level === data.level).map((sentence) => sentence.spanish))
+    .filter((value) => value && value !== correct);
+  const unique = pool.filter((value, index) => pool.indexOf(value) === index);
+  return shuffleArray([correct].concat(shuffleArray(unique).slice(0, 3)));
 }
 
 /** Варіанти вправ із вибором; якщо дистракторів немає — добираємо з інших вправ рівня. */
@@ -691,9 +622,7 @@ function gapSentence(exercise) {
   return value.indexOf('__') !== -1 ? value : value + ' ____';
 }
 
-function tokenState(pool) {
-  return { pool: (pool || []).filter(Boolean), picked: [] };
-}
+function tokenState(pool) { return { pool: (pool || []).filter(Boolean), picked: [] }; }
 
 /**
  * Пари для `match_pairs`: слова з `relatedWordIds` (іспанське ↔ українське)
@@ -709,9 +638,7 @@ function prepareMatch(exercise, app) {
     pairs.length = 0;
     if (exercise.answerEs && exercise.answerUk) pairs.push({ es: exercise.answerEs, uk: exercise.answerUk });
   }
-  if (!pairs.length) {
-    pairs.push({ es: exercise.answerEs || exercise.promptEs || '—', uk: exercise.answerUk || exercise.promptUk || '—' });
-  }
+  if (!pairs.length) pairs.push({ es: exercise.answerEs || exercise.promptEs || '—', uk: exercise.answerUk || exercise.promptUk || '—' });
   const extras = (exercise.distractors || []).filter(Boolean);
   if (!extras.length) {
     const pool = wordsOfLevel(app.content, exercise.level)
@@ -721,11 +648,7 @@ function prepareMatch(exercise, app) {
   }
   const right = shuffleArray(pairs.map((pair) => ({ uk: pair.uk, key: pair.es })).concat(extras.map((uk) => ({ uk, key: null }))));
   return {
-    pairs: pairs,
-    right: right,
-    matched: [],
-    pickedLeft: null,
-    pickedRight: null,
+    pairs, right, matched: [], pickedLeft: null, pickedRight: null,
     answerForCheck: exercise.answerEs || exercise.answerUk || pairs[0].es
   };
 }
@@ -761,8 +684,7 @@ function evaluate(item, answer) {
 
 function dueSoon(store, hours) {
   const now = Date.now();
-  const limit = now + hours * 3600000;
   return Object.values(store.cards || {})
-    .filter((card) => !card.suspended && card.dueAt > now && card.dueAt <= limit)
+    .filter((card) => !card.suspended && card.dueAt > now && card.dueAt <= now + hours * 3600000)
     .length;
 }
