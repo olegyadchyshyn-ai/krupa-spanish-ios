@@ -167,7 +167,8 @@ final class BackupService: ObservableObject {
             ])
         }
         let envelope = try Self.makeDecoder().decode(BackupEnvelope.self, from: data)
-        progress.importData(try Self.makeEncoder().encode(envelope.data))
+        // importData теж кидає виняток — тому обидва виклики з `try`.
+        try progress.importData(Self.makeEncoder().encode(envelope.data))
         return Summary(
             exportedAt: envelope.exportedAt,
             contentVersion: envelope.contentVersion,
