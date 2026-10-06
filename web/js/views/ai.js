@@ -165,10 +165,10 @@ function corrections(text) {
     add(gustar[0], 'me gustan ' + gustar[1], 'З множиною вживаємо me gustan');
   }
 
-  // 5. Артикль у звертанні: «el señor» → «señor».
-  const address = source.match(/\b(el|la)\s+(señor|señora)\b/i);
+  // 5. Артикль у звертанні: «El señor García» → «señor García».
+  const address = source.match(/\b([Ee]l|[Ll]a)\s+([Ss]eñor|[Ss]eñora)\b(\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?/);
   if (address) {
-    add(address[0], address[0].replace(/^(el|la)\s+/i, ''), 'У звертанні артикль не вживаємо: señor García');
+    add(address[0], address[0].replace(/^([Ee]l|[Ll]a)\s+/, ''), 'У звертанні артикль не вживаємо: señor García');
   }
 
   // 6. Національність: «estoy español» → «soy español».

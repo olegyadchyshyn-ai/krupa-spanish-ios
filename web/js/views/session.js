@@ -115,7 +115,7 @@ export function createSessionView(app, plan, options) {
       ...buildBody(),
       state.feedback ? buildFeedback() : null,
       buildReveal(),
-      state.feedback ? buildActions() : null
+      state.feedback || !itemIsGraded(step.item) ? buildActions() : null
     ]);
   }
 
