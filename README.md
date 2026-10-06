@@ -40,7 +40,7 @@ iOS-порт застосунку для вивчення іспанської �
 1. Завантажте проєкт на GitHub (див. нижче).
 2. У репозиторії: **Settings → Pages → Source = GitHub Actions** (один раз).
 3. Після кожного пушу workflow **Deploy web version (PWA)** сам публікує теку `web/`.
-4. Посилання для дитини матиме вигляд `https://ВАШ-ЛОГІН.github.io/НАЗВА-РЕПОЗИТОРІЮ/`
+4. Посилання для дитини матиме вигляд `https://olegyadchyshyn-ai.github.io/krupa-spanish-ios/`
    — його можна надіслати у WhatsApp. Інструкція для дитини:
    [install-web-uk.md](docs/install-web-uk.md).
 
@@ -78,7 +78,7 @@ git init
 git add .
 git commit -m "KRUPA Spanish: iOS-версія"
 git branch -M main
-git remote add origin https://github.com/ВАШ-ЛОГІН/krupa-spanish-ios.git
+git remote add origin https://github.com/olegyadchyshyn-ai/krupa-spanish-ios.git
 git push -u origin main
 ```
 
