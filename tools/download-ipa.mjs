@@ -9,16 +9,54 @@
 // Токен потрібен лише на час завантаження (права: Actions — Read).
 // Після використання його можна відкликати: https://github.com/settings/tokens
 
-import { mkdtemp, writeFile, readdir, copyFile, rm, stat } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
+import { writeFile, stat } from 'node:fs/promises';
+import { inflateRawSync } from 'node:zlib';
 import { join, resolve } from 'node:path';
-import { createWriteStream } from 'node:fs';
-import { Readable } from 'node:stream';
-import { pipeline } from 'node:stream/promises';
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
 
-const run = promisify(execFile);
+/**
+ * Мінімальний читач ZIP: повертає [{ name, content }].
+ * Підтримує методи 0 (без стиснення) і 8 (deflate) — саме їх використовує
+ * GitHub для архівів артефактів.
+ */
+function extractZip(buffer) {
+  let eocd = -1;
+  const minOffset = Math.max(0, buffer.length - 66000);
+  for (let i = buffer.length - 22; i >= minOffset; i -= 1) {
+    if (buffer.readUInt32LE(i) === 0x06054b50) { eocd = i; break; }
+  }
+  if (eocd < 0) throw new Error('Файл не схожий на ZIP-архів');
+
+  const count = buffer.readUInt16LE(eocd + 10);
+  let offset = buffer.readUInt32LE(eocd + 16);
+  const directory = [];
+
+  for (let i = 0; i < count; i += 1) {
+    if (buffer.readUInt32LE(offset) !== 0x02014b50) break;
+    const method = buffer.readUInt16LE(offset + 10);
+    const compressedSize = buffer.readUInt32LE(offset + 20);
+    const nameLength = buffer.readUInt16LE(offset + 28);
+    const extraLength = buffer.readUInt16LE(offset + 30);
+    const commentLength = buffer.readUInt16LE(offset + 32);
+    const localOffset = buffer.readUInt32LE(offset + 42);
+    const name = buffer.toString('utf8', offset + 46, offset + 46 + nameLength);
+    directory.push({ name, method, compressedSize, localOffset });
+    offset += 46 + nameLength + extraLength + commentLength;
+  }
+
+  const entries = [];
+  for (const entry of directory) {
+    if (entry.name.endsWith('/')) continue;
+    const header = entry.localOffset;
+    if (buffer.readUInt32LE(header) !== 0x04034b50) continue;
+    const nameLength = buffer.readUInt16LE(header + 26);
+    const extraLength = buffer.readUInt16LE(header + 28);
+    const start = header + 30 + nameLength + extraLength;
+    const raw = buffer.subarray(start, start + entry.compressedSize);
+    const content = entry.method === 0 ? Buffer.from(raw) : inflateRawSync(raw);
+    entries.push({ name: entry.name, content });
+  }
+  return entries;
+}
 
 function parseArgs(argv) {
   const args = {};
@@ -91,35 +129,24 @@ if (!artifact) {
 console.log('Знайдено: ' + artifact.name + ', створено ' + artifact.created_at
   + ', розмір ' + Math.round(artifact.size_in_bytes / 1024) + ' КБ');
 
-const workDir = await mkdtemp(join(tmpdir(), 'krupa-ipa-'));
-const zipPath = join(workDir, 'artifact.zip');
-
 console.log('Завантажую архів…');
 const downloadResponse = await api(artifact.archive_download_url);
-await pipeline(Readable.fromWeb(downloadResponse.body), createWriteStream(zipPath));
+const archive = Buffer.from(await downloadResponse.arrayBuffer());
+console.log('Розпаковую (' + Math.round(archive.length / 1024) + ' КБ)…');
 
-console.log('Розпаковую…');
-// Використовуємо tar (є у Windows 10+ і в macOS): він уміє і zip.
-try {
-  await run('tar', ['-xf', zipPath, '-C', workDir]);
-} catch (error) {
-  await run('powershell', ['-NoProfile', '-Command',
-    'Expand-Archive -LiteralPath "' + zipPath + '" -DestinationPath "' + workDir + '" -Force']);
-}
-
-const entries = await readdir(workDir, { recursive: true });
-const ipaRelative = entries.find((name) => String(name).toLowerCase().endsWith('.ipa'));
-if (!ipaRelative) {
+// Розпаковуємо ZIP власними силами: у середовищі з обмеженнями запуск
+// зовнішніх програм (tar, powershell) може бути заблокований.
+const entries = extractZip(archive);
+const ipaEntry = entries.find((entry) => entry.name.toLowerCase().endsWith('.ipa'));
+if (!ipaEntry) {
   console.error('В архіві немає .ipa — перевірте лог збірки.');
+  console.error('Вміст архіву: ' + entries.map((entry) => entry.name).join(', '));
   process.exit(1);
 }
 
-const source = join(workDir, ipaRelative);
 const target = join(outputDirectory, 'KrupaSpanish.ipa');
-await copyFile(source, target);
+await writeFile(target, ipaEntry.content);
 const info = await stat(target);
-
-await rm(workDir, { recursive: true, force: true });
 
 console.log('');
 console.log('Готово: ' + target);
