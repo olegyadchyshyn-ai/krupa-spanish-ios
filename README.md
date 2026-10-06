@@ -52,9 +52,14 @@ iOS-порт застосунку для вивчення іспанської �
 
 ```powershell
 node web/test/logic.test.mjs      # 57 тестів логіки на реальному контенті
-node web/test/views.test.mjs      # чи імпортуються всі екрани
-python -m http.server 8080 --directory web   # перегляд у браузері: http://localhost:8080
+node web/test/views.test.mjs      # чи імпортуються всі модулі
+node web/test/smoke.test.mjs      # чи малюється кожен екран (заглушка DOM)
+node web/test/serve.mjs           # локальний сервер: http://localhost:8080
 ```
+
+Тести не потребують ні браузера, ні інтернету: контент читається з диска,
+`localStorage` підмінюється пам'яттю, а для екранів використовується
+мінімальна заглушка DOM (`web/test/dom-stub.mjs`).
 
 ---
 

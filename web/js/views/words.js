@@ -326,7 +326,9 @@ function wordRow(app, word, cardItem) {
   ]);
 
   return h('div', { class: 'row' }, [
-    h('div', { style: { flex: '1' } }, main),
-    speakButton(() => app.speak(word.spanish, true), 'Прослухати: ' + word.spanish)
+    h('div', { style: { flex: '1 1 auto', minWidth: '0' } }, main),
+    h('div', { style: { flex: '0 0 44px' } }, [
+      speakButton(() => app.speak(word.spanish, true), 'Прослухати: ' + word.spanish)
+    ])
   ]);
 }

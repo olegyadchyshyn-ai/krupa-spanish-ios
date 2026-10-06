@@ -156,7 +156,7 @@ function exampleCard(app, example, index) {
 
 function wordRow(app, word) {
   return h('div', { class: 'row' }, [
-    h('div', { style: { flex: '1' } }, h('button', {
+    h('div', { style: { flex: '1 1 auto', minWidth: '0' } }, h('button', {
       class: 'list-item',
       type: 'button',
       onclick: () => app.navigate('#/word/' + word.id)
@@ -166,7 +166,9 @@ function wordRow(app, word) {
         h('div', { class: 'word-uk', text: word.translationUk })
       ])
     ])),
-    speakButton(() => app.speak(word.spanish, true), 'Прослухати: ' + word.spanish)
+    h('div', { style: { flex: '0 0 44px' } }, [
+      speakButton(() => app.speak(word.spanish, true), 'Прослухати: ' + word.spanish)
+    ])
   ]);
 }
 
