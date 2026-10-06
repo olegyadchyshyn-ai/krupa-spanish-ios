@@ -41,18 +41,9 @@ foreach ($name in $typeOwners.Keys) {
 }
 
 # --- 2. Баланс дужок ---
-foreach ($file in $files) {
-    $text = [System.IO.File]::ReadAllText($file.FullName)
-    # грубо прибираємо рядкові літерали та коментарі
-    $clean = [regex]::Replace($text, '//[^\n]*', '')
-    $clean = [regex]::Replace($clean, '/\*.*?\*/', '', 'Singleline')
-    $clean = [regex]::Replace($clean, '"(?:\\.|[^"\\])*"', '""')
-    $open = ([regex]::Matches($clean, '\{')).Count
-    $close = ([regex]::Matches($clean, '\}')).Count
-    if ($open -ne $close) {
-        $problems.Add("Незбалансовані дужки у $($file.Name): { = $open, } = $close")
-    }
-}
+# Точний підрахунок (з урахуванням багаторядкових літералів і коментарів)
+# виконує окремий скрипт tools/check-braces.ps1 — тут не дублюємо,
+# бо наївний підрахунок дає хибні тривоги через JSON у рядках.
 
 # --- 3. Маршрути AppRoute ---
 $routeFile = Join-Path $sourcesDir 'App\AppRoute.swift'

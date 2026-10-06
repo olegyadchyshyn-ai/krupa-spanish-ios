@@ -2,9 +2,9 @@ import SwiftUI
 
 // MARK: - Вкладка «Прогрес»
 
-/// Екран «Прогрес»: ключові показники, статистика за сьогодні, активність
-/// за останні 7 днів (власна стовпчикова діаграма без `Charts`), рівень і мета,
-/// слабкі місця та теми з часткою вивчених слів.
+/// Екран «Прогрес»: ключові показники, статистика за сьогодні, активність за
+/// останні 7 днів (власна діаграма без `Charts`), рівень і мета, слабкі місця
+/// та теми з часткою вивчених слів.
 struct ProgressScreen: View {
     @EnvironmentObject private var app: AppState
 
@@ -21,10 +21,10 @@ struct ProgressScreen: View {
         GridItem(.flexible(), spacing: KrupaSpacing.sm)
     ]
 
-    /// Скільки днів показуємо на діаграмі активності.
+    /// Скільки днів показує діаграма активності.
     private let weekLength = 7
 
-    /// Скорочені назви днів: індекс = `Calendar.component(.weekday) - 1` (1 — неділя).
+    /// Скорочені назви днів: індекс = `weekday - 1` (1 — неділя).
     private static let weekdayShortNames = ["нд", "пн", "вт", "ср", "чт", "пт", "сб"]
 
     var body: some View {
@@ -48,9 +48,7 @@ struct ProgressScreen: View {
     // MARK: - Дані екрана
 
     private var profile: UserProfile { app.progress.profile }
-
     private var snapshot: ProgressSnapshot { app.progress.snapshot() }
-
     private var todayStat: DailyStat { app.progress.todayStat }
 
     /// Хвилини за сьогодні, округлені до цілого.
@@ -60,8 +58,7 @@ struct ProgressScreen: View {
     private var weekBars: [ProgressDayBar] {
         let calendar = Calendar.current
         let now = Date()
-        let offsets = Array((0..<weekLength).reversed())
-        return offsets.compactMap { offset in
+        return Array((0..<weekLength).reversed()).compactMap { offset in
             guard let date = calendar.date(byAdding: .day, value: -offset, to: now) else { return nil }
             let stat = app.progress.dailyStat(for: date)
             return ProgressDayBar(
@@ -74,15 +71,13 @@ struct ProgressScreen: View {
     }
 
     /// Чи є хоч один день із повтореннями.
-    private var weekHasData: Bool {
-        weekBars.contains { $0.reviews > 0 }
-    }
+    private var weekHasData: Bool { weekBars.contains { $0.reviews > 0 } }
 
     private var weakSpots: [WeakSpot] { app.progress.weakSpots(limit: 8) }
 
     private var topicItems: [ProgressTopicItem] {
-        app.topicsWithProgress().map { item in
-            ProgressTopicItem(topic: item.topic, fraction: item.fraction, wordsCount: item.wordsCount)
+        app.topicsWithProgress().map {
+            ProgressTopicItem(topic: $0.topic, fraction: $0.fraction, wordsCount: $0.wordsCount)
         }
     }
 
@@ -102,30 +97,14 @@ struct ProgressScreen: View {
 
     private var summaryGrid: some View {
         LazyVGrid(columns: tileColumns, spacing: KrupaSpacing.xs) {
-            StatTile(
-                title: "Серія днів",
-                value: "\(app.progress.streakDays)",
-                systemImage: "flame.fill",
-                tint: .krupaGold
-            )
-            StatTile(
-                title: "Точність",
-                value: percentText(snapshot.accuracy),
-                systemImage: "target",
-                tint: .krupaSuccess
-            )
-            StatTile(
-                title: "Слів засвоєно",
-                value: "\(snapshot.wordsLearned)",
-                systemImage: "character.book.closed.fill",
-                tint: .krupaBrand
-            )
-            StatTile(
-                title: "Хвилин усього",
-                value: "\(Int(snapshot.totalMinutes))",
-                systemImage: "clock.fill",
-                tint: .krupaBrandDark
-            )
+            StatTile(title: "Серія днів", value: "\(app.progress.streakDays)",
+                     systemImage: "flame.fill", tint: .krupaGold)
+            StatTile(title: "Точність", value: percentText(snapshot.accuracy),
+                     systemImage: "target", tint: .krupaSuccess)
+            StatTile(title: "Слів засвоєно", value: "\(snapshot.wordsLearned)",
+                     systemImage: "character.book.closed.fill", tint: .krupaBrand)
+            StatTile(title: "Хвилин усього", value: "\(Int(snapshot.totalMinutes))",
+                     systemImage: "clock.fill", tint: .krupaBrandDark)
         }
     }
 
@@ -134,43 +113,21 @@ struct ProgressScreen: View {
     private var todayCard: some View {
         KrupaCard {
             VStack(alignment: .leading, spacing: KrupaSpacing.sm) {
-                KrupaSectionHeader(
-                    title: "Сьогодні",
-                    subtitle: "Ціль на день: \(max(1, snapshot.dailyGoal)) карток",
-                    systemImage: "sun.max.fill"
-                )
+                KrupaSectionHeader(title: "Сьогодні",
+                                   subtitle: "Ціль на день: \(max(1, snapshot.dailyGoal)) карток",
+                                   systemImage: "sun.max.fill")
 
                 LazyVGrid(columns: miniColumns, spacing: KrupaSpacing.sm) {
-                    ProgressMiniStat(
-                        title: "Повторень",
-                        value: "\(todayStat.reviews)",
-                        systemImage: "arrow.triangle.2.circlepath",
-                        tint: .krupaBrand
-                    )
-                    ProgressMiniStat(
-                        title: "Правильно",
-                        value: "\(todayStat.correct)",
-                        systemImage: "checkmark.circle.fill",
-                        tint: .krupaSuccess
-                    )
-                    ProgressMiniStat(
-                        title: "Нових слів",
-                        value: "\(todayStat.newCards)",
-                        systemImage: "sparkles",
-                        tint: .krupaGold
-                    )
-                    ProgressMiniStat(
-                        title: "Хвилин",
-                        value: "\(minutesToday)",
-                        systemImage: "clock",
-                        tint: .krupaBrandDark
-                    )
-                    ProgressMiniStat(
-                        title: "XP",
-                        value: "\(todayStat.xp)",
-                        systemImage: "bolt.fill",
-                        tint: .krupaWarning
-                    )
+                    ProgressMiniStat(title: "Повторень", value: "\(todayStat.reviews)",
+                                     systemImage: "arrow.triangle.2.circlepath", tint: .krupaBrand)
+                    ProgressMiniStat(title: "Правильно", value: "\(todayStat.correct)",
+                                     systemImage: "checkmark.circle.fill", tint: .krupaSuccess)
+                    ProgressMiniStat(title: "Нових слів", value: "\(todayStat.newCards)",
+                                     systemImage: "sparkles", tint: .krupaGold)
+                    ProgressMiniStat(title: "Хвилин", value: "\(minutesToday)",
+                                     systemImage: "clock", tint: .krupaBrandDark)
+                    ProgressMiniStat(title: "XP", value: "\(todayStat.xp)",
+                                     systemImage: "bolt.fill", tint: .krupaWarning)
                 }
 
                 VStack(alignment: .leading, spacing: KrupaSpacing.xxs) {
@@ -188,15 +145,14 @@ struct ProgressScreen: View {
     private var weekCard: some View {
         KrupaCard {
             VStack(alignment: .leading, spacing: KrupaSpacing.sm) {
-                KrupaSectionHeader(
-                    title: "Останні 7 днів",
-                    subtitle: "Стовпчик = кількість повторень за день.",
-                    systemImage: "chart.bar.fill"
-                )
+                KrupaSectionHeader(title: "Останні 7 днів",
+                                   subtitle: "Стовпчик = кількість повторень за день.",
+                                   systemImage: "chart.bar.fill")
 
                 if weekHasData {
                     ProgressWeekChart(bars: weekBars)
                 } else {
+                    // Поки занять не було — закликаємо почати перше.
                     NavigationLink(value: AppRoute.session(topicId: nil)) {
                         EmptyStateView(
                             systemImage: "chart.bar.xaxis",
@@ -232,19 +188,14 @@ struct ProgressScreen: View {
                     Spacer(minLength: 0)
                 }
 
-                ProgressInfoRow(
-                    systemImage: profile.goal.systemImageName,
-                    title: "Мета: \(profile.goal.titleUk)",
-                    subtitle: profile.goal.descriptionUk,
-                    tint: .krupaBrand
-                )
+                ProgressInfoRow(systemImage: profile.goal.systemImageName,
+                                title: "Мета: \(profile.goal.titleUk)",
+                                subtitle: profile.goal.descriptionUk)
 
-                ProgressInfoRow(
-                    systemImage: "clock.fill",
-                    title: "\(profile.dailyMinutes) хв на день",
-                    subtitle: "Слів засвоєно: \(snapshot.wordsLearned) · у роботі: \(snapshot.wordsInProgress)",
-                    tint: .krupaBrandDark
-                )
+                ProgressInfoRow(systemImage: "clock.fill",
+                                title: "\(profile.dailyMinutes) хв на день",
+                                subtitle: "Слів засвоєно: \(snapshot.wordsLearned) · у роботі: \(snapshot.wordsInProgress)",
+                                tint: .krupaBrandDark)
             }
         }
     }
@@ -261,7 +212,7 @@ struct ProgressScreen: View {
                 )
 
                 if weakSpots.isEmpty {
-                    Text("Даних замало: дайте більше відповідей, і тут з'являться теми та слова, які варто підсилити.")
+                    Text("Даних замало: дайте більше відповідей — і тут з'являться теми та слова, які варто підсилити.")
                         .font(.krupaCaption)
                         .foregroundStyle(Color.krupaTextSecondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -279,31 +230,19 @@ struct ProgressScreen: View {
     private func weakSpotRow(_ spot: WeakSpot) -> some View {
         if let note = app.content.grammarNote(tag: spot.key) {
             NavigationLink(value: AppRoute.grammarDetail(note.id)) {
-                ProgressWeakSpotRow(
-                    title: note.titleUk,
-                    subtitle: "Граматика",
-                    spot: spot,
-                    showsDisclosure: true
-                )
+                ProgressWeakSpotRow(title: note.titleUk, subtitle: "Граматика",
+                                    spot: spot, showsDisclosure: true)
             }
             .buttonStyle(.plain)
         } else if let word = app.content.word(spot.key) {
             NavigationLink(value: AppRoute.wordDetail(word.id)) {
-                ProgressWeakSpotRow(
-                    title: word.spanishWithArticle,
-                    subtitle: word.translationUk,
-                    spot: spot,
-                    showsDisclosure: true
-                )
+                ProgressWeakSpotRow(title: word.spanishWithArticle, subtitle: word.translationUk,
+                                    spot: spot, showsDisclosure: true)
             }
             .buttonStyle(.plain)
         } else {
-            ProgressWeakSpotRow(
-                title: "Слабке місце: \(spot.titleUk)",
-                subtitle: nil,
-                spot: spot,
-                showsDisclosure: false
-            )
+            ProgressWeakSpotRow(title: "Слабке місце: \(spot.titleUk)", subtitle: nil,
+                                spot: spot, showsDisclosure: false)
         }
     }
 
@@ -311,11 +250,9 @@ struct ProgressScreen: View {
 
     private var topicsSection: some View {
         VStack(alignment: .leading, spacing: KrupaSpacing.xs) {
-            KrupaSectionHeader(
-                title: "Теми",
-                subtitle: "Рівень \(profile.level.title) · \(profile.level.subtitleUk)",
-                systemImage: "book.fill"
-            )
+            KrupaSectionHeader(title: "Теми",
+                               subtitle: "Рівень \(profile.level.title) · \(profile.level.subtitleUk)",
+                               systemImage: "book.fill")
 
             if topicItems.isEmpty {
                 KrupaCard {
@@ -327,12 +264,9 @@ struct ProgressScreen: View {
             } else {
                 ForEach(topicItems, id: \.id) { item in
                     NavigationLink(value: AppRoute.topicDetail(item.topic.id)) {
-                        TopicCardView(
-                            topic: item.topic,
-                            fraction: item.fraction,
-                            wordsCount: item.wordsCount
-                        ) { }
-                        .allowsHitTesting(false)
+                        TopicCardView(topic: item.topic, fraction: item.fraction,
+                                      wordsCount: item.wordsCount) { }
+                            .allowsHitTesting(false)
                     }
                     .buttonStyle(.plain)
                 }
@@ -344,11 +278,8 @@ struct ProgressScreen: View {
 
     private var detailsLink: some View {
         NavigationLink(value: AppRoute.progressDetails) {
-            SecondaryActionButton(
-                title: "Детальніше",
-                systemImage: "chart.bar.doc.horizontal"
-            ) { }
-            .allowsHitTesting(false)
+            SecondaryActionButton(title: "Детальніше", systemImage: "chart.bar.doc.horizontal") { }
+                .allowsHitTesting(false)
         }
         .buttonStyle(.plain)
     }
@@ -366,10 +297,11 @@ private struct ProgressDayBar: Identifiable {
 
 /// Тема з прогресом для списку тем.
 private struct ProgressTopicItem: Identifiable {
-    var id: String { topic.id }
     var topic: Topic
     var fraction: Double
     var wordsCount: Int
+
+    var id: String { topic.id }
 }
 
 /// Дрібний показник усередині картки «Сьогодні».
@@ -384,9 +316,7 @@ private struct ProgressMiniStat: View {
             Image(systemName: systemImage)
                 .font(.system(size: 14, weight: .semibold))
                 .foregroundStyle(tint)
-            Text(value)
-                .font(.krupaHeadline)
-                .foregroundStyle(Color.krupaTextPrimary)
+            Text(value).font(.krupaHeadline).foregroundStyle(Color.krupaTextPrimary)
             Text(title)
                 .font(.krupaSmall)
                 .foregroundStyle(Color.krupaTextSecondary)
@@ -411,9 +341,7 @@ private struct ProgressInfoRow: View {
                 .foregroundStyle(tint)
                 .frame(width: 20)
             VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
+                Text(title).font(.krupaCaption).foregroundStyle(Color.krupaTextPrimary)
                 if !subtitle.isEmpty {
                     Text(subtitle)
                         .font(.krupaSmall)
@@ -430,6 +358,9 @@ private struct ProgressInfoRow: View {
 private struct ProgressWeekChart: View {
     var bars: [ProgressDayBar]
 
+    /// Максимальна висота стовпчика в точках.
+    private let maxBarHeight: CGFloat = 96
+
     /// Верхня межа шкали (нуль замінюємо на одиницю, щоб не ділити на нуль).
     private var maxReviews: Int { max(1, bars.map(\.reviews).max() ?? 0) }
 
@@ -437,60 +368,43 @@ private struct ProgressWeekChart: View {
         HStack(alignment: .bottom, spacing: KrupaSpacing.xxs) {
             ForEach(0..<7, id: \.self) { index in
                 if index < bars.count {
-                    ProgressWeekBarView(bar: bars[index], maxReviews: maxReviews)
+                    column(bars[index])
                 } else {
-                    Color.clear
-                        .frame(maxWidth: .infinity, minHeight: 1, maxHeight: 1)
+                    Color.clear.frame(maxWidth: .infinity, minHeight: 1, maxHeight: 1)
                 }
             }
         }
     }
-}
 
-/// Один стовпчик діаграми: висота, кількість повторень і підпис дня.
-private struct ProgressWeekBarView: View {
-    var bar: ProgressDayBar
-    var maxReviews: Int
-
-    /// Максимальна висота стовпчика в точках.
-    private let maxBarHeight: CGFloat = 96
-
-    private var barHeight: CGFloat {
-        guard bar.reviews > 0 else { return 4 }
-        let ratio = Double(bar.reviews) / Double(max(1, maxReviews))
-        return max(8, maxBarHeight * ratio)
-    }
-
-    private var barTint: Color {
-        bar.isToday ? .krupaBrand : Color.krupaBrand.opacity(0.45)
-    }
-
-    var body: some View {
+    /// Один стовпчик: висота, кількість повторень і підпис дня.
+    private func column(_ bar: ProgressDayBar) -> some View {
         VStack(spacing: KrupaSpacing.xxs) {
             RoundedRectangle(cornerRadius: 5, style: .continuous)
-                .fill(barTint)
-                .frame(height: barHeight)
-            Text("\(bar.reviews)")
-                .font(.krupaSmall)
-                .foregroundStyle(Color.krupaTextPrimary)
+                .fill(bar.isToday ? Color.krupaBrand : Color.krupaBrand.opacity(0.45))
+                .frame(height: barHeight(for: bar.reviews))
+            Text("\(bar.reviews)").font(.krupaSmall).foregroundStyle(Color.krupaTextPrimary)
             Text(bar.label)
                 .font(.krupaSmall)
                 .foregroundStyle(bar.isToday ? Color.krupaBrand : Color.krupaTextSecondary)
         }
         .frame(maxWidth: .infinity, alignment: .bottom)
     }
+
+    private func barHeight(for reviews: Int) -> CGFloat {
+        guard reviews > 0 else { return 4 }
+        let ratio = Double(reviews) / Double(maxReviews)
+        return max(8, maxBarHeight * ratio)
+    }
 }
 
-/// Рядок слабкого місця з кількістю помилок і часткою.
+/// Рядок слабкого місця з кількістю помилок і їх часткою.
 private struct ProgressWeakSpotRow: View {
     var title: String
     var subtitle: String?
     var spot: WeakSpot
     var showsDisclosure: Bool
 
-    private var percent: Int {
-        min(100, max(0, Int((spot.errorRate * 100).rounded())))
-    }
+    private var percent: Int { min(100, max(0, Int((spot.errorRate * 100).rounded()))) }
 
     var body: some View {
         HStack(alignment: .center, spacing: KrupaSpacing.xs) {
@@ -512,9 +426,7 @@ private struct ProgressWeakSpotRow: View {
 
             Spacer(minLength: 0)
 
-            Text("\(percent)% помилок")
-                .font(.krupaSmall)
-                .foregroundStyle(Color.krupaError)
+            Text("\(percent)% помилок").font(.krupaSmall).foregroundStyle(Color.krupaError)
 
             if showsDisclosure {
                 Image(systemName: "chevron.right")
@@ -528,8 +440,8 @@ private struct ProgressWeakSpotRow: View {
 
 // MARK: - Детальна статистика
 
-/// Екран детальної статистики: зведення за весь час, розподіл карток за
-/// фазами й рівнями, «сила знань», останні відповіді та звіт для надсилання.
+/// Екран детальної статистики: зведення за весь час, розподіл карток за фазами
+/// та рівнями, «сила знань», останні відповіді й звіт для надсилання.
 struct ProgressDetailsScreen: View {
     @EnvironmentObject private var app: AppState
 
@@ -557,11 +469,9 @@ struct ProgressDetailsScreen: View {
         ScrollView {
             VStack(alignment: .leading, spacing: KrupaSpacing.md) {
                 if cards.isEmpty {
-                    KrupaCard {
-                        emptyState
-                    }
+                    emptyState
                 } else {
-                    summaryCard
+                    summarySection
                     phasesCard
                     levelsCard
                     knowledgeCard
@@ -580,9 +490,7 @@ struct ProgressDetailsScreen: View {
     // MARK: - Дані екрана
 
     private var snapshot: ProgressSnapshot { app.progress.snapshot() }
-
     private var cards: [CardState] { Array(app.progress.cards.values) }
-
     private var totalCards: Int { cards.count }
 
     /// Картки, які вже хоч раз повторювали.
@@ -591,6 +499,15 @@ struct ProgressDetailsScreen: View {
     /// Останні 20 відповідей — від найновіших.
     private var recentAnswers: [ReviewLogEntry] {
         Array(app.progress.document.reviewLog.suffix(20).reversed())
+    }
+
+    /// Кількість карток за кожною фазою — рахуємо одним проходом.
+    private var phaseCounts: [CardPhase: Int] {
+        var result: [CardPhase: Int] = [:]
+        for card in cards {
+            result[card.phase, default: 0] += 1
+        }
+        return result
     }
 
     /// Середня «міцність» карток (0…1).
@@ -622,9 +539,20 @@ struct ProgressDetailsScreen: View {
         return min(1, max(0, intervalPart * 0.7 + easePart * 0.3 - lapsePart))
     }
 
-    /// Відсоток без дробової частини.
+    /// Відсоток без дробової частини: «78%».
     private func percentText(_ value: Double) -> String {
         "\(min(100, max(0, Int(value.rounded()))))%"
+    }
+
+    /// Частка від усіх карток (0…1).
+    private func fraction(of count: Int) -> Double {
+        guard totalCards > 0 else { return 0 }
+        return min(1, max(0, Double(count) / Double(totalCards)))
+    }
+
+    /// Скільки карток має вказаний рівень.
+    private func levelCount(_ level: Level) -> Int {
+        cards.filter { $0.levelCode == level.rawValue }.count
     }
 
     /// Час відповіді: сьогодні — «HH:mm», інакше — дата й час.
@@ -636,60 +564,37 @@ struct ProgressDetailsScreen: View {
         return "\(ProgressDetailsScreen.dayFormatter.string(from: date)), \(time)"
     }
 
+    /// Колір смуги для фази картки.
+    private func tint(for phase: CardPhase) -> Color {
+        switch phase {
+        case .new: return .krupaTextSecondary
+        case .learning: return .krupaWarning
+        case .review: return .krupaSuccess
+        case .relearning: return .krupaError
+        }
+    }
+
     // MARK: - Зведення
 
-    private var summaryCard: some View {
-        KrupaCard {
-            VStack(alignment: .leading, spacing: KrupaSpacing.sm) {
-                KrupaSectionHeader(
-                    title: "Зведення",
-                    subtitle: "За весь час навчання",
-                    systemImage: "chart.bar.fill"
-                )
+    private var summarySection: some View {
+        VStack(alignment: .leading, spacing: KrupaSpacing.xs) {
+            KrupaSectionHeader(title: "Зведення",
+                               subtitle: "За весь час навчання · карток у курсі: \(totalCards)",
+                               systemImage: "chart.bar.fill")
 
-                LazyVGrid(columns: metricColumns, spacing: KrupaSpacing.xs) {
-                    ProgressMetricTile(
-                        title: "Усього повторень",
-                        value: "\(snapshot.totalReviews)",
-                        systemImage: "arrow.triangle.2.circlepath",
-                        tint: .krupaBrand
-                    )
-                    ProgressMetricTile(
-                        title: "Найдовша серія",
-                        value: "\(snapshot.longestStreak) дн",
-                        systemImage: "flame.fill",
-                        tint: .krupaGold
-                    )
-                    ProgressMetricTile(
-                        title: "Точність",
-                        value: percentText(snapshot.accuracy),
-                        systemImage: "target",
-                        tint: .krupaSuccess
-                    )
-                    ProgressMetricTile(
-                        title: "Заплановано на завтра",
-                        value: "\(snapshot.dueTomorrow) карток",
-                        systemImage: "calendar",
-                        tint: .krupaWarning
-                    )
-                    ProgressMetricTile(
-                        title: "Хвилин усього",
-                        value: "\(Int(snapshot.totalMinutes))",
-                        systemImage: "clock.fill",
-                        tint: .krupaBrandDark
-                    )
-                    ProgressMetricTile(
-                        title: "XP",
-                        value: "\(snapshot.totalXP)",
-                        systemImage: "bolt.fill",
-                        tint: .krupaBrand
-                    )
-                }
-
-                Text("Карток у курсі: \(totalCards) · слів засвоєно: \(snapshot.wordsLearned) · у роботі: \(snapshot.wordsInProgress)")
-                    .font(.krupaSmall)
-                    .foregroundStyle(Color.krupaTextSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
+            LazyVGrid(columns: metricColumns, spacing: KrupaSpacing.xs) {
+                StatTile(title: "Усього повторень", value: "\(snapshot.totalReviews)",
+                         systemImage: "arrow.triangle.2.circlepath", tint: .krupaBrand)
+                StatTile(title: "Найдовша серія", value: "\(snapshot.longestStreak) дн",
+                         systemImage: "flame.fill", tint: .krupaGold)
+                StatTile(title: "Точність", value: percentText(snapshot.accuracy),
+                         systemImage: "target", tint: .krupaSuccess)
+                StatTile(title: "Заплановано на завтра", value: "\(snapshot.dueTomorrow) карток",
+                         systemImage: "calendar", tint: .krupaWarning)
+                StatTile(title: "Хвилин усього", value: "\(Int(snapshot.totalMinutes))",
+                         systemImage: "clock.fill", tint: .krupaBrandDark)
+                StatTile(title: "XP", value: "\(snapshot.totalXP)",
+                         systemImage: "bolt.fill", tint: .krupaBrand)
             }
         }
     }
@@ -699,18 +604,14 @@ struct ProgressDetailsScreen: View {
     private var phasesCard: some View {
         KrupaCard {
             VStack(alignment: .leading, spacing: KrupaSpacing.sm) {
-                KrupaSectionHeader(
-                    title: "Фази карток",
-                    subtitle: "Скільки карток у кожній фазі повторення.",
-                    systemImage: "square.stack.3d.up.fill"
-                )
+                KrupaSectionHeader(title: "Фази карток",
+                                   subtitle: "Скільки карток у кожній фазі повторення.",
+                                   systemImage: "square.stack.3d.up.fill")
 
                 ForEach(CardPhase.allCases, id: \.self) { phase in
-                    ProgressPhaseRow(
-                        phase: phase,
-                        count: app.progress.cardsInPhase(phase).count,
-                        total: totalCards
-                    )
+                    let count = phaseCounts[phase] ?? 0
+                    ProgressMeterRow(title: phase.titleUk, valueText: "\(count)",
+                                     fraction: fraction(of: count), tint: tint(for: phase))
                 }
             }
         }
@@ -721,18 +622,12 @@ struct ProgressDetailsScreen: View {
     private var levelsCard: some View {
         KrupaCard {
             VStack(alignment: .leading, spacing: KrupaSpacing.sm) {
-                KrupaSectionHeader(
-                    title: "Розподіл за рівнями",
-                    subtitle: "Картки рівнів A0, A1 і A2 у вашому профілі.",
-                    systemImage: "chart.pie.fill"
-                )
+                KrupaSectionHeader(title: "Розподіл за рівнями",
+                                   subtitle: "Картки рівнів A0, A1 і A2 у вашому профілі.",
+                                   systemImage: "chart.pie.fill")
 
                 ForEach(Level.allCases, id: \.rawValue) { level in
-                    ProgressLevelRow(
-                        level: level,
-                        count: cards.filter { $0.levelCode == level.rawValue }.count,
-                        total: totalCards
-                    )
+                    ProgressLevelRow(level: level, count: levelCount(level), total: totalCards)
                 }
             }
         }
@@ -755,18 +650,12 @@ struct ProgressDetailsScreen: View {
                         .foregroundStyle(Color.krupaTextSecondary)
                         .fixedSize(horizontal: false, vertical: true)
                 } else {
-                    ProgressMeterRow(
-                        title: "Середня міцність",
-                        valueText: percentText(averageStrength * 100),
-                        fraction: averageStrength,
-                        tint: .krupaBrand
-                    )
-                    ProgressMeterRow(
-                        title: "Середня точність",
-                        valueText: percentText(averageRetention),
-                        fraction: min(1, averageRetention / 100),
-                        tint: .krupaSuccess
-                    )
+                    ProgressMeterRow(title: "Середня міцність",
+                                     valueText: percentText(averageStrength * 100),
+                                     fraction: averageStrength, tint: .krupaBrand)
+                    ProgressMeterRow(title: "Середня точність",
+                                     valueText: percentText(averageRetention),
+                                     fraction: min(1, averageRetention / 100), tint: .krupaSuccess)
                     Text("Карток у повторенні: \(reviewedCards.count) з \(totalCards)")
                         .font(.krupaSmall)
                         .foregroundStyle(Color.krupaTextSecondary)
@@ -780,11 +669,9 @@ struct ProgressDetailsScreen: View {
     private var reviewLogCard: some View {
         KrupaCard {
             VStack(alignment: .leading, spacing: KrupaSpacing.xs) {
-                KrupaSectionHeader(
-                    title: "Останні відповіді",
-                    subtitle: "До 20 останніх карток із журналу повторень.",
-                    systemImage: "list.bullet.rectangle"
-                )
+                KrupaSectionHeader(title: "Останні відповіді",
+                                   subtitle: "До 20 останніх карток із журналу повторень.",
+                                   systemImage: "list.bullet.rectangle")
 
                 if recentAnswers.isEmpty {
                     Text("Журнал порожній — відповіді з'являться після першого заняття.")
@@ -795,8 +682,7 @@ struct ProgressDetailsScreen: View {
                     ForEach(recentAnswers, id: \.id) { entry in
                         ProgressReviewRow(entry: entry, timeText: timeLabel(for: entry.reviewedAt))
                         if entry.id != recentAnswers.last?.id {
-                            Divider()
-                                .background(Color.krupaDivider)
+                            Divider().background(Color.krupaDivider)
                         }
                     }
                 }
@@ -810,8 +696,7 @@ struct ProgressDetailsScreen: View {
         ShareLink(item: reportText) {
             HStack(spacing: KrupaSpacing.xs) {
                 Image(systemName: "square.and.arrow.up")
-                Text("Поділитися звітом")
-                    .font(.krupaCallout)
+                Text("Поділитися звітом").font(.krupaCallout)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 13)
@@ -841,6 +726,7 @@ struct ProgressDetailsScreen: View {
 
     // MARK: - Порожній стан
 
+    /// Карток ще немає — пропонуємо пройти перше заняття.
     private var emptyState: some View {
         NavigationLink(value: AppRoute.session(topicId: nil)) {
             EmptyStateView(
@@ -858,75 +744,6 @@ struct ProgressDetailsScreen: View {
 
 // MARK: - Допоміжні типи детальної статистики
 
-/// Компактний показник зведення всередині картки.
-private struct ProgressMetricTile: View {
-    var title: String
-    var value: String
-    var systemImage: String
-    var tint: Color = .krupaBrand
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Image(systemName: systemImage)
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(tint)
-            Text(value)
-                .font(.krupaHeadline)
-                .foregroundStyle(Color.krupaTextPrimary)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
-            Text(title)
-                .font(.krupaSmall)
-                .foregroundStyle(Color.krupaTextSecondary)
-                .lineLimit(2)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .padding(KrupaSpacing.xs)
-        .frame(maxWidth: .infinity, minHeight: 88, alignment: .topLeading)
-        .background(Color.krupaSurfaceAlt)
-        .clipShape(RoundedRectangle(cornerRadius: KrupaSpacing.chipRadius, style: .continuous))
-    }
-}
-
-/// Рядок розподілу карток за фазою.
-private struct ProgressPhaseRow: View {
-    var phase: CardPhase
-    var count: Int
-    var total: Int
-
-    private var fraction: Double {
-        guard total > 0 else { return 0 }
-        return min(1, max(0, Double(count) / Double(total)))
-    }
-
-    private var tint: Color {
-        switch phase {
-        case .new: return .krupaTextSecondary
-        case .learning: return .krupaWarning
-        case .review: return .krupaSuccess
-        case .relearning: return .krupaError
-        }
-    }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: KrupaSpacing.xxs) {
-            HStack(spacing: KrupaSpacing.xs) {
-                Text(phase.titleUk)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
-                Spacer(minLength: 0)
-                Text("\(count)")
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
-                Text("\(Int((fraction * 100).rounded()))%")
-                    .font(.krupaSmall)
-                    .foregroundStyle(Color.krupaTextSecondary)
-            }
-            KrupaProgressBar(value: fraction, tint: tint, height: 6)
-        }
-    }
-}
-
 /// Рядок розподілу карток за рівнем.
 private struct ProgressLevelRow: View {
     var level: Level
@@ -942,20 +759,16 @@ private struct ProgressLevelRow: View {
         VStack(alignment: .leading, spacing: KrupaSpacing.xxs) {
             HStack(spacing: KrupaSpacing.xs) {
                 LevelBadge(level: level)
-                Text(level.subtitleUk)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
+                Text(level.subtitleUk).font(.krupaCaption).foregroundStyle(Color.krupaTextPrimary)
                 Spacer(minLength: 0)
-                Text("\(count) карток")
-                    .font(.krupaSmall)
-                    .foregroundStyle(Color.krupaTextSecondary)
+                Text("\(count) карток").font(.krupaSmall).foregroundStyle(Color.krupaTextSecondary)
             }
             KrupaProgressBar(value: fraction, tint: Color.forLevel(level), height: 6)
         }
     }
 }
 
-/// Рядок «підпис + значення + смуга» для показників сили знань.
+/// Рядок «підпис + значення + смуга» для розподілів і сили знань.
 private struct ProgressMeterRow: View {
     var title: String
     var valueText: String
@@ -965,13 +778,9 @@ private struct ProgressMeterRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: KrupaSpacing.xxs) {
             HStack(spacing: KrupaSpacing.xs) {
-                Text(title)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
+                Text(title).font(.krupaCaption).foregroundStyle(Color.krupaTextPrimary)
                 Spacer(minLength: 0)
-                Text(valueText)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextSecondary)
+                Text(valueText).font(.krupaCaption).foregroundStyle(Color.krupaTextSecondary)
             }
             KrupaProgressBar(value: fraction, tint: tint, height: 6)
         }
@@ -986,9 +795,7 @@ private struct ProgressReviewRow: View {
     var body: some View {
         HStack(alignment: .center, spacing: KrupaSpacing.xs) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(timeText)
-                    .font(.krupaCaption)
-                    .foregroundStyle(Color.krupaTextPrimary)
+                Text(timeText).font(.krupaCaption).foregroundStyle(Color.krupaTextPrimary)
                 Text(entry.itemType.titleUk)
                     .font(.krupaSmall)
                     .foregroundStyle(Color.krupaTextSecondary)
@@ -997,11 +804,7 @@ private struct ProgressReviewRow: View {
             Spacer(minLength: 0)
 
             VStack(alignment: .trailing, spacing: 4) {
-                ChipView(
-                    text: entry.grade.titleUk,
-                    systemImage: nil,
-                    tint: Color.forGrade(entry.grade)
-                )
+                ChipView(text: entry.grade.titleUk, systemImage: nil, tint: Color.forGrade(entry.grade))
                 Text("\(entry.responseMs) мс")
                     .font(.krupaSmall)
                     .foregroundStyle(Color.krupaTextSecondary)

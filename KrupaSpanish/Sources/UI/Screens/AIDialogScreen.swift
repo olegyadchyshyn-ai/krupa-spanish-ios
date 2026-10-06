@@ -139,7 +139,7 @@ struct AIDialogScreen: View {
 
     private var composer: some View {
         VStack(spacing: KrupaSpacing.xs) {
-            if let suggestions = messages.last(where: { $0.role == .assistant })?.corrections.isEmpty == false ? nil : lastSuggestions {
+            if let suggestions = suggestedRepliesForComposer {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: KrupaSpacing.xs) {
                         ForEach(Array(suggestions.enumerated()), id: \.offset) { _, suggestion in
@@ -183,6 +183,15 @@ struct AIDialogScreen: View {
 
     private var canSend: Bool {
         !inputText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !app.ai.isThinking
+    }
+
+    /// Підказки для поля введення: ховаємо їх, якщо в останньому повідомленні
+    /// вже є виправлення — щоб не заважати читати розбір помилок.
+    private var suggestedRepliesForComposer: [String]? {
+        if let last = messages.last(where: { $0.role == .assistant }), !last.corrections.isEmpty {
+            return nil
+        }
+        return lastSuggestions
     }
 
     private var lastSuggestions: [String]? {
