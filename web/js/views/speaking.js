@@ -406,7 +406,7 @@ export function renderSpeaking(app) {
       return;
     }
 
-    micBar.hidden = !state.recognizing;
+    micBar.style.display = state.recognizing ? '' : 'none';
     actionHost.appendChild(micBar);
     const heard = (state.heard + ' ' + state.interim).trim();
     if (state.recognizing || heard) {

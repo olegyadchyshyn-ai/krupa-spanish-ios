@@ -48,6 +48,12 @@ jobs:
       - name: Перевірка імпорту екранів
         run: node web/test/views.test.mjs
 
+      - name: Димовий тест екранів (заглушка DOM)
+        run: node web/test/smoke.test.mjs
+
+      - name: Функціональний тест заняття
+        run: node web/test/session.test.mjs
+
   deploy:
     name: Публікація на GitHub Pages
     needs: verify

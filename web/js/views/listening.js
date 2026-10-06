@@ -245,7 +245,8 @@ export function renderListeningDetail(app, { id } = {}) {
   }
 
   function refreshStatus() {
-    stopButton.hidden = !state.playing;
+    // .btn має display: inline-flex, тому атрибут hidden не діє — ховаємо стилем.
+    stopButton.style.display = state.playing ? '' : 'none';
     status.textContent = state.playing
       ? 'Відтворюється…'
       : 'Натисніть «Прослухати», щоб почути матеріал.';

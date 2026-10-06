@@ -50,6 +50,9 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
+/* Атрибут hidden має працювати навіть для елементів із власним display (.btn, .chip тощо) */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   padding: 0;

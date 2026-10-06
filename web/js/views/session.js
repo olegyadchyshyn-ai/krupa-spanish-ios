@@ -167,10 +167,16 @@ export function createSessionView(app, plan, options) {
     const data = item.data;
     const spanish = spanishText(item);
     if (item.prompt === 'recognize') {
+      // Для слова показуємо іспанське й обираємо переклад; для речення —
+      // навпаки, бо `checkItem` для речень завжди звіряє іспанський текст.
+      const isSentence = item.kind === 'sentence';
       return [
-        text('session-prompt', 'Оберіть переклад'),
-        el('row-between', [text('session-spanish', spanish), speakButton(() => speak(spanish))]),
-        buildOptions(step.choices, data.translationUk)
+        text('session-prompt', isSentence ? 'Оберіть іспанське речення' : 'Оберіть переклад'),
+        el('row-between', [
+          isSentence ? text('session-title', data.translationUk) : text('session-spanish', spanish),
+          isSentence ? null : speakButton(() => speak(spanish))
+        ]),
+        buildOptions(step.choices, recognizeCorrect(item))
       ];
     }
     if (item.prompt === 'listen') {
@@ -488,7 +494,7 @@ export function createSessionView(app, plan, options) {
     if (state.feedback) return;
     const patch = overrides || {};
     state.answer = value == null ? '' : String(value);
-    const result = checkItem(step.item, state.answer);
+    const result = evaluate(step.item, state.answer);
     state.feedback = {
       correct: typeof patch.correct === 'boolean' ? patch.correct : result.correct,
       message: patch.message || result.message,
@@ -496,6 +502,9 @@ export function createSessionView(app, plan, options) {
       explanation: result.explanation || ''
     };
     if (patch.recommended) state.recommended = patch.recommended;
+    else if (!state.recommended) {
+      state.recommended = state.feedback.correct ? (state.usedHint ? 'HARD' : 'GOOD') : 'AGAIN';
+    }
     render();
   }
 
@@ -643,13 +652,18 @@ function sentenceHint(item) {
   return item.data.translationUk || '';
 }
 
-/** Чотири українські варіанти: правильний переклад і три чужі слова того ж рівня. */
+/** Що вважається правильною відповіддю на кроці «оберіть варіант». */
+function recognizeCorrect(item) {
+  return item.kind === 'sentence' ? (item.data.spanish || '') : (item.data.translationUk || '');
+}
+
+/** Чотири варіанти: правильна відповідь і три чужі елементи того ж рівня. */
 function translationChoices(item, app) {
   const data = item.data;
-  const correct = data.translationUk || '';
+  const correct = recognizeCorrect(item);
   const pool = item.kind === 'word'
     ? wordsOfLevel(app.content, data.level).map((word) => word.translationUk)
-    : (app.content.sentences || []).filter((sentence) => sentence.level === data.level).map((sentence) => sentence.translationUk);
+    : (app.content.sentences || []).filter((sentence) => sentence.level === data.level).map((sentence) => sentence.spanish);
   const options = [];
   for (const value of shuffleArray(pool)) {
     if (options.length >= 3) break;
@@ -729,6 +743,20 @@ function checkSpeech(item, transcript, expected) {
     return { correct: true, message: 'Розпізнано — майже точно!', correctAnswer: expected, explanation: result.explanation };
   }
   return result;
+}
+
+/**
+ * `checkItem` для слова знає лише `spanish`, тому складання речення з
+ * `word.exampleEs` перевіряємо як речення — через той самий `checkItem`.
+ */
+function evaluate(item, answer) {
+  if (item.kind === 'word' && item.prompt === 'buildSentence' && item.data.exampleEs) {
+    return checkItem({
+      kind: 'sentence',
+      data: { spanish: item.data.exampleEs, translationUk: item.data.exampleUk, audioHint: item.data.exampleUk }
+    }, answer);
+  }
+  return checkItem(item, answer);
 }
 
 function dueSoon(store, hours) {
