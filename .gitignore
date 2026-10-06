@@ -20,3 +20,4 @@ _recon/
 # Локальні налаштування Xcode
 xcuserdata/
 *.xcuserstate
+smoke-*.tmp.mjs
